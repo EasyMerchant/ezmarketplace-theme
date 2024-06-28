@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'flowbite';
+
+
+@layer components {
+    .file::-webkit-file-upload-button {
+      @apply !bg-transparent !text-new-car !py-0 !font-inter !text-base !leading-19-6 !pr-8 !me-0;
+    }
+  }
+ 
+  
+  
