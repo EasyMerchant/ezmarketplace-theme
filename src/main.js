@@ -236,3 +236,181 @@ function ImgUpload() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var reed = document.getElementById("clockOuterCircle");
+    var reed1 = document.getElementById("clockStyleCircle");
+    var reed2 = document.getElementById("colorClock");
+    var reed4 = document.getElementById("colorClock2");
+
+    if (reed) {
+        reed.addEventListener('click', deed);
+    }
+
+    if (reed1) {
+        reed1.addEventListener('click', deed);
+    }
+
+    if (reed2) {
+        reed2.addEventListener('input', deed);
+    }
+
+    if (reed4) {
+        reed4.addEventListener('input', deed1);
+    }
+
+    function deed() {
+        var reed3 = reed2.value;
+        if (reed) {
+            reed.style.backgroundColor = reed3;
+        }
+    }
+
+    function deed1() {
+        var reed5 = reed4.value;
+        if (reed1) {
+            reed1.style.backgroundColor = reed5;
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var reed = document.getElementById("clockOuterCircle2");
+    var reed1 = document.getElementById("clockStyleCircle2");
+    var reed2 = document.getElementById("colorClock2-1");
+    var reed4 = document.getElementById("colorClock2-2");
+
+    if (reed) {
+        reed.addEventListener('click', deed);
+    }
+
+    if (reed1) {
+        reed1.addEventListener('click', deed);
+    }
+
+    if (reed2) {
+        reed2.addEventListener('input', deed);
+    }
+
+    if (reed4) {
+        reed4.addEventListener('input', deed1);
+    }
+
+    function deed() {
+        var reed3 = reed2.value;
+        if (reed) {
+            reed.style.backgroundColor = reed3;
+        }
+    }
+
+    function deed1() {
+        var reed5 = reed4.value;
+        if (reed1) {
+            reed1.style.backgroundColor = reed5;
+        }
+    }
+});
+
+
+
+function myFunction() {
+    var copyText = document.getElementById("Token");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+  }
+  
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const filterButton = document.getElementById('filterButton');
+    const filterIcon = document.getElementById('filterIcon');
+    const filterModal = document.getElementById('filterModal');
+    const clearButton = document.getElementById('clearButton');
+    const selects = document.querySelectorAll('#filterModal select');
+
+    if (filterButton) {
+        filterButton.addEventListener('click', () => {
+            if (filterModal) {
+                filterModal.classList.remove('hidden');
+            }
+        });
+    }
+
+    if (clearButton) {
+        clearButton.addEventListener('click', () => {
+            // Reset select elements to default
+            selects.forEach(select => select.value = 'Select');
+
+            // Reset button classes
+            if (filterButton) {
+                filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
+                filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
+            }
+
+            // Reset icon classes
+            if (filterIcon) {
+                filterIcon.classList.remove('stroke-[#ffffff]');
+                filterIcon.classList.add('stroke-[#2E333E]');
+            }
+
+            // Hide the modal
+            if (filterModal) {
+                filterModal.classList.add('hidden');
+            }
+        });
+    }
+
+    if (filterModal) {
+        filterModal.addEventListener('click', (event) => {
+            if (event.target === filterModal) {
+                filterModal.classList.add('hidden');
+            }
+        });
+    }
+
+    if (selects) {
+        selects.forEach(select => {
+            select.addEventListener('change', () => {
+                let isAnySelected = false;
+                selects.forEach(sel => {
+                    if (sel.value !== 'Select') {
+                        isAnySelected = true;
+                    }
+                });
+
+                if (isAnySelected) {
+                    if (filterButton) {
+                        filterButton.classList.remove('bg-white', 'text-gray-700','rounded-lg');
+                        filterButton.classList.add('bg-new-car', 'text-white','rounded-lg');
+                    }
+                    if (filterIcon) {
+                        filterIcon.classList.remove('stroke-[#2E333E]');
+                        filterIcon.classList.add('stroke-[#ffffff]');
+                    }
+                } else {
+                    if (filterButton) {
+                        filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
+                        filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
+                    }
+                    if (filterIcon) {
+                        filterIcon.classList.remove('stroke-[#ffffff]');
+                        filterIcon.classList.add('stroke-[#2E333E]');
+                    }
+                }
+            });
+        });
+    }
+});
+
+document.getElementById('openPopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'flex';
+});
+
+document.getElementById('cancelButton').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+
+document.getElementById('deleteButton').addEventListener('click', function() {
+    // Add your delete functionality here
+    alert('Entries deleted!');
+    document.getElementById('popup').style.display = 'none';
+});

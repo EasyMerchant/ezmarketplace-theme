@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite with Tailwind CSS</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-anti-flash-white">
+    <div class="flex min-h-screen overflow-hidden">
+    <div class="sidebar h-screen max-w-84 w-full  bg-white sticky top-0 z-2">
+        <div class="flex min-h-screen flex-col justify-between w-full">
+            <div class="h-screen overflow-y-auto overflow-x-hidden scrollbar-none">
+                <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header">
+                    <div class="logo hidden items-center gap-2 ">
+                        <img src="../Image/Main-logo.svg" alt="">
+                        <div class="text-base leading-4 uppercase">TMMO</div>
+                    </div>
+                    <img src="../Image/sider-image.svg" class="w-8 siderbar-button" alt="">
+                </div>
+                <ul class="space-y-2 tracking-wide px-4 ">
+                    <li class="min-w-max group">
+                        <a href="./index.html" aria-label="dashboard"
+                        class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="z-10">
+                                <path
+                                    d="M14 17V15.3333C14 14.4493 13.6839 13.6014 13.1213 12.9763C12.5587 12.3512 11.7956 12 11 12H5C4.20435 12 3.44129 12.3512 2.87868 12.9763C2.31607 13.6014 2 14.4493 2 15.3333V17"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M8 9C9.65685 9 11 7.65685 11 6C11 4.34315 9.65685 3 8 3C6.34315 3 5 4.34315 5 6C5 7.65685 6.34315 9 8 9Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M18 17V15.2964C17.9996 14.5415 17.8029 13.8082 17.4409 13.2115C17.0789 12.6149 16.5721 12.1887 16 12"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M13 4C13.5721 4.14213 14.0792 4.46497 14.4413 4.91762C14.8034 5.37027 15 5.92699 15 6.5C15 7.07301 14.8034 7.62973 14.4413 8.08238C14.0792 8.53503 13.5721 8.85787 13 9"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span
+                                class=" font-medium menu hidden  text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">Users</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="#"
+                            class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 13.2216C16.5033 14.3991 15.7263 15.4367 14.7371 16.2437C13.7478 17.0507 12.5764 17.6025 11.3253 17.8509C10.0741 18.0992 8.78135 18.0366 7.55992 17.6685C6.33849 17.3004 5.22562 16.638 4.31861 15.7391C3.41159 14.8403 2.73805 13.7325 2.35687 12.5125C1.97568 11.2924 1.89846 9.99739 2.13196 8.74055C2.36546 7.48371 2.90256 6.30333 3.69631 5.30262C4.49006 4.30191 5.51629 3.51133 6.68528 3"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M18 10C18 8.94943 17.7931 7.90914 17.391 6.93853C16.989 5.96793 16.3997 5.08601 15.6569 4.34315C14.914 3.60028 14.0321 3.011 13.0615 2.60896C12.0909 2.20693 11.0506 2 10 2V10H18Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Charts</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="./Merchants.html"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.4 6H3.6C2.71634 6 2 6.76751 2 7.71429V16.2857C2 17.2325 2.71634 18 3.6 18H16.4C17.2837 18 18 17.2325 18 16.2857V7.71429C18 6.76751 17.2837 6 16.4 6Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M13 17V3.66667C13 3.22464 12.842 2.80072 12.5607 2.48816C12.2794 2.17559 11.8978 2 11.5 2H8.5C8.10218 2 7.72064 2.17559 7.43934 2.48816C7.15804 2.80072 7 3.22464 7 3.66667V17"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Merchants</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="#"
+                            class="block w-full tems-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                            aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
+
+                            <div class="flex justify-between">
+                                <div class="flex gap-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2H2V8H8V2Z" stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M18 2H12V8H18V2Z" stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M18 12H12V18H18V12Z" stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M8 12H2V18H8V12Z" stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span
+                                        class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Products</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                    <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+
+
+                        <ul id="dropdown-example1"
+                            class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                            <li>
+                                <a href="./Products-All-Products.html"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8">All
+                                    Products</a>
+                            </li>
+
+                            <li>
+                                <a href="./Products-Category.html"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">Category</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="./Media-Library.html"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.2222 2H3.77778C2.79594 2 2 2.79594 2 3.77778V16.2222C2 17.2041 2.79594 18 3.77778 18H16.2222C17.2041 18 18 17.2041 18 16.2222V3.77778C18 2.79594 17.2041 2 16.2222 2Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18 12.5455L13.625 8L4 18" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Media
+                                Library</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="./Quotes.html"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2L2 6L10 10L18 6L10 2Z" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 14L10 18L18 14" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 10L10 14L18 10" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Quotes</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="./Invocies.html"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.75 2H4.75C4.28587 2 3.84075 2.16857 3.51256 2.46863C3.18437 2.76869 3 3.17565 3 3.6V16.4C3 16.8243 3.18437 17.2313 3.51256 17.5314C3.84075 17.8314 4.28587 18 4.75 18H15.25C15.7141 18 16.1592 17.8314 16.4874 17.5314C16.8156 17.2313 17 16.8243 17 16.4V6.8L11.75 2Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 3V8H17" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 11H6" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 14H6" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 8H6.5H6" stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Invoices</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="./Sales-Orders.html"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.4917 11.5083L11.5167 17.4833C11.3619 17.6383 11.1781 17.7612 10.9757 17.8451C10.7734 17.929 10.5565 17.9721 10.3375 17.9721C10.1185 17.9721 9.9016 17.929 9.69927 17.8451C9.49694 17.7612 9.31312 17.6383 9.15833 17.4833L2 10.3333V2H10.3333L17.4917 9.15833C17.8021 9.47061 17.9763 9.89303 17.9763 10.3333C17.9763 10.7736 17.8021 11.1961 17.4917 11.5083Z"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.83203 5.83203H5.84203" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Purchase
+                                Order</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="#"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.5 17.5C8.77614 17.5 9 17.2761 9 17C9 16.7239 8.77614 16.5 8.5 16.5C8.22386 16.5 8 16.7239 8 17C8 17.2761 8.22386 17.5 8.5 17.5Z"
+                                    fill="#2E333E" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M15.5 17.5C15.7761 17.5 16 17.2761 16 17C16 16.7239 15.7761 16.5 15.5 16.5C15.2239 16.5 15 16.7239 15 17C15 17.2761 15.2239 17.5 15.5 17.5Z"
+                                    fill="#2E333E" stroke="#585D68"
+                                    class="group-hover:stroke-new-car group-active:stroke-new-car" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M2 2.5H4.90909L6.85818 12.3191C6.92469 12.6567 7.10684 12.96 7.37276 13.1758C7.63868 13.3917 7.97142 13.5063 8.31273 13.4997H15.3818C15.7231 13.5063 16.0559 13.3917 16.3218 13.1758C16.5877 12.96 16.7699 12.6567 16.8364 12.3191L18 6.16658H5.63636"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Sales
+                                Order</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="#"
+                            class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.1973 2L15.5918 3.68199M15.5918 3.68199L18 6.20498L15.1904 9.14847L12.7822 6.62548M15.5918 3.68199L12.7822 6.62548M9.48301 10.082C9.89749 10.5104 10.227 11.0206 10.4525 11.583C10.678 12.1454 10.7952 12.749 10.7971 13.359C10.7991 13.9691 10.6858 14.5735 10.4639 15.1375C10.2419 15.7014 9.91573 16.2139 9.50399 16.6452C9.09226 17.0766 8.60315 17.4184 8.06482 17.6509C7.52649 17.8834 6.94958 18.002 6.36731 18C5.78503 17.9979 5.20889 17.8752 4.67206 17.639C4.13523 17.4027 3.64832 17.0575 3.23935 16.6232C2.43512 15.7509 1.99011 14.5825 2.00017 13.3697C2.01023 12.1569 2.47455 10.9968 3.29313 10.1392C4.11171 9.28156 5.21906 8.7951 6.37667 8.78456C7.53427 8.77402 8.64952 9.24025 9.4822 10.0828L9.48301 10.082ZM9.48301 10.082L12.7822 6.62548"
+                                    stroke="#585D68" class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+
+                            <span
+                                class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Roles
+                                & Permission</span>
+                        </a>
+                    </li>
+                    <li class="min-w-max group">
+
+                        <a href="#"
+                            class="block w-full items-center  p-4   gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 rounded-lg group-hover:rounded-lg "
+                            aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example2">
+
+                            <div class="flex justify-between">
+                                <div class="flex gap-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.2 6.7995V10.7995C13.2 11.436 13.4529 12.0465 13.9029 12.4966C14.353 12.9466 14.9635 13.1995 15.6 13.1995C16.2365 13.1995 16.847 12.9466 17.2971 12.4966C17.7471 12.0465 18 11.436 18 10.7995V9.9995C17.9999 8.19392 17.389 6.44148 16.2666 5.02713C15.1443 3.61277 13.5764 2.61968 11.8181 2.20934C10.0598 1.799 8.21435 1.99554 6.58188 2.767C4.94942 3.53846 3.62592 4.83947 2.82661 6.45848C2.0273 8.07749 1.79918 9.91929 2.17934 11.6844C2.5595 13.4495 3.52559 15.0341 4.92051 16.1805C6.31543 17.3269 8.05715 17.9678 9.86246 17.9988C11.6678 18.0299 13.4305 17.4493 14.864 16.3515"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span
+                                        class=" menu hidden text-sm font-inter leading-16-8  text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Email
+                                        Template</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                    <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+
+                        <ul id="dropdown-example2"
+                            class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                            <li>
+                                <a href="./Email-Template.html"
+                                    class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8">Variables</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">Templates</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="min-w-max group">
+
+
+
+                        <a href="#"
+                            class="block w-full items-center  p-4   gap-4  bg-new-car-8 group-hover:bg-new-car-8 rounded-lg group-hover:rounded-lg "
+                            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+
+                            <div class="flex justify-between">
+                                <div class="flex gap-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 7C13.866 7 17 5.88071 17 4.5C17 3.11929 13.866 2 10 2C6.13401 2 3 3.11929 3 4.5C3 5.88071 6.13401 7 10 7Z"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17 10C17 11.1067 13.8889 12 10 12C6.11111 12 3 11.1067 3 10"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M3 4V15.5294C3 16.8965 6.11111 18 10 18C13.8889 18 17 16.8965 17 15.5294V4"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span
+                                        class=" menu hidden text-sm font-inter leading-16-8  text-new-car group-hover:text-new-car ">Manage
+                                        Content</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                    <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+
+                        <ul id="dropdown-example"
+                            class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                            <li>
+                                <a href="#"
+                                class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm  text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  after:absolute after:bg-new-car after:w-02 after:bottom-12% after:left-10% after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">Content
+                                    Widget</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="min-w-max group">
+
+
+
+                        <a href="#"
+                            class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                            aria-controls="dropdown-example3" data-collapse-toggle="dropdown-example3">
+
+                            <div class="flex justify-between">
+                                <div class="flex gap-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 10H13.2L11.6 12H8.4L6.8 10H2" stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M4.76 4.8325L2 10V14.5C2 14.8978 2.16857 15.2794 2.46863 15.5607C2.76869 15.842 3.17565 16 3.6 16H16.4C16.8243 16 17.2313 15.842 17.5314 15.5607C17.8314 15.2794 18 14.8978 18 14.5V10L15.24 4.8325C15.1075 4.58259 14.9033 4.37228 14.6504 4.22521C14.3974 4.07814 14.1057 4.00015 13.808 4H6.192C5.89433 4.00015 5.60261 4.07814 5.34964 4.22521C5.09666 4.37228 4.89246 4.58259 4.76 4.8325Z"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span
+                                        class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Client
+                                        Log</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                    <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+
+                        <ul id="dropdown-example3"
+                            class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                            <li>
+                                <a href="./Client-Logs-Activity-Logs.html"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8 hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8">Activity
+                                    Log</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-40% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-40% hover:after:left-10% hover:after:h-8">API
+                                    Log</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">API
+                                    Stats</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="min-w-max group">
+                        <a href="#"
+                            class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                            aria-controls="dropdown-example4" data-collapse-toggle="dropdown-example4">
+
+                            <div class="flex justify-between">
+                                <div class="flex gap-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M15.3818 12.1818C15.285 12.4012 15.2561 12.6445 15.2989 12.8804C15.3417 13.1164 15.4542 13.3341 15.6218 13.5055L15.6655 13.5491C15.8007 13.6842 15.908 13.8446 15.9812 14.0212C16.0544 14.1978 16.0921 14.387 16.0921 14.5782C16.0921 14.7693 16.0544 14.9586 15.9812 15.1352C15.908 15.3118 15.8007 15.4722 15.6655 15.6073C15.5304 15.7425 15.3699 15.8498 15.1934 15.923C15.0168 15.9962 14.8275 16.0339 14.6364 16.0339C14.4452 16.0339 14.2559 15.9962 14.0794 15.923C13.9028 15.8498 13.7424 15.7425 13.6073 15.6073L13.5636 15.5636C13.3922 15.396 13.1745 15.2835 12.9386 15.2407C12.7027 15.1979 12.4594 15.2268 12.24 15.3236C12.0249 15.4158 11.8414 15.5689 11.7122 15.764C11.583 15.9591 11.5137 16.1878 11.5127 16.4218V16.5455C11.5127 16.9312 11.3595 17.3012 11.0867 17.574C10.8139 17.8468 10.444 18 10.0582 18C9.67241 18 9.30244 17.8468 9.02966 17.574C8.75688 17.3012 8.60364 16.9312 8.60364 16.5455V16.48C8.59801 16.2393 8.52009 16.0058 8.38001 15.81C8.23993 15.6141 8.04417 15.4649 7.81818 15.3818C7.59882 15.285 7.3555 15.2561 7.11957 15.2989C6.88365 15.3417 6.66595 15.4542 6.49455 15.6218L6.45091 15.6655C6.31582 15.8007 6.1554 15.908 5.97882 15.9812C5.80224 16.0544 5.61297 16.0921 5.42182 16.0921C5.23067 16.0921 5.04139 16.0544 4.86481 15.9812C4.68824 15.908 4.52782 15.8007 4.39273 15.6655C4.25749 15.5304 4.1502 15.3699 4.077 15.1934C4.00381 15.0168 3.96613 14.8275 3.96613 14.6364C3.96613 14.4452 4.00381 14.2559 4.077 14.0794C4.1502 13.9028 4.25749 13.7424 4.39273 13.6073L4.43636 13.5636C4.60403 13.3922 4.7165 13.1745 4.75928 12.9386C4.80205 12.7027 4.77317 12.4594 4.67636 12.24C4.58417 12.0249 4.43109 11.8414 4.23597 11.7122C4.04085 11.583 3.81221 11.5137 3.57818 11.5127H3.45455C3.06878 11.5127 2.69881 11.3595 2.42603 11.0867C2.15325 10.8139 2 10.444 2 10.0582C2 9.67241 2.15325 9.30244 2.42603 9.02966C2.69881 8.75688 3.06878 8.60364 3.45455 8.60364H3.52C3.76072 8.59801 3.99419 8.52009 4.19004 8.38001C4.38589 8.23993 4.53507 8.04417 4.61818 7.81818C4.71499 7.59882 4.74387 7.3555 4.70109 7.11957C4.65832 6.88365 4.54585 6.66595 4.37818 6.49455L4.33455 6.45091C4.19931 6.31582 4.09202 6.1554 4.01882 5.97882C3.94562 5.80224 3.90795 5.61297 3.90795 5.42182C3.90795 5.23067 3.94562 5.04139 4.01882 4.86481C4.09202 4.68824 4.19931 4.52782 4.33455 4.39273C4.46963 4.25749 4.63005 4.1502 4.80663 4.077C4.98321 4.00381 5.17249 3.96613 5.36364 3.96613C5.55479 3.96613 5.74406 4.00381 5.92064 4.077C6.09722 4.1502 6.25764 4.25749 6.39273 4.39273L6.43636 4.43636C6.60777 4.60403 6.82547 4.7165 7.06139 4.75928C7.29731 4.80205 7.54064 4.77317 7.76 4.67636H7.81818C8.03329 4.58417 8.21674 4.43109 8.34596 4.23597C8.47518 4.04085 8.54452 3.81221 8.54545 3.57818V3.45455C8.54545 3.06878 8.6987 2.69881 8.97148 2.42603C9.24426 2.15325 9.61423 2 10 2C10.3858 2 10.7557 2.15325 11.0285 2.42603C11.3013 2.69881 11.4545 3.06878 11.4545 3.45455V3.52C11.4555 3.75403 11.5248 3.98267 11.654 4.17779C11.7833 4.37291 11.9667 4.52599 12.1818 4.61818C12.4012 4.71499 12.6445 4.74387 12.8804 4.70109C13.1164 4.65832 13.3341 4.54585 13.5055 4.37818L13.5491 4.33455C13.6842 4.19931 13.8446 4.09202 14.0212 4.01882C14.1978 3.94562 14.387 3.90795 14.5782 3.90795C14.7693 3.90795 14.9586 3.94562 15.1352 4.01882C15.3118 4.09202 15.4722 4.19931 15.6073 4.33455C15.7425 4.46963 15.8498 4.63005 15.923 4.80663C15.9962 4.98321 16.0339 5.17249 16.0339 5.36364C16.0339 5.55479 15.9962 5.74406 15.923 5.92064C15.8498 6.09722 15.7425 6.25764 15.6073 6.39273L15.5636 6.43636C15.396 6.60777 15.2835 6.82547 15.2407 7.06139C15.1979 7.29731 15.2268 7.54064 15.3236 7.76V7.81818C15.4158 8.03329 15.5689 8.21674 15.764 8.34596C15.9591 8.47518 16.1878 8.54452 16.4218 8.54545H16.5455C16.9312 8.54545 17.3012 8.6987 17.574 8.97148C17.8468 9.24426 18 9.61423 18 10C18 10.3858 17.8468 10.7557 17.574 11.0285C17.3012 11.3013 16.9312 11.4545 16.5455 11.4545H16.48C16.246 11.4555 16.0173 11.5248 15.8222 11.654C15.6271 11.7833 15.474 11.9667 15.3818 12.1818Z"
+                                            stroke="#585D68"
+                                            class="group-hover:stroke-new-car group-active:stroke-new-car"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span
+                                        class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Settings</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                    <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                        <ul id="dropdown-example4"
+                            class="hidden py-2 relative space-y-2 before:w-px before:h-85% before:top-8% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-2% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-2% hover:after:left-10% hover:after:h-8">API
+                                    Token</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-20% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-20% hover:after:left-10% hover:after:h-8">Deployers</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-35% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-35% hover:after:left-10% hover:after:h-8">Vendors</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-35% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-35% hover:after:left-10% hover:after:h-8">Processors</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-20% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-20% hover:after:left-10% hover:after:h-8">Invoice</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-8% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-8% hover:after:left-10% hover:after:h-8">Product</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="relative z-50 w-screen overflow-hidden min-h-screen">
+        <header class="py-4 px-8 h-16 bg-white border-b border-gray-200 sticky top-0 z-10">
+            <div class="flex items-center justify-end h-full">
+
+                <div class="flex items-center gap-16">
+                    <div class="">
+                        <img src="../Image/notification.svg" alt="">
+                    </div>
+                    <div class="flex items-center ms-3">
+                        <div>
+                            <a href="#" class="flex text-sm items-center bg-user-dropdowm bg-no-repeat bg-right"
+                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-8 h-8 rounded-full" src="../Image/user-avatra.svg" alt="user photo">
+                                <div class="px-4 py-3 text-left mr-4" role="none">
+                                    <p class="text-sm leading-4 font-semibold text-gray-900 " role="none">
+                                        Chris Butler
+                                    </p>
+                                    <p class="text-xs font-medium leading-3  text-gray-900 truncate " role="none">
+                                        Tenant
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none bg-white  rounded-lg shadow  divide-gray-600"
+                            id="dropdown-user">
+
+                            <ul class="" role="none">
+                                <li class="min-w-max group">
+                                    <a href="#" aria-label="dashboard"
+                                        class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.6673 17.5V15.8333C16.6673 14.9493 16.3161 14.1014 15.691 13.4763C15.0659 12.8512 14.218 12.5 13.334 12.5H6.66732C5.78326 12.5 4.93542 12.8512 4.31029 13.4763C3.68517 14.1014 3.33398 14.9493 3.33398 15.8333V17.5"
+                                                stroke="#585D68" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                            <path
+                                                d="M9.99935 9.16667C11.8403 9.16667 13.3327 7.67428 13.3327 5.83333C13.3327 3.99238 11.8403 2.5 9.99935 2.5C8.1584 2.5 6.66602 3.99238 6.66602 5.83333C6.66602 7.67428 8.1584 9.16667 9.99935 9.16667Z"
+                                                stroke="#585D68" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                        </svg>
+
+
+                                        <span
+                                            class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">My
+                                            Profile</span>
+                                    </a>
+                                </li>
+                                <li class="min-w-max group">
+                                    <a href="#" aria-label="dashboard"
+                                        class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.4444 9H4.55556C3.69645 9 3 9.73262 3 10.6364V16.3636C3 17.2674 3.69645 18 4.55556 18H15.4444C16.3036 18 17 17.2674 17 16.3636V10.6364C17 9.73262 16.3036 9 15.4444 9Z"
+                                                stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                            <path
+                                                d="M6 9V5.88889C6 4.85749 6.42143 3.86834 7.17157 3.13903C7.92172 2.40972 8.93913 2 10 2C11.0609 2 12.0783 2.40972 12.8284 3.13903C13.5786 3.86834 14 4.85749 14 5.88889V9"
+                                                stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                        </svg>
+
+                                        <span
+                                            class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">Change
+                                            Password</span>
+                                    </a>
+                                </li>
+                                <li class="min-w-max group">
+                                    <a href="#" aria-label="dashboard"
+                                        class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5"
+                                                stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                            <path d="M13.334 14.1654L17.5007 9.9987L13.334 5.83203" stroke="#2E333E"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="group-hover:stroke-new-car group-active:stroke-new-car" />
+                                            <path d="M17.5 10H7.5" stroke="#2E333E" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                        <span
+                                            class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <main class="relative overflow-hidden h-calc  flex  flex-col gap-4 pt-8 xl:w-1120 w-full sm:mx-auto mx-0 xl:px-0 px-8">
+            <div class="flex justify-between items-center px-4 pt-13.5">
+                <div class="flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <div class="text-lg font-medium font-inter leading-21-6 text-dark-gunmetal-80">Add Template</div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="text-white bg-blue-700  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-15">
+                        Save</a>
+                    <a href="#"
+                        class="text-dark-gunmetal-80 bg-white  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-15">
+                        Cancel</a>
+                </div>
+            </div>
+            <div class="lg:flex block gap-8 lg:overflow-hidden overflow-auto ">
+            <form class="p-8 bg-white h-auto  w-full overflow-y-auto scrollbar-none lg:mb-0 mb-8">
+                <div class="pb-4">
+                    <label for="page-ID"
+                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">page ID<span
+                            class="text-deep-carmine-pink">*</span></label>
+                    <select id="page-ID"
+                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 ">
+                        <option selected class="text-dark-gunmetal-80 text-base font-inter">Select</option>
+                        <option class="text-dark-gunmetal-80 text-base font-inter" value="US">Select1</option>
+                        <option class="text-dark-gunmetal-80 text-base font-inter" value="CA">Select2</option>
+                        <option class="text-dark-gunmetal-80 text-base font-inter" value="FR">Select3</option>
+                        <option class="text-dark-gunmetal-80 text-base font-inter" value="DE">Select4</option>
+                    </select>
+                </div>
+                <div class="pb-4">
+                    <label for="Header"
+                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Header <span
+                            class="text-deep-carmine-pink">*</span></label>
+                    <input type="text" id="Header"
+                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                        placeholder="Header" value="Header" required>
+                </div>
+                
+                <div class="pb-4">
+                    <label for="Colours"
+                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Colours <span
+                            class="text-deep-carmine-pink">*</span></label>
+                            <div class="flex gap-8 sm:flex-row flex-col">
+                                <div class="flex gap-2 items-center">
+                                <input type="color" name="colorClock" id="colorClock" value="#FFFFFF" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
+                                <label
+                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Text</label></div>
+                        <div class="flex gap-2 items-center">
+                            <input type="color" name="colorClock" id="colorClock2" value="#612DAE" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
+                            <label
+                    class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Background</label></div>
+                        </div>
+                            </div>
+                            
+                <div class="pb-4">
+                    <label for="Subject"
+                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Subject <span
+                            class="text-deep-carmine-pink">*</span></label>
+                    <input type="text" id="Subject"
+                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                        placeholder="Subject" required>
+                </div>
+                <div class="pb-4">
+                    <label for="Content"
+                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Content <span
+                            class="text-deep-carmine-pink">*</span></label>
+                            <textarea id="content" name="content" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" rows="10" required></textarea></div>
+                        <div class="pb-4">
+                                <label for="Subject"
+                                    class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Subject <span
+                                        class="text-deep-carmine-pink">*</span></label>
+                                        <div class="flex gap-8">
+                                        <div class="flex items-center gap-2">
+                                        <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 checked:!bg-none">
+                                        <label for="bordered-radio-1" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2">Left</label></div>
+                                            <div class="flex items-center gap-2">
+                                                <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 checked:!bg-none">
+                                                <label for="bordered-radio-2" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2">Right</label></div>
+                                            </div>
+                            </div>
+                            <div class="pb-4">
+                                <label for="Footer"
+                                    class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Footer <span
+                                        class="text-deep-carmine-pink">*</span></label>
+                                <input type="text" id="Footer"
+                                    class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                                    placeholder="Text" required></div>
+                                    <div class="pb-4">
+                                        <label for="Colours"
+                                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Colours <span
+                                                class="text-deep-carmine-pink">*</span></label>
+                                                <div class="flex gap-8 sm:flex-row flex-col">
+                                                    <div class="flex gap-2 items-center">
+                                                    <input type="color" name="colorClock" id="colorClock2-1" value="#FFFFFF" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
+                                                    <label
+                                            class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Text</label></div>
+                                            <div class="flex gap-2 items-center">
+                                                <input type="color" name="colorClock" id="colorClock2-2" value="#F5D6D6" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
+                                                <label
+                                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Background</label></div>
+                                            </div>
+                                                </div>
+                                                <div class="pb-4">
+                                                    <label for="Status"
+                                                        class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Status <span
+                                                            class="text-deep-carmine-pink">*</span></label>
+                                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                                                <div class="relative w-022 h-014 border border-gunmetal  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:border-new-car  after:content-[''] after:absolute after:top-03  after:start-02 after:bg-gunmetal peer-checked:after:bg-new-car after:border-gunmetal peer-checked:after:border-new-car after:border after:rounded-full after:h-06 after:w-06 after:transition-all"></div>
+                                                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Active</span>
+                                                              </label>
+                                                </div>
+            </form>
+            <div class=" h-auto  w-full overflow-y-auto scrollbar-none">
+            <div class="h-060 rounded-tl-lg rounded-tr-lg bg-grape" id="clockStyleCircle"></div>
+
+            <div class="flex sm:flex-row flex-col gap-056 py-9 px-6 bg-white h-auto  w-full overflow-y-auto scrollbar-none">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133" height="113" viewBox="0 0 133 113" fill="none">
+                        <rect width="133" height="113" fill="url(#pattern0_1606_23830)"/>
+                        <defs>
+                        <pattern id="pattern0_1606_23830" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_1606_23830" transform="matrix(0.0037594 0 0 0.00442478 0 -0.0530973)"/>
+                        </pattern>
+                        <image id="image0_1606_23830" width="266" height="238" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                        </svg>
+                        <div class="pt-3 font-inter font-semibold text-sm leading-7 text-center text-dark-gunmetal-80">Header Text</div>
+                        <div class="pt-2 font-inter text-sm text-center leading-21 text-dark-gunmetal-80">Following is a fake message written by the designer. </div>
+                </div>
+            <div>
+                <div class="font-inter font-semibold text-sm leading-7  text-dark-gunmetal-80">Content Header</div>
+                <form class="pt-6 w-232 overflow-y-auto scrollbar-none">
+                    <div class="pb-4">
+                        <label for="Name"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Name <span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="text" id="Name"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                            placeholder="Name" required>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Email"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Email <span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="email" id="Email"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                            placeholder="Email" required>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Password"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Password <span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="password" id="Password"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                            placeholder="Password" required>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Confirm-Password"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Confirm Password <span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="password" id="Confirm-Password"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6"
+                            placeholder="Confirm-Password" required>
+                    </div>
+                    <div class="">
+                        <input type="submit" value="Save" class="bg-dark-gunmetal-80 w-full text-white px-3 py-15 text-base font-inter rounded-lg ">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="h-060 rounded-bl-lg rounded-br-lg bg-pale-pink" id="clockStyleCircle2"></div>
+        </div>
+        </div>
+        </main>
+        <footer></footer>
+    </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+    <script>ClassicEditor
+        .create(document.querySelector('#content'))
+        .catch(error => {
+          console.error(error);
+        });</script>
+    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+</body>
+
+</html>
