@@ -1,13 +1,71 @@
+// Handle theme toggling based on local storage and media query
+if (localStorage.getItem('color-theme') === 'dark' || 
+    (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+} else {
+    document.documentElement.classList.remove('dark');
+}
+
+// Select theme toggle icons and button
+var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+var themeToggleBtn = document.getElementById("theme-toggle");
+
+// Change icons based on current theme
+if (localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    themeToggleLightIcon.classList.remove("hidden");
+} else {
+    themeToggleDarkIcon.classList.remove("hidden");
+}
+
+// Add event listener for theme toggle button
+themeToggleBtn.addEventListener("click", function () {
+    themeToggleDarkIcon.classList.toggle("hidden");
+    themeToggleLightIcon.classList.toggle("hidden");
+
+    // Toggle theme and save to local storage
+    if (localStorage.getItem("color-theme")) {
+        if (localStorage.getItem("color-theme") === "light") {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+        }
+    } else {
+        if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+        } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+        }
+    }
+
+    updateSidebarTheme(); // Call function to update sidebar theme
+});
+
+// Select sidebar and related elements
 const siderbarButton = document.querySelector(".siderbar-button");
 const sidebar = document.querySelector('.sidebar');
 const logo = document.querySelector(".logo");
 const logohead = document.querySelector(".logo-header");
 const menuitems = document.querySelectorAll(".menu");
 
+// Function to update sidebar theme based on current theme
+function updateSidebarTheme() {
+    const isDarkTheme = document.documentElement.classList.contains('dark');
+    sidebar.style.backgroundColor = isDarkTheme ? '#242933' : '#FFFFFF';
+}
+
+// Initialize sidebar theme
+updateSidebarTheme();
+
+// Add event listener for sidebar toggle button
 siderbarButton.addEventListener('click', () => {
     if (sidebar.style.maxWidth === '256px') {
         sidebar.style.maxWidth = '';
-        sidebar.style.backgroundColor = '';
         sidebar.style.boxShadow = '';
         sidebar.style.transition = 'all .4s ease-in-out';
         logo.style.display = 'none';
@@ -16,7 +74,6 @@ siderbarButton.addEventListener('click', () => {
         });
     } else {
         sidebar.style.maxWidth = '256px';
-        sidebar.style.backgroundColor = 'white';
         sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
         sidebar.style.transition = 'all .4s ease-in-out';
         logo.style.display = 'flex';
@@ -26,6 +83,10 @@ siderbarButton.addEventListener('click', () => {
         logohead.style.justifyContent = "space-between";
     }
 });
+
+// Ensure initial sidebar theme is set correctly
+updateSidebarTheme();
+
 
 
 const selectedElm = document.getElementById('selected');
@@ -401,16 +462,30 @@ function myFunction() {
     }
 });
 
-document.getElementById('openPopup').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'flex';
-});
+function addEventListeners() {
+    const openPopupButton = document.getElementById('openPopup');
+    if (openPopupButton) {
+        openPopupButton.addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'flex';
+        });
+    } 
 
-document.getElementById('cancelButton').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-});
+    const cancelButton = document.getElementById('cancelButton');
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+    } 
 
-document.getElementById('deleteButton').addEventListener('click', function() {
-    // Add your delete functionality here
-    alert('Entries deleted!');
-    document.getElementById('popup').style.display = 'none';
-});
+    const deleteButton = document.getElementById('deleteButton');
+    if (deleteButton) {
+        deleteButton.addEventListener('click', function() {
+            // Add your delete functionality here
+            alert('Entries deleted!');
+            document.getElementById('popup').style.display = 'none';
+        });
+    } 
+}
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', addEventListeners);
