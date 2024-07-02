@@ -4,6 +4,7 @@ module.exports = {
     './src/**/*.{html,js}',
     './node_modules/flowbite/**/*.js'
   ],
+  darkMode:"class",
   theme: {
     screens: {
       'sm': '640px',
@@ -41,6 +42,7 @@ module.exports = {
         "156":"156px",
         "184.67":"184.67px",
         "232":'232px',
+        "480":'480px',
         "544":'544px',
         "683":'683px',
         "736":'736px',
@@ -81,6 +83,7 @@ module.exports = {
         "26":'26px',
         "27":'27px',
         "030":'30px',
+        "57":'57px',
         "61":'61px',
         "9%":'9%',
         "100%":'100%',
@@ -88,6 +91,8 @@ module.exports = {
       colors:{
         "anti-flash-white":'#f2f4f8',
         "new-car-8":'#1757d914',
+        "chinese-black":"#121212",
+        "charleston-green":"#242933",
         "new-car":'#1757D9',
         "dark-gunmetal-60":'#1c212b99',
         "AuroMetalSaurus-32":'#70758052',
@@ -98,11 +103,22 @@ module.exports = {
         "gunmetal":'#2E333E',
         "deep-carmine-pink-08":'#e9393914',
         "Lavender":"#E5EAF5",
+        "Lavender-60":"#e5eaf599",
         "grape":'#612DAE',
-        "pale-pink":'#F5D6D6'
+        "pale-pink":'#F5D6D6',
+        "silver-sand":"#B6BBC6",
+        "alice-blue":"#f4f6fbde",
+        "pale-cerulean":"#A5BAE3",
+        "black-coral":"#585D68",
+        "metallic-silver":"#9FA4AF",
+        "yellow-green-20":"#22c21533",
+        "aquamarine":"#78FCC5"
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
+        "user-dropdown-dark":"url('../Image/user-dropdown-dark.svg')",
+        "logo-in-light":"url('../Image/logo-light.svg')",
+        "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
       },
       inset:{
@@ -115,23 +131,33 @@ module.exports = {
         "10%":'10%',
         "12%":'12%',
         "14%":'14%',
+        "16%":'16%',
+        "17%":'17%',
         "18%":'18%',
         "20%":'20%',
         "28%":'28%',
+        "29%":'29%',
         "30%":'30%',
         "35%":'35%',
         "36%":'36%',
         "40%":'40%',
         "43%":'43%',
         "46%":'46%',
+        "49%":'49%',
       },
       gap:{
         "056":"56px",
       },
     },
   },
+  variants: {
+    extend: {
+      colors: ['dark', 'dark-hover', 'dark-group-hover'],
+    },
+  },
   plugins: [
     require('flowbite/plugin'),
     require('tailwind-scrollbar'),
+    
   ],
 }

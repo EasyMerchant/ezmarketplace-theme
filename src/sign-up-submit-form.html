@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite with Tailwind CSS</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-anti-flash-white  dark:bg-chinese-black">
+    <div class="p-2.5">
+    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400  rounded-lg text-sm p-2.5 relative">
+        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 fixed" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 fixed" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+</div>
+    <div class="sm:w-544 sm:mx-auto px-15 2xl:py-48 py-9%">
+        <div class="py-15 px-018 flex gap-6 bg-deep-carmine-pink-08 rounded-lg mb-8 hidden">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" fill="#E93939"/>
+                <path d="M10 6.66797V10.0013" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 13.332H10.0083" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+<span class="font-inter text-base leading-25-6 text-dark-gunmetal-80">Something went wrong.</span>                    
+        </div>
+        <div class="p-8 bg-white flex gap-4 justify-center flex-col items-center dark:bg-charleston-green">
+            <div class="bg-yellow-green-20 w-40 h-40 rounded-full py-16 px-57"><svg width="53" height="40" viewBox="0 0 53 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M49 4L18.0625 36L4 21.4545" stroke="#22C215" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-aquamarine"/>
+                </svg>
+                </div>
+                <form class="sm:w-480    w-full mt-4">
+<div class="text-center font-inter text-base leading-25-6 text-black pb-2 font-medium dark:text-Lavender">Account Successfully Created!</div>
+<div class="text-center font-inter text-sm leading-19-6 text-black pb-16 dark:text-Lavender-60">A verification email has been sent to your email. To access your account please verify your email.</div>
+                        <div class="pb-4">
+                            <input type="submit" value="Log in" class="w-full font-inter text-sm text-center text-white font-medium bg-new-car py-21 rounded-lg dark:bg-pale-cerulean dark:text-dark-gunmetal">
+                        </div>
+                </form>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+    </body>
+</html>
