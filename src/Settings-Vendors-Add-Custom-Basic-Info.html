@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-anti-flash-white  dark:bg-chinese-black">
+<body class="bg-anti-flash-white  dark:bg-chinese-black ">
     <div class="flex min-h-screen overflow-hidden">
-        <div class="sidebar h-screen max-w-84 w-full  bg-white sticky top-0 z-2">
+        <div class="sidebar h-screen max-w-84 w-full  bg-white fixed z-99">
             <div class="flex min-h-screen flex-col justify-between w-full">
-                <div class="h-screen overflow-y-auto overflow-x-hidden scrollbar-none">
+                <div class="h-screen overflow-hidden scrollbar-none">
                     <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header">
                         <div class="logo hidden items-center gap-2 ">
                             <img src="../Image/Main-logo.svg" alt="">
@@ -27,7 +27,7 @@
                             <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></div>
                     </div>
-                    <ul class="space-y-2 tracking-wide px-4 ">
+                    <ul class="space-y-2 tracking-wide px-4 overflow-y-auto h-screen scrollbar-none">
                         <li class="min-w-max group">
                             <a href="./index.html" aria-label="dashboard"
                             class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
@@ -71,7 +71,7 @@
                                 </svg>
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Charts</span>
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Charts</span>
                             </a>
                         </li>
                         <li class="min-w-max group">
@@ -90,10 +90,10 @@
                                 </svg>
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Merchants</span>
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Merchants</span>
                             </a>
                         </li>
-                        <li class="min-w-max group">
+                        <li class="min-w-max group toggle-sidebar">
                             <a href="#"
                                 class="block w-full tems-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
                                 aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
@@ -115,7 +115,7 @@
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <span
-                                            class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Products</span>
+                                            class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Products</span>
                                     </div>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" class="menu hidden">
@@ -161,7 +161,7 @@
                                 </svg>
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Media
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Media
                                     Library</span>
                             </a>
                         </li>
@@ -182,7 +182,7 @@
                                 </svg>
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Quotes</span>
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Quotes</span>
                             </a>
                         </li>
                         <li class="min-w-max group">
@@ -209,7 +209,7 @@
 
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Invoices</span>
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Invoices</span>
                             </a>
                         </li>
                         <li class="min-w-max group">
@@ -228,7 +228,7 @@
 
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Purchase
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Purchase
                                     Order</span>
                             </a>
                         </li>
@@ -255,7 +255,7 @@
 
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Sales
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Sales
                                     Order</span>
                             </a>
                         </li>
@@ -272,7 +272,7 @@
 
 
                                 <span
-                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Roles
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Roles
                                     & Permission</span>
                             </a>
                         </li>
@@ -348,7 +348,7 @@
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <span
-                                            class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Manage
+                                            class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Manage
                                             Content</span>
                                     </div>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -484,14 +484,14 @@
             </div>
         </div>
         <div class="relative z-50 w-screen overflow-hidden min-h-screen">
-            <header class="py-4 px-8 w-full h-16 bg-white border-b border-gray-200 dark:bg-charleston-green dark:border-0">
+            <header class="py-4 px-8 w-full h-16 bg-white border-b border-gray-200 dark:bg-charleston-green dark:border-0 fixed z-10">
                 <div class="flex items-center justify-end h-full">
     
                     <div class="flex items-center gap-16">
                         <div class="">
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="" class="sr-only peer">
-                                <div class="relative w-022 h-014 border border-gunmetal  dark:border-silver-sand rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-03  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand"></div>
+                                <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand"></div>
                                 <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Live</span>
                               </label>
                         </div>
@@ -505,7 +505,7 @@
                                         <p class="text-sm leading-4 font-semibold text-gray-900 dark:text-Lavender" role="none">
                                             Chris Butler
                                         </p>
-                                        <p class="text-xs font-medium leading-3  text-gray-900 truncate dark:text-metallic-silver" role="none">
+                                        <p class="text-xs font-medium leading-3  text-dark-gunmetal-60 truncate dark:text-metallic-silver" role="none">
                                             Tenant
                                         </p>
                                     </div>
@@ -602,10 +602,10 @@
                     </div>
                     <div class="flex items-center gap-4">
                         <a href="#"
-                            class="text-white bg-blue-700  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-15 dark:text-dark-gunmetal dark:bg-pale-cerulean">
+                            class="text-white bg-blue-700  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:text-dark-gunmetal dark:bg-pale-cerulean">
                             Save</a>
                         <a href="#"
-                            class="text-dark-gunmetal-80 bg-white  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-15 dark:border-black-coral dark:text-Lavender dark:bg-transparent  dark:border">
+                            class="text-dark-gunmetal-80 bg-white  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:border-black-coral dark:text-Lavender dark:bg-transparent  dark:border">
                             Cancel</a>
                     </div>
                 </div>
@@ -624,7 +624,7 @@
                                 class="flex items-center w-full p-2 !pl-26  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg   sm:active:after:absolute active:after:bg-new-car sm:active:after:w-02 dark:active:after:bg-Lavender dark:hover:after:bg-Lavender  dark:text-metallic-silver dark:active:text-Lavender dark:hover:text-Lavender sm:active:after:bottom-0 sm:active:after:left-0 sm:active:after:h-8  hover:text-dark-gunmetal-80 sm:hover:after:absolute sm:hover:after:bg-new-car sm:hover:after:w-02 sm:hover:after:bottom-0 sm:hover:after:left-0 sm:hover:after:h-8 active:after:w-8 active:after:absolute active:after:bottom-0 active:after:bg-new-car active:after:h-px hover:after:w-8 hover:after:absolute hover:after:bottom-0 hover:after:bg-new-car hover:after:h-px">Contact Info.</a>
                         </li>
                     </ul>
-                    <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green">
+                    <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green rounded-lg">
     
                     <div class="pb-4">
                         <label for="name"

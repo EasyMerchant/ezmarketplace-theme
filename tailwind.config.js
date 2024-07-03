@@ -72,6 +72,9 @@ module.exports = {
         "21":"21px",
         "25-6":"25.6px"
       },
+      margin:{
+        '172':"172px",
+      },
       padding:{
         "010":'10px',
         "13":'13px',
@@ -114,7 +117,8 @@ module.exports = {
         "yellow-green-20":"#22c21533",
         "aquamarine":"#78FCC5",
         "baker-miller-pink":"#FF9EB0",
-        "outer-space":"#434853"
+        "outer-space":"#434853",
+        "baker-miller-pink-08":"#ff9eb014"
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
@@ -152,6 +156,10 @@ module.exports = {
       },
       borderWidth:{
         "02":"2px",
+      },
+      zIndex:{
+        '99':'99',
+        '111':'1111'
       },
     },
   },

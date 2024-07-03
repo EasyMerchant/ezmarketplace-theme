@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var themeToggleBtn = document.getElementById("theme-toggle");
 
     // Log the elements to check if they are found
-    console.log(themeToggleDarkIcon);
-    console.log(themeToggleLightIcon);
-    console.log(themeToggleBtn);
 
     if (!themeToggleDarkIcon || !themeToggleLightIcon || !themeToggleBtn) {
         console.error('One or more theme toggle elements not found');
@@ -65,11 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuitems = document.querySelectorAll(".menu");
 
     // Log the elements to check if they are found
-    console.log(siderbarButton);
-    console.log(sidebar);
-    console.log(logo);
-    console.log(logohead);
-    console.log(menuitems);
 
     if (!siderbarButton || !sidebar || !logo || !logohead || menuitems.length === 0) {
         console.error('One or more sidebar elements not found');
@@ -95,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menuitems.forEach(item => {
                 item.style.display = 'none';
             });
+            logohead.style.justifyContent = "center";
         } else {
             sidebar.style.maxWidth = '256px';
             sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';

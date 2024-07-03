@@ -1199,12 +1199,20 @@ input:checked + .toggle-bg {
   top: 0px;
 }
 
+.top-16 {
+  top: 4rem;
+}
+
 .top-43\% {
   top: 43%;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-111 {
+  z-index: 1111;
 }
 
 .z-20 {
@@ -1221,6 +1229,10 @@ input:checked + .toggle-bg {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-99 {
+  z-index: 99;
 }
 
 .\!m-0 {
@@ -2207,11 +2219,6 @@ input:checked + .toggle-bg {
   padding-bottom: 13px;
 }
 
-.py-13\.5 {
-  padding-top: 13.5px;
-  padding-bottom: 13.5px;
-}
-
 .py-15 {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2767,6 +2774,14 @@ input:checked + .toggle-bg {
   line-height: 19.6px;
 }
 
+.placeholder\:text-dark-gunmetal-80::-moz-placeholder {
+  color: #1c212bde;
+}
+
+.placeholder\:text-dark-gunmetal-80::placeholder {
+  color: #1c212bde;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -2902,6 +2917,11 @@ input:checked + .toggle-bg {
   inset-inline-start: 2px;
 }
 
+.after\:top-02::after {
+  content: var(--tw-content);
+  top: 2px;
+}
+
 .after\:top-03::after {
   content: var(--tw-content);
   top: 3px;
@@ -3030,10 +3050,6 @@ input:checked + .toggle-bg {
   border-width: 1px;
 }
 
-.checked\:border-\[2px\]:checked {
-  border-width: 2px;
-}
-
 .checked\:border-new-car:checked {
   --tw-border-opacity: 1;
   border-color: rgb(23 87 217 / var(--tw-border-opacity));
@@ -3049,11 +3065,6 @@ input:checked + .toggle-bg {
 
 .checked\:content-\[url\(data\:image\/svg\+xml\;base64\2c PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI\+CjxwYXRoIGQ9Ik0zLjQwNDI1IDhMMCA0LjU5NTc1TDEuMTkxNDkgMy40MDQyNkwzLjQwNDI1IDUuNjE3MDJMOS4wMjEyOCAwTDEwLjIxMjggMS4xOTE0OUwzLjQwNDI1IDhaIiBmaWxsPSIjMTc1N0Q5Ii8\+Cjwvc3ZnPgo\=\)\]:checked {
   --tw-content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjQwNDI1IDhMMCA0LjU5NTc1TDEuMTkxNDkgMy40MDQyNkwzLjQwNDI1IDUuNjE3MDJMOS4wMjEyOCAwTDEwLjIxMjggMS4xOTE0OUwzLjQwNDI1IDhaIiBmaWxsPSIjMTc1N0Q5Ii8+Cjwvc3ZnPgo=);
-  content: var(--tw-content);
-}
-
-.checked\:content-\[url\(data\:image\/svg\+xml\;base64\2c PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI\+CjxwYXRoIGQ9Ik0zLjkwNDI1IDhMMC41IDQuNTk1NzVMMS42OTE0OSAzLjQwNDI2TDMuOTA0MjUgNS42MTcwMkw5LjUyMTI4IDBMMTAuNzEyOCAxLjE5MTQ5TDMuOTA0MjUgOFoiIGZpbGw9IiMxNzU3RDkiLz4KPC9zdmc\+Cg\=\=\)\]:checked {
-  --tw-content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjkwNDI1IDhMMC41IDQuNTk1NzVMMS42OTE0OSAzLjQwNDI2TDMuOTA0MjUgNS42MTcwMkw5LjUyMTI4IDBMMTAuNzEyOCAxLjE5MTQ5TDMuOTA0MjUgOFoiIGZpbGw9IiMxNzU3RDkiLz4KPC9zdmc+Cg==);
   content: var(--tw-content);
 }
 
@@ -3540,6 +3551,10 @@ input:checked + .toggle-bg {
   background-color: rgb(229 234 245 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-baker-miller-pink-08:is(.dark *) {
+  background-color: #ff9eb014;
+}
+
 .dark\:bg-blue-600:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(28 100 242 / var(--tw-bg-opacity));
@@ -3595,6 +3610,10 @@ input:checked + .toggle-bg {
   background-image: url('../Image/user-dropdown-dark.svg');
 }
 
+.dark\:fill-baker-miller-pink:is(.dark *) {
+  fill: #FF9EB0;
+}
+
 .dark\:fill-gunmetal:is(.dark *) {
   fill: #2E333E;
 }
@@ -3623,6 +3642,10 @@ input:checked + .toggle-bg {
   stroke: #1c212b;
 }
 
+.dark\:stroke-deep-carmine-pink:is(.dark *) {
+  stroke: #e93939;
+}
+
 .dark\:stroke-pale-cerulean:is(.dark *) {
   stroke: #A5BAE3;
 }
@@ -3642,6 +3665,11 @@ input:checked + .toggle-bg {
 
 .dark\:text-alice-blue:is(.dark *) {
   color: #f4f6fbde;
+}
+
+.dark\:text-baker-miller-pink:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 158 176 / var(--tw-text-opacity));
 }
 
 .dark\:text-blue-500:is(.dark *) {
@@ -3687,11 +3715,6 @@ input:checked + .toggle-bg {
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.dark\:text-baker-miller-pink:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 158 176 / var(--tw-text-opacity));
 }
 
 .dark\:ring-offset-gray-800:is(.dark *) {
@@ -3849,6 +3872,10 @@ input:checked + .toggle-bg {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sm\:mb-172 {
+    margin-bottom: 172px;
   }
 
   .sm\:h-fit {
