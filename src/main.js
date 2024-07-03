@@ -1,91 +1,108 @@
-// Handle theme toggling based on local storage and media query
-if (localStorage.getItem('color-theme') === 'dark' || 
-    (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-} else {
-    document.documentElement.classList.remove('dark');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    // Select theme toggle icons and button
+    var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+    var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+    var themeToggleBtn = document.getElementById("theme-toggle");
 
-// Select theme toggle icons and button
-var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-var themeToggleBtn = document.getElementById("theme-toggle");
+    // Log the elements to check if they are found
 
-// Change icons based on current theme
-if (localStorage.getItem("color-theme") === "dark" ||
-    (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-    themeToggleLightIcon.classList.remove("hidden");
-} else {
-    themeToggleDarkIcon.classList.remove("hidden");
-}
-
-// Add event listener for theme toggle button
-themeToggleBtn.addEventListener("click", function () {
-    themeToggleDarkIcon.classList.toggle("hidden");
-    themeToggleLightIcon.classList.toggle("hidden");
-
-    // Toggle theme and save to local storage
-    if (localStorage.getItem("color-theme")) {
-        if (localStorage.getItem("color-theme") === "light") {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("color-theme", "dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("color-theme", "light");
-        }
-    } else {
-        if (document.documentElement.classList.contains("dark")) {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("color-theme", "light");
-        } else {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("color-theme", "dark");
-        }
+    if (!themeToggleDarkIcon || !themeToggleLightIcon || !themeToggleBtn) {
+        console.error('One or more theme toggle elements not found');
+        return; // Exit the function if elements are not found
     }
 
-    updateSidebarTheme(); // Call function to update sidebar theme
-});
-
-// Select sidebar and related elements
-const siderbarButton = document.querySelector(".siderbar-button");
-const sidebar = document.querySelector('.sidebar');
-const logo = document.querySelector(".logo");
-const logohead = document.querySelector(".logo-header");
-const menuitems = document.querySelectorAll(".menu");
-
-// Function to update sidebar theme based on current theme
-function updateSidebarTheme() {
-    const isDarkTheme = document.documentElement.classList.contains('dark');
-    sidebar.style.backgroundColor = isDarkTheme ? '#242933' : '#FFFFFF';
-}
-
-// Initialize sidebar theme
-updateSidebarTheme();
-
-// Add event listener for sidebar toggle button
-siderbarButton.addEventListener('click', () => {
-    if (sidebar.style.maxWidth === '256px') {
-        sidebar.style.maxWidth = '';
-        sidebar.style.boxShadow = '';
-        sidebar.style.transition = 'all .4s ease-in-out';
-        logo.style.display = 'none';
-        menuitems.forEach(item => {
-            item.style.display = 'none';
-        });
+    // Handle theme toggling based on local storage and media query
+    if (localStorage.getItem('color-theme') === 'dark' || 
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
     } else {
-        sidebar.style.maxWidth = '256px';
-        sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
-        sidebar.style.transition = 'all .4s ease-in-out';
-        logo.style.display = 'flex';
-        menuitems.forEach(item => {
-            item.style.display = 'block';
-        });
-        logohead.style.justifyContent = "space-between";
+        document.documentElement.classList.remove('dark');
     }
-});
 
-// Ensure initial sidebar theme is set correctly
-updateSidebarTheme();
+    // Change icons based on current theme
+    if (localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        themeToggleLightIcon.classList.remove("hidden");
+    } else {
+        themeToggleDarkIcon.classList.remove("hidden");
+    }
+
+    // Add event listener for theme toggle button
+    themeToggleBtn.addEventListener("click", function () {
+        themeToggleDarkIcon.classList.toggle("hidden");
+        themeToggleLightIcon.classList.toggle("hidden");
+
+        // Toggle theme and save to local storage
+        if (localStorage.getItem("color-theme")) {
+            if (localStorage.getItem("color-theme") === "light") {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("color-theme", "dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("color-theme", "light");
+            }
+        } else {
+            if (document.documentElement.classList.contains("dark")) {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("color-theme", "light");
+            } else {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("color-theme", "dark");
+            }
+        }
+
+        updateSidebarTheme(); // Call function to update sidebar theme
+    });
+
+    // Select sidebar and related elements
+    const siderbarButton = document.querySelector(".siderbar-button");
+    const sidebar = document.querySelector('.sidebar');
+    const logo = document.querySelector(".logo");
+    const logohead = document.querySelector(".logo-header");
+    const menuitems = document.querySelectorAll(".menu");
+
+    // Log the elements to check if they are found
+
+    if (!siderbarButton || !sidebar || !logo || !logohead || menuitems.length === 0) {
+        console.error('One or more sidebar elements not found');
+        return; // Exit the function if elements are not found
+    }
+
+    // Function to update sidebar theme based on current theme
+    function updateSidebarTheme() {
+        const isDarkTheme = document.documentElement.classList.contains('dark');
+        sidebar.style.backgroundColor = isDarkTheme ? '#242933' : '#FFFFFF';
+    }
+
+    // Initialize sidebar theme
+    updateSidebarTheme();
+
+    // Add event listener for sidebar toggle button
+    siderbarButton.addEventListener('click', () => {
+        if (sidebar.style.maxWidth === '256px') {
+            sidebar.style.maxWidth = '';
+            sidebar.style.boxShadow = '';
+            sidebar.style.transition = 'all .4s ease-in-out';
+            logo.style.display = 'none';
+            menuitems.forEach(item => {
+                item.style.display = 'none';
+            });
+            logohead.style.justifyContent = "center";
+        } else {
+            sidebar.style.maxWidth = '256px';
+            sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
+            sidebar.style.transition = 'all .4s ease-in-out';
+            logo.style.display = 'flex';
+            menuitems.forEach(item => {
+                item.style.display = 'block';
+            });
+            logohead.style.justifyContent = "space-between";
+        }
+    });
+
+    // Ensure initial sidebar theme is set correctly
+    updateSidebarTheme();
+});
 
 
 
@@ -183,11 +200,11 @@ function toggleSelection(imageElement) {
                     <img src="${selectedImageSrc}" alt="Selected Image">
                     <div class="absolute -top-5 -right-3 remove-image">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="32" height="32" rx="16" fill="white"/>
-                            <path d="M10 12H11.3333H22" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20.6654 11.9987V21.332C20.6654 21.6857 20.5249 22.0248 20.2748 22.2748C20.0248 22.5249 19.6857 22.6654 19.332 22.6654H12.6654C12.3117 22.6654 11.9726 22.5249 11.7226 22.2748C11.4725 22.0248 11.332 21.6857 11.332 21.332V11.9987M13.332 11.9987V10.6654C13.332 10.3117 13.4725 9.9726 13.7226 9.72256C13.9726 9.47251 14.3117 9.33203 14.6654 9.33203H17.332C17.6857 9.33203 18.0248 9.47251 18.2748 9.72256C18.5249 9.9726 18.6654 10.3117 18.6654 10.6654V11.9987" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.668 15.332V19.332" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17.332 15.332V19.332" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect width="32" height="32" rx="16" fill="white" class="dark:fill-outer-space"/>
+                            <path d="M10 12H11.3333H22" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-baker-miller-pink"/>
+                            <path d="M20.6654 11.9987V21.332C20.6654 21.6857 20.5249 22.0248 20.2748 22.2748C20.0248 22.5249 19.6857 22.6654 19.332 22.6654H12.6654C12.3117 22.6654 11.9726 22.5249 11.7226 22.2748C11.4725 22.0248 11.332 21.6857 11.332 21.332V11.9987M13.332 11.9987V10.6654C13.332 10.3117 13.4725 9.9726 13.7226 9.72256C13.9726 9.47251 14.3117 9.33203 14.6654 9.33203H17.332C17.6857 9.33203 18.0248 9.47251 18.2748 9.72256C18.5249 9.9726 18.6654 10.3117 18.6654 10.6654V11.9987" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-baker-miller-pink"/>
+                            <path d="M14.668 15.332V19.332" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-baker-miller-pink"/>
+                            <path d="M17.332 15.332V19.332" stroke="#E93939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-baker-miller-pink"/>
                         </svg>
                     </div>
                 </div>
@@ -270,7 +287,7 @@ function ImgUpload() {
 
                         var reader = new FileReader();
                         reader.onload = function (e) {
-                            var html = "<div class='w-20 h-20'><div style='background-image: url(" + e.target.result + ")' data-number='" + document.querySelectorAll(".upload__img-close").length + "' data-file='" + f.name + "' class='bg-no-repeat bg-center bg-cover relative pb-100%'><div class='absolute -top-5 -right-3 remove-image'><svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='32' height='32' rx='16' fill='white'/><path d='M10 12H11.3333H22' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M20.6654 11.9987V21.332C20.6654 21.6857 20.5249 22.0248 20.2748 22.2748C20.0248 22.5249 19.6857 22.6654 19.332 22.6654H12.6654C12.3117 22.6654 11.9726 22.5249 11.7226 22.2748C11.4725 22.0248 11.332 21.6857 11.332 21.332V11.9987M13.332 11.9987V10.6654C13.332 10.3117 13.4725 9.9726 13.7226 9.72256C13.9726 9.47251 14.3117 9.33203 14.6654 9.33203H17.332C17.6857 9.33203 18.0248 9.47251 18.2748 9.72256C18.5249 9.9726 18.6654 10.3117 18.6654 10.6654V11.9987' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M14.668 15.332V19.332' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M17.332 15.332V19.332' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div></div></div>";
+                            var html = "<div class='w-20 h-20'><div style='background-image: url(" + e.target.result + ")' data-number='" + document.querySelectorAll(".upload__img-close").length + "' data-file='" + f.name + "' class='bg-no-repeat bg-center bg-cover relative pb-100%'><div class='absolute -top-5 -right-3 remove-image'><svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='32' height='32' rx='16' fill='white' class='dark:fill-outer-space'/><path d='M10 12H11.3333H22' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='dark:stroke-baker-miller-pink'/><path d='M20.6654 11.9987V21.332C20.6654 21.6857 20.5249 22.0248 20.2748 22.2748C20.0248 22.5249 19.6857 22.6654 19.332 22.6654H12.6654C12.3117 22.6654 11.9726 22.5249 11.7226 22.2748C11.4725 22.0248 11.332 21.6857 11.332 21.332V11.9987M13.332 11.9987V10.6654C13.332 10.3117 13.4725 9.9726 13.7226 9.72256C13.9726 9.47251 14.3117 9.33203 14.6654 9.33203H17.332C17.6857 9.33203 18.0248 9.47251 18.2748 9.72256C18.5249 9.9726 18.6654 10.3117 18.6654 10.6654V11.9987' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='dark:stroke-baker-miller-pink'/><path d='M14.668 15.332V19.332' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='dark:stroke-baker-miller-pink'/><path d='M17.332 15.332V19.332' stroke='#E93939' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='dark:stroke-baker-miller-pink'/></svg></div></div></div>";
                             imgWrap.insertAdjacentHTML('beforeend', html);
                             iterator++;
                         }
