@@ -1070,6 +1070,11 @@ input:checked + .toggle-bg {
   color: rgb(23 87 217 / var(--tw-text-opacity)) !important;
 }
 
+.file:is(.dark *)::-webkit-file-upload-button {
+  --tw-text-opacity: 1 !important;
+  color: rgb(165 186 227 / var(--tw-text-opacity)) !important;
+}
+
 ::-webkit-color-swatch-wrapper {
   border-radius: 0.5rem !important;
   border-width: 1px !important;
@@ -1462,10 +1467,6 @@ input:checked + .toggle-bg {
   width: 150px;
 }
 
-.w-154 {
-  width: 154px;
-}
-
 .w-156 {
   width: 156px;
 }
@@ -1558,6 +1559,10 @@ input:checked + .toggle-bg {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.max-w-0 {
+  max-width: 0px;
 }
 
 .max-w-2xl {
@@ -1882,6 +1887,10 @@ input:checked + .toggle-bg {
 
 .border-0 {
   border-width: 0px;
+}
+
+.border-02 {
+  border-width: 2px;
 }
 
 .border-2 {
@@ -3526,6 +3535,11 @@ input:checked + .toggle-bg {
   border-color: transparent;
 }
 
+.dark\:bg-Lavender:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 234 245 / var(--tw-bg-opacity));
+}
+
 .dark\:bg-blue-600:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(28 100 242 / var(--tw-bg-opacity));
@@ -3581,8 +3595,24 @@ input:checked + .toggle-bg {
   background-image: url('../Image/user-dropdown-dark.svg');
 }
 
+.dark\:fill-gunmetal:is(.dark *) {
+  fill: #2E333E;
+}
+
+.dark\:fill-outer-space:is(.dark *) {
+  fill: #434853;
+}
+
+.dark\:stroke-Lavender:is(.dark *) {
+  stroke: #E5EAF5;
+}
+
 .dark\:stroke-aquamarine:is(.dark *) {
   stroke: #78FCC5;
+}
+
+.dark\:stroke-baker-miller-pink:is(.dark *) {
+  stroke: #FF9EB0;
 }
 
 .dark\:stroke-black-coral:is(.dark *) {
@@ -3591,6 +3621,10 @@ input:checked + .toggle-bg {
 
 .dark\:stroke-dark-gunmetal:is(.dark *) {
   stroke: #1c212b;
+}
+
+.dark\:stroke-pale-cerulean:is(.dark *) {
+  stroke: #A5BAE3;
 }
 
 .dark\:stroke-silver-sand:is(.dark *) {
@@ -3655,6 +3689,11 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.dark\:text-baker-miller-pink:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 158 176 / var(--tw-text-opacity));
+}
+
 .dark\:ring-offset-gray-800:is(.dark *) {
   --tw-ring-offset-color: #1F2937;
 }
@@ -3687,10 +3726,34 @@ input:checked + .toggle-bg {
   background-color: rgb(229 234 245 / var(--tw-bg-opacity)) !important;
 }
 
+.dark\:after\:bg-Lavender:is(.dark *)::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 234 245 / var(--tw-bg-opacity));
+}
+
 .dark\:after\:bg-silver-sand:is(.dark *)::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(182 187 198 / var(--tw-bg-opacity));
+}
+
+.dark\:checked\:border-02:checked:is(.dark *) {
+  border-width: 2px;
+}
+
+.dark\:checked\:border-pale-cerulean:checked:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(165 186 227 / var(--tw-border-opacity));
+}
+
+.dark\:checked\:bg-transparent:checked:is(.dark *) {
+  background-color: transparent;
+}
+
+.dark\:checked\:content-\[url\(data\:image\/svg\+xml\;base64\2c PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI\+CjxwYXRoIGQ9Ik0zLjQwNDI1IDhMMCA0LjU5NTc1TDEuMTkxNDkgMy40MDQyNkwzLjQwNDI1IDUuNjE3MDJMOS4wMjEyOCAwTDEwLjIxMjggMS4xOTE0OUwzLjQwNDI1IDhaIiBmaWxsPSIjQTVCQUUzIi8\+Cjwvc3ZnPgo\=\)\]:checked:is(.dark *) {
+  --tw-content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjQwNDI1IDhMMCA0LjU5NTc1TDEuMTkxNDkgMy40MDQyNkwzLjQwNDI1IDUuNjE3MDJMOS4wMjEyOCAwTDEwLjIxMjggMS4xOTE0OUwzLjQwNDI1IDhaIiBmaWxsPSIjQTVCQUUzIi8+Cjwvc3ZnPgo=);
+  content: var(--tw-content);
 }
 
 .group:hover .dark\:group-hover\:bg-pale-cerulean:is(.dark *) {
@@ -3802,10 +3865,6 @@ input:checked + .toggle-bg {
     width: 232px;
   }
 
-  .sm\:w-40 {
-    width: 10rem;
-  }
-
   .sm\:w-480 {
     width: 480px;
   }
@@ -3826,6 +3885,10 @@ input:checked + .toggle-bg {
     max-width: 10rem;
   }
 
+  .sm\:max-w-544 {
+    max-width: 544px;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -3840,6 +3903,11 @@ input:checked + .toggle-bg {
 
   .sm\:gap-8 {
     gap: 2rem;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .sm\:px-8 {

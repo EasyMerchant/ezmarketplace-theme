@@ -289,18 +289,107 @@
                             class="flex items-center w-full p-2 !pl-26  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg   sm:active:after:absolute active:after:bg-new-car sm:active:after:w-02 dark:active:after:bg-Lavender dark:hover:after:bg-Lavender  dark:text-metallic-silver dark:active:text-Lavender dark:hover:text-Lavender sm:active:after:bottom-0 sm:active:after:left-0 sm:active:after:h-8  hover:text-dark-gunmetal-80 sm:hover:after:absolute sm:hover:after:bg-new-car sm:hover:after:w-02 sm:hover:after:bottom-0 sm:hover:after:left-0 sm:hover:after:h-8 active:after:w-8 active:after:absolute active:after:bottom-0 active:after:bg-new-car active:after:h-px hover:after:w-8 hover:after:absolute hover:after:bottom-0 hover:after:bg-new-car hover:after:h-px">Document Upload</a>
                     </li>
                 </ul>
-                <div class="p-8 bg-white h-fit  sm:w-544 w-full overflow-hidden scrollbar-none dark:bg-charleston-green">
-                    <div class="text-center pb-4 font-inter font-medium text-sm leading-16-8 dark:text-Lavender">No Banking Info. Available</div>
-                    <div class="text-center pb-8 font-inter font-normal text-sm leading-19-6 dark:text-Lavender-60">To add banking details click on the button below.</div>
-                    <a href="./setup-account-add-bank-info.html"
-                            class="text-new-car bg-new-car-8 mt-4 font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-010 w-150 mx-auto flex items-center gap-1  text-center dark:border dark:border-pale-cerulean dark:text-pale-cerulean dark:bg-transparent dark:gap-0 dark:justify-between "><svg
-                                width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 15L10 5" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="dark:stroke-pale-cerulean"/>
-                                    <path d="M15 10L5 10" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="dark:stroke-pale-cerulean"/>
-                            </svg>Add Bank Info</a>
-                </div>
+                <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green">
+                    <div class="flex items-center gap-2 mb-4 py-014">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand"/>
+                        </svg>
+    
+                        <div class="text-base font-medium font-inter leading-19-2 text-dark-gunmetal-80 dark:text-Lavender">Add Bank Info.</div>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Payout-Currency"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Payout Currency<span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <select id="Payout-Currency"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                            <option selected class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60">Select</option>
+                            <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Select1</option>
+                            <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Select2</option>
+                            <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="FR">Select3</option>
+                            <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="DE">Select4</option>
+                        </select>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Name-on-Account"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Name on Account <span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="text" id="Name-on-Account"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            placeholder="Name" required>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Routing-Number"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Routing Number<span
+                                class="text-deep-carmine-pink">*</span></label>
+                        <input type="text" id="Routing-Number"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            placeholder="Number" required>
+                    </div>
+                    <div class="flex pb-4 gap-4 sm:flex-row flex-col">
+                        <div class="sm:w-232 w-full">
+                            <label for="Country"
+                                class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Country
+                                <span class="text-deep-carmine-pink">*</span></label>
+                            <select id="Country"
+                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                                <option selected>Country</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">USA</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Indaia</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="FR">UK</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="DE">Japan</option>
+                            </select>
+                        </div>
+                        <div class="sm:w-232 w-full">
+                            <label for="State"
+                                class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">State
+                                <span class="text-deep-carmine-pink">*</span></label>
+                            <select id="State"
+                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                                <option selected>State</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">State1</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">State2</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="FR">State3</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="DE">State4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pb-4">
+                        <label for="Account-Number"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Account Number<span class="text-deep-carmine-pink">*</span></label>
+                        <input type="text" id="Account-Number"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            placeholder="Number" required>
+    
+                    </div>
+                    <div class="pb-4 ">
+                        <label for="Account-Type"
+                                class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Account Type
+                                <span class="text-deep-carmine-pink">*</span></label>
+                            <select id="Account-Type"
+                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                                <option selected>Select</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Select1</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Select2</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="FR">Select3</option>
+                                <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="DE">Select4</option>
+                            </select>
+                    </div>
+                    <div class="pb-4 ">
+                        <label for="Minimal-Payment-Account"
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Minimal Payment Account<span class="text-deep-carmine-pink">*</span></label>
+                        <input type="text" id="Minimal-Payment-Account"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            placeholder="Number" required>
+                    </div>
+                    
+                    
+                    <div class="">
+                        <input type="submit" value="Add Bank Info." class="bg-new-car-8  text-new-car px-3 py-15 text-base font-inter rounded-lg dark:border dark:border-pale-cerulean dark:bg-transparent dark:text-pale-cerulean">
+                    </div>
+                    
+                </form>
             </div>
         </main>
         <footer></footer>
