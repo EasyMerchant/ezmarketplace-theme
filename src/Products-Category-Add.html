@@ -13,10 +13,10 @@
 
 <body class="bg-anti-flash-white  dark:bg-chinese-black ">
     <div class="flex min-h-screen overflow-hidden">
-    <div class="sidebar h-screen max-w-84 w-full  bg-white fixed z-99">
+    <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
         <div class="flex min-h-screen flex-col justify-between w-full">
             <div class="h-screen overflow-hidden scrollbar-none">
-                <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header">
+                <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header sticky top-0 bg-white z-99 dark:bg-charleston-green">
                     <div class="logo hidden items-center gap-2 ">
                         <img src="../Image/Main-logo.svg" alt="">
                         <div class="text-base leading-4 font-semibold text-dark-gunmetal-80 font-inter uppercase dark:text-alice-blue">TMMO</div>
@@ -27,9 +27,9 @@
                             <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></div>
                 </div>
-                <ul class="space-y-2 tracking-wide px-4 overflow-y-auto h-screen scrollbar-none">
+                <ul class="space-y-2 tracking-wide px-4 overflow-y-auto h-calc-1 scrollbar-none">
                     <li class="min-w-max group">
-                        <a href="#" aria-label="dashboard"
+                        <a href="./index.html" aria-label="dashboard"
                             class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="z-10">
@@ -115,12 +115,12 @@
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <span
-                                        class=" menu hidden text-sm font-inter leading-16-8  text-new-car dark:text-dark-gunmetal">Products</span>
+                                        class=" menu hidden text-sm font-inter leading-16-8  text-new-car dark:text-dark-gunmetal font-medium">Products</span>
                                 </div>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -303,7 +303,7 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -354,7 +354,7 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -396,7 +396,7 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -450,7 +450,7 @@
                             </div>
                         </a>
                         <ul id="dropdown-example4"
-                        class="hidden py-2 relative space-y-2 before:w-px before:h-85% before:top-8% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                        class="hidden py-2 relative space-y-2 before:w-px before:h-93%  before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
                         <li>
                             <a href="./Settings-API-Token.html"
                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-2% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-2% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
@@ -466,11 +466,11 @@
                         </li>
                         <li>
                             <a href="./Settings-Processors.html"
-                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-49% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-49% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Processors</a>
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-46% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-46% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Processors</a>
                         </li>
                         <li>
                             <a href="./Settings-Invoice.html"
-                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-35% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-35% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Invoice</a>
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-30% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-30% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Invoice</a>
                         </li>
                         <li>
                             <a href="./Settings-Product.html"
@@ -488,7 +488,7 @@
         </div>
     </div>
     <div class="relative z-50 w-screen overflow-hidden min-h-screen">
-        <header class="py-4 px-8 h-16 bg-white border-b border-gray-200 sticky top-0 z-10 dark:bg-charleston-green dark:border-0">
+        <header class="py-4 px-8 w-full h-16 bg-white border-b border-gray-200 dark:bg-charleston-green dark:border-0 fixed z-10 left-0">
             <div class="flex items-center justify-end h-full">
 
                 <div class="flex items-center gap-16">
@@ -594,7 +594,8 @@
         </header>
 
 
-        <main class="relative overflow-hidden h-full  flex  flex-col gap-4 pt-8 sm:w-544 w-full sm:mx-auto mx-0 sm:px-8 px-8 sm:mb-172 relative top-16">
+        <main class="relative overflow-hidden overflow-y-auto h-calc  flex  flex-col gap-4 pt-8 md:w-736 w-full md:mx-auto mx-0 md:px-0 px-8
+top-16 sm:pb-172 pb-2.5 scrollbar-none">
             <div class="flex justify-between items-center px-4 pt-13.5">
                 <div class="flex items-center gap-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -613,7 +614,7 @@
                         Cancel</a>
                 </div>
             </div>
-            <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green rounded-lg">
+           <form class="p-8 bg-white h-auto md:w-544 w-full  dark:bg-charleston-green rounded-lg">
 
                 <div class="pb-4">
                     <label for="name"

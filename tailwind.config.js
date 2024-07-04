@@ -16,7 +16,7 @@ module.exports = {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1280px',
+      'xl': '1150px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
@@ -28,7 +28,12 @@ module.exports = {
     extend: {
       maxWidth:{
         "84":'84px',
+        "232":"232px",
         "544":'544px',
+        "1120":"1120px"
+      },
+      minHeight:{
+        "calc":"calc(100vh - 100%)",
       },
       width:{
         "02":'2px',
@@ -61,7 +66,9 @@ module.exports = {
         "65%":"65%",
         "75%":"75%",
         "85%":"85%",
-        "calc":"calc(100vh - 64px)"
+        "93%":"93%",
+        "calc":"calc(100vh - 64px)",
+        "calc-1":"calc(100vh - 15%)"
       },
       lineHeight:{
         "14.52":"14.52px",
@@ -71,9 +78,6 @@ module.exports = {
         "21-6":"21.6px",
         "21":"21px",
         "25-6":"25.6px"
-      },
-      margin:{
-        '172':"172px",
       },
       padding:{
         "010":'10px',
@@ -88,7 +92,9 @@ module.exports = {
         "030":'30px',
         "57":'57px',
         "61":'61px',
+        '172':"172px",
         "9%":'9%',
+        "24%":'24%',
         "100%":'100%',
       },
       colors:{

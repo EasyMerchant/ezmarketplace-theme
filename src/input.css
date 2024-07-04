@@ -15,7 +15,15 @@
     ::-webkit-color-swatch{
       @apply !rounded-lg !border !border-s-AuroMetalSaurus-32 !shadow-none;
     }
+    
   }
  
   
+  .ck.ck-editor .ck.ck-editor__top .ck.ck-sticky-panel .ck.ck-sticky-panel__content .ck-toolbar.ck-toolbar_grouping{
+    @apply dark:!bg-transparent dark:!text-Lavender;
+  }
+  .ck.ck-editor .ck.ck-editor__top .ck-reset_all{
+    @apply dark:!text-Lavender;
+  }
+
   

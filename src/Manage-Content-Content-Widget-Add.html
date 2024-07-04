@@ -12,10 +12,10 @@
 </head>
 <body class="bg-anti-flash-white  dark:bg-chinese-black ">
     <div class="flex min-h-screen overflow-hidden">
-    <div class="sidebar h-screen max-w-84 w-full  bg-white fixed z-99">
+    <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
         <div class="flex min-h-screen flex-col justify-between w-full">
             <div class="h-screen overflow-hidden scrollbar-none">
-                <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header">
+                <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header sticky top-0 bg-white z-99 dark:bg-charleston-green">
                     <div class="logo hidden items-center gap-2 ">
                         <img src="../Image/Main-logo.svg" alt="">
                         <div class="text-base leading-4 font-semibold text-dark-gunmetal-80 font-inter uppercase dark:text-alice-blue">TMMO</div>
@@ -26,7 +26,7 @@
                             <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></div>
                 </div>
-                <ul class="space-y-2 tracking-wide px-4 overflow-y-auto h-screen scrollbar-none">
+                <ul class="space-y-2 tracking-wide px-4 overflow-y-auto h-calc-1 scrollbar-none">
                     <li class="min-w-max group">
                         <a href="./index.html" aria-label="dashboard"
                         class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
@@ -119,7 +119,7 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -278,7 +278,7 @@
                     <li class="min-w-max group">
 
                         <a href="#"
-                            class="block w-full items-center  p-4   gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 rounded-lg group-hover:rounded-lg dark:bg-pale-cerulean dark:group-hover:bg-pale-cerulean "
+                        class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
                             aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example2">
 
                             <div class="flex justify-between">
@@ -296,13 +296,13 @@
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <span
-                                        class=" menu hidden text-sm font-inter leading-16-8  text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car ">Email
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Email
                                         Template</span>
                                 </div>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -315,7 +315,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">Templates</a>
+                                    class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8 dark:text-metallic-silver dark:hover:text-Lavender dark:hover:after:bg-Lavender">Templates</a>
                             </li>
 
                         </ul>
@@ -347,13 +347,13 @@
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <span
-                                        class=" menu hidden text-sm font-inter leading-16-8  text-new-car dark:text-dark-gunmetal">Manage
+                                        class=" menu hidden text-sm font-inter leading-16-8  text-new-car dark:text-dark-gunmetal font-medium">Manage
                                         Content</span>
                                 </div>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round"  class="dark:stroke-dark-gunmetal dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -361,8 +361,8 @@
                         <ul id="dropdown-example"
                             class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10% dark:berfore:bg-black-coral">
                             <li>
-                                <a href="#"
-                                class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm  text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  after:absolute after:bg-new-car after:w-02 after:bottom-12% after:left-10% after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8">Content
+                                <a href="./Manage-Content-Content-Widget.html"
+                                class="flex items-center w-full p-2  font-inter font-medium leading-16-8 text-sm  text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  after:absolute after:bg-new-car after:w-02 after:bottom-12% after:left-10% after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8 dark:text-Lavender dark:after:bg-Lavender">Content
                                     Widget</a>
                             </li>
 
@@ -395,7 +395,7 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
@@ -444,38 +444,42 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="menu hidden">
                                     <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal"/>
                                 </svg>
                             </div>
                         </a>
                         <ul id="dropdown-example4"
-                            class="hidden py-2 relative space-y-2 before:w-px before:h-85% before:top-8% before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-2% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-2% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
-                                    Token</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-16% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-16% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Deployers</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-29% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-29% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Vendors</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-49% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-49% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Processors</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-35% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-35% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Invoice</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-17% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-17% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Product</a>
-                            </li>
-                        </ul>
+                        class="hidden py-2 relative space-y-2 before:w-px before:h-93%  before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                        <li>
+                            <a href="./Settings-API-Token.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-2% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-2% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
+                                Token</a>
+                        </li>
+                        <li>
+                            <a href="./Settings-Deployers.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-16% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-16% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Deployers</a>
+                        </li>
+                        <li>
+                            <a href="./Settings-Vendors.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-29% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-29% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Vendors</a>
+                        </li>
+                        <li>
+                            <a href="./Settings-Processors.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-46% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-46% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Processors</a>
+                        </li>
+                        <li>
+                            <a href="./Settings-Invoice.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-30% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-30% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Invoice</a>
+                        </li>
+                        <li>
+                            <a href="./Settings-Product.html"
+                                class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-17% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-17% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Product</a>
+                        </li>
+                        <li><button id="theme-toggle" type="button">
+                            <div id="theme-toggle-dark-icon" class="hidden flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-5% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-5% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Dark theme</div>
+                            <div id="theme-toggle-light-icon" class="hidden flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-5% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-5% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Light Theme</div>
+                        </button></li>
+                    </ul>
                     </li>
                 </ul>
             </div>
@@ -483,7 +487,7 @@
         </div>
     </div>
     <div class="relative z-50 w-screen overflow-hidden min-h-screen">
-        <header class="py-4 px-8 h-16 bg-white border-b border-gray-200 sticky top-0 z-10 dark:bg-charleston-green dark:border-0">
+        <header class="py-4 px-8 w-full h-16 bg-white border-b border-gray-200 dark:bg-charleston-green dark:border-0 fixed z-10 left-0">
             <div class="flex items-center justify-end h-full">
 
                 <div class="flex items-center gap-16">
@@ -491,7 +495,7 @@
                         <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="" class="sr-only peer">
                                 <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand"></div>
-                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Live</span>
+                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender dark:text-Lavender">Live</span>
                               </label>
                     </div>
                     <div class="flex items-center ms-3">
@@ -501,7 +505,7 @@
                                 <span class="sr-only">Open user menu</span>
                                 <img class="w-8 h-8 rounded-full" src="../Image/user-avatra.svg" alt="user photo">
                                 <div class="px-4 py-3 text-left mr-4" role="none">
-                                    <p class="text-sm leading-4 font-semibold text-gray-900 dark:text-Lavender" role="none">
+                                    <p class="text-sm leading-4 font-semibold text-dark-gunmetal-80 dark:text-Lavender " role="none">
                                         Chris Butler
                                     </p>
                                     <p class="text-xs font-medium leading-3  text-dark-gunmetal-60 truncate dark:text-metallic-silver" role="none">
@@ -589,7 +593,8 @@
         </header>
 
 
-        <main class="relative overflow-hidden h-calc  flex  flex-col gap-4 pt-8 xl:w-1120 w-full sm:mx-auto mx-0 xl:px-0 px-8">
+        <main class="relative overflow-hidden overflow-y-auto h-calc  flex  flex-col gap-4 pt-8 max-w-1120 w-full md:mx-auto mx-0  px-8
+        top-16 sm:pb-172 pb-2.5 scrollbar-none">
             <div class="flex justify-between items-center px-4 pt-13.5">
                 <div class="flex items-center gap-2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -608,8 +613,8 @@
                         Cancel</a>
                 </div>
             </div>
-            <div class="lg:flex block gap-8 lg:overflow-hidden overflow-auto ">
-            <form class="p-8 bg-white h-auto  w-full overflow-y-auto scrollbar-none lg:mb-0 mb-8">
+            <div class="lg:flex block gap-8  ">
+            <form class="p-8 bg-white h-auto  w-full overflow-y-auto scrollbar-none lg:mb-0 mb-8 dark:bg-charleston-green">
                 <div class="pb-4">
                     <label for="page-ID"
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">page ID<span
@@ -640,11 +645,11 @@
                                 <div class="flex gap-2 items-center">
                                 <input type="color" name="colorClock" id="colorClock" value="#FFFFFF" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
                                 <label
-                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Text</label></div>
+                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Text</label></div>
                         <div class="flex gap-2 items-center">
                             <input type="color" name="colorClock" id="colorClock2" value="#612DAE" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
                             <label
-                    class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Background</label></div>
+                    class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Background</label></div>
                         </div>
                             </div>
                             
@@ -668,10 +673,10 @@
                                         <div class="flex gap-8">
                                         <div class="flex items-center gap-2">
                                         <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 checked:!bg-none">
-                                        <label for="bordered-radio-1" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2">Left</label></div>
+                                        <label for="bordered-radio-1" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2 dark:text-Lavender">Left</label></div>
                                             <div class="flex items-center gap-2">
                                                 <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 checked:!bg-none">
-                                                <label for="bordered-radio-2" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2">Right</label></div>
+                                                <label for="bordered-radio-2" class="block  text-base  text-dark-gunmetal-60 font-inter leading-19-2 dark:text-Lavender">Right</label></div>
                                             </div>
                             </div>
                             <div class="pb-4">
@@ -689,11 +694,11 @@
                                                     <div class="flex gap-2 items-center">
                                                     <input type="color" name="colorClock" id="colorClock2-1" value="#FFFFFF" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
                                                     <label
-                                            class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Text</label></div>
+                                            class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Text</label></div>
                                             <div class="flex gap-2 items-center">
                                                 <input type="color" name="colorClock" id="colorClock2-2" value="#F5D6D6" class="bg-gray-50 border w-16 h-10 border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block  placeholder:text-base placeholder:font-inter placeholder:leading-19-6">
                                                 <label
-                                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Background</label></div>
+                                        class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Background</label></div>
                                             </div>
                                                 </div>
                                                 <div class="pb-4">
@@ -702,8 +707,8 @@
                                                             class="text-deep-carmine-pink">*</span></label>
                                                             <label class="flex items-center gap-2 cursor-pointer">
                                                                 <input type="checkbox" value="" class="sr-only peer" checked>
-                                                                <div class="relative w-022 h-014 border border-gunmetal  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:border-new-car  after:content-[''] after:absolute after:top-03  after:start-02 after:bg-gunmetal peer-checked:after:bg-new-car after:border-gunmetal peer-checked:after:border-new-car after:border after:rounded-full after:h-06 after:w-06 after:transition-all"></div>
-                                                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8">Active</span>
+                                                                <div class="relative w-022 h-014 border-02 border-gunmetal  rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:border-new-car  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal peer-checked:after:bg-new-car after:border-gunmetal peer-checked:after:border-new-car after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:border-pale-cerulean dark:peer-checked:border-pale-cerulean dark:peer-checked:after:bg-pale-cerulean dark:peer-checked:after:border-pale-cerulean dark:after:bg-pale-cerulean dark:after:border-pale-cerulean"></div>
+                                                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Active</span>
                                                               </label>
                                                 </div>
             </form>
@@ -726,37 +731,37 @@
                 </div>
             <div>
                 <div class="font-inter font-semibold text-sm leading-7  text-dark-gunmetal-80">Content Header</div>
-                <form class="pt-6 w-232 overflow-y-auto scrollbar-none">
+                <form class="pt-6 max-w-232 xl:w-232 w-full overflow-y-auto scrollbar-none">
                     <div class="pb-4">
                         <label for="Name"
-                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Name <span
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 ">Name <span
                                 class="text-deep-carmine-pink">*</span></label>
                         <input type="text" id="Name"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 "
                             placeholder="Name" required>
                     </div>
                     <div class="pb-4">
                         <label for="Email"
-                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Email <span
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 ">Email <span
                                 class="text-deep-carmine-pink">*</span></label>
                         <input type="email" id="Email"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 "
                             placeholder="Email" required>
                     </div>
                     <div class="pb-4">
                         <label for="Password"
-                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Password <span
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 ">Password <span
                                 class="text-deep-carmine-pink">*</span></label>
                         <input type="password" id="Password"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 "
                             placeholder="Password" required>
                     </div>
                     <div class="pb-4">
                         <label for="Confirm-Password"
-                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Confirm Password <span
+                            class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 ">Confirm Password <span
                                 class="text-deep-carmine-pink">*</span></label>
                         <input type="password" id="Confirm-Password"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 "
                             placeholder="Confirm-Password" required>
                     </div>
                     <div class="">

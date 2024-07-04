@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Select theme toggle icons and button
     var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
@@ -248,6 +250,7 @@ document.querySelectorAll('.delete-icon').forEach(function(deleteIcon) {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
     ImgUpload();
 });
@@ -420,14 +423,14 @@ function myFunction() {
 
             // Reset button classes
             if (filterButton) {
-                filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
-                filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
+                filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg' ,"dark:bg-Lavender");
+                filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg',"dark:bg-transparent");
             }
 
             // Reset icon classes
             if (filterIcon) {
-                filterIcon.classList.remove('stroke-[#ffffff]');
-                filterIcon.classList.add('stroke-[#2E333E]');
+                filterIcon.classList.remove('stroke-[#ffffff]','dark:stroke-silver-sand');
+                filterIcon.classList.add('stroke-[#2E333E]','dark:stroke-dark-gunmetal');
             }
 
             // Hide the modal
@@ -457,21 +460,21 @@ function myFunction() {
 
                 if (isAnySelected) {
                     if (filterButton) {
-                        filterButton.classList.remove('bg-white', 'text-gray-700','rounded-lg');
+                        filterButton.classList.remove('bg-white', 'text-gray-700','rounded-lg',"dark:bg-transparent");
                         filterButton.classList.add('bg-new-car', 'text-white','rounded-lg');
                     }
                     if (filterIcon) {
-                        filterIcon.classList.remove('stroke-[#2E333E]');
-                        filterIcon.classList.add('stroke-[#ffffff]');
+                        filterIcon.classList.remove('stroke-[#2E333E]','dark:stroke-dark-gunmetal');
+                        filterIcon.classList.add('stroke-[#ffffff]','dark:stroke-silver-sand');
                     }
                 } else {
                     if (filterButton) {
-                        filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
-                        filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
+                        filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg' ,"dark:bg-Lavender");
+                        filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg',"dark:bg-transparent");
                     }
                     if (filterIcon) {
-                        filterIcon.classList.remove('stroke-[#ffffff]');
-                        filterIcon.classList.add('stroke-[#2E333E]');
+                        filterIcon.classList.remove('stroke-[#ffffff]','dark:stroke-silver-sand');
+                        filterIcon.classList.add('stroke-[#2E333E]','dark:stroke-dark-gunmetal');
                     }
                 }
             });
@@ -506,3 +509,5 @@ function addEventListeners() {
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', addEventListeners);
+
+
