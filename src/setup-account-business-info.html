@@ -13,24 +13,24 @@
 
 <body class="bg-anti-flash-white  dark:bg-chinese-black">
     <div class="flex min-h-screen overflow-hidden">
-        <div class="sidebar h-screen max-w-84 w-full  bg-white sticky top-0 z-2">
+        <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
             <div class="flex min-h-screen flex-col justify-between w-full">
                 <div class="h-screen overflow-y-auto overflow-x-hidden scrollbar-none">
-                    <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header sticky top-0 bg-white z-99 dark:bg-charleston-green">
+                    <div class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header sticky top-0 bg-white dark:bg-charleston-green z-99">
                         <div class="logo hidden items-center gap-2 ">
                             <img src="../Image/Main-logo.svg" alt="">
                             <div class="text-base leading-4 font-semibold text-dark-gunmetal-80 font-inter uppercase dark:text-alice-blue">TMMO</div>
                         </div>
                         <div class="w-8 siderbar-button">
-                        <svg width="32" height="32"  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.8333 8.5H10.1667C9.24619 8.5 8.5 9.24619 8.5 10.1667V21.8333C8.5 22.7538 9.24619 23.5 10.1667 23.5H21.8333C22.7538 23.5 23.5 22.7538 23.5 21.8333V10.1667C23.5 9.24619 22.7538 8.5 21.8333 8.5Z" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg></div>
+                            <svg width="32" height="32"  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.8333 8.5H10.1667C9.24619 8.5 8.5 9.24619 8.5 10.1667V21.8333C8.5 22.7538 9.24619 23.5 10.1667 23.5H21.8333C22.7538 23.5 23.5 22.7538 23.5 21.8333V10.1667C23.5 9.24619 22.7538 8.5 21.8333 8.5Z" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></div>
                     </div>
                     <ul class="space-y-2 tracking-wide px-4 ">
                         <li class="min-w-max group">
                             <a href="./index.html" aria-label="dashboard"
-                                class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="z-10">
                                     <path
@@ -143,16 +143,16 @@
             </div>
         </div>
         <div class="relative z-50 w-screen overflow-hidden min-h-screen">
-            <header class="py-4 px-8 w-full h-16 bg-white border-b border-gray-200 dark:bg-charleston-green dark:border-0">
+            <header class="py-4 px-8 w-full h-16 bg-white border-b shrink-0 border-gray-200 dark:bg-charleston-green dark:border-0 fixed top-0 left-0 z-111">
                 <div class="flex items-center justify-end h-full">
     
                     <div class="flex items-center gap-16">
                         <div class="">
                             <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="checkbox" value="" class="sr-only peer">
-                                <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand"></div>
-                                <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Live</span>
-                              </label>
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand peer-checked:border-new-car peer-checked:after:bg-new-car peer-checked:after:border-new-car   dark:bg-black "></div>
+                                    <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Live</span>
+                                  </label>
                         </div>
                         <div class="flex items-center ms-3">
                             <div>
@@ -170,13 +170,13 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="z-50 hidden my-4 text-base list-none bg-white  rounded-lg shadow  divide-gray-600"
+                            <div class="z-50 hidden my-4 text-base list-none bg-white  rounded-lg shadow  divide-gray-600 dark:bg-charleston-green"
                                 id="dropdown-user">
     
                                 <ul class="" role="none">
                                     <li class="min-w-max group">
-                                        <a href="#" aria-label="dashboard"
-                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                        <a href="./My-Profile.html" aria-label="dashboard"
+                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -193,13 +193,13 @@
     
     
                                             <span
-                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">My
+                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">My
                                                 Profile</span>
                                         </a>
                                     </li>
                                     <li class="min-w-max group">
-                                        <a href="#" aria-label="dashboard"
-                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                        <a href="./Change-Password.html" aria-label="dashboard"
+                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -215,13 +215,13 @@
                                             </svg>
     
                                             <span
-                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">Change
+                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">Change
                                                 Password</span>
                                         </a>
                                     </li>
                                     <li class="min-w-max group">
                                         <a href="#" aria-label="dashboard"
-                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                                            class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -233,11 +233,11 @@
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                                     class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
                                                 <path d="M17.5 10H7.5" stroke="#2E333E" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                    stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
                                             </svg>
     
                                             <span
-                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8">Logout</span>
+                                                class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">Logout</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -249,6 +249,7 @@
             </header>
     
     
+    
             <main class="relative overflow-hidden overflow-y-auto h-calc  flex  flex-col gap-4 pt-8 md:w-736 w-full md:mx-auto mx-0 md:px-0 px-8
 top-16 sm:pb-172 pb-2.5 scrollbar-none">
             <div class="flex justify-between items-center px-4 pt-13.5">
@@ -256,11 +257,11 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                     <div class="text-lg font-medium font-inter leading-21-6 text-dark-gunmetal-80 dark:text-Lavender">Setup Account</div>
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="./add-user.html"
-                        class="text-white bg-blue-700  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:text-dark-gunmetal dark:bg-pale-cerulean">
+                    <a href="#"
+                        class="text-white bg-new-car  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:text-dark-gunmetal dark:bg-pale-cerulean">
                         Next</a>
-                    <a href="./add-user.html"
-                        class="text-dark-gunmetal-80 bg-white  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:border-black-coral dark:text-Lavender dark:bg-transparent  dark:border">
+                    <a href="#"
+                        class="text-dark-gunmetal-80 bg-white  font-medium rounded-lg text-sm leading-16-8 font-inter px-4 py-3 dark:border-black-coral dark:text-Lavender dark:bg-transparent  dark:border dark:py-011 dark:py-011 dark:py-011">
                         Previous</a>
                 </div>
             </div>
@@ -291,14 +292,14 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                             class="flex items-center w-full p-2 !pl-26  font-inter font-medium leading-16-8 text-sm text-dark-gunmetal-60 active:text-dark-gunmetal-80 transition duration-75 rounded-lg   sm:active:after:absolute active:after:bg-new-car sm:active:after:w-02 dark:active:after:bg-Lavender dark:hover:after:bg-Lavender  dark:text-metallic-silver dark:active:text-Lavender dark:hover:text-Lavender sm:active:after:bottom-0 sm:active:after:left-0 sm:active:after:h-8  hover:text-dark-gunmetal-80 sm:hover:after:absolute sm:hover:after:bg-new-car sm:hover:after:w-02 sm:hover:after:bottom-0 sm:hover:after:left-0 sm:hover:after:h-8 active:after:w-8 active:after:absolute active:after:bottom-0 active:after:bg-new-car active:after:h-px hover:after:w-8 hover:after:absolute hover:after:bottom-0 hover:after:bg-new-car hover:after:h-px">Document Upload</a>
                     </li>
                 </ul>
-                <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green">
+                <form class="p-8 bg-white h-auto sm:max-w-544 w-full  overflow-y-auto scrollbar-none dark:bg-charleston-green rounded-lg rounded-lg">
 
                 <div class="pb-4">
                     <label for="Business-Type"
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Business Type<span
                             class="text-deep-carmine-pink">*</span></label>
                     <select id="Business-Type"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                         <option selected class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60">Limited Liability</option>
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Limited Liability1</option>
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Limited Liability2</option>
@@ -311,7 +312,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Business Category<span
                             class="text-deep-carmine-pink">*</span></label>
                     <select id="Business-Category"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                         <option selected class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60">Services</option>
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Services1</option>
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Services2</option>
@@ -324,7 +325,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">DBA Name <span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="DBA-Name"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Name"  required>
                 </div>
                 <div class="pb-4">
@@ -332,7 +333,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Legal Name of Business <span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="Legal-Name-of-Business"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Name" required>
                 </div>
                 <div class="pb-4">
@@ -340,7 +341,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Tax Filing Name<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="Tax-Filing-Name"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Name" required>
                 </div>
                 <div class="pb-4">
@@ -348,7 +349,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Tax Filing Name<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="Tax-Filing-Name"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Name" required>
                 </div>
                 <div class="pb-4">
@@ -356,7 +357,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Company Website<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="url" id="Company-Website"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="URL" required>
                 </div>
                 <div class="pb-4">
@@ -364,7 +365,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Sub Domain<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="url" id="Sub-Domain"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="URL" required>
                 </div>
                 <div class="flex pb-4 gap-4 sm:flex-row flex-col">
@@ -373,7 +374,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                             class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">SIC
                             <span class="text-deep-carmine-pink">*</span></label>
                         <select id="SIC"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                            class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                             <option selected>Select</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Select1</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Select2</option>
@@ -384,9 +385,9 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                     <div class="sm:w-232 w-full">
                         <label for="Customer-Service-No."
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Customer Service No.<span class="text-deep-carmine-pink">*</span></label>
-                    <div class="flex items-center">
+                    <div class="flex items-center border border-AuroMetalSaurus-32 rounded-lg dark:border-black-coral">
                         <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone"
-                            class="flex-shrink-0  inline-flex items-center py-3 px-4 text-dark-gunmetal-80 text-base font-inter font-medium text-center bg-gray-100 border border-gray-300 rounded-s-lg dark:bg-charleston-green dark:border-black-coral dark:text-Lavender-60"
+                            class="flex-shrink-0  inline-flex items-center py-3 px-4 text-dark-gunmetal-80 text-base font-inter font-medium text-center bg-white  rounded-s-lg dark:bg-charleston-green dark:border-black-coral dark:text-Lavender-60"
                             type="button">
                             <svg fill="none" aria-hidden="true" class="h-4 w-4 me-2" viewBox="0 0 20 15">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -690,7 +691,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         </div>
                         <div class="relative w-full">
                             <input type="text" id="Customer-Service-No."
-                                class="bg-gray-50 border- border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-tr-lg rounded-br-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-3 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                                class="bg-white border-0 border-l border-AuroMetalSaurus-32  text-dark-gunmetal-80 text-base font-inter rounded-tr-lg rounded-br-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-3 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral "
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(123) 456-7890" value="(123) 456-7890" required>
                         </div>
                     </div>
@@ -701,7 +702,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">EIN/ TIN<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="EIN/TIN"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Number" required>
                 </div>
                 <div class="flex pb-4 gap-4 sm:flex-row flex-col">
@@ -710,7 +711,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                             class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Year in Service
                             <span class="text-deep-carmine-pink">*</span></label>
                         <select id="Year-in-Service"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                            class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                             <option selected>Years</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">Years1</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="CA">Years2</option>
@@ -723,7 +724,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 opacity-0">DOB <span
                             class="text-deep-carmine-pink">*</span></label>
                         <input type="text"
-                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                                class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                              placeholder="Months" required>
                     </div>
                 </div>
@@ -734,7 +735,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                             class="text-deep-carmine-pink">*</span></label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="" class="sr-only peer">
-                                <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand"></div>
+                                <div class="relative w-022 h-014 border-02 border-gunmetal  dark:border-silver-sand rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-02  after:start-02 after:bg-gunmetal after:border-gunmetal after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand peer-checked:border-new-car peer-checked:after:bg-new-car peer-checked:after:border-new-car   dark:bg-black "></div>
                                 <span class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">No</span>
                               </label>
                 </div>
@@ -744,7 +745,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         <label for="Accepting-Cards-in-person"
                             class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Accepting Cards in person<span class="text-deep-carmine-pink">*</span></label>
                         <select id="Accepting-Cards-in-person"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                            class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                             <option selected>Yes</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">No</option>
                         </select>
@@ -753,7 +754,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         <label
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 opacity-0">%</label>
                         <input type="text"
-                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                                class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                              placeholder="%" required>
                     </div>
                 </div>
@@ -762,7 +763,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         <label for="Accepting-Cards-Online"
                             class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Accepting Cards Online<span class="text-deep-carmine-pink">*</span></label>
                         <select id="Accepting-Cards-Online"
-                            class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                            class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                             <option selected>Yes</option>
                             <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" value="US">No</option>
                         </select>
@@ -771,7 +772,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         <label
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 opacity-0">%</label>
                         <input type="text"
-                                class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                                class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                              placeholder="%" required>
                     </div>
                 </div>
@@ -779,7 +780,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                     <label for="Accepting-Cards-Over-Phone"
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Accepting Cards Over Phone<span class="text-deep-carmine-pink">*</span></label>
                     <select id="Accepting-Cards-Over-Phone"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral">
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60">Yes</option>
                         <option class="text-dark-gunmetal-80 text-base font-inter dark:text-Lavender-60" selected>No</option>
                     </select>
@@ -789,7 +790,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Max. Monthly Sales volume<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="Max.Monthly-Sales-volume"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Number" required>
                 </div>
                 <div class="">
@@ -797,7 +798,7 @@ top-16 sm:pb-172 pb-2.5 scrollbar-none">
                         class="block mb-2 text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Max. Transaction Value<span
                             class="text-deep-carmine-pink">*</span></label>
                     <input type="text" id="Max.Transaction-Value"
-                        class="bg-gray-50 border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
+                        class="bg-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-13 placeholder:text-base placeholder:font-inter placeholder:leading-19-6 dark:bg-charleston-green dark:text-Lavender-60 dark:border-black-coral"
                         placeholder="Number" required>
                 </div>
             </form>

@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Select theme toggle icons and button
     var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
@@ -7,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var themeToggleBtn = document.getElementById("theme-toggle");
 
     // Log the elements to check if they are found
-
     if (!themeToggleDarkIcon || !themeToggleLightIcon || !themeToggleBtn) {
         console.error('One or more theme toggle elements not found');
         return; // Exit the function if elements are not found
@@ -64,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuitems = document.querySelectorAll(".menu");
 
     // Log the elements to check if they are found
-
     if (!siderbarButton || !sidebar || !logo || !logohead || menuitems.length === 0) {
         console.error('One or more sidebar elements not found');
         return; // Exit the function if elements are not found
@@ -81,16 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener for sidebar toggle button
     siderbarButton.addEventListener('click', () => {
-        if (sidebar.style.maxWidth === '256px') {
-            sidebar.style.maxWidth = '';
-            sidebar.style.boxShadow = '';
-            sidebar.style.transition = 'all .4s ease-in-out';
-            logo.style.display = 'none';
-            menuitems.forEach(item => {
-                item.style.display = 'none';
-            });
-            logohead.style.justifyContent = "center";
-        } else {
+        toggleSidebar();
+    });
+
+    function toggleSidebar(open) {
+        const dropdowns = document.querySelectorAll('ul[id^="dropdown-example"]');
+
+        if (open === true || sidebar.style.maxWidth !== '256px') {
             sidebar.style.maxWidth = '256px';
             sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
             sidebar.style.transition = 'all .4s ease-in-out';
@@ -99,13 +92,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.display = 'block';
             });
             logohead.style.justifyContent = "space-between";
+        } else {
+            sidebar.style.maxWidth = '';
+            sidebar.style.boxShadow = '';
+            sidebar.style.transition = 'all .4s ease-in-out';
+            logo.style.display = 'none';
+            menuitems.forEach(item => {
+                item.style.display = 'none';
+            });
+            logohead.style.justifyContent = "center";
+            // Close all dropdowns
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.add('hidden');
+            });
         }
-    });
+    }
 
     // Ensure initial sidebar theme is set correctly
     updateSidebarTheme();
-});
 
+    // Add event listeners for list items with dropdowns
+    const dropdownLis = document.querySelectorAll('a[data-collapse-toggle^="dropdown-example"]');
+    dropdownLis.forEach(a => {
+        a.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Open the sidebar if it's not already open
+            toggleSidebar(true);
+
+            // Handle the dropdown
+            const dropdownId = this.getAttribute('aria-controls');
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+            }
+        });
+    });
+});
 
 
 const selectedElm = document.getElementById('selected');
