@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var themeToggleBtn = document.getElementById("theme-toggle");
 
     // Log the elements to check if they are found
-
     if (!themeToggleDarkIcon || !themeToggleLightIcon || !themeToggleBtn) {
         console.error('One or more theme toggle elements not found');
         return; // Exit the function if elements are not found
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuitems = document.querySelectorAll(".menu");
 
     // Log the elements to check if they are found
-
     if (!siderbarButton || !sidebar || !logo || !logohead || menuitems.length === 0) {
         console.error('One or more sidebar elements not found');
         return; // Exit the function if elements are not found
@@ -79,16 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener for sidebar toggle button
     siderbarButton.addEventListener('click', () => {
-        if (sidebar.style.maxWidth === '256px') {
-            sidebar.style.maxWidth = '';
-            sidebar.style.boxShadow = '';
-            sidebar.style.transition = 'all .4s ease-in-out';
-            logo.style.display = 'none';
-            menuitems.forEach(item => {
-                item.style.display = 'none';
-            });
-            logohead.style.justifyContent = "center";
-        } else {
+        toggleSidebar();
+    });
+
+    function toggleSidebar(open) {
+        const dropdowns = document.querySelectorAll('ul[id^="dropdown-example"]');
+
+        if (open === true || sidebar.style.maxWidth !== '256px') {
             sidebar.style.maxWidth = '256px';
             sidebar.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
             sidebar.style.transition = 'all .4s ease-in-out';
@@ -97,13 +92,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.display = 'block';
             });
             logohead.style.justifyContent = "space-between";
+        } else {
+            sidebar.style.maxWidth = '';
+            sidebar.style.boxShadow = '';
+            sidebar.style.transition = 'all .4s ease-in-out';
+            logo.style.display = 'none';
+            menuitems.forEach(item => {
+                item.style.display = 'none';
+            });
+            logohead.style.justifyContent = "center";
+            // Close all dropdowns
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.add('hidden');
+            });
         }
-    });
+    }
 
     // Ensure initial sidebar theme is set correctly
     updateSidebarTheme();
-});
 
+    // Add event listeners for list items with dropdowns
+    const dropdownLis = document.querySelectorAll('a[data-collapse-toggle^="dropdown-example"]');
+    dropdownLis.forEach(a => {
+        a.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Open the sidebar if it's not already open
+            toggleSidebar(true);
+
+            // Handle the dropdown
+            const dropdownId = this.getAttribute('aria-controls');
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+            }
+        });
+    });
+});
 
 
 const selectedElm = document.getElementById('selected');
@@ -246,6 +271,7 @@ document.querySelectorAll('.delete-icon').forEach(function(deleteIcon) {
         }
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -398,86 +424,6 @@ function myFunction() {
   }
   
 
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const filterButton = document.getElementById('filterButton');
-    const filterIcon = document.getElementById('filterIcon');
-    const filterModal = document.getElementById('filterModal');
-    const clearButton = document.getElementById('clearButton');
-    const selects = document.querySelectorAll('#filterModal select');
-
-    if (filterButton) {
-        filterButton.addEventListener('click', () => {
-            if (filterModal) {
-                filterModal.classList.remove('hidden');
-            }
-        });
-    }
-
-    if (clearButton) {
-        clearButton.addEventListener('click', () => {
-            // Reset select elements to default
-            selects.forEach(select => select.value = 'Select');
-
-            // Reset button classes
-            if (filterButton) {
-                filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
-                filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
-            }
-
-            // Reset icon classes
-            if (filterIcon) {
-                filterIcon.classList.remove('stroke-[#ffffff]');
-                filterIcon.classList.add('stroke-[#2E333E]');
-            }
-
-            // Hide the modal
-            if (filterModal) {
-                filterModal.classList.add('hidden');
-            }
-        });
-    }
-
-    if (filterModal) {
-        filterModal.addEventListener('click', (event) => {
-            if (event.target === filterModal) {
-                filterModal.classList.add('hidden');
-            }
-        });
-    }
-
-    if (selects) {
-        selects.forEach(select => {
-            select.addEventListener('change', () => {
-                let isAnySelected = false;
-                selects.forEach(sel => {
-                    if (sel.value !== 'Select') {
-                        isAnySelected = true;
-                    }
-                });
-
-                if (isAnySelected) {
-                    if (filterButton) {
-                        filterButton.classList.remove('bg-white', 'text-gray-700','rounded-lg');
-                        filterButton.classList.add('bg-new-car', 'text-white','rounded-lg');
-                    }
-                    if (filterIcon) {
-                        filterIcon.classList.remove('stroke-[#2E333E]');
-                        filterIcon.classList.add('stroke-[#ffffff]');
-                    }
-                } else {
-                    if (filterButton) {
-                        filterButton.classList.remove('bg-new-car', 'text-white' ,'rounded-lg');
-                        filterButton.classList.add('bg-white', 'text-gray-700','rounded-lg');
-                    }
-                    if (filterIcon) {
-                        filterIcon.classList.remove('stroke-[#ffffff]');
-                        filterIcon.classList.add('stroke-[#2E333E]');
-                    }
-                }
-            });
-        });
-    }
-});
 
 function addEventListeners() {
     const openPopupButton = document.getElementById('openPopup');
@@ -506,3 +452,5 @@ function addEventListeners() {
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', addEventListeners);
+
+
