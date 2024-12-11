@@ -40,4 +40,19 @@
 .ck-reset_all .ck-button:hover .ck-icon > path {
   @apply dark:!text-dark-gunmetal;
 }
-
+.total-open-applications .apexcharts-menu-icon {
+  @apply -mt-16;
+}
+.total-open-applications .apexcharts-menu-icon svg,
+.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg {
+  @apply opacity-0;
+}
+.total-applications-main .apexcharts-menu-icon {
+  @apply  hidden;
+}
+.merchants-main .apexcharts-menu-icon {
+  @apply -mt-48; 
+}
+.merchants-main .apexcharts-menu {
+  @apply -mt-14; 
+}
