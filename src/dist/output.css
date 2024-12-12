@@ -2993,39 +2993,23 @@ input:checked + .toggle-bg {
 
 .total-open-applications .apexcharts-menu-icon {
   margin-top: -4rem;
-  margin-right: -0.75rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.total-open-applications .apexcharts-menu {
-  margin-right: -0.75rem;
 }
 
 .total-open-applications .apexcharts-menu-icon svg,
-.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg,
-.subscriptions-main .apexcharts-toolbar .apexcharts-menu-icon svg {
+.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg {
   opacity: 0;
 }
 
-.total-applications-main .apexcharts-menu-icon,
-.total-sales-main .apexcharts-menu-icon {
+.total-applications-main .apexcharts-menu-icon {
   display: none;
 }
 
-.merchants-main .apexcharts-menu-icon,
-.subscriptions-main .apexcharts-menu-icon {
-  margin-top: -180px;
-  margin-right: -0.75rem;
-  height: 2rem;
-  width: 2rem;
+.merchants-main .apexcharts-menu-icon {
+  margin-top: -12rem;
 }
 
-.merchants-main .apexcharts-menu,
-.subscriptions-main .apexcharts-menu {
+.merchants-main .apexcharts-menu {
   margin-top: -3.5rem;
-  margin-right: -0.75rem;
-  width: 2rem;
 }
 
 .placeholder\:font-inter::-moz-placeholder {
@@ -4261,15 +4245,6 @@ input:checked + .toggle-bg {
     gap: 2rem;
   }
 
-  .sm\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
-  .sm\:gap-y-4 {
-    row-gap: 1rem;
-  }
-
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -4941,12 +4916,12 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -4958,17 +4933,9 @@ input:checked + .toggle-bg {
   .xl\:w-auto {
     width: auto;
   }
-
-  .xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .\32xl\:py-48 {
     padding-top: 12rem;
     padding-bottom: 12rem;
