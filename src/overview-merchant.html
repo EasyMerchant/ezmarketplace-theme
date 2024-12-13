@@ -621,272 +621,968 @@
                      Overview
                   </div>
                </div>
-               <div class="grid lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
-                  <div class="active-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Active subscriptions</p>
+
+                
+
+<div class="w-full">
+    <ul class="flex border-b border-b-AuroMetalSaurus-32 flex-wrap -mb-px text-sm font-medium text-center sm:gap-5 lg:gap-14 mb-4" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg" id="subscriptions-tab" data-tabs-target="#subscriptions" type="button" role="tab" aria-controls="subscriptions" aria-selected="false">Subscriptions</button>
+        </li>
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="transactions-tab" data-tabs-target="#transactions" type="button" role="tab" aria-controls="transactions" aria-selected="false">Transactions</button>
+        </li>
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sales-tab" data-tabs-target="#sales" type="button" role="tab" aria-controls="sales" aria-selected="false">Sales</button>
+        </li>
+        <li role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="fraud-tab" data-tabs-target="#fraud" type="button" role="tab" aria-controls="fraud" aria-selected="false">Fraud</button>
+        </li>
+    </ul>
+</div>
+<div id="default-tab-content">
+    <div class="hidden" id="subscriptions" role="tabpanel" aria-labelledby="subscriptions-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="grid lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
+         <div class="active-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Earnings</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  $16,343.00 
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-sm text-green-dark font-normal">1.0%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3231)">
+                  <path d="M20.3359 10.8359V29.1693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.5026 14.1641H18.2526C17.4791 14.1641 16.7372 14.4714 16.1902 15.0183C15.6432 15.5653 15.3359 16.3072 15.3359 17.0807C15.3359 17.8543 15.6432 18.5961 16.1902 19.1431C16.7372 19.6901 17.4791 19.9974 18.2526 19.9974H22.4193C23.1928 19.9974 23.9347 20.3047 24.4817 20.8517C25.0286 21.3986 25.3359 22.1405 25.3359 22.9141C25.3359 23.6876 25.0286 24.4295 24.4817 24.9765C23.9347 25.5234 23.1928 25.8307 22.4193 25.8307H15.3359" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3231">
+                  <rect width="20" height="20" fill="white" transform="translate(10.3359 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="subscription-earnings-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Active subscriptions</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  200 
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-sm text-green-dark font-normal">1.0%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3244)">
+                  <path d="M19.9987 24.1693C22.2999 24.1693 24.1654 22.3038 24.1654 20.0026C24.1654 17.7014 22.2999 15.8359 19.9987 15.8359C17.6975 15.8359 15.832 17.7014 15.832 20.0026C15.832 22.3038 17.6975 24.1693 19.9987 24.1693Z" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 10.8359V12.5026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 27.5V29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 13.5156L14.699 14.699" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 25.2969L26.4841 26.4802" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.832 20H12.4987" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 20H29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 26.4802L14.699 25.2969" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 14.699L26.4841 13.5156" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3244">
+                  <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="expiring-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Expiring subscriptions</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  13
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
+                     </svg>
+                     <span class="text-sm text-deep-carmine-pink font-normal">0.7%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3264)">
+                  <path d="M24.1654 25.0026C24.1654 23.8975 23.7264 22.8377 22.945 22.0563C22.1636 21.2749 21.1038 20.8359 19.9987 20.8359C18.8936 20.8359 17.8338 21.2749 17.0524 22.0563C16.271 22.8377 15.832 23.8975 15.832 25.0026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 17.4974V11.6641" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 18.5156L14.699 19.699" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.832 25H12.4987" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 25H29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 19.699L26.4841 18.5156" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M29.1654 28.3359H10.832" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.3346 14.1641L20.0013 17.4974L16.668 14.1641" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3264">
+                  <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                                   
+            </div>
+         </div>
+         <div class="cancel-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Cancel subscriptions</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  3
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
+                     </svg>
+                     <span class="text-sm text-deep-carmine-pink font-normal">3.1%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <path d="M27.4994 20.6583C27.3683 22.0768 26.836 23.4287 25.9646 24.5557C25.0933 25.6826 23.919 26.5382 22.5792 27.0221C21.2394 27.5061 19.7894 27.5984 18.399 27.2884C17.0086 26.9784 15.7353 26.2788 14.728 25.2715C13.7206 24.2642 13.021 22.9908 12.711 21.6004C12.401 20.21 12.4934 18.7601 12.9773 17.4202C13.4613 16.0804 14.3168 14.9061 15.4438 14.0348C16.5708 13.1634 17.9226 12.6311 19.3411 12.5C18.5106 13.6236 18.111 15.0079 18.2149 16.4012C18.3188 17.7945 18.9193 19.1042 19.9073 20.0922C20.8952 21.0801 22.2049 21.6807 23.5983 21.7846C24.9916 21.8885 26.3759 21.4888 27.4994 20.6583Z" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                                   
+            </div>
+         </div>
+      </div>
+      <div class="subscriptions-main rounded-lg bg-white px-4 py-5">
+         <div class="flex items-center justify-between flex-column">
+            <div class="subscriptions-block w-full">
+               <div class="flex flex-wrap items-center justify-between flex-column w-full mb-4">
+                  <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 ">Subscriptions</h4>
+                  <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+                     <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                        <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+                     </div>
+                     <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+               <div class="flex flex-wrap items-center gap-4 sm:gap-x-8 sm:gap-y-4">
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#3BA951"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                           Active subscriptions
+                        </p>
                         <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
                            200 
                            <span class="flex items-center gap-1 ml-1">
                               <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
-                              </svg>
+                              </svg>                                                                                
                               <span class="text-sm text-green-dark font-normal">1.0%</span>
                            </span>
                         </h4>
                      </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
                   </div>
-                  <div class="subscription-earnings-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Subscription earnings</p>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#EFB117"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                           Subscription earnings
+                        </p>
                         <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
                            $16,343.00 
                            <span class="flex items-center gap-1 ml-1">
                               <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                                 <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
                               </svg>
                               <span class="text-sm text-green-dark font-normal">1.0%</span>
                            </span>
                         </h4>
                      </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
                   </div>
-                  <div class="expiring-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Expiring subscriptions</p>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#5C85FF"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                           Expiring subscriptions
+                        </p>
                         <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
                            13
                            <span class="flex items-center gap-1 ml-1">
                               <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
-                              </svg>
+                                 <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
+                              </svg>                                          
                               <span class="text-sm text-deep-carmine-pink font-normal">0.7%</span>
                            </span>
                         </h4>
                      </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
                   </div>
-                  <div class="cancel-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Cancel subscriptions</p>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#FF725C"/>
+                        </svg>                                    
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                           Cancel subscriptions
+                        </p>
                         <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
                            3
                            <span class="flex items-center gap-1 ml-1">
                               <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
-                              </svg>
+                                 <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
+                              </svg>                                          
                               <span class="text-sm text-deep-carmine-pink font-normal">3.1%</span>
                            </span>
                         </h4>
                      </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
                   </div>
                </div>
-               <div class="subscriptions-main rounded-lg bg-white px-4 py-5">
-                  <div class="flex items-center justify-between flex-column">
-                     <div class="subscriptions-block w-full">
-                        <div class="flex flex-wrap items-center justify-between flex-column w-full mb-4">
-                           <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 ">Subscriptions</h4>
-                           <div class="flex gap-2 mt-4 sm:mt-0 items-center">
-                              <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
-                                 <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
-                                 <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
-                                 <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
-                              </div>
-                              <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
-                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                 </svg>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-4 sm:gap-x-8 sm:gap-y-4">
-                           <div class="flex">
-                              <div class="flex h-6 items-center">
-                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="8" height="8" rx="4" fill="#3BA951"/>
-                                 </svg>
-                              </div>
-                              <div class="pl-3">
-                                 <p class="text-dark-gunmetal-60 flex gap-2 items-center">
-                                    Active subscriptions
-                                 </p>
-                                 <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                                    200 
-                                    <span class="flex items-center gap-1 ml-1">
-                                       <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
-                                       </svg>                                                                                
-                                       <span class="text-sm text-green-dark font-normal">1.0%</span>
-                                    </span>
-                                 </h4>
-                              </div>
-                           </div>
-                           <div class="flex">
-                              <div class="flex h-6 items-center">
-                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="8" height="8" rx="4" fill="#EFB117"/>
-                                 </svg>
-                              </div>
-                              <div class="pl-3">
-                                 <p class="text-dark-gunmetal-60 flex gap-2 items-center">
-                                    Subscription earnings
-                                 </p>
-                                 <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                                    $16,343.00 
-                                    <span class="flex items-center gap-1 ml-1">
-                                       <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
-                                       </svg>
-                                       <span class="text-sm text-green-dark font-normal">1.0%</span>
-                                    </span>
-                                 </h4>
-                              </div>
-                           </div>
-                           <div class="flex">
-                              <div class="flex h-6 items-center">
-                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="8" height="8" rx="4" fill="#5C85FF"/>
-                                 </svg>
-                              </div>
-                              <div class="pl-3">
-                                 <p class="text-dark-gunmetal-60 flex gap-2 items-center">
-                                    Expiring subscriptions
-                                 </p>
-                                 <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                                    13
-                                    <span class="flex items-center gap-1 ml-1">
-                                       <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
-                                       </svg>                                          
-                                       <span class="text-sm text-deep-carmine-pink font-normal">0.7%</span>
-                                    </span>
-                                 </h4>
-                              </div>
-                           </div>
-                           <div class="flex">
-                              <div class="flex h-6 items-center">
-                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="8" height="8" rx="4" fill="#FF725C"/>
-                                 </svg>                                    
-                              </div>
-                              <div class="pl-3">
-                                 <p class="text-dark-gunmetal-60 flex gap-2 items-center">
-                                    Cancel subscriptions
-                                 </p>
-                                 <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                                    3
-                                    <span class="flex items-center gap-1 ml-1">
-                                       <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
-                                       </svg>                                          
-                                       <span class="text-sm text-deep-carmine-pink font-normal">3.1%</span>
-                                    </span>
-                                 </h4>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="chart"></div>
+            </div>
+         </div>
+         <div id="subscriptions-chart"></div>
+      </div>
+   </div>
+    </div>
+    <div class="hidden" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="grid lg:grid-cols-3 gap-4">
+         <div class="total-transactions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Total transactions</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  100/ $32,630.56                           
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.667969" width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3425)">
+                  <path d="M21 10.8359V29.1693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.1667 14.1641H18.9167C18.1431 14.1641 17.4013 14.4714 16.8543 15.0183C16.3073 15.5653 16 16.3072 16 17.0807C16 17.8543 16.3073 18.5961 16.8543 19.1431C17.4013 19.6901 18.1431 19.9974 18.9167 19.9974H23.0833C23.8569 19.9974 24.5987 20.3047 25.1457 20.8517C25.6927 21.3986 26 22.1405 26 22.9141C26 23.6876 25.6927 24.4295 25.1457 24.9765C24.5987 25.5234 23.8569 25.8307 23.0833 25.8307H16" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3425">
+                  <rect width="20" height="20" fill="white" transform="translate(11 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="total-refunds-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Total refunds</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  70/ $9,630.52
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.335938" width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3434)">
+                  <path d="M24.4609 10.8359L27.6276 14.1693L24.4609 17.5026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.3789 19.1641V17.4974C13.3789 16.6133 13.7125 15.7655 14.3064 15.1404C14.9003 14.5153 15.7057 14.1641 16.5456 14.1641H27.6289" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.5456 29.1667L13.3789 25.8333L16.5456 22.5" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.6289 20.8359V22.5026C27.6289 23.3867 27.2953 24.2345 26.7014 24.8596C26.1075 25.4847 25.3021 25.8359 24.4622 25.8359H13.3789" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3434">
+                  <rect width="19" height="20" fill="white" transform="translate(11.0039 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                  
+            </div>
+         </div>
+         <div class="total-chargeback-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60">Total chargeback</p>
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  18/ $2,630.31
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <path d="M18.1263 18.3359L14.168 22.5026L18.1263 26.6693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M26.8346 13.3359V19.1693C26.8346 20.0533 26.501 20.9012 25.9071 21.5263C25.3133 22.1514 24.5078 22.5026 23.668 22.5026H14.168" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+            </div>
+         </div>
+      </div>
+    </div>
+    </div>
+    <div class="hidden" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="total-sales-main rounded-lg bg-white px-4 py-5">
+         <div class="flex flex-wrap items-center justify-between flex-column">
+            <div class="total-sales-block">
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Total Sales</h4>
+               <div class="flex items-center text-sm text-dark-gunmetal-60">
+                  <span class="flex items-center gap-1 ml-1 mr-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-green-dark">5% vs</span>
+                  </span>
+                  Past Month
                </div>
-               <div class="grid lg:grid-cols-3 gap-4">
-                  <div class="total-transactions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Total transactions</p>
-                        <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                           100/ $32,630.56                            
-                        </h4>
-                     </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-1 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+         </div>
+         <div id="total-applications-chart"></div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-4 total-transactions-block">
+         <div class="total-transactions-block rounded-lg bg-white px-4 py-5">
+            <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Product </h4>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                  <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-transactions-chart1"></div>
+            </div>
+         </div>
+         <div class="total-refunds-block rounded-lg bg-white px-4 py-5">
+            <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Category</h4>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                  <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-refunds-chart1"></div>
+            </div>
+         </div>
+         <div class="total-chargebacks-block rounded-lg bg-white px-4 py-5">
+            <div class="flex justify-between items-center">
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Customer</h4>
+               <a href="javascript:void(0)" class="text-sm text-new-car hover:text-dark-gunmetal-80 font-medium">See All</a>
+            </div>
+            <div class="flex gap-2">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                  <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-chargebacks-chart1"></div>
+            </div>
+         </div>
+      </div>
+      <div class="total-open-applications rounded-lg bg-white w-full dark:bg-charleston-green py-5 px-4">
+         <div class="flex flex-wrap items-center justify-between flex-column">
+            <div class="total-applications-block">
+               <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2 flex items-center gap-4 sm:gap-7">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15 18.5L9 12.5L15 6.5" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     Top Sales by Customer</h4>
+                     
+            </div>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                  <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+               <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <div class="w-full my-4 overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 px-4">
+               <thead class="px-4">
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           No.
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60 flex gap-2">
+                           Table Head                                             
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head 
+                        </div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           1.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           2.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           3.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                          4.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           5.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           6.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           7.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           8.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           9.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           10.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+    </div>
+    <div class="hidden" id="fraud" role="tabpanel" aria-labelledby="fraud-tab">
+         <div class="flex flex-col gap-4 w-full">
+            <div class="grid lg:grid-cols-3 gap-4">
+               <div class="total-transactions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60">Suspicious transactions</p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        38                           
+                     </h4>
                   </div>
-                  <div class="total-refunds-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Total refunds</p>
-                        <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                           70/ $12,876.41
-                        </h4>
-                     </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="total-refunds-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60">Max. Fraud Amount</p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        $5,874.16
+                     </h4>
                   </div>
-                  <div class="total-chargeback-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
-                     <div class="w-11/12 xl:w-auto">
-                        <p class="text-dark-gunmetal-60">Total chargeback</p>
-                        <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
-                           18/ $5,823.08
-                        </h4>
-                     </div>
-                     <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="total-chargeback-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60">Total Fraud Amount</p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        $12,121.08
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+            </div>
+         <div class="fraud-main rounded-lg bg-white px-4 py-5">
+            <div class="flex flex-wrap items-center justify-between flex-column">
+               <div class="total-sales-block">
+                  <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Fraud</h4>                 
+               </div>
+               <div class="flex flex-wrap gap-2 mb-2 sm:mt-0 items-center">
+                  <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                     <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                     <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                     <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+                  </div>
+                  <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
                   </div>
                </div>
-               <div class="total-sales-main rounded-lg bg-white px-4 py-5">
-                  <div class="flex flex-wrap items-center justify-between flex-column">
-                     <div class="total-sales-block">
-                        <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Total Sales</h4>
-                        <div class="flex items-center text-sm text-dark-gunmetal-60">
-                           <span class="flex items-center gap-1 ml-1 mr-1">
-                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
-                              </svg>
-                              <span class="text-green-dark">5% vs</span>
-                           </span>
-                           Past Month
-                        </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-8">
+               <div class="flex">
+                  <div class="flex h-6 items-center">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="8" rx="4" fill="#3BA951"/>
+                     </svg>
+                  </div>
+                  <div class="pl-3">
+                     <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                        Avg. Fraud
+                     </p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        60 
+                        <span class="flex items-center gap-1 ml-1">
+                           <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"></path>
+                           </svg>
+                           <span class="text-sm text-deep-carmine-pink font-normal">1.0%</span>
+                        </span>
+                     </h4>
+                  </div>
+               </div>
+               <div class="flex">
+                  <div class="flex h-6 items-center">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="8" rx="4" fill="#EFB117"/>
+                     </svg>
+                  </div>
+                  <div class="pl-3">
+                     <p class="text-dark-gunmetal-60 flex gap-2 items-center">
+                        Fraud by Risk Score
+                     </p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        70 
+                        <span class="flex items-center gap-1 ml-1">
+                           <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
+                           </svg>
+                           <span class="text-sm text-green-dark font-normal">17.0%</span>
+                        </span>
+                     </h4>
+                  </div>
+               </div>
+            </div>
+            <div id="fraud-chart"></div>
+         </div>
+         <div class="flex flex-wrap lg:flex-nowrap gap-4 items-start">
+            <div class="bg-white flex flex-col rounded-lg px-4 py-5 items-center justify-between w-full lg:w-8/12">
+               <div class="w-full flex justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60">Fraudulent transactions</p>
+                     <h4 class="text-lg text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        38                           
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="w-full mt-4">
+                 <img class="w-full object-cover h-80 rounded-lg" src="../src/map-img.jpg">                    
+               </div>
+            </div>
+            <div class="w-full lg:w-1/3 bg-white flex flex-wrap rounded-lg px-4 py-5 items-center">
+               <div class="flex flex-wrap items-center justify-between flex-column w-full mb-4">
+                  <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 ">Top Merchant by Fraud</h4>
+                  <div class="w-full mt-2">
+                  <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+                     <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                        <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
                      </div>
-                     <div class="flex flex-wrap gap-2 mt-4 sm:mt-0 items-center">
-                        <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
-                           <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
-                        </div>
+                  </div>                     
+                  </div>
+               </div>
+               <div class="w-full flex flex-col gap-4 mt-6">
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" rx="4" fill="#4269D0"/>
+                        </svg>
+                     </div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">Jane Doe</p>
+                        <p class="text-dark-gunmetal-60">$100,000</p>
                      </div>
                   </div>
-                  <div id="total-applications-chart"></div>
-               </div> 
-               <div class="grid lg:grid-cols-3 gap-4 total-transactions-block">
-                  <div class="total-transactions-block rounded-lg bg-white px-4 py-5">
-                     <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Product</h4>
-                     <div class="flex gap-2 mt-4 sm:mt-0 items-center">
-                        <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
-                           <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
-                        </div>
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#EFB117"/>
+                           </svg>                           
                      </div>
-                     <div class="mt-4 flex w-full items-center justify-center">
-                        <div id="total-transactions-chart1"></div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">MIke Doe</p>
+                        <p class="text-dark-gunmetal-60">$80,000</p>
                      </div>
                   </div>
-                  <div class="total-refunds-block rounded-lg bg-white px-4 py-5">
-                     <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Category</h4>
-                     <div class="flex gap-2 mt-4 sm:mt-0 items-center">
-                        <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
-                           <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
-                        </div>
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#FF725C"/>
+                           </svg>                                                    
                      </div>
-                     <div class="mt-4 flex w-full items-center justify-center">
-                        <div id="total-refunds-chart1"></div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">Jon Doe</p>
+                        <p class="text-dark-gunmetal-60">$50,000</p>
                      </div>
                   </div>
-                  <div class="total-chargebacks-block rounded-lg bg-white px-4 py-5">
-                     <h4 class="text-lg text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Customer</h4>
-                     <div class="flex gap-2">
-                        <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
-                           <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
-                           <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
-                        </div>
+                  <div class="border-0 border-b-AuroMetalSaurus-32 flex flex-wrap gap-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#6CC5B0"/>
+                           </svg>                                                     
                      </div>
-                     <div class="mt-4 flex w-full items-center justify-center">
-                        <div id="total-chargebacks-chart1"></div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">Mark Doe</p>
+                        <p class="text-dark-gunmetal-60">$9,000</p>
                      </div>
                   </div>
                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+</div>
+
+
+              
+              
+              
+              
+              
             </main>
             <footer></footer>
          </div>

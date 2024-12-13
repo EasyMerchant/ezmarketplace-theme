@@ -453,190 +453,85 @@ function addEventListeners() {
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', addEventListeners);
 
-
-var chart;
-    var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data
-    
-    var options = {
-        series: [{
-            name: "Desktops",
-            data: initialData
-        }],
-        colors: ["#3BA951"],
-        chart: {
-            height: 350,
-            type: 'line',
-            zoom: {
-                enabled: false
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'straight'
-        },
-        grid: {
-            row: {
-                colors: ['#f3f3f3', 'transparent'],
-                opacity: 0.5
-            }
-        },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
-    };
-
-    // Function to calculate percentage change
-    function calculatePercentageChange(current, previous) {
-        if (previous === 0) return 0;
-        return ((current - previous) / previous) * 100;
+var options = {
+    series: [{
+      name: "Session Duration",
+      data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+    },
+    {
+      name: "Page Views",
+      data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+    },
+    {
+      name: 'Total Visits',
+      data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
     }
-
-    // Function to update chart and title based on the selected filter
-    function updateChart(filter) {
-        var data;
-        var percentageChange = 0;
-
-        // Determine the data and title based on the filter
-        if (filter === 'today') {
-            // You would typically have data for today here; we simulate it.
-            data = [120]; // Just an example value for today.
-
-            // Calculate percentage change compared to the previous day
-            percentageChange = calculatePercentageChange(data[0], 100); // Example comparison with previous day
-
-        } else if (filter === 'week') {
-            // Simulated data for the current week (e.g., sum of last 7 days)
-            data = [100, 150, 170, 200, 230, 210, 240]; // Example data for this week
-
-            // Calculate percentage change compared to last week
-            var previousWeekData = [90, 140, 160, 190, 220, 200, 230]; // Example data for last week
-            var currentWeekTotal = data.reduce((a, b) => a + b, 0);
-            var previousWeekTotal = previousWeekData.reduce((a, b) => a + b, 0);
-            percentageChange = calculatePercentageChange(currentWeekTotal, previousWeekTotal);
-
-        } else if (filter === 'month') {
-            // Simulated data for the current month (e.g., sum of last 30 days)
-            data = initialData; // Example data for this month
-
-            // Calculate percentage change compared to last month
-            var previousMonthData = [80, 120, 130, 180, 200, 210, 250, 290, 300]; // Example data for last month
-            var currentMonthTotal = data.reduce((a, b) => a + b, 0);
-            var previousMonthTotal = previousMonthData.reduce((a, b) => a + b, 0);
-            percentageChange = calculatePercentageChange(currentMonthTotal, previousMonthTotal);
-        }
-
-        // Update chart with the new data
-        chart.updateOptions({
-            series: [{
-                name: "Desktops",
-                data: data
-            }]
-        });
+  ],
+    chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+  },
+  colors: ["#3BA951", "#EFB117", "#3BA951"],
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [5, 7, 5],
+    curve: 'straight',
+    dashArray: [0, 8, 5]
+  },
+  legend: {
+    tooltipHoverFormatter: function(val, opts) {
+      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
     }
-  
-  if (document.getElementById("total-open-applications-chart") && typeof ApexCharts !== 'undefined') {
-    
-    // Initialize the chart
-    chart = new ApexCharts(document.querySelector("#total-open-applications-chart"), options);
-    chart.render();
-
-    // Initial load (can default to 'month' or any other filter)
-    updateChart('month');
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
+    }
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+      '10 Jan', '11 Jan', '12 Jan'
+    ],
+  },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val) {
+            return val + " (mins)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val + " per session"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val;
+          }
+        }
+      }
+    ]
+  },
+  grid: {
+    borderColor: '#3BA951',
   }
+  };
 
-  var chart;
-    var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data
-    
-    var options = {
-        series: [{
-            name: "Desktops",
-            data: initialData
-        }],
-        colors: ["#3BA951"],
-        chart: {
-            height: 350,
-            type: 'line',
-            zoom: {
-                enabled: false
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'straight'
-        },
-        grid: {
-            row: {
-                colors: ['#f3f3f3', 'transparent'],
-                opacity: 0.5
-            }
-        },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
-    };
+  var chart = new ApexCharts(document.querySelector("#total-open-applications-chart"), options);
+  chart.render();
 
-    // Function to calculate percentage change
-    function calculatePercentageChange(current, previous) {
-        if (previous === 0) return 0;
-        return ((current - previous) / previous) * 100;
-    }
-
-    // Function to update chart and title based on the selected filter
-    function updateChart(filter) {
-        var data;
-        var percentageChange = 0;
-
-        // Determine the data and title based on the filter
-        if (filter === 'today') {
-            // You would typically have data for today here; we simulate it.
-            data = [120]; // Just an example value for today.
-
-            // Calculate percentage change compared to the previous day
-            percentageChange = calculatePercentageChange(data[0], 100); // Example comparison with previous day
-
-        } else if (filter === 'week') {
-            // Simulated data for the current week (e.g., sum of last 7 days)
-            data = [100, 150, 170, 200, 230, 210, 240]; // Example data for this week
-
-            // Calculate percentage change compared to last week
-            var previousWeekData = [90, 140, 160, 190, 220, 200, 230]; // Example data for last week
-            var currentWeekTotal = data.reduce((a, b) => a + b, 0);
-            var previousWeekTotal = previousWeekData.reduce((a, b) => a + b, 0);
-            percentageChange = calculatePercentageChange(currentWeekTotal, previousWeekTotal);
-
-        } else if (filter === 'month') {
-            // Simulated data for the current month (e.g., sum of last 30 days)
-            data = initialData; // Example data for this month
-
-            // Calculate percentage change compared to last month
-            var previousMonthData = [80, 120, 130, 180, 200, 210, 250, 290, 300]; // Example data for last month
-            var currentMonthTotal = data.reduce((a, b) => a + b, 0);
-            var previousMonthTotal = previousMonthData.reduce((a, b) => a + b, 0);
-            percentageChange = calculatePercentageChange(currentMonthTotal, previousMonthTotal);
-        }
-
-        // Update chart with the new data
-        chart.updateOptions({
-            series: [{
-                name: "Desktops",
-                data: data
-            }]
-        });
-    }
-  
-  if (document.getElementById("total-applications-chart") && typeof ApexCharts !== 'undefined') {
-    
-    // Initialize the chart
-    chart = new ApexCharts(document.querySelector("#total-applications-chart"), options);
-    chart.render();
-
-    // Initial load (can default to 'month' or any other filter)
-    updateChart('month');
-  }
 
   var options = {
     series: [{
@@ -714,9 +609,168 @@ var chart;
   }
   };
 
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  var chart = new ApexCharts(document.querySelector("#merchants-chart"), options);
   chart.render();
 
+
+  var options = {
+    series: [{
+      name: "Session Duration",
+      data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+    },
+    {
+      name: "Page Views",
+      data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+    },
+    {
+      name: 'Total Visits',
+      data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+    }
+  ],
+    chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+  },
+  colors: ["#3BA951", "#EFB117", "#3BA951"],
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [5, 7, 5],
+    curve: 'straight',
+    dashArray: [0, 8, 5]
+  },
+  legend: {
+    tooltipHoverFormatter: function(val, opts) {
+      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
+    }
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
+    }
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+      '10 Jan', '11 Jan', '12 Jan'
+    ],
+  },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val) {
+            return val + " (mins)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val + " per session"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val;
+          }
+        }
+      }
+    ]
+  },
+  grid: {
+    borderColor: '#3BA951',
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#subscriptions-chart"), options);
+  chart.render();
+
+
+  var options = {
+    series: [{
+      name: "Session Duration",
+      data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+    },
+    {
+      name: "Page Views",
+      data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+    },
+    {
+      name: 'Total Visits',
+      data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+    }
+  ],
+    chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+  },
+  colors: ["#3BA951", "#EFB117", "#3BA951"],
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [5, 7, 5],
+    curve: 'straight',
+    dashArray: [0, 8, 5]
+  },
+  legend: {
+    tooltipHoverFormatter: function(val, opts) {
+      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
+    }
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
+    }
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+      '10 Jan', '11 Jan', '12 Jan'
+    ],
+  },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val) {
+            return val + " (mins)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val + " per session"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val;
+          }
+        }
+      }
+    ]
+  },
+  grid: {
+    borderColor: '#3BA951',
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#fraud-chart"), options);
+  chart.render();
 
   var options = {
     series: [44, 55, 13, 33, 20],
@@ -769,10 +823,9 @@ var chart;
       ]
     }
   };
-  
+
   var chart = new ApexCharts(document.querySelector("#total-transactions-chart1"), options);
   chart.render();
-
 
   var options = {
     series: [44, 55, 13, 33, 20],
@@ -884,6 +937,103 @@ var chart;
   
   var chart = new ApexCharts(document.querySelector("#total-chargebacks-chart1"), options);
   chart.render();
+
+  var chart;
+    var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data
+    
+    var options = {
+        series: [{
+            name: "Desktops",
+            data: initialData
+        }],
+        colors: ["#3BA951"],
+        chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+                enabled: false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'straight'
+        },
+        grid: {
+            row: {
+                colors: ['#f3f3f3', 'transparent'],
+                opacity: 0.5
+            }
+        },
+        xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        }
+    };
+
+    // Function to calculate percentage change
+    function calculatePercentageChange(current, previous) {
+        if (previous === 0) return 0;
+        return ((current - previous) / previous) * 100;
+    }
+
+    // Function to update chart and title based on the selected filter
+    function updateChart(filter) {
+        var data;
+        var percentageChange = 0;
+
+        // Determine the data and title based on the filter
+        if (filter === 'today') {
+            // You would typically have data for today here; we simulate it.
+            data = [120]; // Just an example value for today.
+
+            // Calculate percentage change compared to the previous day
+            percentageChange = calculatePercentageChange(data[0], 100); // Example comparison with previous day
+
+        } else if (filter === 'week') {
+            // Simulated data for the current week (e.g., sum of last 7 days)
+            data = [100, 150, 170, 200, 230, 210, 240]; // Example data for this week
+
+            // Calculate percentage change compared to last week
+            var previousWeekData = [90, 140, 160, 190, 220, 200, 230]; // Example data for last week
+            var currentWeekTotal = data.reduce((a, b) => a + b, 0);
+            var previousWeekTotal = previousWeekData.reduce((a, b) => a + b, 0);
+            percentageChange = calculatePercentageChange(currentWeekTotal, previousWeekTotal);
+
+        } else if (filter === 'month') {
+            // Simulated data for the current month (e.g., sum of last 30 days)
+            data = initialData; // Example data for this month
+
+            // Calculate percentage change compared to last month
+            var previousMonthData = [80, 120, 130, 180, 200, 210, 250, 290, 300]; // Example data for last month
+            var currentMonthTotal = data.reduce((a, b) => a + b, 0);
+            var previousMonthTotal = previousMonthData.reduce((a, b) => a + b, 0);
+            percentageChange = calculatePercentageChange(currentMonthTotal, previousMonthTotal);
+        }
+
+        // Update chart with the new data
+        chart.updateOptions({
+            series: [{
+                name: "Desktops",
+                data: data
+            }]
+        });
+    }
+  
+  if (document.getElementById("total-applications-chart") && typeof ApexCharts !== 'undefined') {
+    
+    // Initialize the chart
+    chart = new ApexCharts(document.querySelector("#total-applications-chart"), options);
+    chart.render();
+
+    // Initial load (can default to 'month' or any other filter)
+    updateChart('month');
+  }
+
+
+
+
+  
   
 
   
