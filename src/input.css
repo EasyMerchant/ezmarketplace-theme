@@ -40,4 +40,32 @@
 .ck-reset_all .ck-button:hover .ck-icon > path {
   @apply dark:!text-dark-gunmetal;
 }
-
+.total-open-applications .apexcharts-menu-icon {
+  @apply -mt-16 -mr-3 w-8 h-8;
+}
+.total-open-applications .apexcharts-menu {
+  @apply -mr-3
+} 
+.total-open-applications .apexcharts-menu-icon svg,
+.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg,
+.applications-main .apexcharts-toolbar .apexcharts-menu-icon svg, 
+.subscriptions-main .apexcharts-toolbar .apexcharts-menu-icon svg,
+.fraud-main .apexcharts-toolbar .apexcharts-menu-icon svg {
+  @apply opacity-0;
+}
+.total-applications-main .apexcharts-menu-icon,
+.total-sales-main .apexcharts-menu-icon {
+  @apply  hidden;
+}
+.merchants-main .apexcharts-menu-icon,
+.subscriptions-main .apexcharts-menu-icon,
+.applications-main .apexcharts-menu-icon,
+.fraud-main  .apexcharts-menu-icon {
+  @apply mt-[-180px] -mr-3 w-8 h-8; 
+}
+.merchants-main .apexcharts-menu,
+.subscriptions-main .apexcharts-menu,
+.applications-main .apexcharts-menu,
+.fraud-main .apexcharts-menu {
+  @apply -mt-14 -mr-3 w-8; 
+}

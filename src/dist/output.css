@@ -1434,10 +1434,6 @@ input:checked + .toggle-bg {
   margin-bottom: 1rem;
 }
 
-.-mb-px {
-  margin-bottom: -1px;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1508,10 +1504,6 @@ input:checked + .toggle-bg {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .block {
@@ -1608,10 +1600,6 @@ input:checked + .toggle-bg {
 
 .h-8 {
   height: 2rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .h-9 {
@@ -2078,11 +2066,6 @@ input:checked + .toggle-bg {
   border-end-start-radius: 0.5rem;
 }
 
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .rounded-bl-lg {
   border-bottom-left-radius: 0.5rem;
 }
@@ -2178,10 +2161,6 @@ input:checked + .toggle-bg {
 .border-y-AuroMetalSaurus-16 {
   border-top-color: #70758029;
   border-bottom-color: #70758029;
-}
-
-.border-b-AuroMetalSaurus-32 {
-  border-bottom-color: #70758052;
 }
 
 .border-r-AuroMetalSaurus-32 {
@@ -2326,11 +2305,6 @@ input:checked + .toggle-bg {
 
 .stroke-new-car {
   stroke: #1757D9;
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .p-010 {
@@ -3019,45 +2993,23 @@ input:checked + .toggle-bg {
 
 .total-open-applications .apexcharts-menu-icon {
   margin-top: -4rem;
-  margin-right: -0.75rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.total-open-applications .apexcharts-menu {
-  margin-right: -0.75rem;
 }
 
 .total-open-applications .apexcharts-menu-icon svg,
-.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg,
-.applications-main .apexcharts-toolbar .apexcharts-menu-icon svg, 
-.subscriptions-main .apexcharts-toolbar .apexcharts-menu-icon svg,
-.fraud-main .apexcharts-toolbar .apexcharts-menu-icon svg {
+.merchants-main .apexcharts-toolbar .apexcharts-menu-icon svg {
   opacity: 0;
 }
 
-.total-applications-main .apexcharts-menu-icon,
-.total-sales-main .apexcharts-menu-icon {
+.total-applications-main .apexcharts-menu-icon {
   display: none;
 }
 
-.merchants-main .apexcharts-menu-icon,
-.subscriptions-main .apexcharts-menu-icon,
-.applications-main .apexcharts-menu-icon,
-.fraud-main  .apexcharts-menu-icon {
-  margin-top: -180px;
-  margin-right: -0.75rem;
-  height: 2rem;
-  width: 2rem;
+.merchants-main .apexcharts-menu-icon {
+  margin-top: -12rem;
 }
 
-.merchants-main .apexcharts-menu,
-.subscriptions-main .apexcharts-menu,
-.applications-main .apexcharts-menu,
-.fraud-main .apexcharts-menu {
+.merchants-main .apexcharts-menu {
   margin-top: -3.5rem;
-  margin-right: -0.75rem;
-  width: 2rem;
 }
 
 .placeholder\:font-inter::-moz-placeholder {
@@ -4289,29 +4241,8 @@ input:checked + .toggle-bg {
     justify-content: flex-end;
   }
 
-  .sm\:gap-5 {
-    gap: 1.25rem;
-  }
-
-  .sm\:gap-7 {
-    gap: 1.75rem;
-  }
-
   .sm\:gap-8 {
     gap: 2rem;
-  }
-
-  .sm\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
-  .sm\:gap-y-4 {
-    row-gap: 1rem;
-  }
-
-  .sm\:p-4 {
-    padding: 1rem;
   }
 
   .sm\:px-4 {
@@ -4985,28 +4916,12 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .lg\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
-  .lg\:gap-14 {
-    gap: 3.5rem;
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -5018,17 +4933,9 @@ input:checked + .toggle-bg {
   .xl\:w-auto {
     width: auto;
   }
-
-  .xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .\32xl\:py-48 {
     padding-top: 12rem;
     padding-bottom: 12rem;

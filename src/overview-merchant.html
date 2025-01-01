@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Flowbite with Tailwind CSS</title>
+      <link href="../dist/output.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+   </head>
+   <body class="bg-anti-flash-white dark:bg-chinese-black">
+      <div class="flex grow">
+         <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
+            <div class="flex min-h-screen flex-col justify-between w-full">
+               <div class="h-screen overflow-y-auto overflow-x-hidden scrollbar-none">
+                  <div
+                     class="w-full pt-4 pb-10 px-4 flex items-center justify-center logo-header sticky top-0 bg-white dark:bg-charleston-green z-99">
+                     <div class="logo hidden items-center gap-2 ">
+                        <img src="../Image/Main-logo.svg" alt="">
+                        <div
+                           class="text-base leading-4 font-semibold text-dark-gunmetal-80 font-inter uppercase dark:text-alice-blue">
+                           TMMO
+                        </div>
+                     </div>
+                     <div class="w-8 siderbar-button">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M21.8333 8.5H10.1667C9.24619 8.5 8.5 9.24619 8.5 10.1667V21.8333C8.5 22.7538 9.24619 23.5 10.1667 23.5H21.8333C22.7538 23.5 23.5 22.7538 23.5 21.8333V10.1667C23.5 9.24619 22.7538 8.5 21.8333 8.5Z"
+                              stroke="#2E333E" class="dark:stroke-silver-sand" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M13.5 8.5V23.5" stroke="#2E333E" class="dark:stroke-silver-sand"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                  </div>
+                  <ul class="space-y-2 tracking-wide px-4">
+                     <li class="min-w-max group">
+                        <a href="./overview.html" aria-label="dashboard"
+                           class="flex items-center   p-4  text-gray-600 gap-4  bg-new-car-8 group-hover:bg-new-car-8 rounded-lg group-hover:rounded-lg dark:bg-pale-cerulean dark:group-hover:bg-pale-cerulean ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.75 2H4.75C4.28587 2 3.84075 2.16857 3.51256 2.46863C3.18437 2.76869 3 3.17565 3 3.6V16.4C3 16.8243 3.18437 17.2313 3.51256 17.5314C3.84075 17.8314 4.28587 18 4.75 18H15.25C15.7141 18 16.1592 17.8314 16.4874 17.5314C16.8156 17.2313 17 16.8243 17 16.4V6.8L11.75 2Z" stroke="#1757D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 3V8H17" stroke="#1757D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 11H6" stroke="#1757D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 14H6" stroke="#1757D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M7 8H6.5H6" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8  text-new-car dark:text-dark-gunmetal font-medium">Overview</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./index.html" aria-label="dashboard"
+                           class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" class="z-10">
+                              <path
+                                 d="M14 17V15.3333C14 14.4493 13.6839 13.6014 13.1213 12.9763C12.5587 12.3512 11.7956 12 11 12H5C4.20435 12 3.44129 12.3512 2.87868 12.9763C2.31607 13.6014 2 14.4493 2 15.3333V17"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M8 9C9.65685 9 11 7.65685 11 6C11 4.34315 9.65685 3 8 3C6.34315 3 5 4.34315 5 6C5 7.65685 6.34315 9 8 9Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M18 17V15.2964C17.9996 14.5415 17.8029 13.8082 17.4409 13.2115C17.0789 12.6149 16.5721 12.1887 16 12"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M13 4C13.5721 4.14213 14.0792 4.46497 14.4413 4.91762C14.8034 5.37027 15 5.92699 15 6.5C15 7.07301 14.8034 7.62973 14.4413 8.08238C14.0792 8.53503 13.5721 8.85787 13 9"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand">Users</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M17 13.2216C16.5033 14.3991 15.7263 15.4367 14.7371 16.2437C13.7478 17.0507 12.5764 17.6025 11.3253 17.8509C10.0741 18.0992 8.78135 18.0366 7.55992 17.6685C6.33849 17.3004 5.22562 16.638 4.31861 15.7391C3.41159 14.8403 2.73805 13.7325 2.35687 12.5125C1.97568 11.2924 1.89846 9.99739 2.13196 8.74055C2.36546 7.48371 2.90256 6.30333 3.69631 5.30262C4.49006 4.30191 5.51629 3.51133 6.68528 3"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M18 10C18 8.94943 17.7931 7.90914 17.391 6.93853C16.989 5.96793 16.3997 5.08601 15.6569 4.34315C14.914 3.60028 14.0321 3.011 13.0615 2.60896C12.0909 2.20693 11.0506 2 10 2V10H18Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Charts</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Merchants.html"
+                           class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M16.4 6H3.6C2.71634 6 2 6.76751 2 7.71429V16.2857C2 17.2325 2.71634 18 3.6 18H16.4C17.2837 18 18 17.2325 18 16.2857V7.71429C18 6.76751 17.2837 6 16.4 6Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M13 17V3.66667C13 3.22464 12.842 2.80072 12.5607 2.48816C12.2794 2.17559 11.8978 2 11.5 2H8.5C8.10218 2 7.72064 2.17559 7.43934 2.48816C7.15804 2.80072 7 3.22464 7 3.66667V17"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" font-medium menu hidden text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-silver-sand dark:group-hover:text-dark-gunmetal">Merchants</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="block w-full tems-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                           aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
+                           <div class="flex justify-between">
+                              <div class="flex gap-4">
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2H2V8H8V2Z" stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18 2H12V8H18V2Z" stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18 12H12V18H18V12Z" stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 12H2V18H8V12Z" stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                                 <span
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Products</span>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                 <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal" />
+                              </svg>
+                           </div>
+                        </a>
+                        <ul id="dropdown-example1"
+                           class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10% dark:berfore:bg-black-coral">
+                           <li>
+                              <a href="./Products-All-Products.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">All
+                              Products</a>
+                           </li>
+                           <li>
+                              <a href="./Products-Category.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Category</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Media-Library.html"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M16.2222 2H3.77778C2.79594 2 2 2.79594 2 3.77778V16.2222C2 17.2041 2.79594 18 3.77778 18H16.2222C17.2041 18 18 17.2041 18 16.2222V3.77778C18 2.79594 17.2041 2 16.2222 2Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M18 12.5455L13.625 8L4 18" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Media
+                           Library</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Quotes.html"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10 2L2 6L10 10L18 6L10 2Z" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2 14L10 18L18 14" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M2 10L10 14L18 10" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Quotes</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Invocies.html"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M11.75 2H4.75C4.28587 2 3.84075 2.16857 3.51256 2.46863C3.18437 2.76869 3 3.17565 3 3.6V16.4C3 16.8243 3.18437 17.2313 3.51256 17.5314C3.84075 17.8314 4.28587 18 4.75 18H15.25C15.7141 18 16.1592 17.8314 16.4874 17.5314C16.8156 17.2313 17 16.8243 17 16.4V6.8L11.75 2Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M12 3V8H17" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M12 11H6" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M12 14H6" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M7 8H6.5H6" stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Invoices</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M17.4917 11.5083L11.5167 17.4833C11.3619 17.6383 11.1781 17.7612 10.9757 17.8451C10.7734 17.929 10.5565 17.9721 10.3375 17.9721C10.1185 17.9721 9.9016 17.929 9.69927 17.8451C9.49694 17.7612 9.31312 17.6383 9.15833 17.4833L2 10.3333V2H10.3333L17.4917 9.15833C17.8021 9.47061 17.9763 9.89303 17.9763 10.3333C17.9763 10.7736 17.8021 11.1961 17.4917 11.5083Z"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M5.83203 5.83203H5.84203" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Purchase
+                           Order</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Sales-Orders.html"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.5 17.5C8.77614 17.5 9 17.2761 9 17C9 16.7239 8.77614 16.5 8.5 16.5C8.22386 16.5 8 16.7239 8 17C8 17.2761 8.22386 17.5 8.5 17.5Z"
+                                 fill="#2E333E" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M15.5 17.5C15.7761 17.5 16 17.2761 16 17C16 16.7239 15.7761 16.5 15.5 16.5C15.2239 16.5 15 16.7239 15 17C15 17.2761 15.2239 17.5 15.5 17.5Z"
+                                 fill="#2E333E" stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M2 2.5H4.90909L6.85818 12.3191C6.92469 12.6567 7.10684 12.96 7.37276 13.1758C7.63868 13.3917 7.97142 13.5063 8.31273 13.4997H15.3818C15.7231 13.5063 16.0559 13.3917 16.3218 13.1758C16.5877 12.96 16.7699 12.6567 16.8364 12.3191L18 6.16658H5.63636"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Sales
+                           Order</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="./Roles-Permission.html"
+                           class="flex items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg ">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M17.1973 2L15.5918 3.68199M15.5918 3.68199L18 6.20498L15.1904 9.14847L12.7822 6.62548M15.5918 3.68199L12.7822 6.62548M9.48301 10.082C9.89749 10.5104 10.227 11.0206 10.4525 11.583C10.678 12.1454 10.7952 12.749 10.7971 13.359C10.7991 13.9691 10.6858 14.5735 10.4639 15.1375C10.2419 15.7014 9.91573 16.2139 9.50399 16.6452C9.09226 17.0766 8.60315 17.4184 8.06482 17.6509C7.52649 17.8834 6.94958 18.002 6.36731 18C5.78503 17.9979 5.20889 17.8752 4.67206 17.639C4.13523 17.4027 3.64832 17.0575 3.23935 16.6232C2.43512 15.7509 1.99011 14.5825 2.00017 13.3697C2.01023 12.1569 2.47455 10.9968 3.29313 10.1392C4.11171 9.28156 5.21906 8.7951 6.37667 8.78456C7.53427 8.77402 8.64952 9.24025 9.4822 10.0828L9.48301 10.082ZM9.48301 10.082L12.7822 6.62548"
+                                 stroke="#585D68"
+                                 class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                           <span
+                              class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Roles
+                           & Permission</span>
+                        </a>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                           aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example2">
+                           <div class="flex justify-between">
+                              <div class="flex gap-4">
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                       d="M13.2 6.7995V10.7995C13.2 11.436 13.4529 12.0465 13.9029 12.4966C14.353 12.9466 14.9635 13.1995 15.6 13.1995C16.2365 13.1995 16.847 12.9466 17.2971 12.4966C17.7471 12.0465 18 11.436 18 10.7995V9.9995C17.9999 8.19392 17.389 6.44148 16.2666 5.02713C15.1443 3.61277 13.5764 2.61968 11.8181 2.20934C10.0598 1.799 8.21435 1.99554 6.58188 2.767C4.94942 3.53846 3.62592 4.83947 2.82661 6.45848C2.0273 8.07749 1.79918 9.91929 2.17934 11.6844C2.5595 13.4495 3.52559 15.0341 4.92051 16.1805C6.31543 17.3269 8.05715 17.9678 9.86246 17.9988C11.6678 18.0299 13.4305 17.4493 14.864 16.3515"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                                 <span
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Email
+                                 Template</span>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                 <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal" />
+                              </svg>
+                           </div>
+                        </a>
+                        <ul id="dropdown-example2"
+                           class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10% dark:berfore:bg-black-coral">
+                           <li>
+                              <a href="./Email-Template.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Variables</a>
+                           </li>
+                           <li>
+                              <a href="./Email-Template-Template.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Templates</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                           aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                           <div class="flex justify-between">
+                              <div class="flex gap-4">
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M10 7C13.866 7 17 5.88071 17 4.5C17 3.11929 13.866 2 10 2C6.13401 2 3 3.11929 3 4.5C3 5.88071 6.13401 7 10 7Z"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17 10C17 11.1067 13.8889 12 10 12C6.11111 12 3 11.1067 3 10"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                       d="M3 4V15.5294C3 16.8965 6.11111 18 10 18C13.8889 18 17 16.8965 17 15.5294V4"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                                 <span
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Manage
+                                 Content</span>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                 <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal" />
+                              </svg>
+                           </div>
+                        </a>
+                        <ul id="dropdown-example"
+                           class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10% dark:berfore:bg-black-coral">
+                           <li>
+                              <a href="./Manage-Content-Content-Widget.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Content
+                              Widget</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                           aria-controls="dropdown-example3" data-collapse-toggle="dropdown-example3">
+                           <div class="flex justify-between">
+                              <div class="flex gap-4">
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 10H13.2L11.6 12H8.4L6.8 10H2" stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                       d="M4.76 4.8325L2 10V14.5C2 14.8978 2.16857 15.2794 2.46863 15.5607C2.76869 15.842 3.17565 16 3.6 16H16.4C16.8243 16 17.2313 15.842 17.5314 15.5607C17.8314 15.2794 18 14.8978 18 14.5V10L15.24 4.8325C15.1075 4.58259 14.9033 4.37228 14.6504 4.22521C14.3974 4.07814 14.1057 4.00015 13.808 4H6.192C5.89433 4.00015 5.60261 4.07814 5.34964 4.22521C5.09666 4.37228 4.89246 4.58259 4.76 4.8325Z"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                                 <span
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Client
+                                 Log</span>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                 <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal" />
+                              </svg>
+                           </div>
+                        </a>
+                        <ul id="dropdown-example3"
+                           class="hidden py-2 relative space-y-2 before:w-px before:h-75% before:top-12% before:bg-AuroMetalSaurus-32 before:absolute before:left-10% dark:berfore:bg-black-coral">
+                           <li>
+                              <a href="./Client-Logs-Activity-Logs.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-12% active:after:left-10% active:after:h-8 hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Activity
+                              Log</a>
+                           </li>
+                           <li>
+                              <a href="./Client-Logs-API-Logs.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-40% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-40% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
+                              Log</a>
+                           </li>
+                           <li>
+                              <a href="./Client-Logs-API-Stats.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-12% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-12% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
+                              Stats</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="min-w-max group">
+                        <a href="javascript:void(0)"
+                           class="block w-full items-center  rounded-md p-4  text-gray-600 gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg "
+                           aria-controls="dropdown-example4" data-collapse-toggle="dropdown-example4">
+                           <div class="flex justify-between">
+                              <div class="flex gap-4">
+                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                       d="M15.3818 12.1818C15.285 12.4012 15.2561 12.6445 15.2989 12.8804C15.3417 13.1164 15.4542 13.3341 15.6218 13.5055L15.6655 13.5491C15.8007 13.6842 15.908 13.8446 15.9812 14.0212C16.0544 14.1978 16.0921 14.387 16.0921 14.5782C16.0921 14.7693 16.0544 14.9586 15.9812 15.1352C15.908 15.3118 15.8007 15.4722 15.6655 15.6073C15.5304 15.7425 15.3699 15.8498 15.1934 15.923C15.0168 15.9962 14.8275 16.0339 14.6364 16.0339C14.4452 16.0339 14.2559 15.9962 14.0794 15.923C13.9028 15.8498 13.7424 15.7425 13.6073 15.6073L13.5636 15.5636C13.3922 15.396 13.1745 15.2835 12.9386 15.2407C12.7027 15.1979 12.4594 15.2268 12.24 15.3236C12.0249 15.4158 11.8414 15.5689 11.7122 15.764C11.583 15.9591 11.5137 16.1878 11.5127 16.4218V16.5455C11.5127 16.9312 11.3595 17.3012 11.0867 17.574C10.8139 17.8468 10.444 18 10.0582 18C9.67241 18 9.30244 17.8468 9.02966 17.574C8.75688 17.3012 8.60364 16.9312 8.60364 16.5455V16.48C8.59801 16.2393 8.52009 16.0058 8.38001 15.81C8.23993 15.6141 8.04417 15.4649 7.81818 15.3818C7.59882 15.285 7.3555 15.2561 7.11957 15.2989C6.88365 15.3417 6.66595 15.4542 6.49455 15.6218L6.45091 15.6655C6.31582 15.8007 6.1554 15.908 5.97882 15.9812C5.80224 16.0544 5.61297 16.0921 5.42182 16.0921C5.23067 16.0921 5.04139 16.0544 4.86481 15.9812C4.68824 15.908 4.52782 15.8007 4.39273 15.6655C4.25749 15.5304 4.1502 15.3699 4.077 15.1934C4.00381 15.0168 3.96613 14.8275 3.96613 14.6364C3.96613 14.4452 4.00381 14.2559 4.077 14.0794C4.1502 13.9028 4.25749 13.7424 4.39273 13.6073L4.43636 13.5636C4.60403 13.3922 4.7165 13.1745 4.75928 12.9386C4.80205 12.7027 4.77317 12.4594 4.67636 12.24C4.58417 12.0249 4.43109 11.8414 4.23597 11.7122C4.04085 11.583 3.81221 11.5137 3.57818 11.5127H3.45455C3.06878 11.5127 2.69881 11.3595 2.42603 11.0867C2.15325 10.8139 2 10.444 2 10.0582C2 9.67241 2.15325 9.30244 2.42603 9.02966C2.69881 8.75688 3.06878 8.60364 3.45455 8.60364H3.52C3.76072 8.59801 3.99419 8.52009 4.19004 8.38001C4.38589 8.23993 4.53507 8.04417 4.61818 7.81818C4.71499 7.59882 4.74387 7.3555 4.70109 7.11957C4.65832 6.88365 4.54585 6.66595 4.37818 6.49455L4.33455 6.45091C4.19931 6.31582 4.09202 6.1554 4.01882 5.97882C3.94562 5.80224 3.90795 5.61297 3.90795 5.42182C3.90795 5.23067 3.94562 5.04139 4.01882 4.86481C4.09202 4.68824 4.19931 4.52782 4.33455 4.39273C4.46963 4.25749 4.63005 4.1502 4.80663 4.077C4.98321 4.00381 5.17249 3.96613 5.36364 3.96613C5.55479 3.96613 5.74406 4.00381 5.92064 4.077C6.09722 4.1502 6.25764 4.25749 6.39273 4.39273L6.43636 4.43636C6.60777 4.60403 6.82547 4.7165 7.06139 4.75928C7.29731 4.80205 7.54064 4.77317 7.76 4.67636H7.81818C8.03329 4.58417 8.21674 4.43109 8.34596 4.23597C8.47518 4.04085 8.54452 3.81221 8.54545 3.57818V3.45455C8.54545 3.06878 8.6987 2.69881 8.97148 2.42603C9.24426 2.15325 9.61423 2 10 2C10.3858 2 10.7557 2.15325 11.0285 2.42603C11.3013 2.69881 11.4545 3.06878 11.4545 3.45455V3.52C11.4555 3.75403 11.5248 3.98267 11.654 4.17779C11.7833 4.37291 11.9667 4.52599 12.1818 4.61818C12.4012 4.71499 12.6445 4.74387 12.8804 4.70109C13.1164 4.65832 13.3341 4.54585 13.5055 4.37818L13.5491 4.33455C13.6842 4.19931 13.8446 4.09202 14.0212 4.01882C14.1978 3.94562 14.387 3.90795 14.5782 3.90795C14.7693 3.90795 14.9586 3.94562 15.1352 4.01882C15.3118 4.09202 15.4722 4.19931 15.6073 4.33455C15.7425 4.46963 15.8498 4.63005 15.923 4.80663C15.9962 4.98321 16.0339 5.17249 16.0339 5.36364C16.0339 5.55479 15.9962 5.74406 15.923 5.92064C15.8498 6.09722 15.7425 6.25764 15.6073 6.39273L15.5636 6.43636C15.396 6.60777 15.2835 6.82547 15.2407 7.06139C15.1979 7.29731 15.2268 7.54064 15.3236 7.76V7.81818C15.4158 8.03329 15.5689 8.21674 15.764 8.34596C15.9591 8.47518 16.1878 8.54452 16.4218 8.54545H16.5455C16.9312 8.54545 17.3012 8.6987 17.574 8.97148C17.8468 9.24426 18 9.61423 18 10C18 10.3858 17.8468 10.7557 17.574 11.0285C17.3012 11.3013 16.9312 11.4545 16.5455 11.4545H16.48C16.246 11.4555 16.0173 11.5248 15.8222 11.654C15.6271 11.7833 15.474 11.9667 15.3818 12.1818Z"
+                                       stroke="#585D68"
+                                       class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal"
+                                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                                 <span
+                                    class=" menu hidden text-sm font-inter leading-16-8 text-dark-gunmetal-60 font-medium group-active:text-new-car group-hover:text-new-car dark:group-hover:text-dark-gunmetal dark:group-active:text-dark-gunmetal dark:text-silver-sand ">Settings</span>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="menu hidden">
+                                 <path d="M6 8L10.0268 11.973L13.9998 7.94617" stroke="#2E333E" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal" />
+                              </svg>
+                           </div>
+                        </a>
+                        <ul id="dropdown-example4"
+                           class="hidden py-2 relative space-y-2 before:w-px before:h-93%  before:bg-AuroMetalSaurus-32 before:absolute before:left-10%">
+                           <li>
+                              <a href="./Settings-API-Token.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-2% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-2% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">API
+                              Token</a>
+                           </li>
+                           <li>
+                              <a href="./Settings-Deployers.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-16% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-16% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Deployers</a>
+                           </li>
+                           <li>
+                              <a href="./Settings-Vendors.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:top-29% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:top-29% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Vendors</a>
+                           </li>
+                           <li>
+                              <a href="./Settings-Processors.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-46% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-46% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Processors</a>
+                           </li>
+                           <li>
+                              <a href="./Settings-Invoice.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-30% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-30% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Invoice</a>
+                           </li>
+                           <li>
+                              <a href="./Settings-Product.html"
+                                 class="flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-17% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-17% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">Product</a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" id="theme-toggle" type="button">
+                                 <div id="theme-toggle-dark-icon"
+                                    class="hidden flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-5% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-5% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">
+                                    Dark theme
+                                 </div>
+                                 <div id="theme-toggle-light-icon"
+                                    class="hidden flex items-center w-full p-2 text-dark-gunmetal-60 font-inter font-medium leading-16-8 text-sm  active:text-dark-gunmetal-80 transition duration-75 rounded-lg pl-11  active:after:absolute active:after:bg-new-car active:after:w-02 active:after:bottom-5% active:after:left-10% active:after:h-8  hover:text-dark-gunmetal-80 hover:after:absolute hover:after:bg-new-car hover:after:w-02 hover:after:bottom-5% hover:after:left-10% hover:after:h-8 dark:hover:after:bg-Lavender dark:active:after:Lavender dark:active:text-Lavender dark:hover:text-Lavender dark:text-metallic-silver">
+                                    Light Theme
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="relative z-50 w-screen h-screen overflow-hidden grow flex flex-col">
+            <header
+               class="py-4 px-8 w-full h-16 bg-white border-b shrink-0 border-gray-200 dark:bg-charleston-green dark:border-0 fixed top-0 left-0 z-111">
+               <div class="flex items-center justify-end h-full">
+                  <div class="flex items-center gap-16">
+                     <div class="">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                           <input type="checkbox" value="" class="sr-only peer">
+                           <div
+                              class="relative w-022 h-014 border-02 border-gunmetal dark:border-silver-sand rounded-full peer peer-checked:after:translate-x-full 
+                              rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-02 after:start-02 after:bg-gunmetal after:border-gunmetal 
+                              after:border after:rounded-full after:h-06 after:w-06 after:transition-all dark:after:bg-silver-sand dark:after:border-silver-sand
+                              peer-checked:after:bg-charleston-green peer-checked:after:border-charleston-green peer-checked:border-silver-sand peer-checked:!bg-silver-sand">
+                           </div>
+                           <span
+                              class="block text-sm font-medium text-dark-gunmetal-80 font-inter leading-16-8 dark:text-Lavender">Live</span>
+                        </label>
+                     </div>
+                     <div class="flex items-center ms-3">
+                        <div>
+                           <a href="javascript:void(0)"
+                              class="flex text-sm items-center bg-user-dropdowm bg-no-repeat bg-right dark:bg-user-dropdown-dark"
+                              aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                              <span class="sr-only">Open user menu</span>
+                              <img class="w-8 h-8 rounded-full" src="../Image/user-avatra.svg" alt="user photo">
+                              <div class="px-4 py-3 text-left mr-4" role="none">
+                                 <p class="text-sm leading-4 font-semibold text-dark-gunmetal-80 dark:text-Lavender "
+                                    role="none">
+                                    Chris Butler
+                                 </p>
+                                 <p class="text-xs font-medium leading-3  text-dark-gunmetal-60 truncate dark:text-metallic-silver"
+                                    role="none">
+                                    Tenant
+                                 </p>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none bg-white  rounded-lg shadow  divide-gray-600 dark:bg-charleston-green"
+                           id="dropdown-user">
+                           <ul class="" role="none">
+                              <li class="min-w-max group">
+                                 <a href="./My-Profile.html" aria-label="dashboard"
+                                    class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M16.6673 17.5V15.8333C16.6673 14.9493 16.3161 14.1014 15.691 13.4763C15.0659 12.8512 14.218 12.5 13.334 12.5H6.66732C5.78326 12.5 4.93542 12.8512 4.31029 13.4763C3.68517 14.1014 3.33398 14.9493 3.33398 15.8333V17.5"
+                                          stroke="#585D68" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                       <path
+                                          d="M9.99935 9.16667C11.8403 9.16667 13.3327 7.67428 13.3327 5.83333C13.3327 3.99238 11.8403 2.5 9.99935 2.5C8.1584 2.5 6.66602 3.99238 6.66602 5.83333C6.66602 7.67428 8.1584 9.16667 9.99935 9.16667Z"
+                                          stroke="#585D68" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                    </svg>
+                                    <span
+                                       class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">My
+                                    Profile</span>
+                                 </a>
+                              </li>
+                              <li class="min-w-max group">
+                                 <a href="./Change-Password.html" aria-label="dashboard"
+                                    class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M15.4444 9H4.55556C3.69645 9 3 9.73262 3 10.6364V16.3636C3 17.2674 3.69645 18 4.55556 18H15.4444C16.3036 18 17 17.2674 17 16.3636V10.6364C17 9.73262 16.3036 9 15.4444 9Z"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                       <path
+                                          d="M6 9V5.88889C6 4.85749 6.42143 3.86834 7.17157 3.13903C7.92172 2.40972 8.93913 2 10 2C11.0609 2 12.0783 2.40972 12.8284 3.13903C13.5786 3.86834 14 4.85749 14 5.88889V9"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                    </svg>
+                                    <span
+                                       class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">Change
+                                    Password</span>
+                                 </a>
+                              </li>
+                              <li class="min-w-max group">
+                                 <a href="javascript:void(0)" aria-label="dashboard"
+                                    class="relative flex items-center px-4 py-3 w-full gap-4  group-active:bg-new-car-8 dark:group-active:bg-pale-cerulean dark:group-hover:bg-pale-cerulean group-hover:bg-new-car-8 active:rounded-lg group-hover:rounded-lg dark:text-Lavender ">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                       <path d="M13.334 14.1654L17.5007 9.9987L13.334 5.83203" stroke="#2E333E"
+                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                       <path d="M17.5 10H7.5" stroke="#2E333E" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round"
+                                          class="group-hover:stroke-new-car group-active:stroke-new-car dark:stroke-silver-sand dark:group-hover:stroke-dark-gunmetal dark:group-active:stroke-dark-gunmetal" />
+                                    </svg>
+                                    <span
+                                       class=" font-medium text-dark-gunmetal-60 group-active:text-new-car group-hover:text-new-car text-sm font-inter leading-16-8 dark:text-Lavender dark:group-hover:text-dark-gunmetal">Logout</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <main
+               class="relative overflow-hidden overflow-y-auto h-calc  flex flex-col gap-4 pt-8 w-full px-4 sm:px-8 top-16 sm:pb-16 pb-8 scrollbar-none">
+               <div class="flex justify-between items-center sm:px-4 sm:pb-4">
+                  <div class="text-lg font-medium font-inter leading-21-6 text-dark-gunmetal-80 dark:text-Lavender">
+                     Overview
+                  </div>
+               </div>
+
+                
+
+<div class="w-full">
+    <ul class="flex border-b border-b-AuroMetalSaurus-32 flex-wrap -mb-px text-sm font-inter font-medium text-center sm:gap-5 lg:gap-14 mb-4" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg font-inter font-medium" id="subscriptions-tab" data-tabs-target="#subscriptions" type="button" role="tab" aria-controls="subscriptions" aria-selected="false">Subscriptions</button>
+        </li>
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg font-inter font-medium hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="transactions-tab" data-tabs-target="#transactions" type="button" role="tab" aria-controls="transactions" aria-selected="false">Transactions</button>
+        </li>
+        <li class="me-2" role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg  font-inter font-medium hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sales-tab" data-tabs-target="#sales" type="button" role="tab" aria-controls="sales" aria-selected="false">Sales</button>
+        </li>
+        <li role="presentation">
+            <button class="inline-block p-2 sm:p-4 border-b rounded-t-lg font-inter font-medium hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="fraud-tab" data-tabs-target="#fraud" type="button" role="tab" aria-controls="fraud" aria-selected="false">Fraud</button>
+        </li>
+    </ul>
+</div>
+<div id="default-tab-content">
+    <div class="hidden" id="subscriptions" role="tabpanel" aria-labelledby="subscriptions-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="grid lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
+         <div class="active-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 text-sm font-inter">Earnings</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  $16,343.00 
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-sm font-inter text-green-dark font-normal">1.0%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3231)">
+                  <path d="M20.3359 10.8359V29.1693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.5026 14.1641H18.2526C17.4791 14.1641 16.7372 14.4714 16.1902 15.0183C15.6432 15.5653 15.3359 16.3072 15.3359 17.0807C15.3359 17.8543 15.6432 18.5961 16.1902 19.1431C16.7372 19.6901 17.4791 19.9974 18.2526 19.9974H22.4193C23.1928 19.9974 23.9347 20.3047 24.4817 20.8517C25.0286 21.3986 25.3359 22.1405 25.3359 22.9141C25.3359 23.6876 25.0286 24.4295 24.4817 24.9765C23.9347 25.5234 23.1928 25.8307 22.4193 25.8307H15.3359" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3231">
+                  <rect width="20" height="20" fill="white" transform="translate(10.3359 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="subscription-earnings-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 font-inter text-sm">Active subscriptions</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  200 
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-sm text-green-dark font-normal">1.0%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3244)">
+                  <path d="M19.9987 24.1693C22.2999 24.1693 24.1654 22.3038 24.1654 20.0026C24.1654 17.7014 22.2999 15.8359 19.9987 15.8359C17.6975 15.8359 15.832 17.7014 15.832 20.0026C15.832 22.3038 17.6975 24.1693 19.9987 24.1693Z" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 10.8359V12.5026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 27.5V29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 13.5156L14.699 14.699" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 25.2969L26.4841 26.4802" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.832 20H12.4987" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 20H29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 26.4802L14.699 25.2969" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 14.699L26.4841 13.5156" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3244">
+                  <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="expiring-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 font-inter text-sm">Expiring subscriptions</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  13
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
+                     </svg>
+                     <span class="text-sm font-inter text-deep-carmine-pink font-normal">0.7%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3264)">
+                  <path d="M24.1654 25.0026C24.1654 23.8975 23.7264 22.8377 22.945 22.0563C22.1636 21.2749 21.1038 20.8359 19.9987 20.8359C18.8936 20.8359 17.8338 21.2749 17.0524 22.0563C16.271 22.8377 15.832 23.8975 15.832 25.0026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 17.4974V11.6641" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5156 18.5156L14.699 19.699" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.832 25H12.4987" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 25H29.1667" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.3008 19.699L26.4841 18.5156" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M29.1654 28.3359H10.832" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.3346 14.1641L20.0013 17.4974L16.668 14.1641" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3264">
+                  <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                                   
+            </div>
+         </div>
+         <div class="cancel-subscriptions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 text-sm font-inter">Cancel subscriptions</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  3
+                  <span class="flex items-center gap-1 ml-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"/>
+                     </svg>
+                     <span class="text-sm font-inter text-deep-carmine-pink font-normal">3.1%</span>
+                  </span>
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <path d="M27.4994 20.6583C27.3683 22.0768 26.836 23.4287 25.9646 24.5557C25.0933 25.6826 23.919 26.5382 22.5792 27.0221C21.2394 27.5061 19.7894 27.5984 18.399 27.2884C17.0086 26.9784 15.7353 26.2788 14.728 25.2715C13.7206 24.2642 13.021 22.9908 12.711 21.6004C12.401 20.21 12.4934 18.7601 12.9773 17.4202C13.4613 16.0804 14.3168 14.9061 15.4438 14.0348C16.5708 13.1634 17.9226 12.6311 19.3411 12.5C18.5106 13.6236 18.111 15.0079 18.2149 16.4012C18.3188 17.7945 18.9193 19.1042 19.9073 20.0922C20.8952 21.0801 22.2049 21.6807 23.5983 21.7846C24.9916 21.8885 26.3759 21.4888 27.4994 20.6583Z" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                                   
+            </div>
+         </div>
+      </div>
+      <div class="subscriptions-main rounded-lg bg-white px-4 py-5">
+         <div class="flex items-center justify-between flex-column">
+            <div class="subscriptions-block w-full">
+               <div class="flex flex-wrap items-center justify-between flex-column w-full mb-4">
+                  <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 ">Subscriptions</h4>
+                  <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+                     <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-full p-1">
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Today</a>
+                        <a class="flex items-center justify-center rounded-xl px-3 h-7" href="javascript:void(0)">Week</a>
+                        <a class="flex items-center justify-center bg-white rounded-xl px-3 h-7" href="javascript:void(0)">Month</a>
+                     </div>
+                     <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+               <div class="flex flex-wrap items-center gap-4 sm:gap-x-8 sm:gap-y-4">
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#3BA951"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 font-inter text-sm flex gap-2 items-center">
+                           Active subscriptions
+                        </p>
+                        <h4 class="text-lg  font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                           200 
+                           <span class="flex items-center gap-1 ml-1">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M3.18911 0.623596C3.58825 0.0705366 4.41175 0.0705361 4.81088 0.623595L7.1861 3.91479C7.6634 4.57616 7.19083 5.5 6.37522 5.5L1.62478 5.5C0.809174 5.5 0.336598 4.57616 0.813896 3.9148L3.18911 0.623596Z" fill="#1A9310"/>
+                              </svg>                                                                                
+                              <span class="text-sm font-inter text-green-dark font-normal">1.0%</span>
+                           </span>
+                        </h4>
+                     </div>
+                  </div>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#EFB117"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 font-inter text-sm flex gap-2 items-center">
+                           Subscription earnings
+                        </p>
+                        <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                           $16,343.00 
+                           <span class="flex items-center gap-1 ml-1">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
+                              </svg>
+                              <span class="text-sm text-green-dark font-normal">1.0%</span>
+                           </span>
+                        </h4>
+                     </div>
+                  </div>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#5C85FF"/>
+                        </svg>
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 text-sm font-inter flex gap-2 items-center">
+                           Expiring subscriptions
+                        </p>
+                        <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                           13
+                           <span class="flex items-center gap-1 ml-1">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
+                              </svg>                                          
+                              <span class="text-sm text-deep-carmine-pink font-normal">0.7%</span>
+                           </span>
+                        </h4>
+                     </div>
+                  </div>
+                  <div class="flex">
+                     <div class="flex h-6 items-center">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="8" height="8" rx="4" fill="#FF725C"/>
+                        </svg>                                    
+                     </div>
+                     <div class="pl-3">
+                        <p class="text-dark-gunmetal-60 text-sm font-inter flex gap-2 items-center">
+                           Cancel subscriptions
+                        </p>
+                        <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                           3
+                           <span class="flex items-center gap-1 ml-1">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M4.81089 4.8764C4.41175 5.42946 3.58825 5.42946 3.18912 4.87641L0.813898 1.58521C0.336599 0.923842 0.809174 -2.3761e-07 1.62478 -3.08912e-07L6.37522 -7.24209e-07C7.19083 -7.95511e-07 7.6634 0.923841 7.1861 1.5852L4.81089 4.8764Z" fill="#E93939"/>
+                              </svg>                                          
+                              <span class="text-sm text-deep-carmine-pink font-normal">3.1%</span>
+                           </span>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="subscriptions-chart"></div>
+      </div>
+   </div>
+    </div>
+    <div class="hidden" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="grid lg:grid-cols-3 gap-4">
+         <div class="total-transactions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 font-inter text-sm">Total transactions</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  100/ $32,630.56                           
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.667969" width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3425)">
+                  <path d="M21 10.8359V29.1693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.1667 14.1641H18.9167C18.1431 14.1641 17.4013 14.4714 16.8543 15.0183C16.3073 15.5653 16 16.3072 16 17.0807C16 17.8543 16.3073 18.5961 16.8543 19.1431C17.4013 19.6901 18.1431 19.9974 18.9167 19.9974H23.0833C23.8569 19.9974 24.5987 20.3047 25.1457 20.8517C25.6927 21.3986 26 22.1405 26 22.9141C26 23.6876 25.6927 24.4295 25.1457 24.9765C24.5987 25.5234 23.8569 25.8307 23.0833 25.8307H16" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3425">
+                  <rect width="20" height="20" fill="white" transform="translate(11 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>                  
+            </div>
+         </div>
+         <div class="total-refunds-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 text-sm font-inter">Total refunds</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  70/ $9,630.52
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.335938" width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <g clip-path="url(#clip0_3454_3434)">
+                  <path d="M24.4609 10.8359L27.6276 14.1693L24.4609 17.5026" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.3789 19.1641V17.4974C13.3789 16.6133 13.7125 15.7655 14.3064 15.1404C14.9003 14.5153 15.7057 14.1641 16.5456 14.1641H27.6289" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.5456 29.1667L13.3789 25.8333L16.5456 22.5" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.6289 20.8359V22.5026C27.6289 23.3867 27.2953 24.2345 26.7014 24.8596C26.1075 25.4847 25.3021 25.8359 24.4622 25.8359H13.3789" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3454_3434">
+                  <rect width="19" height="20" fill="white" transform="translate(11.0039 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                  
+            </div>
+         </div>
+         <div class="total-chargeback-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+            <div class="w-11/12 xl:w-auto">
+               <p class="text-dark-gunmetal-60 text-sm font-inter">Total chargeback</p>
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                  18/ $2,630.31
+               </h4>
+            </div>
+            <div class="w-10 h-10 rounded-lg">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="black" fill-opacity="0.04"/>
+                  <path d="M18.1263 18.3359L14.168 22.5026L18.1263 26.6693" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M26.8346 13.3359V19.1693C26.8346 20.0533 26.501 20.9012 25.9071 21.5263C25.3133 22.1514 24.5078 22.5026 23.668 22.5026H14.168" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+            </div>
+         </div>
+      </div>
+    </div>
+    </div>
+    <div class="hidden" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+      <div class="flex flex-col gap-4 w-full">
+      <div class="total-sales-main rounded-lg bg-white px-4 py-5">
+         <div class="flex flex-wrap items-center justify-between flex-column">
+            <div class="total-sales-block">
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 mb-2">Total Sales</h4>
+               <div class="flex items-center text-sm text-dark-gunmetal-60 font-inter">
+                  <span class="flex items-center gap-1 ml-1 mr-1">
+                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
+                     </svg>
+                     <span class="text-green-dark">5% vs</span>
+                  </span>
+                  Past Month
+               </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-1 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                  <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center bg-white rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+         </div>
+         <div id="total-applications-chart"></div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-4 total-transactions-block">
+         <div class="total-transactions-block rounded-lg bg-white px-4 py-5">
+            <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Product </h4>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                  <a class="flex items-center justify-center bg-white rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-transactions-chart1"></div>
+            </div>
+         </div>
+         <div class="total-refunds-block rounded-lg bg-white px-4 py-5">
+            <h4 class="text-lg font-inter  text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Category</h4>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                  <a class="flex items-center justify-center bg-white rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-refunds-chart1"></div>
+            </div>
+         </div>
+         <div class="total-chargebacks-block rounded-lg bg-white px-4 py-5">
+            <div class="flex justify-between items-center">
+               <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 mb-2">Top Sales by Customer</h4>
+               <a href="javascript:void(0)" class="text-sm font-inter text-new-car hover:text-dark-gunmetal-80 font-medium">See All</a>
+            </div>
+            <div class="flex gap-2">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                  <a class="flex items-center justify-center bg-white rounded-lg px-3 h-7 font-inter " href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-lg px-3 h-7 font-inter " href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-lg px-3 h-7 font-inter " href="javascript:void(0)">Month</a>
+               </div>
+            </div>
+            <div class="mt-4 flex w-full items-center justify-center">
+               <div id="total-chargebacks-chart1"></div>
+            </div>
+         </div>
+      </div>
+      <div class="total-open-applications rounded-lg bg-white w-full dark:bg-charleston-green py-5 px-4">
+         <div class="flex flex-wrap items-center justify-between flex-column">
+            <div class="total-applications-block">
+               <h4 class="text-lg font-inter  text-dark-gunmetal-80 font-medium m-0 mb-2 flex items-center gap-4 sm:gap-7">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15 18.5L9 12.5L15 6.5" stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     Top Sales by Customer</h4>
+                     
+            </div>
+            <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+               <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                  <a class="flex items-center justify-center bg-white rounded-lg font-inter  px-3 h-7" href="javascript:void(0)">Today</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Week</a>
+                  <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Month</a>
+               </div>
+               <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <div class="w-full my-4 overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 px-4">
+               <thead class="px-4">
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           No.
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60 flex gap-2">
+                           Table Head                                             
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head
+                        </div>
+                     </th>
+                     <th class="px-2 py-3">
+                        <div
+                           class="text-sm text-dark-gunmetal-60 leading-19-6 font-inter !font-normal dark:text-Lavender-60">
+                           Table Head 
+                        </div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           1.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           2.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           3.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                          4.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           5.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           6.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           7.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           8.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-y border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           9.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="border-0 border-y-AuroMetalSaurus-16">
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           10.
+                           </div>
+                     </td>
+                     <td class="px-2 py-4 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter !font-normal dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                     <td class="px-2 py-3 w-fit">
+                        <div
+                           class="text-base text-dark-gunmetal-80 leading-19-6 font-inter w-fit dark:text-Lavender">
+                           Value
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+    </div>
+    <div class="hidden" id="fraud" role="tabpanel" aria-labelledby="fraud-tab">
+         <div class="flex flex-col gap-4 w-full">
+            <div class="grid lg:grid-cols-3 gap-4">
+               <div class="total-transactions-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60 text-sm font-inter">Suspicious transactions</p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        38                           
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="total-refunds-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60 text-sm font-inter">Max. Fraud Amount</p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        $5,874.16
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="total-chargeback-block bg-white flex rounded-lg px-4 py-5 items-center justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60 font-inter text-sm">Total Fraud Amount</p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        $12,121.08
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+            </div>
+         <div class="fraud-main rounded-lg bg-white px-4 py-5">
+            <div class="flex flex-wrap items-center justify-between flex-column">
+               <div class="total-sales-block">
+                  <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 mb-2">Fraud</h4>                 
+               </div>
+               <div class="flex flex-wrap gap-2 mb-2 sm:mt-0 items-center">
+                  <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                     <a class="flex items-center justify-center bg-white rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Today</a>
+                     <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Week</a>
+                     <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Month</a>
+                  </div>
+                  <div class="flex items-center justify-center bg-gray-100 h-8 w-8 rounded-lg">
+                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 14.5V17.1667C18 17.5203 17.8595 17.8594 17.6095 18.1095C17.3594 18.3595 17.0203 18.5 16.6667 18.5H7.33333C6.97971 18.5 6.64057 18.3595 6.39052 18.1095C6.14048 17.8594 6 17.5203 6 17.1667V14.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 11.5L12 14.5L15 11.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 14.5V6.5" stroke="#1C212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </div>
+               </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-8">
+               <div class="flex">
+                  <div class="flex h-6 items-center">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="8" rx="4" fill="#3BA951"/>
+                     </svg>
+                  </div>
+                  <div class="pl-3">
+                     <p class="text-dark-gunmetal-60 font-inter text-sm flex gap-2 items-center">
+                        Avg. Fraud
+                     </p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        60 
+                        <span class="flex items-center gap-1 ml-1">
+                           <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.14292 5.3764C4.74378 5.92946 3.92028 5.92946 3.52115 5.37641L1.14593 2.08521C0.66863 1.42384 1.14121 0.5 1.95681 0.5L6.70725 0.499999C7.52286 0.499999 7.99543 1.42384 7.51813 2.0852L5.14292 5.3764Z" fill="#E93939"></path>
+                           </svg>
+                           <span class="text-sm text-deep-carmine-pink font-normal">1.0%</span>
+                        </span>
+                     </h4>
+                  </div>
+               </div>
+               <div class="flex">
+                  <div class="flex h-6 items-center">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="8" rx="4" fill="#EFB117"/>
+                     </svg>
+                  </div>
+                  <div class="pl-3">
+                     <p class="text-dark-gunmetal-60 font-inter text-sm flex gap-2 items-center">
+                        Fraud by Risk Score
+                     </p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        70 
+                        <span class="flex items-center gap-1 ml-1">
+                           <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.18911 1.1236C3.58825 0.570537 4.41175 0.570536 4.81088 1.1236L7.1861 4.41479C7.6634 5.07616 7.19083 6 6.37522 6L1.62478 6C0.809174 6 0.336598 5.07616 0.813896 4.4148L3.18911 1.1236Z" fill="#1A9310"/>
+                           </svg>
+                           <span class="text-sm text-green-dark font-normal">17.0%</span>
+                        </span>
+                     </h4>
+                  </div>
+               </div>
+            </div>
+            <div id="fraud-chart"></div>
+         </div>
+         <div class="flex flex-wrap lg:flex-nowrap gap-4 items-start">
+            <div class="bg-white flex flex-col rounded-lg px-4 py-5 items-center justify-between w-full lg:w-8/12">
+               <div class="w-full flex justify-between">
+                  <div class="w-11/12 xl:w-auto">
+                     <p class="text-dark-gunmetal-60 text-sm font-inter">Fraudulent transactions</p>
+                     <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium flex items-center gap-1 mt-1">
+                        38                           
+                     </h4>
+                  </div>
+                  <div class="bg-gray-300 w-10 h-10 rounded-lg"></div>
+               </div>
+               <div class="w-full mt-4">
+                 <img class="w-full object-cover h-80 rounded-lg" src="../src/map-img.jpg">                    
+               </div>
+            </div>
+            <div class="w-full lg:w-1/3 bg-white flex flex-wrap rounded-lg px-4 py-5 items-center">
+               <div class="flex flex-wrap items-center justify-between flex-column w-full mb-4">
+                  <h4 class="text-lg font-inter text-dark-gunmetal-80 font-medium m-0 ">Top Merchant by Fraud</h4>
+                  <div class="w-full mt-2">
+                  <div class="flex gap-2 mt-4 sm:mt-0 items-center">
+                     <div class="flex bg-gray-100 gap-1 items-center text-xs text-new-car font-medium rounded-lg p-1">
+                        <a class="flex items-center justify-center bg-white rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Today</a>
+                        <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Week</a>
+                        <a class="flex items-center justify-center rounded-lg font-inter px-3 h-7" href="javascript:void(0)">Month</a>
+                     </div>
+                  </div>                     
+                  </div>
+               </div>
+               <div class="w-full flex flex-col gap-4 mt-6">
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" rx="4" fill="#4269D0"/>
+                        </svg>
+                     </div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 font-inter mb-1">Jane Doe</p>
+                        <p class="text-dark-gunmetal-60 font-inter">$100,000</p>
+                     </div>
+                  </div>
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#EFB117"/>
+                           </svg>                           
+                     </div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1 font-inter">MIke Doe</p>
+                        <p class="text-dark-gunmetal-60 font-inter">$80,000</p>
+                     </div>
+                  </div>
+                  <div class="border-b border-b-AuroMetalSaurus-32 flex flex-wrap gap-4 pb-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#FF725C"/>
+                           </svg>                                                    
+                     </div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">Jon Doe</p>
+                        <p class="text-dark-gunmetal-60">$50,000</p>
+                     </div>
+                  </div>
+                  <div class="border-0 border-b-AuroMetalSaurus-32 flex flex-wrap gap-4">
+                     <div class="h-5 flex items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="12" height="12" rx="4" fill="#6CC5B0"/>
+                           </svg>                                                     
+                     </div>
+                     <div class="text-sm">
+                        <p class="dark-gunmetal-80 mb-1">Mark Doe</p>
+                        <p class="text-dark-gunmetal-60">$9,000</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+</div>
+
+
+              
+              
+              
+              
+              
+            </main>
+            <footer></footer>
+         </div>
+      </div>
+      <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="./main.js"></script>
+   </body>
+</html>
