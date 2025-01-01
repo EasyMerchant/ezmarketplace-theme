@@ -7,20 +7,20 @@ module.exports = {
   darkMode:"class",
   theme: {
     screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
+      'sm': '641px',
+      // => @media (min-width: 641px) { ... }
 
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
+      'md': '769px',
+      // => @media (min-width: 769px) { ... }
 
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
+      'lg': '1025px',
+      // => @media (min-width: 1025px) { ... }
 
-      'xl': '1150px',
-      // => @media (min-width: 1280px) { ... }
+      'xl': '1151px',
+      // => @media (min-width: 1281px) { ... }
 
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      '2xl': '1537px',
+      // => @media (min-width: 1537px) { ... }
     },
     fontFamily:{
       "inter":['Inter','sans-serf'],
@@ -43,10 +43,13 @@ module.exports = {
         "132":"132px",
         "146":"146px",
         "150":"150px",
+        "152":"152px",
         "154":"154px",
         "156":"156px",
         "184.67":"184.67px",
         "232":'232px',
+        "244":'244px',
+        "330":'330px',
         "480":'480px',
         "544":'544px',
         "683":'683px',
@@ -82,6 +85,7 @@ module.exports = {
         "25-6":"25.6px"
       },
       padding:{
+        "05":'5px',
         "09":'9px',
         "010":'10px',
         "011":'11px',
@@ -96,6 +100,7 @@ module.exports = {
         "27":'27px',
         "030":'30px',
         "57":'57px',
+        "060":'60px',
         "61":'61px',
         '172':"172px",
         "9%":'9%',
@@ -157,6 +162,7 @@ module.exports = {
         "30%":'30%',
         "35%":'35%',
         "36%":'36%',
+        "39%":'39%',
         "40%":'40%',
         "43%":'43%',
         "46%":'46%',
