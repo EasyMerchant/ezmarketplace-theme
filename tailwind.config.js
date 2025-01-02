@@ -134,7 +134,9 @@ module.exports = {
         "aquamarine":"#78FCC5",
         "baker-miller-pink":"#FF9EB0",
         "outer-space":"#434853",
-        "baker-miller-pink-08":"#ff9eb014"
+        "baker-miller-pink-08":"#ff9eb014",
+        "green-dark":"#1A9310",
+        "gray-300":"#D9D9D9"
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
@@ -186,8 +188,10 @@ module.exports = {
     },
   },
   plugins: [
-    require('flowbite/plugin'),
-    require('tailwind-scrollbar'),
+    require('flowbite/plugin')({
+      charts: true,
+  }),
+  require('tailwind-scrollbar'),
     
   ],
 }
