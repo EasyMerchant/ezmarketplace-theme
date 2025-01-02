@@ -1432,12 +1432,12 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-px {
   height: 1px;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .max-h-full {
@@ -1740,6 +1740,10 @@ input:checked + .toggle-bg {
   gap: 0.5rem;
 }
 
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1758,10 +1762,6 @@ input:checked + .toggle-bg {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-2\.5 {
-  gap: 0.625rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2432,6 +2432,10 @@ input:checked + .toggle-bg {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -3758,6 +3762,11 @@ input:checked + .toggle-bg {
 
 .dark\:text-alice-blue:is(.dark *) {
   color: #f4f6fbde;
+}
+
+.dark\:text-baker-miller-pink:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 158 176 / var(--tw-text-opacity));
 }
 
 .dark\:text-blue-500:is(.dark *) {
