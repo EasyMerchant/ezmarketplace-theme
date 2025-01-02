@@ -1026,33 +1026,33 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
   .container {
-    max-width: 640px;
+    max-width: 641px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .container {
-    max-width: 768px;
+    max-width: 769px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .container {
-    max-width: 1024px;
+    max-width: 1025px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1151px) {
   .container {
-    max-width: 1150px;
+    max-width: 1151px;
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1537px) {
   .container {
-    max-width: 1536px;
+    max-width: 1537px;
   }
 }
 
@@ -1648,6 +1648,10 @@ input:checked + .toggle-bg {
   height: max-content;
 }
 
+.h-px {
+  height: 1px;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -1688,6 +1692,10 @@ input:checked + .toggle-bg {
   width: 150px;
 }
 
+.w-152 {
+  width: 152px;
+}
+
 .w-156 {
   width: 156px;
 }
@@ -1708,8 +1716,16 @@ input:checked + .toggle-bg {
   width: 5rem;
 }
 
+.w-244 {
+  width: 244px;
+}
+
 .w-3 {
   width: 0.75rem;
+}
+
+.w-330 {
+  width: 330px;
 }
 
 .w-4 {
@@ -1944,6 +1960,10 @@ input:checked + .toggle-bg {
   gap: 0.5rem;
 }
 
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -2132,6 +2152,10 @@ input:checked + .toggle-bg {
   border-right-width: 1px;
 }
 
+.border-dashed {
+  border-style: dashed;
+}
+
 .border-AuroMetalSaurus-16 {
   border-color: #70758029;
 }
@@ -2182,6 +2206,10 @@ input:checked + .toggle-bg {
 
 .border-b-AuroMetalSaurus-32 {
   border-bottom-color: #70758052;
+}
+
+.border-b-AuroMetalSaurus-16 {
+  border-bottom-color: #70758029;
 }
 
 .border-r-AuroMetalSaurus-32 {
@@ -2339,6 +2367,10 @@ input:checked + .toggle-bg {
 
 .p-011 {
   padding: 11px;
+}
+
+.p-05 {
+  padding: 5px;
 }
 
 .p-1 {
@@ -2594,6 +2626,10 @@ input:checked + .toggle-bg {
   padding-left: 1.5rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .pr-10 {
   padding-right: 2.5rem;
 }
@@ -2604,6 +2640,10 @@ input:checked + .toggle-bg {
 
 .pr-6 {
   padding-right: 1.5rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
 }
 
 .ps-10 {
@@ -2640,6 +2680,10 @@ input:checked + .toggle-bg {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -3810,6 +3854,14 @@ input:checked + .toggle-bg {
   background-color: rgb(23 87 217 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:block:is(.dark *) {
+  display: block;
+}
+
+.dark\:hidden:is(.dark *) {
+  display: none;
+}
+
 .dark\:justify-between:is(.dark *) {
   justify-content: space-between;
 }
@@ -4006,6 +4058,11 @@ input:checked + .toggle-bg {
 
 .dark\:text-alice-blue:is(.dark *) {
   color: #f4f6fbde;
+}
+
+.dark\:text-baker-miller-pink:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 158 176 / var(--tw-text-opacity));
 }
 
 .dark\:text-blue-500:is(.dark *) {
@@ -4233,7 +4290,7 @@ input:checked + .toggle-bg {
   background-color: rgb(229 234 245 / var(--tw-bg-opacity, 1));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -4558,7 +4615,7 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .md\:inset-0 {
     inset: 0px;
   }
@@ -4734,6 +4791,11 @@ input:checked + .toggle-bg {
     top: 36%;
   }
 
+  .md\:after\:top-39\%::after {
+    content: var(--tw-content);
+    top: 39%;
+  }
+
   .md\:after\:top-40::after {
     content: var(--tw-content);
     top: 10rem;
@@ -4849,6 +4911,11 @@ input:checked + .toggle-bg {
     top: 36%;
   }
 
+  .md\:hover\:after\:top-39\%:hover::after {
+    content: var(--tw-content);
+    top: 39%;
+  }
+
   .md\:hover\:after\:top-40:hover::after {
     content: var(--tw-content);
     top: 10rem;
@@ -4950,6 +5017,11 @@ input:checked + .toggle-bg {
     top: 36%;
   }
 
+  .md\:active\:after\:top-39\%:active::after {
+    content: var(--tw-content);
+    top: 39%;
+  }
+
   .md\:active\:after\:top-40:active::after {
     content: var(--tw-content);
     top: 10rem;
@@ -4976,7 +5048,7 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -5010,7 +5082,7 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1151px) {
   .xl\:w-232 {
     width: 232px;
   }
@@ -5024,7 +5096,7 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1537px) {
   .\32xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
