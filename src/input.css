@@ -69,3 +69,11 @@
 .fraud-main .apexcharts-menu {
   @apply -mt-14 -mr-3 w-8; 
 }
+
+#paper-container svg{
+  @apply !h-calc
+}
+
+.sidebar.is-hidden {
+  transform: translateX(300px);
+}

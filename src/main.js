@@ -538,8 +538,9 @@ var options = {
 };
 
 var chart = new ApexCharts(document.querySelector("#total-open-applications-chart"), options);
-chart.render();
-
+if(chart){
+  chart.render();
+}
 
 var options = {
   series: [
@@ -626,8 +627,10 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#merchants-chart"), options);
-chart.render();
+var chartOne = new ApexCharts(document.querySelector("#merchants-chart"), options);
+if(chartOne) {
+  chartOne.render();
+}
 
 
 var options = {
@@ -712,9 +715,11 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#subscriptions-chart"), options);
-chart.render();
-
+var chartTwo = new ApexCharts(document.querySelector("#subscriptions-chart"), options);
+if(chartTwo)
+{
+chartTwo.render();
+}
 
 var options = {
   series: [{
@@ -798,8 +803,10 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#fraud-chart"), options);
-chart.render();
+var chartThree = new ApexCharts(document.querySelector("#fraud-chart"), options);
+if(chartThree){
+chartThree.render();
+}
 
 var options = {
   series: [44, 55, 13, 33, 20],
@@ -854,8 +861,10 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#total-transactions-chart1"), options);
-chart.render();
+var chartFour = new ApexCharts(document.querySelector("#total-transactions-chart1"), options);
+if(chartFour){
+chartFour.render();
+}
 
 var options = {
   series: [44, 55, 13, 33, 20],
@@ -910,8 +919,10 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#total-refunds-chart1"), options);
-chart.render();
+var chartFive = new ApexCharts(document.querySelector("#total-refunds-chart1"), options);
+if(chartFive){
+  chartFive.render();
+}
 
 
 var options = {
@@ -967,9 +978,10 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#total-chargebacks-chart1"), options);
-chart.render();
-
+var chartSix = new ApexCharts(document.querySelector("#total-chargebacks-chart1"), options);
+if(chartSix){
+chartSix.render();
+}
 var chart;
 var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data
 

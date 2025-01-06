@@ -47,6 +47,7 @@ module.exports = {
         "156":"156px",
         "184.67":"184.67px",
         "232":'232px',
+        "376-5":"376.5px",
         "480":'480px',
         "544":'544px',
         "683":'683px',
@@ -131,7 +132,8 @@ module.exports = {
         "outer-space":"#434853",
         "baker-miller-pink-08":"#ff9eb014",
         "green-dark":"#1A9310",
-        "gray-300":"#D9D9D9"
+        "gray-300":"#D9D9D9",
+        "black-14":"#00000014"
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
@@ -139,6 +141,7 @@ module.exports = {
         "logo-in-light":"url('../Image/logo-light.svg')",
         "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
+        "composer-bg":"url(data:image/svg+xml;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0idi01IiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjEwMCIgeD0iMCIgeT0iMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSwxLjIyNDY0Njc5OTE0NzM1MzJlLTE2LC0xLjIyNDY0Njc5OTE0NzM1MzJlLTE2LC0xLDAsMCkiPgogIDxkZWZzIGlkPSJ2LTQiPgogICAgPHBhdHRlcm4gaWQ9InBhdHRlcm5fdmlldzJfMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiB4PSIwIiB5PSIwIj4KICAgICAgPHJlY3QgaWQ9InYtNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI0FBQUFBQSI+PC9yZWN0PgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCBpZD0idi04IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fdmlldzJfMCkiPjwvcmVjdD4KPC9zdmc+)"
       },
       inset:{
         "02":'2px',
@@ -173,6 +176,9 @@ module.exports = {
       zIndex:{
         '99':'99',
         '111':'1111'
+      },
+      translate:{
+        "376-5":"376.5px",
       },
     },
   },
