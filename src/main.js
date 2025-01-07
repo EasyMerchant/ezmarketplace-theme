@@ -536,9 +536,9 @@ var options = {
     borderColor: '#3BA951',
   }
 };
-
-var chart = new ApexCharts(document.querySelector("#total-open-applications-chart"), options);
-if(chart){
+var elementChart = document.querySelector("#total-open-applications-chart");
+if(elementChart != null){
+  var chart = new ApexCharts(elementChart, options);
   chart.render();
 }
 
@@ -626,9 +626,9 @@ var options = {
     borderColor: '#3BA951',
   }
 };
-
-var chartOne = new ApexCharts(document.querySelector("#merchants-chart"), options);
-if(chartOne) {
+var elementChartOne = document.querySelector("#merchants-chart");
+if(elementChartOne != null) {
+  var chartOne = new ApexCharts(elementChartOne, options);
   chartOne.render();
 }
 
@@ -714,11 +714,10 @@ var options = {
     borderColor: '#3BA951',
   }
 };
-
-var chartTwo = new ApexCharts(document.querySelector("#subscriptions-chart"), options);
-if(chartTwo)
-{
-chartTwo.render();
+var elementChartTwo = document.querySelector("#subscriptions-chart");
+if(elementChartTwo != null) {
+  var chartTwo = new ApexCharts(elementChartTwo, options);
+  chartTwo.render();
 }
 
 var options = {
@@ -803,9 +802,11 @@ var options = {
   }
 };
 
-var chartThree = new ApexCharts(document.querySelector("#fraud-chart"), options);
-if(chartThree){
-chartThree.render();
+let  elementChartThree = document.querySelector("#fraud-chart")
+
+if( elementChartThree != null){
+  var chartThree = new ApexCharts( elementChartThree, options);
+ chartThree.render();
 }
 
 var options = {
@@ -860,9 +861,10 @@ var options = {
     ]
   }
 };
+let elementChartFour = document.querySelector("#total-transactions-chart1")
 
-var chartFour = new ApexCharts(document.querySelector("#total-transactions-chart1"), options);
-if(chartFour){
+if( elementChartFour != null){
+  var chartFour = new ApexCharts(elementChartFour, options);
 chartFour.render();
 }
 
@@ -918,9 +920,10 @@ var options = {
     ]
   }
 };
+let elementChartFive = document.querySelector("#total-refunds-chart1")
 
-var chartFive = new ApexCharts(document.querySelector("#total-refunds-chart1"), options);
-if(chartFive){
+if( elementChartFive != null){
+  var chartFive = new ApexCharts(elementChartFive, options);
   chartFive.render();
 }
 
@@ -977,10 +980,11 @@ var options = {
     ]
   }
 };
+let elementChartSix = document.querySelector("#total-chargebacks-chart1")
 
-var chartSix = new ApexCharts(document.querySelector("#total-chargebacks-chart1"), options);
-if(chartSix){
-chartSix.render();
+if( elementChartSix != null){
+  var chartSix = new ApexCharts(elementChartSix, options);
+  chartSix.render();
 }
 var chart;
 var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data

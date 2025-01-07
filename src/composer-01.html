@@ -599,7 +599,7 @@
                 </div>
                 
                 <div class="absolute top-1/2 right-8 flex flex-col items-center justify-center gap-2 z-99">
-                    <div class="flex justify-center items-center h-8 w-8 bg-new-car rounded-lg">
+                    <div id="add-shap" class="flex justify-center items-center h-8 w-8 bg-new-car rounded-lg">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.5 5.91406V19.9141" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M5.5 12.9141H19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -658,11 +658,11 @@
                     <form class="flex flex-col gap-4 w-full">
                         <div class="flex flex-col items-start justify-center gap-2 w-full">
                             <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
-                            <input type="text" class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80" value="Node 03">
+                            <input type="text" id="NodeName"  class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80" >
                         </div>
                         <div class="flex flex-col items-start justify-center gap-2 w-full">
                             <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
-                            <input type="text" class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80" value="$1.10">
+                            <input type="text" id="NodeValue"   class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80" >
                         </div>
                     </form>
                 </div>
@@ -670,95 +670,172 @@
         <footer></footer>
     </div>
 </div>
-    <script src="./main.js"></script>
-    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
-    <script src="../node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
-    <script src="../node_modules/@joint/core/dist/joint.js"></script>
-    <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const namespace = joint.shapes;
-            const graph = new joint.dia.Graph({}, { cellNamespace: namespace });
+<script src="../node_modules/flowbite/dist/flowbite.js"></script>
+<script src="../node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
+<script src="../node_modules/@joint/core/dist/joint.js"></script>
+<script src="./main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const namespace = joint.shapes;
+        const graph = new joint.dia.Graph({}, { cellNamespace: namespace });
+       
+        const paper = new joint.dia.Paper({
+            el: document.getElementById('paper-container'),
+            model: graph,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            gridSize: 10,
+        });
 
-            const paper = new joint.dia.Paper({
-                el: document.getElementById('paper-container'),
-                model: graph,
-                width: window.innerWidth,
-                height: window.innerHeight,
-                gridSize: 10,
-            });
+        const rect = new namespace.standard.Rectangle({
+            position: { x: 200, y: 200 },
+            size: { width: 104, height: 61 },
+            attrs: {
+                portBody: {
+                    magnet: true,
+                    width: 16,
+                    height: 16,
+                    x: -8,
+                    y: -8,
+                    fill:  '#03071E'
+                },
+                body: { fill: '#FFFFFF',strokeWidth: 0,rx: 8,
+                ry: 8 },
+                label: { text: 'Node 00  \n$1.10', fill: '#1C212BDE' },
+            },
+        
+        });
 
-            const rect = new namespace.standard.Rectangle({
-                position: { x: 200, y: 200 },
+        graph.addCells([rect]);
+
+        let scale = 1;
+
+        // Zoom In
+        document.getElementById('btn-zoomin').addEventListener('click', () => {
+            scale = Math.min(scale + 0.1, 2);
+            paper.scale(scale, scale);
+        });
+
+        // Zoom Out
+        document.getElementById('btn-zoomout').addEventListener('click', () => {
+            scale = Math.max(scale - 0.1, 0.5);
+            paper.scale(scale, scale);
+        });
+       
+        const nodename = document.getElementById('NodeName');
+        let nodecount = 1;
+    
+        let nodeName = `node 0${nodecount}`;
+        let nodeValue= null ;
+
+    
+        const nodevalue = document.getElementById('NodeValue')
+        const shapaddvalue= document.getElementsByClassName('pop-up')
+        const addshap = document.getElementById('add-shap');
+        const toggleBtn = document.getElementById('toggle-btn');
+        const paperContainer = document.getElementById('paper-container');
+        const hideIcon = document.getElementById('hide-icon');
+        const showIcon = document.getElementById('show-icon');
+            
+        nodename.addEventListener("input", (event) => {
+            nodeName = event.target.value;
+        });
+   
+        nodevalue.addEventListener("input",(event)=>{   
+              //console.log(event.target.value)    
+            nodeValue = event.target.value ;   
+            console.log("Updated nodeValue:", nodeValue); 
+        });
+           
+       
+
+       
+      
+        function setNodeName(newName) {
+        nodename.value = newName;
+         nodeName = newName;
+             }
+
+        function setNodeValue(newValue) {
+           nodevalue.value = newValue;
+         nodeValue = newValue;
+             }
+            addshap.addEventListener('click',()=> { 
+                var popup = document.querySelector(".pop-up");
+                var mainCanva = document.querySelector(".main-canva"); 
+
+               
+                popup.classList.toggle("translate-x-376-5");
+
+                
+                mainCanva.style.display = popup.classList.contains("translate-x-376-5") 
+                ? "none"
+                : "block";
+             })
+         
+          console.log("----",nodeValue)
+        
+        paperContainer.addEventListener('click',()=> {  
+            if (!nodeValue) {
+         alert("Node value is required!");
+        return;
+    }
+             
+            const currentNodeName = nodeName || `node 0${nodecount}`; 
+            const currentNodeValue = nodeValue || "";
+             
+            const newRect = new namespace.standard.Rectangle({
+                position: { x: 400, y: 400 },
                 size: { width: 104, height: 61 },
                 attrs: {
                     portBody: {
-            magnet: true,
-            width: 16,
-            height: 16,
-            x: -8,
-            y: -8,
-            fill:  '#03071E'
-        },
-                    body: { fill: '#FFFFFF',strokeWidth: 0,rx: 8,
-                    ry: 8 },
-                    label: { text: 'Rectangle', fill: '#1C212BDE' },
+                        magnet: true,
+                        width: 16,
+                        height: 16,
+                        x: -8,
+                        y: -8,
+                        fill:  '#03071E'
+                    },
+                    body: { fill: '#FFFFFF', strokeWidth: 0, rx: 8, ry: 8 },
+                    label: { text: `${nodeName} \n ${nodeValue}`, fill: '#1C212BDE' },
                 },
-            
             });
+            graph.addCells([newRect]);
 
-            graph.addCells([rect]);
-
-            let scale = 1;
-
-            // Zoom In
-            document.getElementById('btn-zoomin').addEventListener('click', () => {
-                scale = Math.min(scale + 0.1, 2);
-                paper.scale(scale, scale);
-            });
-
-            // Zoom Out
-            document.getElementById('btn-zoomout').addEventListener('click', () => {
-                scale = Math.max(scale - 0.1, 0.5);
-                paper.scale(scale, scale);
-            });
-
-            const toggleBtn = document.getElementById('toggle-btn');
-            const paperContainer = document.getElementById('paper-container');
-            const hideIcon = document.getElementById('hide-icon');
-            const showIcon = document.getElementById('show-icon');
-
-            toggleBtn.addEventListener('click', () => {
-                if (paperContainer.style.display === 'none') {
-                    paperContainer.style.display = 'block';
-                    toggleBtn.classList= ('flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer');
-                    hideIcon.style.display = 'block';
-                    showIcon.style.display = 'none';
-                } else {
-                    paperContainer.style.display = 'none';
-                    toggleBtn.classList= ('flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer');
-                    hideIcon.style.display = 'none';
-                    showIcon.style.display = 'block';
-                }
-            });
-
-            document.querySelectorAll(".joint-layers").forEach(function(element) {
-  element.addEventListener("click", function() {
-    var popup = document.querySelector(".pop-up");
-    var mainCanva = document.querySelector(".main-canva"); // Select the main-canva element
-
-    // Toggle the class for the pop-up
-    popup.classList.toggle("translate-x-376-5");
-
-    // Change the background color of main-canva
-    mainCanva.style.display = popup.classList.contains("translate-x-376-5") 
-      ? "none" // Set the color when the pop-up is visible
-      : "block";    // Revert to the original color when the pop-up is hidden
-  });
-});
-
-
-
+            nodecount++;
+             setNodeName(`node 0${nodecount}`); 
+           setNodeValue("");
+        })
+        
+        toggleBtn.addEventListener('click', () => {
+            if (paperContainer.style.display === 'none') {
+                paperContainer.style.display = 'block';
+                toggleBtn.classList= ('flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer');
+                hideIcon.style.display = 'block';
+                showIcon.style.display = 'none';
+            } else {
+                paperContainer.style.display = 'none';
+                toggleBtn.classList= ('flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer');
+                hideIcon.style.display = 'none';
+                showIcon.style.display = 'block';
+            }
         });
-    </script>
+
+        document.querySelectorAll(".joint-layers").forEach(function(element) {
+            element.addEventListener("click", function() {
+                var popup = document.querySelector(".pop-up");
+                var mainCanva = document.querySelector(".main-canva"); // Select the main-canva element
+
+                // Toggle the class for the pop-up
+                popup.classList.toggle("translate-x-376-5");
+
+                // Change the background color of main-canva
+                mainCanva.style.display = popup.classList.contains("translate-x-376-5") 
+                ? "none" // Set the color when the pop-up is visible
+                : "block";    // Revert to the original color when the pop-up is hidden
+            });
+        });
+    });
+</script>
 </body>
 </html>
