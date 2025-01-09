@@ -664,7 +664,7 @@
                             <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
                             <input type="text" id="NodeValue"   class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80" >
                         </div>
-                        <button id="a" class="">ADD</button>
+                     <span id="a" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE </span>
                     </form>
                 </div>   
                     <div id="hover-model" class="hidden  text-black dark:text-Lavender">
@@ -693,20 +693,35 @@
             width: window.innerWidth,
             height: window.innerHeight,
             gridSize: 10,
-
             markAvailable: true,
-             linkPinning: false, // Prevent link being dropped in blank paper area
-            defaultLink: () => new joint.shapes.standard.Link(),
-             defaultConnectionPoint: { name: 'boundary' },
-             validateConnection: function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {
-            // Prevent linking between ports within one element
-            if (cellViewS === cellViewT) return false;
-        }
-         
-
+            linkPinning: false, 
+            defaultLink: () => new joint.shapes.standard.Link({
+                attrs: {
+                    line: {
+                        connection: true,
+                        stroke: "#333333",
+                        strokeWidth: 2,
+                        strokeLinejoin: "round",
+                        targetMarker: {
+                            type: "none"
+                        }   
+                    },
+                    wrapper: {
+                        connection: true,
+                        strokeWidth: 10,
+                        strokeLinejoin: "round"
+                    },
+                    connector: {
+                       name: 'rounded',
+                       raw: true,
+                       radius: 20
+                      } 
+                }
+            }),
+             defaultConnectionPoint: { name: 'boundary'  },
         });
 
-
+         
         var portsIn = {
         position: {
             name: 'top'
@@ -763,7 +778,8 @@
         },
         markup: [{
             tagName: 'circle',
-            selector: 'portBody'
+            selector: 'portBody',
+     
         }]
     };
 
@@ -787,7 +803,7 @@
                 ports: {
                   groups: {
                    'in': portsIn,
-                    'out': portsOut
+                   'out': portsOut
             }
         }
             
@@ -802,6 +818,7 @@
         }
         
     ]);
+       //console.log(rect.id)       
         graph.addCells([rect]);
         // Create the remove button
 // Create the remove button with SVG
@@ -900,7 +917,8 @@ var editButton = new joint.elementTools.Button({
                 ry: 8,
                 fill: '#fff', // Green background for edit button
                 cursor: 'pointer',
-                class: 'edit-button'
+                class: 'edit-button',
+                
             }
         },
         {
@@ -941,32 +959,37 @@ var editButton = new joint.elementTools.Button({
     ],
     x: 26, // Center-right below the node
     y: 72,
-    action: function (evt, elementView, tool) {
-        var popUp = document.querySelector('.pop-up');
-        var nodeNameInput = document.getElementById('NodeName');
-        var nodeValueInput = document.getElementById('NodeValue');
+   action: function (evt, elementView, tool) {
+    var popUp = document.querySelector('.pop-up');
+    var nodeNameInput = document.getElementById('NodeName');
+    var nodeValueInput = document.getElementById('NodeValue');
 
-        // Set current label and value
-        nodeNameInput.value = elementView.model.attr('label/text');  // Name field
-        nodeValueInput.value = elementView.model.attr('value');  // Value field
+    // Extract the current label and value
+    const currentText = elementView.model.attr('label/text');
+    const [currentName, currentValue] = currentText.split('\n'); // Split text by newline
 
-        // Show the modal
-        popUp.classList.add('translate-x-0');
+    // Set current values in the modal
+    nodeNameInput.value = currentName.trim();  // Name field
+    nodeValueInput.value = currentValue.trim();  // Value field
 
-        // Handle the form submission inside the modal
-        document.getElementById('a').onclick = function () {
-            const newName = nodeNameInput.value;  // Get new Name
-            const newValue = nodeValueInput.value;  // Get new Value
+    // Show the modal
+    popUp.classList.add('translate-x-0');
 
-            // Update the label and value in the element
-            elementView.model.attr('label/text', newName);  // Update Name
-            elementView.model.attr('value', newValue);  // Update Value
+    // Handle the form submission inside the modal
+    document.getElementById('a').onclick = function () {
+        const newName = nodeNameInput.value;  // Get new Name
+        const newValue = nodeValueInput.value;  // Get new Value
 
-            // Hide the modal
-            popUp.classList.remove('translate-x-0');
-            popUp.classList.add('translate-x-376-5');
-        };
-    }
+        // Combine name and value into the label text
+        const updatedLabel = `${newName}\n${newValue}`;
+        elementView.model.attr('label/text', updatedLabel);  // Update label
+
+        // Hide the modal
+        popUp.classList.remove('translate-x-0');
+        popUp.classList.add('translate-x-376-5');
+       
+    };   
+}
 });
 // Add the tools to the ToolsView
 var toolsView = new joint.dia.ToolsView({
@@ -1086,7 +1109,7 @@ addshap.addEventListener('click', () => {
         }
     ]);
     
-    console.log(newRect);
+   
     graph.addCells([newRect]);
 
     // Remove button configuration
@@ -1225,35 +1248,47 @@ addshap.addEventListener('click', () => {
         ],
         x: 26,
         y: 72,
-        action: function (evt, elementView, tool) {
-            var popUp = document.querySelector('.pop-up');
-            var nodeNameInput = document.getElementById('NodeName');
-            var nodeValueInput = document.getElementById('NodeValue');
+        action: function (evt, elementView, tool) {       
+    const popUp = document.querySelector('.pop-up');
+    const nodeNameInput = document.getElementById('NodeName');
+    const nodeValueInput = document.getElementById('NodeValue');
+    const editButton = document.getElementById('a'); // Your submit button
 
-            // Set current label and value in the input fields
-            nodeNameInput.value = elementView.model.attr('label/text');  // Name field
-            nodeValueInput.value = elementView.model.attr('value');  // Value field
+    // Remove any existing event listeners
+    const newEditButton = editButton.cloneNode(true);
+    editButton.parentNode.replaceChild(newEditButton, editButton);
 
-            // Show the popup by removing the translate class
-            popUp.classList.remove('translate-x-376-5');
-            popUp.classList.add('translate-x-0'); // Popup slides in
+    // Split label into name and value
+    const labelText = elementView.model.attr('label/text');
+    const [currentName, currentValue] = labelText.split('\n');
 
-            // Handle form submission
-            document.getElementById('a').onclick = function () {
-                const newName = nodeNameInput.value;  // Get new Name
-                const newValue = nodeValueInput.value;  // Get new Value
+    nodeNameInput.value = currentName || ''; // Set current name
+    nodeValueInput.value = currentValue || ''; // Set current value
+      
+    // Show pop-up
+    popUp.classList.remove('translate-x-376-5');
+    popUp.classList.add('translate-x-0');
 
-                // Update the label and value in the element
-                elementView.model.attr('label/text', newName);  // Update Name
-                elementView.model.attr('value', newValue);  // Update Value
 
-                // Hide the popup after form submission
-                setTimeout(function () {
-                    popUp.classList.remove('translate-x-0');
-                    popUp.classList.add('translate-x-376-5'); // Slide out popup
-                }, 300);  // Add a delay for the slide-out transition
-            };
-        }
+    elementView.model.attr('body/stroke', '#000000'); // Black border
+    elementView.model.attr('body/strokeWidth', 2);
+    // Add a new event listener
+    newEditButton.addEventListener('click', function () {
+        const newName = nodeNameInput.value.trim();
+        const newValue = nodeValueInput.value.trim();
+
+        // Update the current node's label
+        elementView.model.attr('label/text', `${newName}\n${newValue}`);
+        elementView.model.attr('body/stroke', ''); // Black border
+        elementView.model.attr('body/strokeWidth',);
+        // Hide the p op-up after updating
+        setTimeout(function () {
+            popUp.classList.remove('translate-x-0');
+            popUp.classList.add('translate-x-376-5');
+        }, 300); 
+    });
+}
+
     });
 
     // Add tools to the element view
@@ -1303,225 +1338,6 @@ addshap.addEventListener('click', () => {
                 : "block";
       })
         
-//         paperContainer.addEventListener('click',()=> {  
-//             if (!nodeValue) {
-//                      alert("Node value is required!");
-//                     return;
-//                    }
-                   
-             
-// //              const currentNodeName = nodeName || `node 0${nodecount}`; 
-// //              const currentNodeValue = nodeValue || "";
-             
-// //               const newRect = new namespace.standard.Rectangle({
-// //                 position: { x: 400, y: 400 },
-// //                 size: { width: 104, height: 61 },
-// //                 attrs: {
-// //                     portBody: {
-// //                         magnet: true,
-// //                         width: 16,
-// //                         height: 16,
-// //                         x: -8,
-// //                         y: -8,
-// //                         fill:  '#03071E'
-// //                     },
-// //                     body: { fill: '#FFFFFF', strokeWidth: 0, rx: 8, ry: 8 },
-// //                     label: { text: 'Node 00  \n$1.10', fill: '#1C212BDE' },
-// //                 },
-// //                   ports: {
-// //                   groups: {
-// //                    'in': portsIn,
-// //                     'out': portsOut
-// //             }
-// //         }
-// //             });
-// //             newRect.addPorts([
-// //         { 
-// //             group: 'in',
-// //         },
-       
-// //         { 
-// //             group: 'out',
-// //         }
-// //     ]);
-// //                console.log(newRect)
-// //             graph.addCells([newRect]);
-// //             var removeButton = new joint.elementTools.Button({
-// //     markup: [
-// //         {
-// //             tagName: 'rect', // Background rectangle for the button
-// //             selector: 'button',
-// //             attributes: {
-// //                 width: 32,
-// //                 height: 32,
-// //                 rx: 8, // Rounded corners
-// //                 ry: 8,
-// //                 fill: '#fff', // Red background for remove button
-// //                 cursor: 'pointer',
-// //                 class: 'remove-button',
-// //             }
-// //         },
-// //         {
-// //             tagName: 'svg', // SVG for delete icon
-// //             selector: 'icon',
-// //             attributes: {
-// //                 width: '24',
-// //                 height: '24',
-// //                 viewBox: '0 0 24 24',
-// //                 fill: 'none',
-// //                 xmlns: 'http://www.w3.org/2000/svg',
-// //                 x:'4',
-// //                 y:'4'
-// //             },
-// //             children: [
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M3 5.99219H5H21',
-// //                         stroke: '#E93939',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 },
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M19 5.99219V19.9922C19 20.5226 18.7893 21.0313 18.4142 21.4064C18.0391 21.7815 17.5304 21.9922 17 21.9922H7C6.46957 21.9922 5.96086 21.7815 5.58579 21.4064C5.21071 21.0313 5 20.5226 5 19.9922V5.99219M8 5.99219V3.99219C8 3.46175 8.21071 2.95305 8.58579 2.57797C8.96086 2.2029 9.46957 1.99219 10 1.99219H14C14.5304 1.99219 15.0391 2.2029 15.4142 2.57797C15.7893 2.95305 16 3.46175 16 3.99219V5.99219',
-// //                         stroke: '#E93939',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 },
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M10 10.9922V16.9922',
-// //                         stroke: '#E93939',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 },
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M14 10.9922V16.9922',
-// //                         stroke: '#E93939',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 }
-// //             ]
-// //         }
-// //     ],
-// //     x: 62, // Center-left below the node
-// //     y: 72,
-// //     action: function (evt, elementView, tool) {
-// //         // Confirm before removing the element
-// //         const confirmation = confirm('Are you sure you want to delete this element?');
-// //         if (confirmation) {
-// //             elementView.model.remove(); // Remove the element
-// //         }
-// //     }
-// // });
-
-// // // Create the edit button (unchanged)
-// // var editButton = new joint.elementTools.Button({
-// //     markup: [
-// //         {
-// //             tagName: 'rect', // Background rectangle for the button
-// //             selector: 'button',
-// //             attributes: {
-// //                 width: 32, // Set width to 32 for smaller button
-// //                 height: 32, // Set height to 32 for smaller button
-// //                 rx: 8, // Rounded corners
-// //                 ry: 8,
-// //                 fill: '#fff', // Green background for edit button
-// //                 cursor: 'pointer',
-// //                 class: 'edit-button'
-// //             }
-// //         },
-// //         {
-// //             tagName: 'svg', // SVG for edit icon
-// //             selector: 'icon',
-// //             attributes: {
-// //                 width: '24', // Adjust SVG width
-// //                 height: '24', // Adjust SVG height
-// //                 viewBox: '0 0 24 24',
-// //                 fill: 'none',
-// //                 xmlns: 'http://www.w3.org/2000/svg',
-// //                 x: '4', // Center the SVG horizontally inside the 32x32 button
-// //                 y: '4'  // Center the SVG vertically inside the 32x32 button
-// //             },
-// //             children: [
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M12 19.9922H21',
-// //                         stroke: 'black',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 },
-// //                 {
-// //                     tagName: 'path',
-// //                     attributes: {
-// //                         d: 'M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z',
-// //                         stroke: 'black',
-// //                         'stroke-width': '2',
-// //                         'stroke-linecap': 'round',
-// //                         'stroke-linejoin': 'round'
-// //                     }
-// //                 }
-// //             ]
-// //         }
-// //     ],
-// //     x: 26, // Center-right below the node
-// //     y: 72,
-// //     action: function (evt, elementView, tool) {
-// //         // Prompt user to edit the label of the element
-// //         const newText = prompt('Enter new label:', elementView.model.attr('label/text'));
-// //         if (newText !== null) {
-// //             elementView.model.attr('label/text', newText); // Update the label text
-// //         }
-// //     }
-// // });
-// // // Add the tools to the ToolsView
-// // var toolsView = new joint.dia.ToolsView({
-// //     tools: [removeButton, editButton]
-// // });
-
-// // var elementView = newRect.findView(paper);
-// // elementView.addTools(toolsView);
-// // elementView.hideTools();
-
-// // // Show tools on click
-// // paper.on('element:pointerdown', function (elementView) {
-// //     // Hide tools for all other elements
-// //     graph.getElements().forEach(el => {
-// //         const view = el.findView(paper);
-// //         if (view && view !== elementView) view.hideTools();
-// //     });
-
-// //     // Show tools for the clicked element
-// //     elementView.showTools();
-// // });
-
-// // // Hide tools when clicking outside
-// // document.addEventListener('click', function (event) {
-// //     const targetElement = event.target.closest('.joint-element'); // Check if clicked inside an element
-// //     if (!targetElement) {
-// //         graph.getElements().forEach(el => {
-// //             const elView = el.findView(paper);
-// //             if (elView) elView.hideTools();
-// //         });
-// //     }
-// // });
-//         })
         
         toggleBtn.addEventListener('click', () => {
             if (paperContainer.style.display === 'none') {
@@ -1540,7 +1356,7 @@ addshap.addEventListener('click', () => {
 
 
         document.querySelectorAll(".edit-button").forEach(function(element) {
-              
+            //    console.log("---->", element)
             element.addEventListener("click", function() {
                 var popup = document.querySelector(".pop-up");
                 var mainCanva = document.querySelector(".main-canva"); // Select the main-canva element
