@@ -53,7 +53,8 @@ module.exports = {
         "683":'683px',
         "736":'736px',
         "760":'760px',
-        "1120":"1120px"
+        "1120":"1120px",
+        "calc":"calc(100vw - 148px)"
       },
       height:{
         "06":'6px',
@@ -69,7 +70,8 @@ module.exports = {
         "85%":"85%",
         "93%":"93%",
         "calc":"calc(100vh - 64px)",
-        "calc-1":"calc(100vh - 15%)"
+        "calc-1":"calc(100vh - 15%)",
+        "calc-2":"calc(100vh - 56px)"
       },
       lineHeight:{
         "010":'10px',
@@ -141,7 +143,7 @@ module.exports = {
         "logo-in-light":"url('../Image/logo-light.svg')",
         "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
-        "composer-bg":"url(data:image/svg+xml;base64,PHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0idi01IiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjEwMCIgeD0iMCIgeT0iMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSwxLjIyNDY0Njc5OTE0NzM1MzJlLTE2LC0xLjIyNDY0Njc5OTE0NzM1MzJlLTE2LC0xLDAsMCkiPgogIDxkZWZzIGlkPSJ2LTQiPgogICAgPHBhdHRlcm4gaWQ9InBhdHRlcm5fdmlldzJfMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiB4PSIwIiB5PSIwIj4KICAgICAgPHJlY3QgaWQ9InYtNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI0FBQUFBQSI+PC9yZWN0PgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCBpZD0idi04IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fdmlldzJfMCkiPjwvcmVjdD4KPC9zdmc+)"
+        "composer-bg":"url(../Image/composor-canva.svg)"
       },
       inset:{
         "02":'2px',
