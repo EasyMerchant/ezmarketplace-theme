@@ -135,7 +135,8 @@ module.exports = {
         "baker-miller-pink-08":"#ff9eb014",
         "green-dark":"#1A9310",
         "gray-300":"#D9D9D9",
-        "black-14":"#00000014"
+        "black-14":"#00000014",
+        "dark-gunmemtal-87":'#1C212BDE'
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",

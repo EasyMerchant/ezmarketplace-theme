@@ -730,15 +730,24 @@
             <div id="paper"></div>
             <div
                class="pop-up w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               <div class="flex items-center justify-between w-full">
                <div class="flex items-center gap-2 cursor-pointer" id="closepop-up">
                   <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                      <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
                   </svg>
-                  <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Edit Node
+                  <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Node
                   </div>
                </div>
+            <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect width="32" height="32.0543" rx="8" fill="white"/>
+               <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>
+               </a></div>
                <form class="flex flex-col gap-4 w-full">
                   <div class="flex flex-col items-start justify-center gap-2 w-full">
                      <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
@@ -991,7 +1000,7 @@
          const paperWidth = window.innerWidth - 244;
          const paperHeight = window.innerHeight - 102;
          const rectWidth = 104; // Width of the rectangle
-         const rectHeight = 61; // Height of the rectangle
+         const rectHeight = 80; // Height of the rectangle
 
          var child_1 = new Child({
             position: {
@@ -1010,9 +1019,10 @@
                },
                body: {
                   fill: '#FFFFFF', strokeWidth: 0, rx: 8,
-                  ry: 8
+                  ry: 8,
+                  y: 1
                },
-               label: { text: 'Node 00  \n$1.10', fill: '#1C212BDE' },
+               label: { text: 'Node 00  \n\n$1.10', fill: '#1C212BDE' },
             },
             ports: {
                groups: {
@@ -1035,86 +1045,6 @@
             child_1
          ]);
 
-         var removeButton = new joint.elementTools.Button({
-            markup: [
-               {
-                  tagName: 'rect',
-                  selector: 'button',
-                  attributes: {
-                     width: 32,
-                     height: 32,
-                     rx: 8,
-                     ry: 8,
-                     fill: '#fff',
-                     cursor: 'pointer',
-                     class: 'remove-button'
-                  }
-               },
-               {
-                  tagName: 'svg',
-                  selector: 'icon',
-                  attributes: {
-                     width: '24',
-                     height: '24',
-                     viewBox: '0 0 24 24',
-                     fill: 'none',
-                     xmlns: 'http://www.w3.org/2000/svg',
-                     x: '4',
-                     y: '4'
-                  },
-                  children: [
-                     {
-                        tagName: 'path',
-                        attributes: {
-                           d: 'M3 5.99219H5H21',
-                           stroke: '#E93939',
-                           'stroke-width': '2',
-                           'stroke-linecap': 'round',
-                           'stroke-linejoin': 'round'
-                        }
-                     },
-                     {
-                        tagName: 'path',
-                        attributes: {
-                           d: 'M19 5.99219V19.9922C19 20.5226 18.7893 21.0313 18.4142 21.4064C18.0391 21.7815 17.5304 21.9922 17 21.9922H7C6.46957 21.9922 5.96086 21.7815 5.58579 21.4064C5.21071 21.0313 5 20.5226 5 19.9922V5.99219M8 5.99219V3.99219C8 3.46175 8.21071 2.95305 8.58579 2.57797C8.96086 2.2029 9.46957 1.99219 10 1.99219H14C14.5304 1.99219 15.0391 2.2029 15.4142 2.57797C15.7893 2.95305 16 3.46175 16 3.99219V5.99219',
-                           stroke: '#E93939',
-                           'stroke-width': '2',
-                           'stroke-linecap': 'round',
-                           'stroke-linejoin': 'round'
-                        }
-                     },
-                     {
-                        tagName: 'path',
-                        attributes: {
-                           d: 'M10 10.9922V16.9922',
-                           stroke: '#E93939',
-                           'stroke-width': '2',
-                           'stroke-linecap': 'round',
-                           'stroke-linejoin': 'round'
-                        }
-                     },
-                     {
-                        tagName: 'path',
-                        attributes: {
-                           d: 'M14 10.9922V16.9922',
-                           stroke: '#E93939',
-                           'stroke-width': '2',
-                           'stroke-linecap': 'round',
-                           'stroke-linejoin': 'round'
-                        }
-                     }
-                  ]
-               }
-            ],
-            x: 62,
-            y: 72,
-            action: function (evt, elementView, tool) {
-               const confirmation = confirm('Are you sure you want to delete this element?');
-               if (confirmation) {
-                  elementView.model.remove();
-               }
-            }
-         });
          // Edit button configuration
          var editButton = new joint.elementTools.Button({
             markup: [
@@ -1167,7 +1097,7 @@
                   ]
                }
             ],
-            x: 26,
+            x: 35,
             y: 72,
             action: function (evt, elementView, tool) {
                const popUp = document.querySelector('.pop-up');
@@ -1209,13 +1139,16 @@
                });
             }
          });
+         
          // Add tools to the element view
          var toolsView = new joint.dia.ToolsView({
-            tools: [removeButton, editButton]
+            tools: [editButton]
          });
          var elementView = child_1.findView(paper);
          elementView.addTools(toolsView);
          elementView.hideTools();
+
+        
          // Show tools on click
          paper.on('element:pointerdown', function (elementView) {
             // Hide tools for all other elements
@@ -1226,6 +1159,8 @@
             // Show tools for the clicked element
             elementView.showTools();
          });
+         
+        
          // Hide tools when clicking outside
          document.addEventListener('click', function (event) {
             const targetElement = event.target.closest('.joint-element');
@@ -1244,6 +1179,20 @@
             // `fitAncestorElements()` method is defined at `joint.shapes.container.Base` in `./joint.shapes.container.js`
             element.fitAncestorElements();
          });
+         
+         const deleteButton = document.getElementById('delete-node');
+deleteButton.addEventListener('click', function () {
+    // Find the element view
+    const elementView = child_1.findView(paper);
+
+    if (elementView) {
+        // Remove all tools from the element view
+        elementView.removeTools();
+        console.log("Tools removed from the element.");
+    } else {
+        console.log("No active element found to remove tools.");
+    }
+});
 
 
          const nodename = document.getElementById('NodeName');
@@ -1296,8 +1245,9 @@
                      y: -8,
                      fill: '#03071E'
                   },
-                  body: { fill: '#FFFFFF', strokeWidth: 0, rx: 8, ry: 8 },
-                  label: { text: `${nodeName}  \n$1.10`, fill: '#1C212BDE' },
+                  body: { fill: '#FFFFFF', strokeWidth: 0, rx: 8, ry: 8,
+                  y: 1 },
+                  label: { text: `${nodeName}  \n\n$1.10`, fill: '#1C212BDE' },
                },
                ports: {
                   groups: {
@@ -1314,86 +1264,7 @@
 
             // Add new child node to the graph
             graph.addCells([newChild]);
-            var removeButton = new joint.elementTools.Button({
-               markup: [
-                  {
-                     tagName: 'rect',
-                     selector: 'button',
-                     attributes: {
-                        width: 32,
-                        height: 32,
-                        rx: 8,
-                        ry: 8,
-                        fill: '#fff',
-                        cursor: 'pointer',
-                        class: 'remove-button'
-                     }
-                  },
-                  {
-                     tagName: 'svg',
-                     selector: 'icon',
-                     attributes: {
-                        width: '24',
-                        height: '24',
-                        viewBox: '0 0 24 24',
-                        fill: 'none',
-                        xmlns: 'http://www.w3.org/2000/svg',
-                        x: '4',
-                        y: '4'
-                     },
-                     children: [
-                        {
-                           tagName: 'path',
-                           attributes: {
-                              d: 'M3 5.99219H5H21',
-                              stroke: '#E93939',
-                              'stroke-width': '2',
-                              'stroke-linecap': 'round',
-                              'stroke-linejoin': 'round'
-                           }
-                        },
-                        {
-                           tagName: 'path',
-                           attributes: {
-                              d: 'M19 5.99219V19.9922C19 20.5226 18.7893 21.0313 18.4142 21.4064C18.0391 21.7815 17.5304 21.9922 17 21.9922H7C6.46957 21.9922 5.96086 21.7815 5.58579 21.4064C5.21071 21.0313 5 20.5226 5 19.9922V5.99219M8 5.99219V3.99219C8 3.46175 8.21071 2.95305 8.58579 2.57797C8.96086 2.2029 9.46957 1.99219 10 1.99219H14C14.5304 1.99219 15.0391 2.2029 15.4142 2.57797C15.7893 2.95305 16 3.46175 16 3.99219V5.99219',
-                              stroke: '#E93939',
-                              'stroke-width': '2',
-                              'stroke-linecap': 'round',
-                              'stroke-linejoin': 'round'
-                           }
-                        },
-                        {
-                           tagName: 'path',
-                           attributes: {
-                              d: 'M10 10.9922V16.9922',
-                              stroke: '#E93939',
-                              'stroke-width': '2',
-                              'stroke-linecap': 'round',
-                              'stroke-linejoin': 'round'
-                           }
-                        },
-                        {
-                           tagName: 'path',
-                           attributes: {
-                              d: 'M14 10.9922V16.9922',
-                              stroke: '#E93939',
-                              'stroke-width': '2',
-                              'stroke-linecap': 'round',
-                              'stroke-linejoin': 'round'
-                           }
-                        }
-                     ]
-                  }
-               ],
-               x: 62,
-               y: 72,
-               action: function (evt, elementView, tool) {
-                  const confirmation = confirm('Are you sure you want to delete this element?');
-                  if (confirmation) {
-                     elementView.model.remove();
-                  }
-               }
-            });
+            
             // Edit button configuration
             var editButton = new joint.elementTools.Button({
                markup: [
@@ -1446,7 +1317,7 @@
                      ]
                   }
                ],
-               x: 26,
+               x: 35,
                y: 72,
                action: function (evt, elementView, tool) {
                   const popUp = document.querySelector('.pop-up');
@@ -1490,7 +1361,7 @@
             });
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
-               tools: [removeButton, editButton]
+               tools: [editButton]
             });
             var elementView = newChild.findView(paper);
             elementView.addTools(toolsView);
@@ -1572,6 +1443,19 @@
                ? "none"
                : "block";
          })
+
+         paper.on('element:mouseenter', function(elementView) {
+            
+            var elementView = child_1.findView(paper);
+   elementView.model.attr('body/stroke', '#000000'); // Black border
+         elementView.model.attr('body/strokeWidth', 2);
+   });
+   
+   paper.on('element:mouseleave', function(elementView) {
+   
+   elementView.model.attr('body/stroke', ''); // Black border
+            elementView.model.attr('body/strokeWidth',);
+   });
 
       })(joint);
 
