@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-anti-flash-white  dark:bg-chinese-black scrollbar-none">
    <div class="flex grow">
       <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
@@ -630,7 +632,7 @@
          </header>
          <div class="w-screen hidden main-canva h-screen absolute bg-black-14 z-10"></div>
          <main
-            class="relative overflow-hidden overflow-y-hidden h-calc  flex  flex-col gap-4 pt-8 w-full  px-8   top-16 pb-2.5 scrollbar-none bg-composer-bg">
+            class="relative overflow-hidden overflow-y-hidden h-calc  flex  flex-col gap-4 pt-8 w-full  px-8   top-16 pb-2.5 scrollbar-none bg-composer-bg bg-cover">
             <div class="flex justify-between items-center w-full">
                <a href="./composer.html" class="flex items-center gap-2">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -651,7 +653,8 @@
                </div>
             </div>
             <div class="absolute top-1/2 right-8 flex flex-col items-center justify-center gap-2 z-99">
-               <div id="add-shap" class="flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer">
+               <div data-modal-target="select-modal" data-modal-toggle="select-modal"
+                  class="flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer">
                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M12.5 5.91406V19.9141" stroke="white" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -689,38 +692,143 @@
                </div>
                <div id="toggle-btn"
                   class="flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer">
-                  <svg id="hide-icon" width="25" height="25" viewBox="0 0 25 25" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_3727_3478)">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g clip-path="url(#clip0_3943_6129)">
                         <path
-                           d="M18.44 18.0182C16.7306 19.3212 14.6491 20.043 12.5 20.0781C5.5 20.0781 1.5 12.0781 1.5 12.0781C2.74389 9.76005 4.46914 7.73476 6.56 6.13815M10.4 4.31815C11.0883 4.15703 11.7931 4.07649 12.5 4.07815C19.5 4.07815 23.5 12.0781 23.5 12.0781C22.893 13.2138 22.1691 14.2829 21.34 15.2681M14.62 14.1981C14.3454 14.4929 14.0141 14.7293 13.6462 14.8933C13.2782 15.0572 12.8809 15.1454 12.4781 15.1525C12.0753 15.1596 11.6752 15.0855 11.3016 14.9346C10.9281 14.7838 10.5887 14.5592 10.3038 14.2743C10.019 13.9894 9.79439 13.6501 9.64351 13.2765C9.49262 12.903 9.41853 12.5029 9.42563 12.1001C9.43274 11.6972 9.52091 11.3 9.68488 10.932C9.84884 10.564 10.0853 10.2328 10.38 9.95815"
+                           d="M12.5 15.0781C14.1569 15.0781 15.5 13.735 15.5 12.0781C15.5 10.4213 14.1569 9.07812 12.5 9.07812C10.8431 9.07812 9.5 10.4213 9.5 12.0781C9.5 13.735 10.8431 15.0781 12.5 15.0781Z"
                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                            class="group-hover:stroke-white" />
-                        <path d="M1.5 1.07812L23.5 23.0781" stroke="black" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" class="group-hover:stroke-white" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_3727_3478">
-                           <rect width="24" height="24" fill="white" transform="translate(0.5 0.078125)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  <svg id="show-icon" class="hidden" width="25" height="25" viewBox="0 0 25 25" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_3727_3478)">
                         <path
-                           d="M18.44 18.0182C16.7306 19.3212 14.6491 20.043 12.5 20.0781C5.5 20.0781 1.5 12.0781 1.5 12.0781C2.74389 9.76005 4.46914 7.73476 6.56 6.13815M10.4 4.31815C11.0883 4.15703 11.7931 4.07649 12.5 4.07815C19.5 4.07815 23.5 12.0781 23.5 12.0781C22.893 13.2138 22.1691 14.2829 21.34 15.2681M14.62 14.1981C14.3454 14.4929 14.0141 14.7293 13.6462 14.8933C13.2782 15.0572 12.8809 15.1454 12.4781 15.1525C12.0753 15.1596 11.6752 15.0855 11.3016 14.9346C10.9281 14.7838 10.5887 14.5592 10.3038 14.2743C10.019 13.9894 9.79439 13.6501 9.64351 13.2765C9.49262 12.903 9.41853 12.5029 9.42563 12.1001C9.43274 11.6972 9.52091 11.3 9.68488 10.932C9.84884 10.564 10.0853 10.2328 10.38 9.95815"
+                           d="M19.9 15.0781C19.7669 15.3797 19.7272 15.7143 19.786 16.0387C19.8448 16.3631 19.9995 16.6624 20.23 16.8981L20.29 16.9581C20.476 17.1439 20.6235 17.3644 20.7241 17.6072C20.8248 17.85 20.8766 18.1103 20.8766 18.3731C20.8766 18.636 20.8248 18.8962 20.7241 19.139C20.6235 19.3818 20.476 19.6024 20.29 19.7881C20.1043 19.9741 19.8837 20.1216 19.6409 20.2222C19.3981 20.3229 19.1378 20.3747 18.875 20.3747C18.6122 20.3747 18.3519 20.3229 18.1091 20.2222C17.8663 20.1216 17.6457 19.9741 17.46 19.7881L17.4 19.7281C17.1643 19.4976 16.865 19.3429 16.5406 19.2841C16.2162 19.2253 15.8816 19.265 15.58 19.3981C15.2842 19.5249 15.032 19.7354 14.8543 20.0037C14.6766 20.272 14.5813 20.5863 14.58 20.9081V21.0781C14.58 21.6086 14.3693 22.1173 13.9942 22.4923C13.6191 22.8674 13.1104 23.0781 12.58 23.0781C12.0496 23.0781 11.5409 22.8674 11.1658 22.4923C10.7907 22.1173 10.58 21.6086 10.58 21.0781V20.9881C10.5723 20.6571 10.4651 20.3361 10.2725 20.0668C10.0799 19.7975 9.81074 19.5924 9.5 19.4781C9.19838 19.345 8.86381 19.3053 8.53941 19.3641C8.21502 19.4229 7.91568 19.5776 7.68 19.8081L7.62 19.8681C7.43425 20.0541 7.21368 20.2016 6.97088 20.3022C6.72808 20.4029 6.46783 20.4547 6.205 20.4547C5.94217 20.4547 5.68192 20.4029 5.43912 20.3022C5.19632 20.2016 4.97575 20.0541 4.79 19.8681C4.60405 19.6824 4.45653 19.4618 4.35588 19.219C4.25523 18.9762 4.20343 18.716 4.20343 18.4531C4.20343 18.1903 4.25523 17.93 4.35588 17.6872C4.45653 17.4444 4.60405 17.2239 4.79 17.0381L4.85 16.9781C5.08054 16.7424 5.23519 16.4431 5.294 16.1187C5.35282 15.7943 5.31312 15.4597 5.18 15.1581C5.05324 14.8624 4.84276 14.6101 4.57447 14.4324C4.30618 14.2548 3.99179 14.1594 3.67 14.1581H3.5C2.96957 14.1581 2.46086 13.9474 2.08579 13.5723C1.71071 13.1973 1.5 12.6886 1.5 12.1581C1.5 11.6277 1.71071 11.119 2.08579 10.7439C2.46086 10.3688 2.96957 10.1581 3.5 10.1581H3.59C3.92099 10.1504 4.242 10.0432 4.5113 9.85064C4.78059 9.65803 4.98572 9.38886 5.1 9.07812C5.23312 8.77651 5.27282 8.44193 5.214 8.11754C5.15519 7.79314 5.00054 7.4938 4.77 7.25812L4.71 7.19812C4.52405 7.01238 4.37653 6.7918 4.27588 6.54901C4.17523 6.30621 4.12343 6.04596 4.12343 5.78312C4.12343 5.52029 4.17523 5.26004 4.27588 5.01724C4.37653 4.77445 4.52405 4.55387 4.71 4.36812C4.89575 4.18217 5.11632 4.03465 5.35912 3.93401C5.60192 3.83336 5.86217 3.78155 6.125 3.78155C6.38783 3.78155 6.64808 3.83336 6.89088 3.93401C7.13368 4.03465 7.35425 4.18217 7.54 4.36812L7.6 4.42812C7.83568 4.65866 8.13502 4.81331 8.45941 4.87213C8.78381 4.93095 9.11838 4.89124 9.42 4.75812H9.5C9.79577 4.63136 10.048 4.42088 10.2257 4.15259C10.4034 3.8843 10.4987 3.56991 10.5 3.24813V3.07812C10.5 2.54769 10.7107 2.03898 11.0858 1.66391C11.4609 1.28884 11.9696 1.07813 12.5 1.07812C13.0304 1.07813 13.5391 1.28884 13.9142 1.66391C14.2893 2.03898 14.5 2.54769 14.5 3.07812V3.16812C14.5013 3.48991 14.5966 3.8043 14.7743 4.07259C14.952 4.34088 15.2042 4.55136 15.5 4.67812C15.8016 4.81124 16.1362 4.85095 16.4606 4.79213C16.785 4.73331 17.0843 4.57866 17.32 4.34812L17.38 4.28813C17.5657 4.10217 17.7863 3.95465 18.0291 3.85401C18.2719 3.75336 18.5322 3.70155 18.795 3.70155C19.0578 3.70155 19.3181 3.75336 19.5609 3.85401C19.8037 3.95465 20.0243 4.10217 20.21 4.28813C20.396 4.47387 20.5435 4.69445 20.6441 4.93724C20.7448 5.18004 20.7966 5.44029 20.7966 5.70312C20.7966 5.96596 20.7448 6.22621 20.6441 6.46901C20.5435 6.7118 20.396 6.93238 20.21 7.11812L20.15 7.17812C19.9195 7.4138 19.7648 7.71314 19.706 8.03754C19.6472 8.36193 19.6869 8.69651 19.82 8.99813V9.07812C19.9468 9.37389 20.1572 9.62614 20.4255 9.80382C20.6938 9.98149 21.0082 10.0768 21.33 10.0781H21.5C22.0304 10.0781 22.5391 10.2888 22.9142 10.6639C23.2893 11.039 23.5 11.5477 23.5 12.0781C23.5 12.6086 23.2893 13.1173 22.9142 13.4923C22.5391 13.8674 22.0304 14.0781 21.5 14.0781H21.41C21.0882 14.0794 20.7738 14.1748 20.5055 14.3524C20.2372 14.5301 20.0268 14.7824 19.9 15.0781Z"
                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                           class="stroke-white" />
-                        <path d="M1.5 1.07812L23.5 23.0781" stroke="black" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" class="stroke-white" />
+                           class="group-hover:stroke-white" />
                      </g>
                      <defs>
-                        <clipPath id="clip0_3727_3478">
+                        <clipPath id="clip0_3943_6129">
                            <rect width="24" height="24" fill="white" transform="translate(0.5 0.078125)" />
                         </clipPath>
                      </defs>
                   </svg>
+
+
+               </div>
+            </div>
+            <!-- Main modal -->
+            <div id="select-modal" tabindex="-1" aria-hidden="true"
+               class="bg-black-14 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full">
+               <div class="relative p-4 w-full max-w-md max-h-full">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow-sm p-4">
+                     <!-- Modal header -->
+                     <div class="flex items-center justify-between ">
+                        <h3 class="text-base font-medium text-black-87 leading-19-2 font-inter">
+                           Add Node
+                        </h3>
+                        <button type="button"
+                           class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                           data-modal-toggle="select-modal">
+                           <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8.5L8.00072 16.4993" stroke="black" stroke-opacity="0.6" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M8 8.5L15.9993 16.4993" stroke="black" stroke-opacity="0.6" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </button>
+                     </div>
+                     <!-- Modal body -->
+                     <div class="pt-4">
+                        <ul class="list-none">
+                           <li class="m-0" id="add-account">
+                              <div
+                                 class="inline-flex items-center justify-between w-full py-4 text-gray-900 bg-white border-b border-gray-200  cursor-pointer">
+                                 <div class="flex items-center gap-4">
+                                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M25 8.5H7C5.89543 8.5 5 9.39543 5 10.5V22.5C5 23.6046 5.89543 24.5 7 24.5H25C26.1046 24.5 27 23.6046 27 22.5V10.5C27 9.39543 26.1046 8.5 25 8.5Z"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M5 14.5H27" stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+
+                                    <div class="flex flex-col gap-2 items-start">
+                                       <div class="text-sm leading-19-6 font-inter text-black-87">Accounts</div>
+                                       <div class="text-xs leading-16-8 font-inter text-dark-gunmetal-60">Financial a/c
+                                          like debit card, crypto, etc</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="m-0" id="data-provider">
+                              <div
+                                 class="inline-flex items-center justify-between w-full py-4 text-gray-900 bg-white border-b border-gray-200  cursor-pointer">
+                                 <div class="flex items-center gap-4">
+                                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M16 12.5C20.9706 12.5 25 11.1569 25 9.5C25 7.84315 20.9706 6.5 16 6.5C11.0294 6.5 7 7.84315 7 9.5C7 11.1569 11.0294 12.5 16 12.5Z"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M25 16.5C25 18.16 21 19.5 16 19.5C11 19.5 7 18.16 7 16.5"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M7 9.5V23.5C7 25.16 11 26.5 16 26.5C21 26.5 25 25.16 25 23.5V9.5"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+
+                                    <div class="flex flex-col gap-2 items-start">
+                                       <div class="text-sm leading-19-6 font-inter text-black-87">Data Provider</div>
+                                       <div class="text-xs leading-16-8 font-inter text-dark-gunmetal-60">To work and
+                                          move around data</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="m-0" id="add-condition">
+                              <div
+                                 class="inline-flex items-center justify-between w-full py-4 text-gray-900 bg-white border-b border-gray-200  cursor-pointer">
+                                 <div class="flex items-center gap-4">
+                                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M10.375 22.4375C10.6236 22.4375 10.8621 22.5363 11.0379 22.7121C11.2137 22.8879 11.3125 23.1264 11.3125 23.375C11.3125 23.6236 11.2137 23.8621 11.0379 24.0379C10.8621 24.2137 10.6236 24.3125 10.375 24.3125C10.1264 24.3125 9.8879 24.2137 9.71209 24.0379C9.53627 23.8621 9.4375 23.6236 9.4375 23.375C9.4375 23.1264 9.53627 22.8879 9.71209 22.7121C9.8879 22.5363 10.1264 22.4375 10.375 22.4375ZM13.5 23.375C13.5 22.0938 12.7305 20.9922 11.625 20.5117V19C11.625 18.3086 12.1836 17.75 12.875 17.75H19.125C19.8164 17.75 20.375 18.3086 20.375 19V20.5117C19.2695 20.9922 18.5 22.0938 18.5 23.375C18.5 25.1016 19.8984 26.5 21.625 26.5C23.3516 26.5 24.75 25.1016 24.75 23.375C24.75 22.0938 23.9805 20.9922 22.875 20.5117V19C22.875 16.9297 21.1953 15.25 19.125 15.25H17.25V12.4883C18.3555 12.0078 19.125 10.9062 19.125 9.625C19.125 7.89844 17.7266 6.5 16 6.5C14.2734 6.5 12.875 7.89844 12.875 9.625C12.875 10.9062 13.6445 12.0078 14.75 12.4883V15.25H12.875C10.8047 15.25 9.125 16.9297 9.125 19V20.5117C8.01953 20.9922 7.25 22.0938 7.25 23.375C7.25 25.1016 8.64844 26.5 10.375 26.5C12.1016 26.5 13.5 25.1016 13.5 23.375ZM21.625 22.4375C21.8736 22.4375 22.1121 22.5363 22.2879 22.7121C22.4637 22.8879 22.5625 23.1264 22.5625 23.375C22.5625 23.6236 22.4637 23.8621 22.2879 24.0379C22.1121 24.2137 21.8736 24.3125 21.625 24.3125C21.3764 24.3125 21.1379 24.2137 20.9621 24.0379C20.7863 23.8621 20.6875 23.6236 20.6875 23.375C20.6875 23.1264 20.7863 22.8879 20.9621 22.7121C21.1379 22.5363 21.3764 22.4375 21.625 22.4375ZM16.9375 9.625C16.9375 9.87364 16.8387 10.1121 16.6629 10.2879C16.4871 10.4637 16.2486 10.5625 16 10.5625C15.7514 10.5625 15.5129 10.4637 15.3371 10.2879C15.1613 10.1121 15.0625 9.87364 15.0625 9.625C15.0625 9.37636 15.1613 9.13791 15.3371 8.96209C15.5129 8.78627 15.7514 8.6875 16 8.6875C16.2486 8.6875 16.4871 8.78627 16.6629 8.96209C16.8387 9.13791 16.9375 9.37636 16.9375 9.625Z"
+                                          fill="#2E333E" />
+                                    </svg>
+
+                                    <div class="flex flex-col gap-2 items-start">
+                                       <div class="text-sm leading-19-6 font-inter text-black-87">Condition</div>
+                                       <div class="text-xs leading-16-8 font-inter text-dark-gunmetal-60">Rules based on
+                                          IF statements</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="m-0" id="add-action">
+                              <div
+                                 class="inline-flex items-center justify-between w-full py-4 text-gray-900 bg-white border-0 border-gray-200  cursor-pointer">
+                                 <div class="flex items-center gap-4">
+                                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M17 6.5L7 18.5H16L15 26.5L25 14.5H16L17 6.5Z" fill="#2E333E"
+                                          stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+
+
+                                    <div class="flex flex-col gap-2 items-start">
+                                       <div class="text-sm leading-19-6 font-inter text-black-87">Action</div>
+                                       <div class="text-xs leading-16-8 font-inter text-dark-gunmetal-60">List of
+                                          actions to perform</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
             </div>
             <div id="paper-container" class="!w-calc !h-calc-2 block"></div>
@@ -728,7 +836,7 @@
             <div
                class="pop-up w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
                <div class="flex items-center justify-between w-full">
-                  <div class="flex items-center gap-2 cursor-pointer" id="closepop-up">
+                  <div class="flex items-center gap-2 cursor-pointer closepop-up">
                      <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
@@ -767,14 +875,137 @@
                   </span>
                </form>
             </div>
-            <div id="hover-model" class="hidden  text-black dark:text-Lavender">
-               <div class="action-buttons">
-                  <button class="edit-button p-1 bg-white text-black">Edit</button>
-                  <button class="delete-button p-1 bg-white text-black">Delete</button>
+            <div
+               class="condition-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-2 cursor-pointer closepop-up">
+                     <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
+                     </svg>
+                     <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Condition
+                        Node
+                     </div>
+                  </div>
+                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32.0543" rx="8" fill="white" />
+                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path
+                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
+                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+                  </a>
                </div>
+               <form class="flex flex-col gap-4 w-full">
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                     <input type="text" id="condition-name"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
+                     <input type="text" id="condition"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <span id="add" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
+                  </span>
+               </form>
+            </div>
+            <div
+               class="dataProvider-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-2 cursor-pointer closepop-up">
+                     <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
+                     </svg>
+                     <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Data Node
+                     </div>
+                  </div>
+                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32.0543" rx="8" fill="white" />
+                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path
+                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
+                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+                  </a>
+               </div>
+               <form class="flex flex-col gap-4 w-full">
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                     <input type="text" id="dataProvider-name"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
+                     <input type="text" id="data"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <span id="add-data" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
+                  </span>
+               </form>
+            </div>
+            <div
+               class="addAction-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-2 cursor-pointer closepop-up">
+                     <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
+                     </svg>
+                     <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Data Node
+                     </div>
+                  </div>
+                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32.0543" rx="8" fill="white" />
+                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path
+                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
+                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+                  </a>
+               </div>
+               <form class="flex flex-col gap-4 w-full">
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                     <input type="text" id="addAction-name"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <div class="flex flex-col items-start justify-center gap-2 w-full">
+                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
+                     <input type="text" id="actionData"
+                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div>
+                  <span id="add-actions"
+                     class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
+                  </span>
+               </form>
             </div>
          </main>
          <footer></footer>
+
       </div>
    </div>
    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
@@ -783,509 +1014,410 @@
    <script src="./main.js"></script>
    <script>
       (function (joint) {
-    joint.shapes.standard.Link.define("container.Link", {
-        attrs: {
-            line: {
-                stroke: "#222222",
-                strokeWidth: 1,
-                targetMarker: {
-                    d: "M 4 -4 0 0 4 4 M 7 -4 3 0 7 4 M 10 -4 6 0 10 4",
-                    fill: "none",
-                },
+         joint.shapes.standard.Link.define("container.Link", {
+            attrs: {
+               line: {
+                  stroke: "#222222",
+                  strokeWidth: 1,
+                  targetMarker: {
+                     d: "M 4 -4 0 0 4 4 M 7 -4 3 0 7 4 M 10 -4 6 0 10 4",
+                     fill: "none",
+                  },
+               },
             },
-        },
-    });
+         });
 
-    var headerHeight = 30;
-    var buttonSize = 14;
+         var headerHeight = 30;
+         var buttonSize = 14;
 
-    joint.dia.Element.define(
-        "container.Base",
-        {
-            // no default attributes
-        },
-        {
-            fitAncestorElements: function () {
-                var padding = 10;
-                this.fitParent({
-                    deep: true,
-                    padding: {
+         joint.dia.Element.define(
+            "container.Base",
+            {
+               // no default attributes
+            },
+            {
+               fitAncestorElements: function () {
+                  var padding = 10;
+                  this.fitParent({
+                     deep: true,
+                     padding: {
                         top: headerHeight + padding,
                         left: padding,
                         right: padding,
                         bottom: padding,
-                    },
-                });
-            },
-        }
-    );
+                     },
+                  });
+               },
+            }
+         );
 
-    joint.shapes.container.Base.define(
-        "container.Child",
-        {
-            size: { width: 50, height: 50 },
-            attrs: {
-                root: {
-                    magnetSelector: "body",
-                },
-                body: {
-                    refWidth: "100%",
-                    refHeight: "100%",
-                    strokeWidth: 1,
-                    stroke: "#FF4365",
-                    fill: "#F9DBDF",
-                },
-                label: {
-                    textVerticalAnchor: "middle",
-                    textAnchor: "middle",
-                    refX: "50%",
-                    refY: "50%",
-                    fontSize: 14,
-                    fontFamily: "sans-serif",
-                    fill: "#222222",
-                },
+         joint.shapes.container.Base.define(
+            "container.Child",
+            {
+               size: { width: 50, height: 50 },
+               attrs: {
+                  root: {
+                     magnetSelector: "body",
+                  },
+                  body: {
+                     refWidth: "100%",
+                     refHeight: "100%",
+                     strokeWidth: 1,
+                     stroke: "#FF4365",
+                     fill: "#F9DBDF",
+                  },
+                  label: {
+                     textVerticalAnchor: "middle",
+                     textAnchor: "middle",
+                     refX: "50%",
+                     refY: "50%",
+                     fontSize: 14,
+                     fontFamily: "sans-serif",
+                     fill: "#222222",
+                  },
+               },
             },
-        },
-        {
-            markup: [
-                {
-                    tagName: "rect",
-                    selector: "shadow",
-                },
-                {
-                    tagName: "rect",
-                    selector: "body",
-                },
-                {
-                    tagName: "text",
-                    selector: "label",
-                },
-            ],
-        }
-    );
+            {
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "shadow",
+                  },
+                  {
+                     tagName: "rect",
+                     selector: "body",
+                  },
+                  {
+                     tagName: "text",
+                     selector: "label",
+                  },
+               ],
+            }
+         );
 
-    joint.shapes.container.Base.define(
-        "container.Parent",
-        {
-            attrs: {
-                root: {
-                    magnetSelector: "body",
-                },
-                shadow: {
-                    refWidth: "100%",
-                    refHeight: "100%",
-                    x: 3,
-                    y: 3,
-                    opacity: 0,
-                },
+         joint.shapes.container.Base.define(
+            "container.Parent",
+            {
+               attrs: {
+                  root: {
+                     magnetSelector: "body",
+                  },
+                  shadow: {
+                     refWidth: "100%",
+                     refHeight: "100%",
+                     x: 3,
+                     y: 3,
+                     opacity: 0,
+                  },
+               },
             },
-        },
-        {
-            markup: [
-                {
-                    tagName: "rect",
-                    selector: "shadow",
-                },
-                {
-                    tagName: "rect",
-                    selector: "body",
-                },
-            ],
-        }
-    );
-})(joint);
-(function (joint) {
-    var graph = new joint.dia.Graph({}, { cellNamespace: joint.shapes });
-    var paper = new joint.dia.Paper({
-        el: document.getElementById("paper-container"),
-        model: graph,
-        width: window.innerWidth,
-        height: window.innerHeight,
-        gridSize: 10,
-        markAvailable: true,
-        linkPinning: false,
-        defaultLink: () =>
-            new joint.shapes.standard.Link({
-                attrs: {
-                    line: {
+            {
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "shadow",
+                  },
+                  {
+                     tagName: "rect",
+                     selector: "body",
+                  },
+               ],
+            }
+         );
+      })(joint);
+      (function (joint) {
+         var graph = new joint.dia.Graph({}, { cellNamespace: joint.shapes });
+         var paper = new joint.dia.Paper({
+            el: document.getElementById("paper-container"),
+            model: graph,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            gridSize: 10,
+            markAvailable: true,
+            linkPinning: false,
+            defaultLink: () =>
+               new joint.shapes.standard.Link({
+                  attrs: {
+                     line: {
                         connection: true,
                         stroke: "#333333", // Line color
                         strokeWidth: 1, // Line thickness
                         strokeLinejoin: "round",
                         targetMarker: {
-                            type: "none", // No arrowhead at the target
+                           type: "none", // No arrowhead at the target
                         },
-                    },
-                    wrapper: {
+                     },
+                     wrapper: {
                         connection: true,
                         strokeWidth: 10,
                         strokeLinejoin: "round",
-                    },
-                },
-                connector: {
-                    name: "smooth", // Create a curved, smooth link
-                },
-            }),
-        defaultConnectionPoint: { name: "boundary" },
-    });
+                     },
+                  },
+                  connector: {
+                     name: "smooth", // Create a curved, smooth link
+                  },
+               }),
+            defaultConnectionPoint: { name: "boundary" },
+         });
 
-    var portsIn = {
-        position: {
-            name: "top",
-        },
-        attrs: {
-            portBody: {
-                magnet: true,
-                r: 4,
-                fill: "#fff",
-                strokeWidth: "2",
-                stroke: "#2E333E",
-            },
-        },
-        label: {
+         var portsIn = {
             position: {
-                name: "top",
-                args: { y: 6 },
+               name: "top",
             },
-            markup: [
-                {
-                    tagName: "text",
-                    selector: "label",
-                    className: "label-text",
-                },
-            ],
-        },
-        markup: [
-            {
-                tagName: "circle",
-                selector: "portBody",
-            },
-        ],
-    };
-    var portsOut = {
-        position: {
-            name: "bottom",
-        },
-        attrs: {
-            portBody: {
-                magnet: true,
-                r: 4,
-                fill: "#fff",
-                strokeWidth: "2",
-                stroke: "#2E333E",
-                fillL: "#fff",
-            },
-        },
-        label: {
-            position: {
-                name: "bottom",
-                args: { y: 6 },
-            },
-            markup: [
-                {
-                    tagName: "text",
-                    selector: "label",
-                    className: "label-text",
-                },
-            ],
-        },
-        markup: [
-            {
-                tagName: "circle",
-                selector: "portBody",
-            },
-        ],
-    };
-
-    var Container = joint.shapes.container.Parent;
-    var Child = joint.shapes.container.Child;
-    var Link = joint.shapes.container.Link;
-
-    var container_a = new Container({
-        z: 1,
-        attrs: { headerText: { text: "Container A" } },
-    });
-
-    const paperWidth = window.innerWidth - 244;
-    const paperHeight = window.innerHeight - 102;
-    const rectWidth = 104; // Width of the rectangle
-    const rectHeight = 80; // Height of the rectangle
-
-    var child_1 = new Child({
-        position: {
-            x: (paperWidth - rectWidth) / 2, // Center the rectangle horizontally
-            y: (paperHeight - rectHeight) / 2, // Center the rectangle vertically
-        },
-        size: { width: rectWidth, height: rectHeight },
-        attrs: {
-            portBody: {
-                magnet: true,
-                width: 16,
-                height: 16,
-                x: -8,
-                y: -8,
-                fill: "#03071E",
-            },
-            body: {
-                fill: "#FFFFFF",
-                strokeWidth: 0,
-                rx: 8,
-                ry: 8,
-                y: 1,
-            },
-            label: { text: "Node 00  \n\n$1.10", fill: "#1C212BDE" },
-        },
-        ports: {
-            groups: {
-                //  'in': portsIn,
-                out: portsOut,
-            },
-        },
-    });
-    child_1.addPorts([
-        {
-            group: "out",
-        },
-    ]);
-
-    graph.addCells([container_a, child_1]);
-
-    child_1.findView(paper).$el.on("mouseenter", function () {
-        // Apply stroke and strokeWidth on hover
-        child_1.attr("body/stroke", "#000000");
-        child_1.attr("body/strokeWidth", 2);
-    });
-
-    child_1.findView(paper).$el.on("mouseleave", function () {
-        // Remove stroke and reset strokeWidth when mouse leaves
-        child_1.attr("body/stroke", null);
-        child_1.attr("body/strokeWidth", 0);
-    });
-
-    // Edit button configuration
-    var editButton = new joint.elementTools.Button({
-        markup: [
-            {
-                tagName: "rect",
-                selector: "button",
-                attributes: {
-                    width: 32,
-                    height: 32,
-                    rx: 8,
-                    ry: 8,
-                    fill: "#fff",
-                    cursor: "pointer",
-                    class: "edit-button",
-                },
-            },
-            {
-                tagName: "svg",
-                selector: "icon",
-                attributes: {
-                    width: "24",
-                    height: "24",
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    x: "4",
-                    y: "4",
-                },
-                children: [
-                    {
-                        tagName: "path",
-                        attributes: {
-                            d: "M12 19.9922H21",
-                            stroke: "black",
-                            "stroke-width": "2",
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                        },
-                    },
-                    {
-                        tagName: "path",
-                        attributes: {
-                            d:
-                                "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
-                            stroke: "black",
-                            "stroke-width": "2",
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                        },
-                    },
-                ],
-            },
-        ],
-        x: 35,
-        y: 92,
-        action: function (evt, elementView, tool) {
-            const popUp = document.querySelector(".pop-up");
-            const nodeNameInput = document.getElementById("NodeName");
-            const nodeValueInput = document.getElementById("NodeValue");
-            const mainCanva = document.querySelector(".main-canva");
-
-            const editButton = document.getElementById("a"); // Your submit button
-            // Remove any existing event listeners
-            const newEditButton = editButton.cloneNode(true);
-            editButton.parentNode.replaceChild(newEditButton, editButton);
-            // Split label into name and value
-            const labelText = elementView.model.attr("label/text");
-            const [currentName, currentValue] = labelText.split("\n\n");
-            nodeNameInput.value = currentName || ""; // Set current name
-            nodeValueInput.value = currentValue || ""; // Set current value
-            // Show pop-up
-            popUp.classList.remove("translate-x-376-5");
-            popUp.classList.add("translate-x-0");
-            mainCanva.classList.remove("hidden");
-            mainCanva.classList.add("block");
-            elementView.model.attr("body/stroke", "#000000"); // Black border
-            elementView.model.attr("body/strokeWidth", 2);
-            // Add a new event listener
-            newEditButton.addEventListener("click", function () {
-                const newName = nodeNameInput.value.trim();
-                const newValue = nodeValueInput.value.trim();
-                // Update the current node's label
-                elementView.model.attr("label/text", `${newName}\n\n${newValue}`);
-                elementView.model.attr("body/stroke", ""); // Black border
-                elementView.model.attr("body/strokeWidth");
-                // Hide the p op-up after updating
-                setTimeout(function () {
-                    popUp.classList.remove("translate-x-0");
-                    popUp.classList.add("translate-x-376-5");
-                    mainCanva.classList.remove("block");
-                    mainCanva.classList.add("hidden");
-                }, 300);
-            });
-        },
-    });
-
-    // Add tools to the element view
-    var toolsView = new joint.dia.ToolsView({
-        tools: [editButton],
-    });
-    var elementView = child_1.findView(paper);
-    elementView.addTools(toolsView);
-    elementView.hideTools();
-
-    // Show tools on click
-    paper.on("element:pointerdown", function (elementView) {
-        // Hide tools for all other elements
-        graph.getElements().forEach((el) => {
-            const view = el.findView(paper);
-            if (view && view !== elementView) view.hideTools();
-        });
-        // Show tools for the clicked element
-        elementView.showTools();
-    });
-
-    // Hide tools when clicking outside
-    document.addEventListener("click", function (event) {
-        const targetElement = event.target.closest(".joint-element");
-        if (!targetElement) {
-            graph.getElements().forEach((el) => {
-                const elView = el.findView(paper);
-                if (elView) elView.hideTools();
-            });
-        }
-    });
-
-    container_a.embed([child_1]);
-
-    paper.on("element:pointermove", function (elementView) {
-        var element = elementView.model;
-        element.fitAncestorElements();
-    });
-
-    const nodename = document.getElementById("NodeName");
-    let nodecount = 0;
-    let nodeName = `node 0${nodecount}`;
-    let nodeValue = null;
-    const nodevalue = document.getElementById("NodeValue");
-    const shapaddvalue = document.getElementsByClassName("pop-up");
-    const addshap = document.getElementById("add-shap");
-    const toggleBtn = document.getElementById("toggle-btn");
-    const paperContainer = document.getElementById("paper-container");
-    const hideIcon = document.getElementById("hide-icon");
-    const showIcon = document.getElementById("show-icon");
-    const closesidebar = document.getElementById("closepop-up");
-
-    nodename.addEventListener("input", (event) => {
-        nodeName = event.target.value;
-    });
-
-    nodevalue.addEventListener("input", (event) => {
-        nodeValue = event.target.value;
-    });
-
-    function setNodeName(newName) {
-        nodename.value = newName;
-        nodeName = newName;
-    }
-
-    function setNodeValue(newValue) {
-        nodevalue.value = newValue;
-        nodeValue = newValue;
-    }
-
-    // Adding the rectangle when the add shape button is clicked
-    addshap.addEventListener("click", () => {
-        // Increment the node count to create a unique node name
-        nodecount++;
-        nodeName = `node 0${nodecount}`;
-
-        // Create a new Child node
-        const newChild = new joint.shapes.container.Child({
-            position: { x: 500, y: 300 }, // Default position
-            size: { width: 104, height: 80 },
             attrs: {
-                portBody: {
-                    magnet: true,
-                    width: 16,
-                    height: 16,
-                    x: -8,
-                    y: -8,
-                    fill: "#03071E",
-                },
-                body: {
-                    fill: "#FFFFFF",
-                    strokeWidth: 0,
-                    rx: 8,
-                    ry: 8,
-                    y: 1,
-                },
-                label: { text: `${nodeName}  \n\n$1.10`, fill: "#1C212BDE" },
+               portBody: {
+                  magnet: true,
+                  r: 4,
+                  fill: "#fff",
+                  strokeWidth: "2",
+                  stroke: "#2E333E",
+               },
             },
-            ports: {
-                groups: {
-                    in: portsIn,
-                    out: portsOut,
-                },
+            label: {
+               position: {
+                  name: "top",
+                  args: { y: 6 },
+               },
+               markup: [
+                  {
+                     tagName: "text",
+                     selector: "label",
+                     className: "label-text",
+                  },
+               ],
             },
-        });
-
-        newChild.addPorts([{ group: "in" }, { group: "out" }]);
-
-        // Add new child node to the graph
-        graph.addCells([newChild]);
-
-        newChild.findView(paper).$el.on("mouseenter", function () {
-            // Apply stroke and strokeWidth on hover
-            newChild.attr("body/stroke", "#000000");
-            newChild.attr("body/strokeWidth", 2);
-        });
-
-        newChild.findView(paper).$el.on("mouseleave", function () {
-            // Remove stroke and reset strokeWidth when mouse leaves
-            newChild.attr("body/stroke", null);
-            newChild.attr("body/strokeWidth", 0);
-        });
-
-        // Edit button configuration
-        var editButton = new joint.elementTools.Button({
             markup: [
-                {
-                    tagName: "rect",
-                    selector: "button",
-                    attributes: {
+               {
+                  tagName: "circle",
+                  selector: "portBody",
+               },
+            ],
+         };
+         var portsOut = {
+            position: {
+               name: "bottom",
+            },
+            attrs: {
+               portBody: {
+                  magnet: true,
+                  r: 4,
+                  fill: "#fff",
+                  strokeWidth: "2",
+                  stroke: "#2E333E",
+                  fillL: "#fff",
+               },
+            },
+            label: {
+               position: {
+                  name: "bottom",
+                  args: { y: 6 },
+               },
+               markup: [
+                  {
+                     tagName: "text",
+                     selector: "label",
+                     className: "label-text",
+                  },
+               ],
+            },
+            markup: [
+               {
+                  tagName: "circle",
+                  selector: "portBody",
+               },
+            ],
+         };
+
+         var Container = joint.shapes.container.Parent;
+         var Child = joint.shapes.container.Child;
+         var Link = joint.shapes.container.Link;
+
+         var container_a = new Container({
+            z: 1,
+            attrs: { headerText: { text: "Container A" } },
+         });
+
+
+         const addAccount = document.getElementById("add-account");
+         const addCondition = document.getElementById("add-condition");
+         const dataProvider = document.getElementById("data-provider");
+         const addAction = document.getElementById("add-action");
+
+         // Adding the rectangle when the add shape button is clicked
+         addAccount.addEventListener("click", () => {
+            let nodename = document.getElementById("NodeName");
+            let nodecount = 0;
+            let nodeName = `node 0${nodecount}`;
+            let nodeValue = null;
+            let nodevalue = document.getElementById("NodeValue");
+            let shapaddvalue = document.getElementsByClassName("pop-up");
+            let toggleBtn = document.getElementById("toggle-btn");
+            let paperContainer = document.getElementById("paper-container");
+            let hideIcon = document.getElementById("hide-icon");
+            let showIcon = document.getElementById("show-icon");
+
+            nodename.addEventListener("input", (event) => {
+               nodeName = event.target.value;
+            });
+
+            nodevalue.addEventListener("input", (event) => {
+               nodeValue = event.target.value;
+            });
+
+            function setNodeName(newName) {
+               nodename.value = newName;
+               nodeName = newName;
+            }
+
+            function setNodeValue(newValue) {
+               nodevalue.value = newValue;
+               nodeValue = newValue;
+            }
+            // Increment the node count to create a unique node name
+            // Create a new Child node
+            const accountData = new joint.shapes.container.Child({
+               position: { x: 500, y: 300 }, // Default position
+               size: { width: 160, height: 72 },
+               attrs: {
+                  body: {
+                     fill: "#FFFFFF",
+                     strokeWidth: 0,
+                     rx: 8,
+                     ry: 8,
+                  },
+                  svgIcon: {
+                     refX: '50%',
+                     refY: '50%',
+                     x: 16, // Half of SVG width (33/2)
+                     y: 16,   // Half of SVG height (32/2)
+                     width: 33,
+                     height: 32,
+                  },
+                  label: {
+                     text: 'Account\nDebit card',
+                     refX: '50%',
+                     refY: '50%',
+                     x: -16, // Half of SVG width (33/2)
+                     y: 0,
+                     textAnchor: 'left',
+                     fill: '#1C212BDE',
+                  },
+               },
+               markup: [
+                  {
+                     tagName: 'rect',
+                     selector: 'body',
+                  },
+                  {
+                     tagName: 'svg',
+                     selector: 'svgIcon',
+                     attributes: {
+                        viewBox: '0 0 33 32',
+                        fill: 'none',
+                        xmlns: 'http://www.w3.org/2000/svg',
+                     },
+                     children: [
+                        {
+                           tagName: 'g',
+                           attributes: {
+                              'clip-path': 'url(#clip0_3943_6248)',
+                           },
+                           children: [
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M5.97656 14H27.9766',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                           ],
+                        },
+                        {
+                           tagName: 'defs',
+                           children: [
+                              {
+                                 tagName: 'clipPath',
+                                 attributes: { id: 'clip0_3943_6248' },
+                                 children: [
+                                    {
+                                       tagName: 'rect',
+                                       attributes: {
+                                          width: '24',
+                                          height: '24',
+                                          fill: 'white',
+                                          transform: 'translate(4.97656 4)',
+                                       },
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     tagName: 'text',
+                     selector: 'label',
+                  },
+               ],
+               ports: {
+                  groups: {
+                     in: portsIn,
+                     out: portsOut,
+                  },
+               },
+            });
+
+
+
+            accountData.addPorts([{ group: "in" }, { group: "out" }]);
+
+            // Add new child node to the graph
+            graph.addCells([accountData]);
+            // Get the paper object (assuming you have it initialized as `paper`)
+            var view = paper.findViewByModel(accountData);
+
+            // Check if the view is found and then get the label width
+            if (view) {
+               var labelElement = view.el.querySelector('text');
+               var labelWidth = labelElement.getBoundingClientRect().width;
+               console.log('Label width:', labelWidth);
+               var parentWidth = labelWidth + 64;
+               accountData.resize(parentWidth, 72);
+            } else {
+               console.log('View not found for the model!');
+            }
+            accountData.findView(paper).$el.on("mouseenter", function () {
+               // Apply stroke and strokeWidth on hover
+               accountData.attr("body/stroke", "#1757D9");
+               accountData.attr("body/strokeWidth", 2);
+            });
+
+            accountData.findView(paper).$el.on("mouseleave", function () {
+               // Remove stroke and reset strokeWidth when mouse leaves
+               accountData.attr("body/stroke", null);
+               accountData.attr("body/strokeWidth", 0);
+            });
+
+            // Edit button configuration
+            var editButton = new joint.elementTools.Button({
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "button",
+                     attributes: {
                         width: 32,
                         height: 32,
                         rx: 8,
@@ -1293,12 +1425,12 @@
                         fill: "#fff",
                         cursor: "pointer",
                         class: "edit-button",
-                    },
-                },
-                {
-                    tagName: "svg",
-                    selector: "icon",
-                    attributes: {
+                     },
+                  },
+                  {
+                     tagName: "svg",
+                     selector: "icon",
+                     attributes: {
                         width: "24",
                         height: "24",
                         viewBox: "0 0 24 24",
@@ -1306,157 +1438,1150 @@
                         xmlns: "http://www.w3.org/2000/svg",
                         x: "4",
                         y: "4",
-                    },
-                    children: [
+                     },
+                     children: [
                         {
-                            tagName: "path",
-                            attributes: {
-                                d: "M12 19.9922H21",
-                                stroke: "black",
-                                "stroke-width": "2",
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                            },
+                           tagName: "path",
+                           attributes: {
+                              d: "M12 19.9922H21",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
                         },
                         {
-                            tagName: "path",
-                            attributes: {
-                                d:
-                                    "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
-                                stroke: "black",
-                                "stroke-width": "2",
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                            },
+                           tagName: "path",
+                           attributes: {
+                              d:
+                                 "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
                         },
-                    ],
-                },
-            ],
-            x: 35,
-            y: 92,
-            action: function (evt, elementView, tool) {
-                const popUp = document.querySelector(".pop-up");
-                const nodeNameInput = document.getElementById("NodeName");
-                const nodeValueInput = document.getElementById("NodeValue");
-                const editButton = document.getElementById("a"); // Your submit button
-                const mainCanva = document.querySelector(".main-canva");
+                     ],
+                  },
+               ],
+               x: 65,
+               y: 92,
+               action: function (evt, elementView, tool) {
+                  const popUp = document.querySelector(".pop-up");
+                  const nodeNameInput = document.getElementById("NodeName");
+                  const nodeValueInput = document.getElementById("NodeValue");
+                  const editButton = document.getElementById("a"); // Your submit button
+                  const mainCanva = document.querySelector(".main-canva");
 
-                // Remove any existing event listeners
-                const newEditButton = editButton.cloneNode(true);
-                editButton.parentNode.replaceChild(newEditButton, editButton);
-                // Split label into name and value
-                const labelText = elementView.model.attr("label/text");
-                const [currentName, currentValue] = labelText.split("\n\n");
-                nodeNameInput.value = currentName || ""; // Set current name
-                nodeValueInput.value = currentValue || ""; // Set current value
-                // Show pop-up
-                popUp.classList.remove("translate-x-376-5");
-                popUp.classList.add("translate-x-0");
-                mainCanva.classList.remove("hidden");
-                mainCanva.classList.add("block");
-                elementView.model.attr("body/stroke", "#000000"); // Black border
-                elementView.model.attr("body/strokeWidth", 2);
-                // Add a new event listener
-                newEditButton.addEventListener("click", function () {
-                    const newName = nodeNameInput.value.trim();
-                    const newValue = nodeValueInput.value.trim();
-                    // Update the current node's label
-                    elementView.model.attr("label/text", `${newName}\n\n${newValue}`);
-                    elementView.model.attr("body/stroke", ""); // Black border
-                    elementView.model.attr("body/strokeWidth");
-                    // Hide the p op-up after updating
-                    setTimeout(function () {
+                  // Remove any existing event listeners
+                  const newEditButton = editButton.cloneNode(true);
+                  editButton.parentNode.replaceChild(newEditButton, editButton);
+                  // Split label into name and value
+                  const labelText = elementView.model.attr("label/text");
+                  const [currentName, currentValue] = labelText.split("\n");
+                  nodeNameInput.value = currentName || ""; // Set current name
+                  nodeValueInput.value = currentValue || ""; // Set current value
+                  // Show pop-up
+                  popUp.classList.remove("translate-x-376-5");
+                  popUp.classList.add("translate-x-0");
+                  mainCanva.classList.remove("hidden");
+                  mainCanva.classList.add("block");
+                  elementView.model.attr("body/stroke", "#1757D9"); // Black border
+                  elementView.model.attr("body/strokeWidth", 2);
+                  // Add a new event listener
+                  newEditButton.addEventListener("click", function () {
+                     const newName = nodeNameInput.value.trim();
+                     const newValue = nodeValueInput.value.trim();
+                     // Update the current node's label
+                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
+                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("body/strokeWidth");
+
+                     // Get the paper object (assuming you have it initialized as `paper`)
+                     var view = paper.findViewByModel(accountData);
+
+                     // Check if the view is found and then get the label width
+                     if (view) {
+                        var labelElement = view.el.querySelector('text');
+                        var labelWidth = labelElement.getBoundingClientRect().width;
+                        console.log('Label width:', labelWidth);
+                        var parentWidth = labelWidth + 64;
+                        accountData.resize(parentWidth, 72);
+                     } else {
+                        console.log('View not found for the model!');
+                     }
+                     // Hide the p op-up after updating
+                     setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
                         popUp.classList.add("translate-x-376-5");
                         mainCanva.classList.remove("block");
                         mainCanva.classList.add("hidden");
-                    }, 300);
-                });
-            },
-        });
-        // Add tools to the element view
-        var toolsView = new joint.dia.ToolsView({
-            tools: [editButton],
-        });
-        var elementView = newChild.findView(paper);
-        elementView.addTools(toolsView);
-        elementView.hideTools();
-        // Show tools on click
-        paper.on("element:pointerdown", function (elementView) {
-            // Hide tools for all other elements
-            graph.getElements().forEach((el) => {
-                const view = el.findView(paper);
-                if (view && view !== elementView) view.hideTools();
+                     }, 300);
+                  });
+               },
             });
-            // Show tools for the clicked element
-            elementView.showTools();
-        });
-        // Hide tools when clicking outside
-        document.addEventListener("click", function (event) {
-            const targetElement = event.target.closest(".joint-element");
-            if (!targetElement) {
-                graph.getElements().forEach((el) => {
-                    const elView = el.findView(paper);
-                    if (elView) elView.hideTools();
-                });
+            // Add tools to the element view
+            var toolsView = new joint.dia.ToolsView({
+               tools: [editButton],
+            });
+            var elementView = accountData.findView(paper);
+            elementView.addTools(toolsView);
+            elementView.hideTools();
+            // Show tools on click
+            paper.on("element:pointerdown", function (elementView) {
+               // Hide tools for all other elements
+               graph.getElements().forEach((el) => {
+                  const view = el.findView(paper);
+                  if (view && view !== elementView) view.hideTools();
+               });
+               // Show tools for the clicked element
+               elementView.showTools();
+            });
+            // Hide tools when clicking outside
+            document.addEventListener("click", function (event) {
+               const targetElement = event.target.closest(".joint-element");
+               if (!targetElement) {
+                  graph.getElements().forEach((el) => {
+                     const elView = el.findView(paper);
+                     if (elView) elView.hideTools();
+                  });
+               }
+            });
+
+            // Embed child node into the container (if necessary)
+            container_a.embed([accountData]);
+
+            // Optionally, you can fit the ancestor elements after adding the new node
+            paper.on("element:pointermove", function (elementView) {
+               var element = elementView.model;
+               element.fitAncestorElements();
+            });
+         });
+
+
+         addCondition.addEventListener("click", () => {
+            let nodename = document.getElementById("condition-name");
+            let nodecount = 0;
+            let nodeName = `node 0${nodecount}`;
+            let nodeValue = null;
+            let nodevalue = document.getElementById("condition");
+            let shapaddvalue = document.getElementsByClassName("condition-popup");
+            let toggleBtn = document.getElementById("toggle-btn");
+            let paperContainer = document.getElementById("paper-container");
+            let hideIcon = document.getElementById("hide-icon");
+            let showIcon = document.getElementById("show-icon");
+
+            nodename.addEventListener("input", (event) => {
+               nodeName = event.target.value;
+            });
+
+            nodevalue.addEventListener("input", (event) => {
+               nodeValue = event.target.value;
+            });
+
+            function setNodeName(newName) {
+               nodename.value = newName;
+               nodeName = newName;
             }
-        });
 
-        // Embed child node into the container (if necessary)
-        container_a.embed([newChild]);
+            function setNodeValue(newValue) {
+               nodevalue.value = newValue;
+               nodeValue = newValue;
+            }
+            // Increment the node count to create a unique node name
+            // Create a new Child node
+            const addCondition = new joint.shapes.container.Child({
+               position: { x: 500, y: 300 }, // Default position
+               size: { width: 160, height: 72 },
+               attrs: {
+                  body: {
+                     fill: "#FFFFFF",
+                     strokeWidth: 0,
+                     rx: 8,
+                     ry: 8,
+                  },
+                  svgIcon: {
+                     refX: '50%',
+                     refY: '50%',
+                     x: 16, // Half of SVG width (33/2)
+                     y: 16,   // Half of SVG height (32/2)
+                     width: 33,
+                     height: 32,
+                  },
+                  label: {
+                     text: 'IF condition\nCondition = value',
+                     refX: '50%',
+                     refY: '50%',
+                     x: -45, // Half of SVG width (33/2)
+                     y: 0,
+                     textAnchor: 'left',
+                     fill: '#1C212BDE',
+                  },
+               },
+               markup: [
+                  {
+                     tagName: 'rect',
+                     selector: 'body',
+                  },
+                  {
+                     tagName: 'svg',
+                     selector: 'svgIcon',
+                     attributes: {
+                        viewBox: '0 0 33 32',
+                        fill: 'none',
+                        xmlns: 'http://www.w3.org/2000/svg',
+                     },
+                     children: [
+                        {
+                           tagName: 'g',
+                           attributes: {
+                              'clip-path': 'url(#clip0_3943_6248)',
+                           },
+                           children: [
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M5.97656 14H27.9766',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                           ],
+                        },
+                        {
+                           tagName: 'defs',
+                           children: [
+                              {
+                                 tagName: 'clipPath',
+                                 attributes: { id: 'clip0_3943_6248' },
+                                 children: [
+                                    {
+                                       tagName: 'rect',
+                                       attributes: {
+                                          width: '24',
+                                          height: '24',
+                                          fill: 'white',
+                                          transform: 'translate(4.97656 4)',
+                                       },
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     tagName: 'text',
+                     selector: 'label',
+                  },
+               ],
+               ports: {
+                  groups: {
+                     in: portsIn,
+                     out: portsOut,
+                  },
+               },
+            });
 
-        // Optionally, you can fit the ancestor elements after adding the new node
-        paper.on("element:pointermove", function (elementView) {
-            var element = elementView.model;
-            element.fitAncestorElements();
-        });
-    });
 
-    toggleBtn.addEventListener("click", () => {
-        if (paperContainer.style.display === "none") {
-            paperContainer.style.display = "block";
-            toggleBtn.classList = "flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer";
-            hideIcon.style.display = "block";
-            showIcon.style.display = "none";
-        } else {
-            paperContainer.style.display = "none";
-            toggleBtn.classList = "flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer";
-            hideIcon.style.display = "none";
-            showIcon.style.display = "block";
-        }
-    });
 
-    // Toolbar
-    var zoomLevel = 1;
+            addCondition.addPorts([{ group: "in" }, { group: "out" }]);
 
-    // Get the center of the visible area dynamically
-    function getVisibleCenter() {
-        const paperRect = paper.el.getBoundingClientRect(); // Get the bounding box of the paper container
-        return {
-            x: paperRect.width / 2,
-            y: paperRect.height / 2,
-        };
-    }
+            // Add new child node to the graph
+            // Add the shape to the graph
+            graph.addCells([addCondition]);
 
-    document.getElementById("zoom-in").addEventListener("click", function () {
-        zoomLevel = Math.min(3, zoomLevel + 0.2);
-        const center = getVisibleCenter(); // Recalculate center based on visible area
-        paper.scaleUniformAtPoint(zoomLevel, center);
-    });
+            // Get the paper object (assuming you have it initialized as `paper`)
+            var view = paper.findViewByModel(addCondition);
 
-    document.getElementById("zoom-out").addEventListener("click", function () {
-        zoomLevel = Math.max(0.2, zoomLevel - 0.2);
-        const center = getVisibleCenter(); // Recalculate center based on visible area
-        paper.scaleUniformAtPoint(zoomLevel, center);
-    });
+            // Check if the view is found and then get the label width
+            if (view) {
+               var labelElement = view.el.querySelector('text');
+               var labelWidth = labelElement.getBoundingClientRect().width;
+               console.log('Label width:', labelWidth);
+               var parentWidth = labelWidth + 64;
+               addCondition.resize(parentWidth, 72);
+            } else {
+               console.log('View not found for the model!');
+            }
 
-    closesidebar.addEventListener("click", () => {
-        var popup = document.querySelector(".pop-up");
-        var mainCanva = document.querySelector(".main-canva");
-        popup.classList.toggle("translate-x-376-5");
-        mainCanva.style.display = popup.classList.contains("translate-x-376-5") ? "none" : "block";
-    });
-})(joint);
+
+
+            addCondition.findView(paper).$el.on("mouseenter", function () {
+               // Apply stroke and strokeWidth on hover
+               addCondition.attr("body/stroke", "#1757D9");
+               addCondition.attr("body/strokeWidth", 2);
+            });
+
+            addCondition.findView(paper).$el.on("mouseleave", function () {
+               // Remove stroke and reset strokeWidth when mouse leaves
+               addCondition.attr("body/stroke", null);
+               addCondition.attr("body/strokeWidth", 0);
+            });
+
+            // Edit button configuration
+            var editButton = new joint.elementTools.Button({
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "button",
+                     attributes: {
+                        width: 32,
+                        height: 32,
+                        rx: 8,
+                        ry: 8,
+                        fill: "#fff",
+                        cursor: "pointer",
+                        class: "edit-button",
+                     },
+                  },
+                  {
+                     tagName: "svg",
+                     selector: "icon",
+                     attributes: {
+                        width: "24",
+                        height: "24",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        x: "4",
+                        y: "4",
+                     },
+                     children: [
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d: "M12 19.9922H21",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d:
+                                 "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                     ],
+                  },
+               ],
+               x: 65,
+               y: 92,
+               action: function (evt, elementView, tool) {
+                  const popUp = document.querySelector(".condition-popup");
+                  const nodeNameInput = document.getElementById("condition-name");
+                  const nodeValueInput = document.getElementById("condition");
+                  const editButton = document.getElementById("add"); // Your submit button
+                  const mainCanva = document.querySelector(".main-canva");
+
+                  // Remove any existing event listeners
+                  const newEditButton = editButton.cloneNode(true);
+                  editButton.parentNode.replaceChild(newEditButton, editButton);
+                  // Split label into name and value
+                  const labelText = elementView.model.attr("label/text");
+                  const [currentName, currentValue] = labelText.split("\n");
+                  nodeNameInput.value = currentName || ""; // Set current name
+                  nodeValueInput.value = currentValue || ""; // Set current value
+                  // Show pop-up
+                  popUp.classList.remove("translate-x-376-5");
+                  popUp.classList.add("translate-x-0");
+                  mainCanva.classList.remove("hidden");
+                  mainCanva.classList.add("block");
+                  elementView.model.attr("body/stroke", "#1757D9"); // Black border
+                  elementView.model.attr("body/strokeWidth", 2);
+                  // Add a new event listener
+                  newEditButton.addEventListener("click", function () {
+                     const newName = nodeNameInput.value.trim();
+                     const newValue = nodeValueInput.value.trim();
+                     // Update the current node's label
+                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
+                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("body/strokeWidth");
+                     const view = paper.findViewByModel(addCondition);
+
+                     // Check if the view is found and then get the label width
+                     if (view) {
+                        const labelElement = view.el.querySelector('text');
+                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        console.log('Label width:', labelWidth);
+                        const parentWidth = labelWidth + 64;
+                        addCondition.resize(parentWidth, 72);
+                     } else {
+                        console.log('View not found for the model!');
+                     }
+                     // Hide the p op-up after updating
+                     setTimeout(function () {
+                        popUp.classList.remove("translate-x-0");
+                        popUp.classList.add("translate-x-376-5");
+                        mainCanva.classList.remove("block");
+                        mainCanva.classList.add("hidden");
+                     }, 300);
+                  });
+               },
+            });
+            // Add tools to the element view
+            var toolsView = new joint.dia.ToolsView({
+               tools: [editButton],
+            });
+            var elementView = addCondition.findView(paper);
+            elementView.addTools(toolsView);
+            elementView.hideTools();
+            // Show tools on click
+            paper.on("element:pointerdown", function (elementView) {
+               // Hide tools for all other elements
+               graph.getElements().forEach((el) => {
+                  const view = el.findView(paper);
+                  if (view && view !== elementView) view.hideTools();
+               });
+               // Show tools for the clicked element
+               elementView.showTools();
+            });
+            // Hide tools when clicking outside
+            document.addEventListener("click", function (event) {
+               const targetElement = event.target.closest(".joint-element");
+               if (!targetElement) {
+                  graph.getElements().forEach((el) => {
+                     const elView = el.findView(paper);
+                     if (elView) elView.hideTools();
+                  });
+               }
+            });
+
+            // Embed child node into the container (if necessary)
+            container_a.embed([addCondition]);
+
+            // Optionally, you can fit the ancestor elements after adding the new node
+            paper.on("element:pointermove", function (elementView) {
+               var element = elementView.model;
+               element.fitAncestorElements();
+            });
+         });
+
+
+         dataProvider.addEventListener("click", () => {
+            let nodename = document.getElementById("dataProvider-name");
+            let nodecount = 0;
+            let nodeName = `node 0${nodecount}`;
+            let nodeValue = null;
+            let nodevalue = document.getElementById("data");
+            let shapaddvalue = document.getElementsByClassName("dataProvider-popup");
+            let toggleBtn = document.getElementById("toggle-btn");
+            let paperContainer = document.getElementById("paper-container");
+            let hideIcon = document.getElementById("hide-icon");
+            let showIcon = document.getElementById("show-icon");
+
+            nodename.addEventListener("input", (event) => {
+               nodeName = event.target.value;
+            });
+
+            nodevalue.addEventListener("input", (event) => {
+               nodeValue = event.target.value;
+            });
+
+            function setNodeName(newName) {
+               nodename.value = newName;
+               nodeName = newName;
+            }
+
+            function setNodeValue(newValue) {
+               nodevalue.value = newValue;
+               nodeValue = newValue;
+            }
+            // Increment the node count to create a unique node name
+            // Create a new Child node
+            const dataProvider = new joint.shapes.container.Child({
+               position: { x: 500, y: 300 }, // Default position
+               size: { width: 160, height: 72 },
+               attrs: {
+                  body: {
+                     fill: "#FFFFFF",
+                     strokeWidth: 0,
+                     rx: 8,
+                     ry: 8,
+                  },
+                  svgIcon: {
+                     refX: '50%',
+                     refY: '50%',
+                     x: 16, // Half of SVG width (33/2)
+                     y: 16,   // Half of SVG height (32/2)
+                     width: 33,
+                     height: 32,
+                  },
+                  label: {
+                     text: 'Data\nCondition = value',
+                     refX: '50%',
+                     refY: '50%',
+                     x: -45, // Half of SVG width (33/2)
+                     y: 0,
+                     textAnchor: 'left',
+                     fill: '#1C212BDE',
+                  },
+               },
+               markup: [
+                  {
+                     tagName: 'rect',
+                     selector: 'body',
+                  },
+                  {
+                     tagName: 'svg',
+                     selector: 'svgIcon',
+                     attributes: {
+                        viewBox: '0 0 33 32',
+                        fill: 'none',
+                        xmlns: 'http://www.w3.org/2000/svg',
+                     },
+                     children: [
+                        {
+                           tagName: 'g',
+                           attributes: {
+                              'clip-path': 'url(#clip0_3943_6248)',
+                           },
+                           children: [
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M5.97656 14H27.9766',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                           ],
+                        },
+                        {
+                           tagName: 'defs',
+                           children: [
+                              {
+                                 tagName: 'clipPath',
+                                 attributes: { id: 'clip0_3943_6248' },
+                                 children: [
+                                    {
+                                       tagName: 'rect',
+                                       attributes: {
+                                          width: '24',
+                                          height: '24',
+                                          fill: 'white',
+                                          transform: 'translate(4.97656 4)',
+                                       },
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     tagName: 'text',
+                     selector: 'label',
+                  },
+               ],
+               ports: {
+                  groups: {
+                     in: portsIn,
+                     out: portsOut,
+                  },
+               },
+            });
+
+
+
+            dataProvider.addPorts([{ group: "in" }, { group: "out" }]);
+
+            // Add new child node to the graph
+            // Add the shape to the graph
+            graph.addCells([dataProvider]);
+
+            // Get the paper object (assuming you have it initialized as `paper`)
+            var view = paper.findViewByModel(dataProvider);
+
+            // Check if the view is found and then get the label width
+            if (view) {
+               var labelElement = view.el.querySelector('text');
+               var labelWidth = labelElement.getBoundingClientRect().width;
+               console.log('Label width:', labelWidth);
+               var parentWidth = labelWidth + 64;
+               dataProvider.resize(parentWidth, 72);
+            } else {
+               console.log('View not found for the model!');
+            }
+
+
+
+            dataProvider.findView(paper).$el.on("mouseenter", function () {
+               // Apply stroke and strokeWidth on hover
+               dataProvider.attr("body/stroke", "#1757D9");
+               dataProvider.attr("body/strokeWidth", 2);
+            });
+
+            dataProvider.findView(paper).$el.on("mouseleave", function () {
+               // Remove stroke and reset strokeWidth when mouse leaves
+               dataProvider.attr("body/stroke", null);
+               dataProvider.attr("body/strokeWidth", 0);
+            });
+
+            // Edit button configuration
+            var editButton = new joint.elementTools.Button({
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "button",
+                     attributes: {
+                        width: 32,
+                        height: 32,
+                        rx: 8,
+                        ry: 8,
+                        fill: "#fff",
+                        cursor: "pointer",
+                        class: "edit-button",
+                     },
+                  },
+                  {
+                     tagName: "svg",
+                     selector: "icon",
+                     attributes: {
+                        width: "24",
+                        height: "24",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        x: "4",
+                        y: "4",
+                     },
+                     children: [
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d: "M12 19.9922H21",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d:
+                                 "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                     ],
+                  },
+               ],
+               x: 65,
+               y: 92,
+               action: function (evt, elementView, tool) {
+                  const popUp = document.querySelector(".dataProvider-popup");
+                  const nodeNameInput = document.getElementById("dataProvider-name");
+                  const nodeValueInput = document.getElementById("data");
+                  const editButton = document.getElementById("add-data"); // Your submit button
+                  const mainCanva = document.querySelector(".main-canva");
+
+                  // Remove any existing event listeners
+                  const newEditButton = editButton.cloneNode(true);
+                  editButton.parentNode.replaceChild(newEditButton, editButton);
+                  // Split label into name and value
+                  const labelText = elementView.model.attr("label/text");
+                  const [currentName, currentValue] = labelText.split("\n");
+                  nodeNameInput.value = currentName || ""; // Set current name
+                  nodeValueInput.value = currentValue || ""; // Set current value
+                  // Show pop-up
+                  popUp.classList.remove("translate-x-376-5");
+                  popUp.classList.add("translate-x-0");
+                  mainCanva.classList.remove("hidden");
+                  mainCanva.classList.add("block");
+                  elementView.model.attr("body/stroke", "#1757D9"); // Black border
+                  elementView.model.attr("body/strokeWidth", 2);
+                  // Add a new event listener
+                  newEditButton.addEventListener("click", function () {
+                     const newName = nodeNameInput.value.trim();
+                     const newValue = nodeValueInput.value.trim();
+                     // Update the current node's label
+                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
+                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("body/strokeWidth");
+                     const view = paper.findViewByModel(dataProvider);
+
+                     // Check if the view is found and then get the label width
+                     if (view) {
+                        const labelElement = view.el.querySelector('text');
+                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        console.log('Label width:', labelWidth);
+                        const parentWidth = labelWidth + 64;
+                        dataProvider.resize(parentWidth, 72);
+                     } else {
+                        console.log('View not found for the model!');
+                     }
+                     // Hide the p op-up after updating
+                     setTimeout(function () {
+                        popUp.classList.remove("translate-x-0");
+                        popUp.classList.add("translate-x-376-5");
+                        mainCanva.classList.remove("block");
+                        mainCanva.classList.add("hidden");
+                     }, 300);
+                  });
+               },
+            });
+            // Add tools to the element view
+            var toolsView = new joint.dia.ToolsView({
+               tools: [editButton],
+            });
+            var elementView = dataProvider.findView(paper);
+            elementView.addTools(toolsView);
+            elementView.hideTools();
+            // Show tools on click
+            paper.on("element:pointerdown", function (elementView) {
+               // Hide tools for all other elements
+               graph.getElements().forEach((el) => {
+                  const view = el.findView(paper);
+                  if (view && view !== elementView) view.hideTools();
+               });
+               // Show tools for the clicked element
+               elementView.showTools();
+            });
+            // Hide tools when clicking outside
+            document.addEventListener("click", function (event) {
+               const targetElement = event.target.closest(".joint-element");
+               if (!targetElement) {
+                  graph.getElements().forEach((el) => {
+                     const elView = el.findView(paper);
+                     if (elView) elView.hideTools();
+                  });
+               }
+            });
+
+            // Embed child node into the container (if necessary)
+            container_a.embed([dataProvider]);
+
+            // Optionally, you can fit the ancestor elements after adding the new node
+            paper.on("element:pointermove", function (elementView) {
+               var element = elementView.model;
+               element.fitAncestorElements();
+            });
+         });
+
+         addAction.addEventListener("click", () => {
+            let nodename = document.getElementById("addAction-name");
+            let nodecount = 0;
+            let nodeName = `node 0${nodecount}`;
+            let nodeValue = null;
+            let nodevalue = document.getElementById("actionData");
+            let shapaddvalue = document.getElementsByClassName("addAction-popup");
+            let toggleBtn = document.getElementById("toggle-btn");
+            let paperContainer = document.getElementById("paper-container");
+            let hideIcon = document.getElementById("hide-icon");
+            let showIcon = document.getElementById("show-icon");
+
+            nodename.addEventListener("input", (event) => {
+               nodeName = event.target.value;
+            });
+
+            nodevalue.addEventListener("input", (event) => {
+               nodeValue = event.target.value;
+            });
+
+            function setNodeName(newName) {
+               nodename.value = newName;
+               nodeName = newName;
+            }
+
+            function setNodeValue(newValue) {
+               nodevalue.value = newValue;
+               nodeValue = newValue;
+            }
+            // Increment the node count to create a unique node name
+            // Create a new Child node
+            const addAction = new joint.shapes.container.Child({
+               position: { x: 500, y: 300 }, // Default position
+               size: { width: 160, height: 72 },
+               attrs: {
+                  body: {
+                     fill: "#FFFFFF",
+                     strokeWidth: 0,
+                     rx: 8,
+                     ry: 8,
+                  },
+                  svgIcon: {
+                     refX: '50%',
+                     refY: '50%',
+                     x: 16, // Half of SVG width (33/2)
+                     y: 16,   // Half of SVG height (32/2)
+                     width: 33,
+                     height: 32,
+                  },
+                  label: {
+                     text: 'Action\nTransfer $1000 to Destination B',
+                     refX: '50%',
+                     refY: '50%',
+                     x: -45, // Half of SVG width (33/2)
+                     y: 0,
+                     textAnchor: 'left',
+                     fill: '#1C212BDE',
+                  },
+               },
+               markup: [
+                  {
+                     tagName: 'rect',
+                     selector: 'body',
+                  },
+                  {
+                     tagName: 'svg',
+                     selector: 'svgIcon',
+                     attributes: {
+                        viewBox: '0 0 33 32',
+                        fill: 'none',
+                        xmlns: 'http://www.w3.org/2000/svg',
+                     },
+                     children: [
+                        {
+                           tagName: 'g',
+                           attributes: {
+                              'clip-path': 'url(#clip0_3943_6248)',
+                           },
+                           children: [
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                              {
+                                 tagName: 'path',
+                                 attributes: {
+                                    d: 'M5.97656 14H27.9766',
+                                    stroke: '#2E333E',
+                                    'stroke-width': '2',
+                                    'stroke-linecap': 'round',
+                                    'stroke-linejoin': 'round',
+                                 },
+                              },
+                           ],
+                        },
+                        {
+                           tagName: 'defs',
+                           children: [
+                              {
+                                 tagName: 'clipPath',
+                                 attributes: { id: 'clip0_3943_6248' },
+                                 children: [
+                                    {
+                                       tagName: 'rect',
+                                       attributes: {
+                                          width: '24',
+                                          height: '24',
+                                          fill: 'white',
+                                          transform: 'translate(4.97656 4)',
+                                       },
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     tagName: 'text',
+                     selector: 'label',
+                  },
+               ],
+               ports: {
+                  groups: {
+                     in: portsIn,
+                     out: portsOut,
+                  },
+               },
+            });
+
+
+
+            addAction.addPorts([{ group: "in" }, { group: "out" }]);
+
+            // Add new child node to the graph
+            // Add the shape to the graph
+            graph.addCells([addAction]);
+
+            // Get the paper object (assuming you have it initialized as `paper`)
+            var view = paper.findViewByModel(addAction);
+
+            // Check if the view is found and then get the label width
+            if (view) {
+               var labelElement = view.el.querySelector('text');
+               var labelWidth = labelElement.getBoundingClientRect().width;
+               console.log('Label width:', labelWidth);
+               var parentWidth = labelWidth + 64;
+               addAction.resize(parentWidth, 72);
+            } else {
+               console.log('View not found for the model!');
+            }
+
+
+
+            addAction.findView(paper).$el.on("mouseenter", function () {
+               // Apply stroke and strokeWidth on hover
+               addAction.attr("body/stroke", "#1757D9");
+               addAction.attr("body/strokeWidth", 2);
+            });
+
+            addAction.findView(paper).$el.on("mouseleave", function () {
+               // Remove stroke and reset strokeWidth when mouse leaves
+               addAction.attr("body/stroke", null);
+               addAction.attr("body/strokeWidth", 0);
+            });
+
+            // Edit button configuration
+            var editButton = new joint.elementTools.Button({
+               markup: [
+                  {
+                     tagName: "rect",
+                     selector: "button",
+                     attributes: {
+                        width: 32,
+                        height: 32,
+                        rx: 8,
+                        ry: 8,
+                        fill: "#fff",
+                        cursor: "pointer",
+                        class: "edit-button",
+                     },
+                  },
+                  {
+                     tagName: "svg",
+                     selector: "icon",
+                     attributes: {
+                        width: "24",
+                        height: "24",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        x: "4",
+                        y: "4",
+                     },
+                     children: [
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d: "M12 19.9922H21",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                        {
+                           tagName: "path",
+                           attributes: {
+                              d:
+                                 "M16.5 3.48851C16.8978 3.09068 17.4374 2.86719 18 2.86719C18.2786 2.86719 18.5544 2.92206 18.8118 3.02866C19.0692 3.13527 19.303 3.29152 19.5 3.48851C19.697 3.68549 19.8532 3.91934 19.9598 4.17671C20.0665 4.43408 20.1213 4.70993 20.1213 4.98851C20.1213 5.26708 20.0665 5.54293 19.9598 5.8003C19.8532 6.05767 19.697 6.29152 19.5 6.48851L7 18.9885L3 19.9885L4 15.9885L16.5 3.48851Z",
+                              stroke: "black",
+                              "stroke-width": "2",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                           },
+                        },
+                     ],
+                  },
+               ],
+               x: 65,
+               y: 92,
+               action: function (evt, elementView, tool) {
+                  const popUp = document.querySelector(".addAction-popup");
+                  const nodeNameInput = document.getElementById("addAction-name");
+                  const nodeValueInput = document.getElementById("actionData");
+                  const editButton = document.getElementById("add-actions"); // Your submit button
+                  const mainCanva = document.querySelector(".main-canva");
+
+                  // Remove any existing event listeners
+                  const newEditButton = editButton.cloneNode(true);
+                  editButton.parentNode.replaceChild(newEditButton, editButton);
+                  // Split label into name and value
+                  const labelText = elementView.model.attr("label/text");
+                  const [currentName, currentValue] = labelText.split("\n");
+                  nodeNameInput.value = currentName || ""; // Set current name
+                  nodeValueInput.value = currentValue || ""; // Set current value
+                  // Show pop-up
+                  popUp.classList.remove("translate-x-376-5");
+                  popUp.classList.add("translate-x-0");
+                  mainCanva.classList.remove("hidden");
+                  mainCanva.classList.add("block");
+                  elementView.model.attr("body/stroke", "#1757D9"); // Black border
+                  elementView.model.attr("body/strokeWidth", 2);
+                  // Add a new event listener
+                  newEditButton.addEventListener("click", function () {
+                     const newName = nodeNameInput.value.trim();
+                     const newValue = nodeValueInput.value.trim();
+                     // Update the current node's label
+                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
+                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("body/strokeWidth");
+                     const view = paper.findViewByModel(addAction);
+
+                     // Check if the view is found and then get the label width
+                     if (view) {
+                        const labelElement = view.el.querySelector('text');
+                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        console.log('Label width:', labelWidth);
+                        const parentWidth = labelWidth + 64;
+                        addAction.resize(parentWidth, 72);
+                     } else {
+                        console.log('View not found for the model!');
+                     }
+                     // Hide the p op-up after updating
+                     setTimeout(function () {
+                        popUp.classList.remove("translate-x-0");
+                        popUp.classList.add("translate-x-376-5");
+                        mainCanva.classList.remove("block");
+                        mainCanva.classList.add("hidden");
+                     }, 300);
+                  });
+               },
+            });
+            // Add tools to the element view
+            var toolsView = new joint.dia.ToolsView({
+               tools: [editButton],
+            });
+            var elementView = addAction.findView(paper);
+            elementView.addTools(toolsView);
+            elementView.hideTools();
+            // Show tools on click
+            paper.on("element:pointerdown", function (elementView) {
+               // Hide tools for all other elements
+               graph.getElements().forEach((el) => {
+                  const view = el.findView(paper);
+                  if (view && view !== elementView) view.hideTools();
+               });
+               // Show tools for the clicked element
+               elementView.showTools();
+            });
+            // Hide tools when clicking outside
+            document.addEventListener("click", function (event) {
+               const targetElement = event.target.closest(".joint-element");
+               if (!targetElement) {
+                  graph.getElements().forEach((el) => {
+                     const elView = el.findView(paper);
+                     if (elView) elView.hideTools();
+                  });
+               }
+            });
+
+            // Embed child node into the container (if necessary)
+            container_a.embed([addAction]);
+
+            // Optionally, you can fit the ancestor elements after adding the new node
+            paper.on("element:pointermove", function (elementView) {
+               var element = elementView.model;
+               element.fitAncestorElements();
+            });
+         });
+
+         //  toggleBtn.addEventListener("click", () => {
+         //      if (paperContainer.style.display === "none") {
+         //          paperContainer.style.display = "block";
+         //          toggleBtn.classList = "flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer";
+         //          hideIcon.style.display = "block";
+         //          showIcon.style.display = "none";
+         //      } else {
+         //          paperContainer.style.display = "none";
+         //          toggleBtn.classList = "flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer";
+         //          hideIcon.style.display = "none";
+         //          showIcon.style.display = "block";
+         //      }
+         //  });
+
+         //  // Toolbar
+         var zoomLevel = 1;
+
+         // Get the center of the visible area dynamically
+         function getVisibleCenter() {
+            const paperRect = paper.el.getBoundingClientRect(); // Get the bounding box of the paper container
+            return {
+               x: paperRect.width / 2,
+               y: paperRect.height / 2,
+            };
+         }
+
+         document.getElementById("zoom-in").addEventListener("click", function () {
+            zoomLevel = Math.min(3, zoomLevel + 0.2);
+            const center = getVisibleCenter(); // Recalculate center based on visible area
+            paper.scaleUniformAtPoint(zoomLevel, center);
+         });
+
+         document.getElementById("zoom-out").addEventListener("click", function () {
+            zoomLevel = Math.max(0.2, zoomLevel - 0.2);
+            const center = getVisibleCenter(); // Recalculate center based on visible area
+            paper.scaleUniformAtPoint(zoomLevel, center);
+         });
+
+         document.addEventListener("DOMContentLoaded", function () {
+            let closeSidebarButtons = document.getElementsByClassName("closepop-up");
+
+            Array.from(closeSidebarButtons).forEach(function (button) {
+               button.addEventListener("click", function () {
+                  // Select all the popups
+                  let popups = document.querySelectorAll(".pop-up, .condition-popup, .dataProvider-popup, .addAction-popup");
+                  let mainCanva = document.querySelector(".main-canva");
+
+                  // Track if any popup is open
+                  let anyPopupOpen = false;
+
+                  // Toggle the translate-x-376-5 class for each popup
+                  popups.forEach(function (popup) {
+                     // Toggle the translate-x-376-5 class to show or hide the popup
+                     popup.classList.toggle("translate-x-376-5");
+
+                     // Check if this popup is visible (i.e., doesn't have the class)
+                     if (!popup.classList.contains("translate-x-376-5")) {
+                        anyPopupOpen = true;
+                     }
+                  });
+
+                  // If any popup is open, keep the mainCanva visible, else hide it
+                  mainCanva.style.display = anyPopupOpen ? "none" : "block";
+               });
+            });
+         });
+
+
+
+
+      })(joint);
 
    </script>
 </body>

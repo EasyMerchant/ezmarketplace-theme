@@ -107,6 +107,7 @@ module.exports = {
       },
       colors:{
         "anti-flash-white":'#f2f4f8',
+        "black-87":"#000000DE",
         "new-car-8":'#1757d914',
         "chinese-black":"#121212",
         "charleston-green":"#242933",
@@ -115,6 +116,7 @@ module.exports = {
         "AuroMetalSaurus-32":'#70758052',
         "AuroMetalSaurus-16":"#70758029",
         "dark-gunmetal-80":'#1c212bde',
+        "dark-gunmetal-60":'#1C212B99',
         "dark-gunmetal":'#1c212b',
         "deep-carmine-pink":'#e93939',
         "gunmetal":'#2E333E',
@@ -144,7 +146,7 @@ module.exports = {
         "logo-in-light":"url('../Image/logo-light.svg')",
         "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
-        "composer-bg":"url(../Image/composor-canva.svg)"
+        "composer-bg":"url(../Image/composor-canva.png)"
       },
       inset:{
         "02":'2px',

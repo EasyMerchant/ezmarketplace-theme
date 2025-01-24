@@ -1810,6 +1810,10 @@ input:checked + .toggle-bg {
   max-width: 84px;
 }
 
+.max-w-md {
+  max-width: 28rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2338,7 +2342,7 @@ input:checked + .toggle-bg {
 }
 
 .bg-composer-bg {
-  background-image: url(../Image/composor-canva.svg);
+  background-image: url(../Image/composor-canva.png);
 }
 
 .bg-logo-in-light {
@@ -2367,10 +2371,6 @@ input:checked + .toggle-bg {
 
 .stroke-new-car {
   stroke: #1757D9;
-}
-
-.stroke-white {
-  stroke: #ffffff;
 }
 
 .object-cover {
@@ -2834,13 +2834,17 @@ input:checked + .toggle-bg {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-black-87 {
+  color: #000000DE;
+}
+
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
 }
 
 .text-dark-gunmetal-60 {
-  color: #1c212b99;
+  color: #1C212B99;
 }
 
 .text-dark-gunmetal-80 {
@@ -5133,4 +5137,4 @@ input:checked + .toggle-bg {
   content: var(--tw-content);
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
+} 
