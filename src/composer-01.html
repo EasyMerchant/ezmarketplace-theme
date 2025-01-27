@@ -639,9 +639,7 @@
                      <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                  <div class="text-lg font-medium font-inter leading-21-6 text-dark-gunmetal-80 ">
-                     Composer 01
-                  </div>
+                  <div id="composerText" class="text-lg font-medium font-inter leading-21-6 text-dark-gunmetal-80 ">Composer 01</div>
                </a>
                <div class="flex items-center gap-4">
                   <a href="#"
@@ -690,7 +688,7 @@
                         stroke-linejoin="round" class="group-hover:stroke-white" />
                   </svg>
                </div>
-               <div id="toggle-btn"
+               <div data-modal-target="crud-modal" data-modal-toggle="crud-modal"
                   class="flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer">
                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0_3943_6129)">
@@ -710,7 +708,47 @@
                      </defs>
                   </svg>
 
-
+               </div>
+            </div>
+            <div id="crud-modal" tabindex="-1" aria-hidden="true"
+               class="bg-black-14 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+               <div class="relative p-4 w-full max-w-md max-h-full">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow-sm">
+                     <!-- Modal header -->
+                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 ">
+                           Updated the Composer Name
+                        </h3>
+                        <button type="button"
+                           class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                           data-modal-toggle="crud-modal">
+                           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                           </svg>
+                           <span class="sr-only">Close modal</span>
+                        </button>
+                     </div>
+                     <!-- Modal body -->
+                     <form id="updateForm" class="p-4 md:p-5">
+                        <div class="grid gap-4 mb-4 grid-cols-2">
+                           <div class="col-span-2">
+                              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">
+                                 Name
+                              </label>
+                              <input type="text" name="name" id="name"
+                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                 placeholder="Type product name" required="" />
+                           </div>
+                        </div>
+                        <button type="submit"
+                           class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                           Update
+                        </button>
+                     </form>
+                  </div>
                </div>
             </div>
             <!-- Main modal -->
@@ -816,8 +854,6 @@
                                           stroke="#2E333E" stroke-width="2" stroke-linecap="round"
                                           stroke-linejoin="round" />
                                     </svg>
-
-
                                     <div class="flex flex-col gap-2 items-start">
                                        <div class="text-sm leading-19-6 font-inter text-black-87">Action</div>
                                        <div class="text-xs leading-16-8 font-inter text-dark-gunmetal-60">List of
@@ -834,7 +870,7 @@
             <div id="paper-container" class="!w-calc !h-calc-2 block"></div>
             <div id="paper"></div>
             <div
-               class="pop-up w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               class="pop-up w-376-5 fixed top-16 right-0 bottom-0 h-calc bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
                <div class="flex items-center justify-between w-full">
                   <div class="flex items-center gap-2 cursor-pointer closepop-up">
                      <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
@@ -845,38 +881,70 @@
                      <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Node
                      </div>
                   </div>
-                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32.0543" rx="8" fill="white" />
-                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path
-                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
-                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
+                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M25 8.5H7C5.89543 8.5 5 9.39543 5 10.5V22.5C5 23.6046 5.89543 24.5 7 24.5H25C26.1046 24.5 27 23.6046 27 22.5V10.5C27 9.39543 26.1046 8.5 25 8.5Z"
+                        stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M5 14.5H27" stroke="#2E333E" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg>
+
+
                </div>
-               <form class="flex flex-col gap-4 w-full">
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
-                     <input type="text" id="NodeName"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+               <form class="flex flex-col justify-between h-full w-full">
+                  <div class="flex flex-col gap-4">
+                     <div class="flex flex-col items-start justify-center gap-2 w-full">
+                        <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                        <input type="text" id="NodeName"
+                           class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                     </div>
+                     <div class="flex flex-col items-start justify-center gap-2 w-full">
+                        <label class="text-black text-sm font-inter leading-16-9 font-medium">Type</label>
+                        <select id="NodeValue"
+                           class="bg--white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 ">
+                           <option selected="">Savings accounts</option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="US">Current accounts
+                           </option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">Fixed deposit accounts
+                           </option>
+                        </select>
+                     </div>
                   </div>
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
-                     <input type="text" id="NodeValue"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+
+                  <div class="flex items-center justify-center gap-4 w-full pt-8 px-4 border-t border-gray-300">
+                     <div class="w-full flex items-center justify-center gap-2 h-14 rounded-lg border border-gray-300">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M2 4H3.33333H14" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path
+                              d="M12.6693 4.0026V13.3359C12.6693 13.6896 12.5288 14.0287 12.2787 14.2787C12.0287 14.5288 11.6896 14.6693 11.3359 14.6693H4.66927C4.31565 14.6693 3.97651 14.5288 3.72646 14.2787C3.47641 14.0287 3.33594 13.6896 3.33594 13.3359V4.0026M5.33594 4.0026V2.66927C5.33594 2.31565 5.47641 1.97651 5.72646 1.72646C5.97651 1.47641 6.31565 1.33594 6.66927 1.33594H9.33594C9.68956 1.33594 10.0287 1.47641 10.2787 1.72646C10.5288 1.97651 10.6693 2.31565 10.6693 2.66927V4.0026"
+                              stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.66406 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path d="M9.33594 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                        <div class="text-sm font-medium font-inter leading-21-6 text-deep-carmine-pink">Delete</div>
+                     </div>
+                     <div id="a"
+                        class="w-full flex items-center justify-center gap-2 h-14 rounded-lg bg-blue-600 text-white p-2  text-center cursor-pointer ">
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V3.33333C2.5 2.97971 2.64048 2.64057 2.89052 2.39052C3.14057 2.14048 3.47971 2 3.83333 2H11.1667L14.5 5.33333V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14Z"
+                              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.8307 13.9974V8.66406H5.16406V13.9974" stroke="white" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M5.16406 2V5.33333H10.4974" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+
+                        Save
+                     </div>
                   </div>
-                  <span id="a" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
-                  </span>
                </form>
             </div>
             <div
-               class="condition-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               class="condition-popup w-376-5 fixed top-16 right-0 bottom-0 h-calc bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
                <div class="flex items-center justify-between w-full">
                   <div class="flex items-center gap-2 cursor-pointer closepop-up">
                      <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
@@ -888,38 +956,111 @@
                         Node
                      </div>
                   </div>
-                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32.0543" rx="8" fill="white" />
-                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path
-                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
-                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
+                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M10.375 22.4375C10.6236 22.4375 10.8621 22.5363 11.0379 22.7121C11.2137 22.8879 11.3125 23.1264 11.3125 23.375C11.3125 23.6236 11.2137 23.8621 11.0379 24.0379C10.8621 24.2137 10.6236 24.3125 10.375 24.3125C10.1264 24.3125 9.8879 24.2137 9.71209 24.0379C9.53627 23.8621 9.4375 23.6236 9.4375 23.375C9.4375 23.1264 9.53627 22.8879 9.71209 22.7121C9.8879 22.5363 10.1264 22.4375 10.375 22.4375ZM13.5 23.375C13.5 22.0938 12.7305 20.9922 11.625 20.5117V19C11.625 18.3086 12.1836 17.75 12.875 17.75H19.125C19.8164 17.75 20.375 18.3086 20.375 19V20.5117C19.2695 20.9922 18.5 22.0938 18.5 23.375C18.5 25.1016 19.8984 26.5 21.625 26.5C23.3516 26.5 24.75 25.1016 24.75 23.375C24.75 22.0938 23.9805 20.9922 22.875 20.5117V19C22.875 16.9297 21.1953 15.25 19.125 15.25H17.25V12.4883C18.3555 12.0078 19.125 10.9062 19.125 9.625C19.125 7.89844 17.7266 6.5 16 6.5C14.2734 6.5 12.875 7.89844 12.875 9.625C12.875 10.9062 13.6445 12.0078 14.75 12.4883V15.25H12.875C10.8047 15.25 9.125 16.9297 9.125 19V20.5117C8.01953 20.9922 7.25 22.0938 7.25 23.375C7.25 25.1016 8.64844 26.5 10.375 26.5C12.1016 26.5 13.5 25.1016 13.5 23.375ZM21.625 22.4375C21.8736 22.4375 22.1121 22.5363 22.2879 22.7121C22.4637 22.8879 22.5625 23.1264 22.5625 23.375C22.5625 23.6236 22.4637 23.8621 22.2879 24.0379C22.1121 24.2137 21.8736 24.3125 21.625 24.3125C21.3764 24.3125 21.1379 24.2137 20.9621 24.0379C20.7863 23.8621 20.6875 23.6236 20.6875 23.375C20.6875 23.1264 20.7863 22.8879 20.9621 22.7121C21.1379 22.5363 21.3764 22.4375 21.625 22.4375ZM16.9375 9.625C16.9375 9.87364 16.8387 10.1121 16.6629 10.2879C16.4871 10.4637 16.2486 10.5625 16 10.5625C15.7514 10.5625 15.5129 10.4637 15.3371 10.2879C15.1613 10.1121 15.0625 9.87364 15.0625 9.625C15.0625 9.37636 15.1613 9.13791 15.3371 8.96209C15.5129 8.78627 15.7514 8.6875 16 8.6875C16.2486 8.6875 16.4871 8.78627 16.6629 8.96209C16.8387 9.13791 16.9375 9.37636 16.9375 9.625Z"
+                        fill="#2E333E" />
+                  </svg>
                </div>
-               <form class="flex flex-col gap-4 w-full">
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
-                     <input type="text" id="condition-name"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+               <form class="flex flex-col justify-between h-full w-full">
+                  <div class="flex flex-col gap-4 w-full">
+                     <div class="flex flex-col items-start justify-center gap-2 w-full">
+                        <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                        <input type="text" id="condition-name"
+                           class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                     </div>
+                     <div
+                        class="flex flex-col items-start justify-center gap-4 p-4 bg-anti-flash-white rounded-lg w-full">
+                        <div class="py-2 text-sm leading-21-6 font-medium font-inter text-dark-gunmemtal-87">Condition
+                           chain</div>
+                        <div class="flex flex-col gap-2 w-full">
+                           <div class="flex flex-col gap-2 w-full">
+                              <label
+                                 class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">Field</label>
+                              <select id="condition1"
+                                 class="bg-anti-flash-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 ">
+                                 <option selected="">transaction.status</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="US">
+                                    transaction.value</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">transaction.data
+                                 </option>
+                              </select>
+                           </div>
+                           <div class="flex flex-col gap-2 w-full">
+                              <label
+                                 class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">Operator</label>
+                              <select id="condition2"
+                                 class="bg-anti-flash-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 ">
+                                 <option selected="">=</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="US">
+                                    <</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">></option>
+                              </select>
+                           </div>
+                           <div class="flex flex-col gap-2 w-full">
+                              <label
+                                 class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">Value</label>
+                              <select id="condition3"
+                                 class="bg-anti-flash-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 ">
+                                 <option selected="">'Success'</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="US">1000</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">'invalid'
+                                 </option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="FR">100000</option>
+                                 <option class="text-dark-gunmetal-80 text-base font-inter " value="DE">5000000</option>
+                              </select>
+                           </div>
+                        </div>
+                        <a href="#" class="flex items-center justify-center gap-4 w-full relative">
+                           <div class="w-full h-px border border-dashed border-gray-300"></div>
+                           <div class="flex items-center justify-center gap-05">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M10.5 15L10.5 5" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                 <path d="M15.5 10H5.5" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                              <div class="text-new-car text-sm leading-21-6 font-inter font-medium ">Add</div>
+                           </div>
+                           <div class="w-full h-px border border-dashed border-gray-300"></div>
+                        </a>
+                     </div>
                   </div>
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
-                     <input type="text" id="condition"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  <div class="flex items-center justify-center gap-4 w-full pt-8 px-4 border-t border-gray-300">
+                     <div class="w-full flex items-center justify-center gap-2 h-14 rounded-lg border border-gray-300">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M2 4H3.33333H14" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path
+                              d="M12.6693 4.0026V13.3359C12.6693 13.6896 12.5288 14.0287 12.2787 14.2787C12.0287 14.5288 11.6896 14.6693 11.3359 14.6693H4.66927C4.31565 14.6693 3.97651 14.5288 3.72646 14.2787C3.47641 14.0287 3.33594 13.6896 3.33594 13.3359V4.0026M5.33594 4.0026V2.66927C5.33594 2.31565 5.47641 1.97651 5.72646 1.72646C5.97651 1.47641 6.31565 1.33594 6.66927 1.33594H9.33594C9.68956 1.33594 10.0287 1.47641 10.2787 1.72646C10.5288 1.97651 10.6693 2.31565 10.6693 2.66927V4.0026"
+                              stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.66406 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path d="M9.33594 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                        <div class="text-sm font-medium font-inter leading-21-6 text-deep-carmine-pink">Delete</div>
+                     </div>
+                     <div id="add"
+                        class="w-full flex items-center justify-center gap-2 h-14 rounded-lg bg-blue-600 text-white p-2  text-center cursor-pointer ">
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V3.33333C2.5 2.97971 2.64048 2.64057 2.89052 2.39052C3.14057 2.14048 3.47971 2 3.83333 2H11.1667L14.5 5.33333V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14Z"
+                              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.8307 13.9974V8.66406H5.16406V13.9974" stroke="white" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M5.16406 2V5.33333H10.4974" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+
+                        Save
+                     </div>
                   </div>
-                  <span id="add" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
-                  </span>
                </form>
             </div>
             <div
-               class="dataProvider-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               class="dataProvider-popup w-376-5 fixed top-16 right-0 bottom-0 h-calc bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
                <div class="flex items-center justify-between w-full">
                   <div class="flex items-center gap-2 cursor-pointer closepop-up">
                      <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
@@ -930,22 +1071,19 @@
                      <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Data Node
                      </div>
                   </div>
-                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32.0543" rx="8" fill="white" />
-                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path
-                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
-                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
+                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M16 12.5C20.9706 12.5 25 11.1569 25 9.5C25 7.84315 20.9706 6.5 16 6.5C11.0294 6.5 7 7.84315 7 9.5C7 11.1569 11.0294 12.5 16 12.5Z"
+                        stroke="#2E333E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M25 16.5C25 18.16 21 19.5 16 19.5C11 19.5 7 18.16 7 16.5" stroke="#2E333E"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M7 9.5V23.5C7 25.16 11 26.5 16 26.5C21 26.5 25 25.16 25 23.5V9.5" stroke="#2E333E"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
                </div>
-               <form class="flex flex-col gap-4 w-full">
+               <form class="flex flex-col justify-between h-full w-full">
+                  <div class="flex flex-col gap-4 w-full">
                   <div class="flex flex-col items-start justify-center gap-2 w-full">
                      <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
                      <input type="text" id="dataProvider-name"
@@ -955,13 +1093,41 @@
                      <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
                      <input type="text" id="data"
                         class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  </div></div>
+                  <div class="flex items-center justify-center gap-4 w-full pt-8 px-4 border-t border-gray-300">
+                     <div class="w-full flex items-center justify-center gap-2 h-14 rounded-lg border border-gray-300">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M2 4H3.33333H14" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path
+                              d="M12.6693 4.0026V13.3359C12.6693 13.6896 12.5288 14.0287 12.2787 14.2787C12.0287 14.5288 11.6896 14.6693 11.3359 14.6693H4.66927C4.31565 14.6693 3.97651 14.5288 3.72646 14.2787C3.47641 14.0287 3.33594 13.6896 3.33594 13.3359V4.0026M5.33594 4.0026V2.66927C5.33594 2.31565 5.47641 1.97651 5.72646 1.72646C5.97651 1.47641 6.31565 1.33594 6.66927 1.33594H9.33594C9.68956 1.33594 10.0287 1.47641 10.2787 1.72646C10.5288 1.97651 10.6693 2.31565 10.6693 2.66927V4.0026"
+                              stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.66406 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path d="M9.33594 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                        <div class="text-sm font-medium font-inter leading-21-6 text-deep-carmine-pink">Delete</div>
+                     </div>
+                     <div id="add-data"
+                        class="w-full flex items-center justify-center gap-2 h-14 rounded-lg bg-blue-600 text-white p-2  text-center cursor-pointer ">
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V3.33333C2.5 2.97971 2.64048 2.64057 2.89052 2.39052C3.14057 2.14048 3.47971 2 3.83333 2H11.1667L14.5 5.33333V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14Z"
+                              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.8307 13.9974V8.66406H5.16406V13.9974" stroke="white" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M5.16406 2V5.33333H10.4974" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+
+                        Save
+                     </div>
                   </div>
-                  <span id="add-data" class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
-                  </span>
                </form>
             </div>
             <div
-               class="addAction-popup w-376-5 fixed top-16 right-0 bottom-0 h-screen bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
+               class="add-popup w-376-5 fixed top-16 right-0 bottom-0 h-calc bg-white py-8 px-4 flex gap-6 flex-col items-start transition-transform duration-300 ease-out translate-x-376-5 z-99">
                <div class="flex items-center justify-between w-full">
                   <div class="flex items-center gap-2 cursor-pointer closepop-up">
                      <svg width="20" height="20" viewBox="0 0 20 20" id="close-sidebar" fill="none"
@@ -969,43 +1135,85 @@
                         <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
                            stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
                      </svg>
-                     <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Data Node
+                     <div class="text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">Action Node
                      </div>
                   </div>
-                  <a href="javascript:void(0)" id="delete-node"><svg width="32" height="33" viewBox="0 0 32 33"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32.0543" rx="8" fill="white" />
-                        <path d="M7 10.0273H9H25" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path
-                           d="M23 10.0273V24.0273C23 24.5578 22.7893 25.0665 22.4142 25.4416C22.0391 25.8166 21.5304 26.0273 21 26.0273H11C10.4696 26.0273 9.96086 25.8166 9.58579 25.4416C9.21071 25.0665 9 24.5578 9 24.0273V10.0273M12 10.0273V8.02734C12 7.49691 12.2107 6.9882 12.5858 6.61313C12.9609 6.23806 13.4696 6.02734 14 6.02734H18C18.5304 6.02734 19.0391 6.23806 19.4142 6.61313C19.7893 6.9882 20 7.49691 20 8.02734V10.0273"
-                           stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                        <path d="M18 15.0273V21.0273" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
+                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M17 6.5L7 18.5H16L15 26.5L25 14.5H16L17 6.5Z" fill="#2E333E" stroke="#2E333E"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
                </div>
-               <form class="flex flex-col gap-4 w-full">
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
-                     <input type="text" id="addAction-name"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+               <form class="flex flex-col justify-between h-full w-full">
+                  <div class="flex flex-col gap-4 w-full">
+                     <div class="flex flex-col items-start justify-center gap-2 w-full">
+                        <label class="text-black text-sm font-inter leading-16-9 font-medium">Name</label>
+                        <input type="text" id="addAction-name"
+                           class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                     </div>
+                     <div class="flex flex-col gap-2 w-full">
+                        <label class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">Action
+                           Type</label>
+                        <select id="action1"
+                           class="bg-anti-flash-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 ">
+                           <option selected="">Money Transfer</option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="US">Loan Transfer</option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">Data Transfer</option>
+                        </select>
+                     </div>
+                     <div class="flex flex-col gap-2 w-full">
+                        <label class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">Amount
+                           ($)</label>
+                        <input type="text" id="action2"
+                           class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80"
+                           placeholder="$">
+                     </div>
+                     <div class="flex flex-col gap-2 w-full">
+                        <label class="text-dark-gunmemtal-87 text-sm font-inter leading-16-9 font-medium">To</label>
+                        <select id="action3"
+                           class="bg-anti-flash-white border border-gray-300 text-dark-gunmetal-80 text-base font-inter rounded-lg  block w-full p-4 "
+                           aria-placeholder="Account">
+                           <option selected="">A</option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="US">B</option>
+                           <option class="text-dark-gunmetal-80 text-base font-inter " value="CA">C</option>
+                        </select>
+                     </div>
                   </div>
-                  <div class="flex flex-col items-start justify-center gap-2 w-full">
-                     <label class="text-black text-sm font-inter leading-16-9 font-medium">Value</label>
-                     <input type="text" id="actionData"
-                        class="w-full h-14 border border-AuroMetalSaurus-32 rounded-lg py-15 px-4 text-sm font-inter font-normal leading-19-6 text-dark-gunmetal-80">
+                  <div class="flex items-center justify-center gap-4 w-full pt-8 px-4 border-t border-gray-300">
+                     <div class="w-full flex items-center justify-center gap-2 h-14 rounded-lg border border-gray-300">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M2 4H3.33333H14" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path
+                              d="M12.6693 4.0026V13.3359C12.6693 13.6896 12.5288 14.0287 12.2787 14.2787C12.0287 14.5288 11.6896 14.6693 11.3359 14.6693H4.66927C4.31565 14.6693 3.97651 14.5288 3.72646 14.2787C3.47641 14.0287 3.33594 13.6896 3.33594 13.3359V4.0026M5.33594 4.0026V2.66927C5.33594 2.31565 5.47641 1.97651 5.72646 1.72646C5.97651 1.47641 6.31565 1.33594 6.66927 1.33594H9.33594C9.68956 1.33594 10.0287 1.47641 10.2787 1.72646C10.5288 1.97651 10.6693 2.31565 10.6693 2.66927V4.0026"
+                              stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.66406 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                           <path d="M9.33594 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                        <div class="text-sm font-medium font-inter leading-21-6 text-deep-carmine-pink">Delete</div>
+                     </div>
+                     <div id="add-actions"
+                        class="w-full flex items-center justify-center gap-2 h-14 rounded-lg bg-blue-600 text-white p-2  text-center cursor-pointer ">
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M13.1667 14H3.83333C3.47971 14 3.14057 13.8595 2.89052 13.6095C2.64048 13.3594 2.5 13.0203 2.5 12.6667V3.33333C2.5 2.97971 2.64048 2.64057 2.89052 2.39052C3.14057 2.14048 3.47971 2 3.83333 2H11.1667L14.5 5.33333V12.6667C14.5 13.0203 14.3595 13.3594 14.1095 13.6095C13.8594 13.8595 13.5203 14 13.1667 14Z"
+                              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.8307 13.9974V8.66406H5.16406V13.9974" stroke="white" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M5.16406 2V5.33333H10.4974" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+
+                        Save
+                     </div>
                   </div>
-                  <span id="add-actions"
-                     class="bg-blue-600 text-white p-2 rounded-md text-center cursor-pointer ">UPDATE
-                  </span>
+
                </form>
             </div>
          </main>
          <footer></footer>
-
       </div>
    </div>
    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
@@ -1204,7 +1412,7 @@
                   fill: "#fff",
                   strokeWidth: "2",
                   stroke: "#2E333E",
-                  fillL: "#fff",
+                  fill: "#fff",
                },
             },
             label: {
@@ -1236,7 +1444,6 @@
             z: 1,
             attrs: { headerText: { text: "Container A" } },
          });
-
 
          const addAccount = document.getElementById("add-account");
          const addCondition = document.getElementById("add-condition");
@@ -1273,7 +1480,7 @@
                nodevalue.value = newValue;
                nodeValue = newValue;
             }
-            // Increment the node count to create a unique node name
+
             // Create a new Child node
             const accountData = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
@@ -1294,10 +1501,10 @@
                      height: 32,
                   },
                   label: {
-                     text: 'Account\nDebit card',
+                     text: '\nAccount\nAccount Type \n',
                      refX: '50%',
                      refY: '50%',
-                     x: -16, // Half of SVG width (33/2)
+                     x: -32, // Half of SVG width (33/2)
                      y: 0,
                      textAnchor: 'left',
                      fill: '#1C212BDE',
@@ -1380,25 +1587,56 @@
                },
             });
 
-
-
             accountData.addPorts([{ group: "in" }, { group: "out" }]);
 
             // Add new child node to the graph
             graph.addCells([accountData]);
+            // Get the paper object (assuming you have it initialized as `paper`)
+            // Assuming `paper` and `accountData` are already defined and accessible
             // Get the paper object (assuming you have it initialized as `paper`)
             var view = paper.findViewByModel(accountData);
 
             // Check if the view is found and then get the label width
             if (view) {
                var labelElement = view.el.querySelector('text');
+               var labelElements = view.el.querySelectorAll('tspan');
                var labelWidth = labelElement.getBoundingClientRect().width;
                console.log('Label width:', labelWidth);
-               var parentWidth = labelWidth + 64;
-               accountData.resize(parentWidth, 72);
+
+               // Adjust parentWidth and resize accountData
+               var svgX = 16;  // X position of the SVG icon
+               var svgWidth = 22;  // Width of the SVG icon
+               var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+               // Calculate the new positions for the second and third tspan elements
+               // Include space for SVG and the gap
+
+               var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+
+               // Loop through each label element to adjust the 'x' attribute
+               var secondTspan = labelElements[1];
+               var thirdTspan = labelElements[2];
+
+               // Perform operations on the second and third tspan elements
+               if (secondTspan) {
+                  secondTspan.setAttribute('y', -16);
+                  secondTspan.setAttribute('y', -20);  // Set the y value to -20 for second tspan
+                  console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                  console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+               }
+
+               // Use the resize method on accountData
+               if (typeof accountData.resize === 'function') {
+                  accountData.resize(parentWidth, 72);
+               } else {
+                  console.error('accountData.resize is not a function!');
+               }
             } else {
                console.log('View not found for the model!');
             }
+
+
+
             accountData.findView(paper).$el.on("mouseenter", function () {
                // Apply stroke and strokeWidth on hover
                accountData.attr("body/stroke", "#1757D9");
@@ -1476,11 +1714,16 @@
                   // Remove any existing event listeners
                   const newEditButton = editButton.cloneNode(true);
                   editButton.parentNode.replaceChild(newEditButton, editButton);
-                  // Split label into name and value
+
+                  // Split label into name and value by the second \n
                   const labelText = elementView.model.attr("label/text");
-                  const [currentName, currentValue] = labelText.split("\n");
+                  const parts = labelText.split("\n", 3);  // Split into a maximum of 3 parts
+                  const currentName = parts[1] || "";  // "Account" will be here
+                  const currentValue = parts[2] || ""; // "Debit card" will be here
+
                   nodeNameInput.value = currentName || ""; // Set current name
                   nodeValueInput.value = currentValue || ""; // Set current value
+
                   // Show pop-up
                   popUp.classList.remove("translate-x-376-5");
                   popUp.classList.add("translate-x-0");
@@ -1488,13 +1731,15 @@
                   mainCanva.classList.add("block");
                   elementView.model.attr("body/stroke", "#1757D9"); // Black border
                   elementView.model.attr("body/strokeWidth", 2);
+
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
                      const newName = nodeNameInput.value.trim();
-                     const newValue = nodeValueInput.value.trim();
+                     const newValue = nodeValueInput.options[nodeValueInput.selectedIndex].text.trim();
+
                      // Update the current node's label
-                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
-                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("label/text", `\n${newName}\n${newValue}\n`);
+                     elementView.model.attr("body/stroke", ""); // Remove black border
                      elementView.model.attr("body/strokeWidth");
 
                      // Get the paper object (assuming you have it initialized as `paper`)
@@ -1503,14 +1748,56 @@
                      // Check if the view is found and then get the label width
                      if (view) {
                         var labelElement = view.el.querySelector('text');
+                        var labelElements = view.el.querySelectorAll('tspan');
                         var labelWidth = labelElement.getBoundingClientRect().width;
                         console.log('Label width:', labelWidth);
-                        var parentWidth = labelWidth + 64;
-                        accountData.resize(parentWidth, 72);
+
+                        // Define the starting position (SVG position)
+                        var svgX = 16;  // X position of the SVG icon
+                        var svgWidth = 22;  // Width of the SVG icon
+                        var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+                        // Calculate the new positions for the second and third tspan elements
+                        // Include space for SVG and the gap
+
+                        var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+                        // Adjust the positions of label elements (tspans) relative to the SVG
+                        var secondTspan = labelElements[1];
+                        var thirdTspan = labelElements[2];
+
+                        if (secondTspan) {
+                           var currentXSecond = secondTspan.getAttribute('x');
+                           console.log('Current x value of second tspan:', currentXSecond);
+                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 32;  // Position second tspan after the SVG
+                           secondTspan.setAttribute('x', newXSecond);
+                           secondTspan.setAttribute('y', -20);  // Align vertically with the SVG
+                           console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                           console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+                        }
+
+                        if (thirdTspan) {
+                           var currentXThird = thirdTspan.getAttribute('x');
+                           console.log('Current x value of third tspan:', currentXThird);
+                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 32;  // Position third tspan further
+                           thirdTspan.setAttribute('x', newXThird);
+                           //   thirdTspan.setAttribute('y',);  // Align vertically with the SVG
+                           console.log('Updated x value of third tspan:', thirdTspan.getAttribute('x'));
+                           console.log('Updated y value of third tspan:', thirdTspan.getAttribute('y'));
+                        }
+
+                        // Use the resize method on accountData
+                        if (typeof accountData.resize === 'function') {
+                           accountData.resize(parentWidth, 72);  // Update the model size
+                           console.log(parentWidth)
+                        } else {
+                           console.error('accountData.resize is not a function!');
+                        }
                      } else {
                         console.log('View not found for the model!');
                      }
-                     // Hide the p op-up after updating
+
+
+                     // Hide the pop-up after updating
                      setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
                         popUp.classList.add("translate-x-376-5");
@@ -1519,11 +1806,14 @@
                      }, 300);
                   });
                },
-            });
+
+            })
+
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
                tools: [editButton],
             });
+
             var elementView = accountData.findView(paper);
             elementView.addTools(toolsView);
             elementView.hideTools();
@@ -1537,6 +1827,7 @@
                // Show tools for the clicked element
                elementView.showTools();
             });
+
             // Hide tools when clicking outside
             document.addEventListener("click", function (event) {
                const targetElement = event.target.closest(".joint-element");
@@ -1558,7 +1849,6 @@
             });
          });
 
-
          addCondition.addEventListener("click", () => {
             let nodename = document.getElementById("condition-name");
             let nodecount = 0;
@@ -1570,13 +1860,32 @@
             let paperContainer = document.getElementById("paper-container");
             let hideIcon = document.getElementById("hide-icon");
             let showIcon = document.getElementById("show-icon");
+            const dropdown1 = document.getElementById("condition1");
+            const dropdown2 = document.getElementById("condition2");
+            const dropdown3 = document.getElementById("condition3");
+
+            // Variables to store the selected values
+            let nodeValue1 = dropdown1.value;
+            let nodeValue2 = dropdown2.value;
+            let nodeValue3 = dropdown3.value;
 
             nodename.addEventListener("input", (event) => {
                nodeName = event.target.value;
             });
 
-            nodevalue.addEventListener("input", (event) => {
-               nodeValue = event.target.value;
+
+
+            // Event listeners for each dropdown
+            dropdown1.addEventListener("change", (event) => {
+               nodeValue1 = event.target.value; // Update the value dynamically
+            });
+
+            dropdown2.addEventListener("change", (event) => {
+               nodeValue2 = event.target.value; // Update the value dynamically
+            });
+
+            dropdown3.addEventListener("change", (event) => {
+               nodeValue3 = event.target.value; // Update the value dynamically
             });
 
             function setNodeName(newName) {
@@ -1588,7 +1897,7 @@
                nodevalue.value = newValue;
                nodeValue = newValue;
             }
-            // Increment the node count to create a unique node name
+
             // Create a new Child node
             const addCondition = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
@@ -1609,7 +1918,7 @@
                      height: 32,
                   },
                   label: {
-                     text: 'IF condition\nCondition = value',
+                     text: '\nIF condition\nCondition = value\n',
                      refX: '50%',
                      refY: '50%',
                      x: -45, // Half of SVG width (33/2)
@@ -1627,58 +1936,19 @@
                      tagName: 'svg',
                      selector: 'svgIcon',
                      attributes: {
-                        viewBox: '0 0 33 32',
+                        width: '32',
+                        height: '33',
+                        viewBox: '0 0 32 33',
                         fill: 'none',
                         xmlns: 'http://www.w3.org/2000/svg',
                      },
                      children: [
                         {
-                           tagName: 'g',
+                           tagName: 'path',
                            attributes: {
-                              'clip-path': 'url(#clip0_3943_6248)',
+                              d: 'M10.375 22.4375C10.6236 22.4375 10.8621 22.5363 11.0379 22.7121C11.2137 22.8879 11.3125 23.1264 11.3125 23.375C11.3125 23.6236 11.2137 23.8621 11.0379 24.0379C10.8621 24.2137 10.6236 24.3125 10.375 24.3125C10.1264 24.3125 9.8879 24.2137 9.71209 24.0379C9.53627 23.8621 9.4375 23.6236 9.4375 23.375C9.4375 23.1264 9.53627 22.8879 9.71209 22.7121C9.8879 22.5363 10.1264 22.4375 10.375 22.4375ZM13.5 23.375C13.5 22.0938 12.7305 20.9922 11.625 20.5117V19C11.625 18.3086 12.1836 17.75 12.875 17.75H19.125C19.8164 17.75 20.375 18.3086 20.375 19V20.5117C19.2695 20.9922 18.5 22.0938 18.5 23.375C18.5 25.1016 19.8984 26.5 21.625 26.5C23.3516 26.5 24.75 25.1016 24.75 23.375C24.75 22.0938 23.9805 20.9922 22.875 20.5117V19C22.875 16.9297 21.1953 15.25 19.125 15.25H17.25V12.4883C18.3555 12.0078 19.125 10.9062 19.125 9.625C19.125 7.89844 17.7266 6.5 16 6.5C14.2734 6.5 12.875 7.89844 12.875 9.625C12.875 10.9062 13.6445 12.0078 14.75 12.4883V15.25H12.875C10.8047 15.25 9.125 16.9297 9.125 19V20.5117C8.01953 20.9922 7.25 22.0938 7.25 23.375C7.25 25.1016 8.64844 26.5 10.375 26.5C12.1016 26.5 13.5 25.1016 13.5 23.375ZM21.625 22.4375C21.8736 22.4375 22.1121 22.5363 22.2879 22.7121C22.4637 22.8879 22.5625 23.1264 22.5625 23.375C22.5625 23.6236 22.4637 23.8621 22.2879 24.0379C22.1121 24.2137 21.8736 24.3125 21.625 24.3125C21.3764 24.3125 21.1379 24.2137 20.9621 24.0379C20.7863 23.8621 20.6875 23.6236 20.6875 23.375C20.6875 23.1264 20.7863 22.8879 20.9621 22.7121C21.1379 22.5363 21.3764 22.4375 21.625 22.4375ZM16.9375 9.625C16.9375 9.87364 16.8387 10.1121 16.6629 10.2879C16.4871 10.4637 16.2486 10.5625 16 10.5625C15.7514 10.5625 15.5129 10.4637 15.3371 10.2879C15.1613 10.1121 15.0625 9.87364 15.0625 9.625C15.0625 9.37636 15.1613 9.13791 15.3371 8.96209C15.5129 8.78627 15.7514 8.6875 16 8.6875C16.2486 8.6875 16.4871 8.78627 16.6629 8.96209C16.8387 9.13791 16.9375 9.37636 16.9375 9.625Z',
+                              fill: '#2E333E',
                            },
-                           children: [
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M5.97656 14H27.9766',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                           ],
-                        },
-                        {
-                           tagName: 'defs',
-                           children: [
-                              {
-                                 tagName: 'clipPath',
-                                 attributes: { id: 'clip0_3943_6248' },
-                                 children: [
-                                    {
-                                       tagName: 'rect',
-                                       attributes: {
-                                          width: '24',
-                                          height: '24',
-                                          fill: 'white',
-                                          transform: 'translate(4.97656 4)',
-                                       },
-                                    },
-                                 ],
-                              },
-                           ],
                         },
                      ],
                   },
@@ -1687,6 +1957,7 @@
                      selector: 'label',
                   },
                ],
+
                ports: {
                   groups: {
                      in: portsIn,
@@ -1694,8 +1965,6 @@
                   },
                },
             });
-
-
 
             addCondition.addPorts([{ group: "in" }, { group: "out" }]);
 
@@ -1709,15 +1978,41 @@
             // Check if the view is found and then get the label width
             if (view) {
                var labelElement = view.el.querySelector('text');
+               var labelElements = view.el.querySelectorAll('tspan');
                var labelWidth = labelElement.getBoundingClientRect().width;
                console.log('Label width:', labelWidth);
-               var parentWidth = labelWidth + 64;
-               addCondition.resize(parentWidth, 72);
+
+               // Adjust parentWidth and resize accountData
+               var svgX = 16;  // X position of the SVG icon
+               var svgWidth = 22;  // Width of the SVG icon
+               var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+               // Calculate the new positions for the second and third tspan elements
+               // Include space for SVG and the gap
+
+               var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+
+               // Loop through each label element to adjust the 'x' attribute
+               var secondTspan = labelElements[1];
+               var thirdTspan = labelElements[2];
+
+               // Perform operations on the second and third tspan elements
+               if (secondTspan) {
+                  secondTspan.setAttribute('y', -16);
+                  secondTspan.setAttribute('y', -20);  // Set the y value to -20 for second tspan
+                  console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                  console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+               }
+
+               // Use the resize method on accountData
+               if (typeof addCondition.resize === 'function') {
+                  addCondition.resize(parentWidth, 72);
+               } else {
+                  console.error('accountData.resize is not a function!');
+               }
             } else {
                console.log('View not found for the model!');
             }
-
-
 
             addCondition.findView(paper).$el.on("mouseenter", function () {
                // Apply stroke and strokeWidth on hover
@@ -1789,7 +2084,9 @@
                action: function (evt, elementView, tool) {
                   const popUp = document.querySelector(".condition-popup");
                   const nodeNameInput = document.getElementById("condition-name");
-                  const nodeValueInput = document.getElementById("condition");
+                  const dropdown1 = document.getElementById("condition1"); // First dropdown
+                  const dropdown2 = document.getElementById("condition2"); // Second dropdown
+                  const dropdown3 = document.getElementById("condition3");
                   const editButton = document.getElementById("add"); // Your submit button
                   const mainCanva = document.querySelector(".main-canva");
 
@@ -1797,10 +2094,19 @@
                   const newEditButton = editButton.cloneNode(true);
                   editButton.parentNode.replaceChild(newEditButton, editButton);
                   // Split label into name and value
+                  // Split label into name and value by the second \n
                   const labelText = elementView.model.attr("label/text");
-                  const [currentName, currentValue] = labelText.split("\n");
+                  const parts = labelText.split("\n", 3);  // Split into a maximum of 3 parts
+                  const currentName = parts[1] || "";  // "Account" will be here
+                  const currentValue = parts[2] || ""; // "Debit card" will be here
+                  const [value1, value2, value3] = currentValue.split(",").map((value) => value.trim());
+
                   nodeNameInput.value = currentName || ""; // Set current name
-                  nodeValueInput.value = currentValue || ""; // Set current value
+
+                  if (dropdown1) dropdown1.value = value1 || "";
+                  if (dropdown2) dropdown2.value = value2 || "";
+                  if (dropdown3) dropdown3.value = value3 || "";
+
                   // Show pop-up
                   popUp.classList.remove("translate-x-376-5");
                   popUp.classList.add("translate-x-0");
@@ -1808,26 +2114,75 @@
                   mainCanva.classList.add("block");
                   elementView.model.attr("body/stroke", "#1757D9"); // Black border
                   elementView.model.attr("body/strokeWidth", 2);
+
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
                      const newName = nodeNameInput.value.trim();
-                     const newValue = nodeValueInput.value.trim();
+                     const newValue1 = dropdown1.options[dropdown1.selectedIndex]?.text.trim() || "";
+                     const newValue2 = dropdown2.options[dropdown2.selectedIndex]?.text.trim() || "";
+                     const newValue3 = dropdown3.options[dropdown3.selectedIndex]?.text.trim() || "";
+
+                     const newValue = `${newValue1} ${newValue2} ${newValue3}`;
+
                      // Update the current node's label
-                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
-                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("label/text", `\n${newName}\n${newValue}\n`);
+                     elementView.model.attr("body/stroke", ""); // Remove black border
                      elementView.model.attr("body/strokeWidth");
-                     const view = paper.findViewByModel(addCondition);
+
+                     // Get the paper object (assuming you have it initialized as `paper`)
+                     var view = paper.findViewByModel(addCondition);
 
                      // Check if the view is found and then get the label width
                      if (view) {
-                        const labelElement = view.el.querySelector('text');
-                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        var labelElement = view.el.querySelector('text');
+                        var labelElements = view.el.querySelectorAll('tspan');
+                        var labelWidth = labelElement.getBoundingClientRect().width;
                         console.log('Label width:', labelWidth);
-                        const parentWidth = labelWidth + 64;
-                        addCondition.resize(parentWidth, 72);
+
+                        // Define the starting position (SVG position)
+                        var svgX = 16;  // X position of the SVG icon
+                        var svgWidth = 22;  // Width of the SVG icon
+                        var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+                        // Calculate the new positions for the second and third tspan elements
+                        // Include space for SVG and the gap
+
+                        var parentWidth = labelWidth + svgWidth + spaceBetween + 61;
+                        // Adjust the positions of label elements (tspans) relative to the SVG
+                        var secondTspan = labelElements[1];
+                        var thirdTspan = labelElements[2];
+
+                        if (secondTspan) {
+                           var currentXSecond = secondTspan.getAttribute('x');
+                           console.log('Current x value of second tspan:', currentXSecond);
+                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 45;  // Position second tspan after the SVG
+                           secondTspan.setAttribute('x', newXSecond);
+                           secondTspan.setAttribute('y', -20);  // Align vertically with the SVG
+                           console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                           console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+                        }
+
+                        if (thirdTspan) {
+                           var currentXThird = thirdTspan.getAttribute('x');
+                           console.log('Current x value of third tspan:', currentXThird);
+                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 45;  // Position third tspan further
+                           thirdTspan.setAttribute('x', newXThird);
+                           //   thirdTspan.setAttribute('y',);  // Align vertically with the SVG
+                           console.log('Updated x value of third tspan:', thirdTspan.getAttribute('x'));
+                           console.log('Updated y value of third tspan:', thirdTspan.getAttribute('y'));
+                        }
+
+                        // Use the resize method on accountData
+                        if (typeof addCondition.resize === 'function') {
+                           addCondition.resize(parentWidth, 72);  // Update the model size
+                           console.log(parentWidth)
+                        } else {
+                           console.error('accountData.resize is not a function!');
+                        }
                      } else {
                         console.log('View not found for the model!');
                      }
+
                      // Hide the p op-up after updating
                      setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
@@ -1876,7 +2231,6 @@
             });
          });
 
-
          dataProvider.addEventListener("click", () => {
             let nodename = document.getElementById("dataProvider-name");
             let nodecount = 0;
@@ -1906,7 +2260,7 @@
                nodevalue.value = newValue;
                nodeValue = newValue;
             }
-            // Increment the node count to create a unique node name
+
             // Create a new Child node
             const dataProvider = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
@@ -1927,7 +2281,7 @@
                      height: 32,
                   },
                   label: {
-                     text: 'Data\nCondition = value',
+                     text: '\nData\nCondition = value\n',
                      refX: '50%',
                      refY: '50%',
                      x: -45, // Half of SVG width (33/2)
@@ -1945,58 +2299,42 @@
                      tagName: 'svg',
                      selector: 'svgIcon',
                      attributes: {
-                        viewBox: '0 0 33 32',
+                        width: '32',
+                        height: '33',
+                        viewBox: '0 0 32 33',
                         fill: 'none',
                         xmlns: 'http://www.w3.org/2000/svg',
                      },
                      children: [
                         {
-                           tagName: 'g',
+                           tagName: 'path',
                            attributes: {
-                              'clip-path': 'url(#clip0_3943_6248)',
+                              d: 'M16 12.5C20.9706 12.5 25 11.1569 25 9.5C25 7.84315 20.9706 6.5 16 6.5C11.0294 6.5 7 7.84315 7 9.5C7 11.1569 11.0294 12.5 16 12.5Z',
+                              stroke: '#2E333E',
+                              'stroke-width': '2',
+                              'stroke-linecap': 'round',
+                              'stroke-linejoin': 'round',
                            },
-                           children: [
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M5.97656 14H27.9766',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                           ],
                         },
                         {
-                           tagName: 'defs',
-                           children: [
-                              {
-                                 tagName: 'clipPath',
-                                 attributes: { id: 'clip0_3943_6248' },
-                                 children: [
-                                    {
-                                       tagName: 'rect',
-                                       attributes: {
-                                          width: '24',
-                                          height: '24',
-                                          fill: 'white',
-                                          transform: 'translate(4.97656 4)',
-                                       },
-                                    },
-                                 ],
-                              },
-                           ],
+                           tagName: 'path',
+                           attributes: {
+                              d: 'M25 16.5C25 18.16 21 19.5 16 19.5C11 19.5 7 18.16 7 16.5',
+                              stroke: '#2E333E',
+                              'stroke-width': '2',
+                              'stroke-linecap': 'round',
+                              'stroke-linejoin': 'round',
+                           },
+                        },
+                        {
+                           tagName: 'path',
+                           attributes: {
+                              d: 'M7 9.5V23.5C7 25.16 11 26.5 16 26.5C21 26.5 25 25.16 25 23.5V9.5',
+                              stroke: '#2E333E',
+                              'stroke-width': '2',
+                              'stroke-linecap': 'round',
+                              'stroke-linejoin': 'round',
+                           },
                         },
                      ],
                   },
@@ -2004,7 +2342,8 @@
                      tagName: 'text',
                      selector: 'label',
                   },
-               ],
+               ]
+               ,
                ports: {
                   groups: {
                      in: portsIn,
@@ -2012,8 +2351,6 @@
                   },
                },
             });
-
-
 
             dataProvider.addPorts([{ group: "in" }, { group: "out" }]);
 
@@ -2027,15 +2364,41 @@
             // Check if the view is found and then get the label width
             if (view) {
                var labelElement = view.el.querySelector('text');
+               var labelElements = view.el.querySelectorAll('tspan');
                var labelWidth = labelElement.getBoundingClientRect().width;
                console.log('Label width:', labelWidth);
-               var parentWidth = labelWidth + 64;
-               dataProvider.resize(parentWidth, 72);
+
+               // Adjust parentWidth and resize dataProvider
+               var svgX = 16;  // X position of the SVG icon
+               var svgWidth = 22;  // Width of the SVG icon
+               var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+               // Calculate the new positions for the second and third tspan elements
+               // Include space for SVG and the gap
+
+               var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+
+               // Loop through each label element to adjust the 'x' attribute
+               var secondTspan = labelElements[1];
+               var thirdTspan = labelElements[2];
+
+               // Perform operations on the second and third tspan elements
+               if (secondTspan) {
+                  secondTspan.setAttribute('y', -16);
+                  secondTspan.setAttribute('y', -20);  // Set the y value to -20 for second tspan
+                  console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                  console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+               }
+
+               // Use the resize method on dataProvider
+               if (typeof dataProvider.resize === 'function') {
+                  dataProvider.resize(parentWidth, 72);
+               } else {
+                  console.error('dataProvider.resize is not a function!');
+               }
             } else {
                console.log('View not found for the model!');
             }
-
-
 
             dataProvider.findView(paper).$el.on("mouseenter", function () {
                // Apply stroke and strokeWidth on hover
@@ -2115,10 +2478,15 @@
                   const newEditButton = editButton.cloneNode(true);
                   editButton.parentNode.replaceChild(newEditButton, editButton);
                   // Split label into name and value
+                  // Split label into name and value by the second \n
                   const labelText = elementView.model.attr("label/text");
-                  const [currentName, currentValue] = labelText.split("\n");
+                  const parts = labelText.split("\n", 3);  // Split into a maximum of 3 parts
+                  const currentName = parts[1] || "";  // "Account" will be here
+                  const currentValue = parts[2] || ""; // "Debit card" will be here
+
                   nodeNameInput.value = currentName || ""; // Set current name
                   nodeValueInput.value = currentValue || ""; // Set current value
+
                   // Show pop-up
                   popUp.classList.remove("translate-x-376-5");
                   popUp.classList.add("translate-x-0");
@@ -2126,26 +2494,71 @@
                   mainCanva.classList.add("block");
                   elementView.model.attr("body/stroke", "#1757D9"); // Black border
                   elementView.model.attr("body/strokeWidth", 2);
+
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
                      const newName = nodeNameInput.value.trim();
                      const newValue = nodeValueInput.value.trim();
+
                      // Update the current node's label
-                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
-                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("label/text", `\n${newName}\n${newValue}\n`);
+                     elementView.model.attr("body/stroke", ""); // Remove black border
                      elementView.model.attr("body/strokeWidth");
-                     const view = paper.findViewByModel(dataProvider);
+
+                     // Get the paper object (assuming you have it initialized as `paper`)
+                     var view = paper.findViewByModel(dataProvider);
 
                      // Check if the view is found and then get the label width
                      if (view) {
-                        const labelElement = view.el.querySelector('text');
-                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        var labelElement = view.el.querySelector('text');
+                        var labelElements = view.el.querySelectorAll('tspan');
+                        var labelWidth = labelElement.getBoundingClientRect().width;
                         console.log('Label width:', labelWidth);
-                        const parentWidth = labelWidth + 64;
-                        dataProvider.resize(parentWidth, 72);
+
+                        // Define the starting position (SVG position)
+                        var svgX = 16;  // X position of the SVG icon
+                        var svgWidth = 22;  // Width of the SVG icon
+                        var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+                        // Calculate the new positions for the second and third tspan elements
+                        // Include space for SVG and the gap
+
+                        var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+                        // Adjust the positions of label elements (tspans) relative to the SVG
+                        var secondTspan = labelElements[1];
+                        var thirdTspan = labelElements[2];
+
+                        if (secondTspan) {
+                           var currentXSecond = secondTspan.getAttribute('x');
+                           console.log('Current x value of second tspan:', currentXSecond);
+                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 45;  // Position second tspan after the SVG
+                           secondTspan.setAttribute('x', newXSecond);
+                           secondTspan.setAttribute('y', -20);  // Align vertically with the SVG
+                           console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                           console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+                        }
+
+                        if (thirdTspan) {
+                           var currentXThird = thirdTspan.getAttribute('x');
+                           console.log('Current x value of third tspan:', currentXThird);
+                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 45;  // Position third tspan further
+                           thirdTspan.setAttribute('x', newXThird);
+                           //   thirdTspan.setAttribute('y',);  // Align vertically with the SVG
+                           console.log('Updated x value of third tspan:', thirdTspan.getAttribute('x'));
+                           console.log('Updated y value of third tspan:', thirdTspan.getAttribute('y'));
+                        }
+
+                        // Use the resize method on accountData
+                        if (typeof dataProvider.resize === 'function') {
+                           dataProvider.resize(parentWidth, 72);  // Update the model size
+                           console.log(parentWidth)
+                        } else {
+                           console.error('accountData.resize is not a function!');
+                        }
                      } else {
                         console.log('View not found for the model!');
                      }
+
                      // Hide the p op-up after updating
                      setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
@@ -2156,10 +2569,12 @@
                   });
                },
             });
+
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
                tools: [editButton],
             });
+
             var elementView = dataProvider.findView(paper);
             elementView.addTools(toolsView);
             elementView.hideTools();
@@ -2173,6 +2588,7 @@
                // Show tools for the clicked element
                elementView.showTools();
             });
+
             // Hide tools when clicking outside
             document.addEventListener("click", function (event) {
                const targetElement = event.target.closest(".joint-element");
@@ -2200,18 +2616,37 @@
             let nodeName = `node 0${nodecount}`;
             let nodeValue = null;
             let nodevalue = document.getElementById("actionData");
-            let shapaddvalue = document.getElementsByClassName("addAction-popup");
+            let shapaddvalue = document.getElementsByClassName("add-popup");
             let toggleBtn = document.getElementById("toggle-btn");
             let paperContainer = document.getElementById("paper-container");
             let hideIcon = document.getElementById("hide-icon");
             let showIcon = document.getElementById("show-icon");
+            const dropdown1 = document.getElementById("action1");
+            const dropdown2 = document.getElementById("action2");
+            const dropdown3 = document.getElementById("action3");
+
+            // Variables to store the selected values
+            let nodeValue1 = dropdown1.value;
+            let nodeValue2 = dropdown2.value;
+            let nodeValue3 = dropdown3.value;
 
             nodename.addEventListener("input", (event) => {
                nodeName = event.target.value;
             });
 
-            nodevalue.addEventListener("input", (event) => {
-               nodeValue = event.target.value;
+
+
+            // Event listeners for each dropdown
+            dropdown1.addEventListener("change", (event) => {
+               nodeValue1 = event.target.value; // Update the value dynamically
+            });
+
+            dropdown2.addEventListener("change", (event) => {
+               nodeValue2 = event.target.value; // Update the value dynamically
+            });
+
+            dropdown3.addEventListener("change", (event) => {
+               nodeValue3 = event.target.value; // Update the value dynamically
             });
 
             function setNodeName(newName) {
@@ -2223,7 +2658,7 @@
                nodevalue.value = newValue;
                nodeValue = newValue;
             }
-            // Increment the node count to create a unique node name
+
             // Create a new Child node
             const addAction = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
@@ -2244,10 +2679,10 @@
                      height: 32,
                   },
                   label: {
-                     text: 'Action\nTransfer $1000 to Destination B',
+                     text: '\nAction\nDo This\n',
                      refX: '50%',
                      refY: '50%',
-                     x: -45, // Half of SVG width (33/2)
+                     x: -16, // Half of SVG width (33/2)
                      y: 0,
                      textAnchor: 'left',
                      fill: '#1C212BDE',
@@ -2262,58 +2697,23 @@
                      tagName: 'svg',
                      selector: 'svgIcon',
                      attributes: {
-                        viewBox: '0 0 33 32',
+                        width: '32',
+                        height: '33',
+                        viewBox: '0 0 32 33',
                         fill: 'none',
                         xmlns: 'http://www.w3.org/2000/svg',
                      },
                      children: [
                         {
-                           tagName: 'g',
+                           tagName: 'path',
                            attributes: {
-                              'clip-path': 'url(#clip0_3943_6248)',
+                              d: 'M17 6.5L7 18.5H16L15 26.5L25 14.5H16L17 6.5Z',
+                              fill: '#2E333E',
+                              stroke: '#2E333E',
+                              'stroke-width': '2',
+                              'stroke-linecap': 'round',
+                              'stroke-linejoin': 'round',
                            },
-                           children: [
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M25.9766 8H7.97656C6.87199 8 5.97656 8.89543 5.97656 10V22C5.97656 23.1046 6.87199 24 7.97656 24H25.9766C27.0811 24 27.9766 23.1046 27.9766 22V10C27.9766 8.89543 27.0811 8 25.9766 8Z',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                              {
-                                 tagName: 'path',
-                                 attributes: {
-                                    d: 'M5.97656 14H27.9766',
-                                    stroke: '#2E333E',
-                                    'stroke-width': '2',
-                                    'stroke-linecap': 'round',
-                                    'stroke-linejoin': 'round',
-                                 },
-                              },
-                           ],
-                        },
-                        {
-                           tagName: 'defs',
-                           children: [
-                              {
-                                 tagName: 'clipPath',
-                                 attributes: { id: 'clip0_3943_6248' },
-                                 children: [
-                                    {
-                                       tagName: 'rect',
-                                       attributes: {
-                                          width: '24',
-                                          height: '24',
-                                          fill: 'white',
-                                          transform: 'translate(4.97656 4)',
-                                       },
-                                    },
-                                 ],
-                              },
-                           ],
                         },
                      ],
                   },
@@ -2330,8 +2730,6 @@
                },
             });
 
-
-
             addAction.addPorts([{ group: "in" }, { group: "out" }]);
 
             // Add new child node to the graph
@@ -2344,15 +2742,41 @@
             // Check if the view is found and then get the label width
             if (view) {
                var labelElement = view.el.querySelector('text');
+               var labelElements = view.el.querySelectorAll('tspan');
                var labelWidth = labelElement.getBoundingClientRect().width;
                console.log('Label width:', labelWidth);
-               var parentWidth = labelWidth + 64;
-               addAction.resize(parentWidth, 72);
+
+               // Adjust parentWidth and resize addAction
+               var svgX = 16;  // X position of the SVG icon
+               var svgWidth = 22;  // Width of the SVG icon
+               var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+               // Calculate the new positions for the second and third tspan elements
+               // Include space for SVG and the gap
+
+               var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+
+               // Loop through each label element to adjust the 'x' attribute
+               var secondTspan = labelElements[1];
+               var thirdTspan = labelElements[2];
+
+               // Perform operations on the second and third tspan elements
+               if (secondTspan) {
+                  secondTspan.setAttribute('y', -16);
+                  secondTspan.setAttribute('y', -20);  // Set the y value to -20 for second tspan
+                  console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                  console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+               }
+
+               // Use the resize method on addAction
+               if (typeof addAction.resize === 'function') {
+                  addAction.resize(parentWidth, 72);
+               } else {
+                  console.error('addAction.resize is not a function!');
+               }
             } else {
                console.log('View not found for the model!');
             }
-
-
 
             addAction.findView(paper).$el.on("mouseenter", function () {
                // Apply stroke and strokeWidth on hover
@@ -2422,9 +2846,11 @@
                x: 65,
                y: 92,
                action: function (evt, elementView, tool) {
-                  const popUp = document.querySelector(".addAction-popup");
+                  const popUp = document.querySelector(".add-popup");
                   const nodeNameInput = document.getElementById("addAction-name");
-                  const nodeValueInput = document.getElementById("actionData");
+                  const dropdown1 = document.getElementById("action1"); // First dropdown
+                  const value = document.getElementById("action2"); // Second dropdown
+                  const dropdown3 = document.getElementById("action3");
                   const editButton = document.getElementById("add-actions"); // Your submit button
                   const mainCanva = document.querySelector(".main-canva");
 
@@ -2432,10 +2858,19 @@
                   const newEditButton = editButton.cloneNode(true);
                   editButton.parentNode.replaceChild(newEditButton, editButton);
                   // Split label into name and value
+                  // Split label into name and value by the second \n
                   const labelText = elementView.model.attr("label/text");
-                  const [currentName, currentValue] = labelText.split("\n");
+                  const parts = labelText.split("\n", 3);  // Split into a maximum of 3 parts
+                  const currentName = parts[1] || "";
+                  const currentValue = parts[2] || "";
+                  const [value1, value2, value3] = currentValue.split(",").map((value) => value.trim());
+
                   nodeNameInput.value = currentName || ""; // Set current name
-                  nodeValueInput.value = currentValue || ""; // Set current value
+
+                  if (dropdown1) dropdown1.value = value1 || "";
+                  if (value) value.value = value2 || "";
+                  if (dropdown3) dropdown3.value = value3 || "";
+
                   // Show pop-up
                   popUp.classList.remove("translate-x-376-5");
                   popUp.classList.add("translate-x-0");
@@ -2443,26 +2878,75 @@
                   mainCanva.classList.add("block");
                   elementView.model.attr("body/stroke", "#1757D9"); // Black border
                   elementView.model.attr("body/strokeWidth", 2);
+
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
                      const newName = nodeNameInput.value.trim();
-                     const newValue = nodeValueInput.value.trim();
+                     const newValue1 = dropdown1.options[dropdown1.selectedIndex]?.text.trim() || "";
+                     const newValue2 = value.value.trim();
+                     const newValue3 = dropdown3.options[dropdown3.selectedIndex]?.text.trim() || "";
+
+                     const newValue = `${newValue1} $${newValue2} To Destination ${newValue3}`;
+
                      // Update the current node's label
-                     elementView.model.attr("label/text", `${newName}\n${newValue}`);
-                     elementView.model.attr("body/stroke", ""); // Black border
+                     elementView.model.attr("label/text", `\n${newName}\n${newValue}\n`);
+                     elementView.model.attr("body/stroke", ""); // Remove black border
                      elementView.model.attr("body/strokeWidth");
-                     const view = paper.findViewByModel(addAction);
+
+                     // Get the paper object (assuming you have it initialized as `paper`)
+                     var view = paper.findViewByModel(addAction);
 
                      // Check if the view is found and then get the label width
                      if (view) {
-                        const labelElement = view.el.querySelector('text');
-                        const labelWidth = labelElement.getBoundingClientRect().width;
+                        var labelElement = view.el.querySelector('text');
+                        var labelElements = view.el.querySelectorAll('tspan');
+                        var labelWidth = labelElement.getBoundingClientRect().width;
                         console.log('Label width:', labelWidth);
-                        const parentWidth = labelWidth + 64;
-                        addAction.resize(parentWidth, 72);
+
+                        // Define the starting position (SVG position)
+                        var svgX = 16;  // X position of the SVG icon
+                        var svgWidth = 22;  // Width of the SVG icon
+                        var spaceBetween = 16;  // Space between the SVG and tspan elements
+
+                        // Calculate the new positions for the second and third tspan elements
+                        // Include space for SVG and the gap
+
+                        var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
+                        // Adjust the positions of label elements (tspans) relative to the SVG
+                        var secondTspan = labelElements[1];
+                        var thirdTspan = labelElements[2];
+
+                        if (secondTspan) {
+                           var currentXSecond = secondTspan.getAttribute('x');
+                           console.log('Current x value of second tspan:', currentXSecond);
+                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 16;  // Position second tspan after the SVG
+                           secondTspan.setAttribute('x', newXSecond);
+                           secondTspan.setAttribute('y', -20);  // Align vertically with the SVG
+                           console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
+                           console.log('Updated y value of second tspan:', secondTspan.getAttribute('y'));
+                        }
+
+                        if (thirdTspan) {
+                           var currentXThird = thirdTspan.getAttribute('x');
+                           console.log('Current x value of third tspan:', currentXThird);
+                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 16;  // Position third tspan further
+                           thirdTspan.setAttribute('x', newXThird);
+                           //   thirdTspan.setAttribute('y',);  // Align vertically with the SVG
+                           console.log('Updated x value of third tspan:', thirdTspan.getAttribute('x'));
+                           console.log('Updated y value of third tspan:', thirdTspan.getAttribute('y'));
+                        }
+
+                        // Use the resize method on accountData
+                        if (typeof addAction.resize === 'function') {
+                           addAction.resize(parentWidth, 72);  // Update the model size
+                           console.log(parentWidth)
+                        } else {
+                           console.error('addAction.resize is not a function!');
+                        }
                      } else {
                         console.log('View not found for the model!');
                      }
+
                      // Hide the p op-up after updating
                      setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
@@ -2511,21 +2995,7 @@
             });
          });
 
-         //  toggleBtn.addEventListener("click", () => {
-         //      if (paperContainer.style.display === "none") {
-         //          paperContainer.style.display = "block";
-         //          toggleBtn.classList = "flex justify-center items-center h-8 w-8 hover:bg-new-car bg-white group rounded-lg cursor-pointer";
-         //          hideIcon.style.display = "block";
-         //          showIcon.style.display = "none";
-         //      } else {
-         //          paperContainer.style.display = "none";
-         //          toggleBtn.classList = "flex justify-center items-center h-8 w-8 bg-new-car rounded-lg cursor-pointer";
-         //          hideIcon.style.display = "none";
-         //          showIcon.style.display = "block";
-         //      }
-         //  });
-
-         //  // Toolbar
+         // Toolbar
          var zoomLevel = 1;
 
          // Get the center of the visible area dynamically
@@ -2550,36 +3020,39 @@
          });
 
          document.addEventListener("DOMContentLoaded", function () {
-            let closeSidebarButtons = document.getElementsByClassName("closepop-up");
+            const closeSidebarButtons = document.querySelectorAll(".closepop-up");
+            const popups = document.querySelectorAll(".pop-up, .condition-popup, .dataProvider-popup, .add-popup");
+            // const addPopup = document.querySelector("");
+            const mainCanva = document.querySelector(".main-canva");
 
-            Array.from(closeSidebarButtons).forEach(function (button) {
+            closeSidebarButtons.forEach(function (button) {
                button.addEventListener("click", function () {
-                  // Select all the popups
-                  let popups = document.querySelectorAll(".pop-up, .condition-popup, .dataProvider-popup, .addAction-popup");
-                  let mainCanva = document.querySelector(".main-canva");
-
-                  // Track if any popup is open
                   let anyPopupOpen = false;
 
-                  // Toggle the translate-x-376-5 class for each popup
+                  // Check and toggle visibility of each popup
                   popups.forEach(function (popup) {
-                     // Toggle the translate-x-376-5 class to show or hide the popup
-                     popup.classList.toggle("translate-x-376-5");
-
-                     // Check if this popup is visible (i.e., doesn't have the class)
                      if (!popup.classList.contains("translate-x-376-5")) {
-                        anyPopupOpen = true;
+                        popup.classList.add("translate-x-376-5"); // Close the popup
+                     } else {
+                        anyPopupOpen = true; // Mark as open if it's not closed
                      }
                   });
-
-                  // If any popup is open, keep the mainCanva visible, else hide it
+                  // Toggle visibility of mainCanva based on popup states
                   mainCanva.style.display = anyPopupOpen ? "none" : "block";
+
                });
             });
          });
 
+         const composerText = document.getElementById("composerText");
+         const nameInput = document.getElementById("name");
+         nameInput.value = composerText.textContent;
 
-
+         // Update div when form is submitted
+         document.getElementById("updateForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form submission
+            composerText.textContent = nameInput.value; // Update div text
+         });
 
       })(joint);
 

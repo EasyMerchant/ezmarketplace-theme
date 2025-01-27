@@ -76,5 +76,5 @@
 
 
 #paper-container svg .joint-layers .joint-cells-layer .joint-cell .v-line{
-  @apply first:text-dark-gunmemtal-87 first:opacity-60 first:text-xs first:leading-16-8 first:font-medium first:font-inter last:text-base last:mt-4 last:leading-4 last:font-normal last:font-inter last:text-dark-gunmemtal-87
+  @apply first:hidden last:hidden even:text-dark-gunmemtal-87 even:opacity-60 even:text-xs even:leading-16-8 even:font-medium even:font-inter odd:text-base odd:mt-4 odd:leading-4 odd:font-normal odd:font-inter odd:text-dark-gunmemtal-87
 } 

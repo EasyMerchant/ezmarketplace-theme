@@ -138,7 +138,8 @@ module.exports = {
         "green-dark":"#1A9310",
         "gray-300":"#D9D9D9",
         "black-14":"#00000014",
-        "dark-gunmemtal-87":'#1C212BDE'
+        "dark-gunmemtal-87":'#1C212BDE',
+        "anti-flash-white":'#F2F4F8'
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
@@ -173,6 +174,7 @@ module.exports = {
         "49%":'49%',
       },
       gap:{
+        "05":'5px',
         "056":"56px",
       },
       borderWidth:{
