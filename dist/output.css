@@ -1554,6 +1554,10 @@ input:checked + .toggle-bg {
   display: grid;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .hidden {
   display: none;
 }
@@ -2139,11 +2143,6 @@ input:checked + .toggle-bg {
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
-
-.rounded-l {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .rounded-bl-lg {
@@ -3246,16 +3245,6 @@ input:checked + .toggle-bg {
   top: 12%;
 }
 
-.before\:left-0::before {
-  content: var(--tw-content);
-  left: 0px;
-}
-
-.before\:block::before {
-  content: var(--tw-content);
-  display: block;
-}
-
 .before\:h-75\%::before {
   content: var(--tw-content);
   height: 75%;
@@ -3286,35 +3275,9 @@ input:checked + .toggle-bg {
   width: 1px;
 }
 
-.before\:w-full::before {
-  content: var(--tw-content);
-  width: 100%;
-}
-
-.before\:border::before {
-  content: var(--tw-content);
-  border-width: 1px;
-}
-
-.before\:border-dashed::before {
-  content: var(--tw-content);
-  border-style: dashed;
-}
-
-.before\:border-gray-300::before {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(217 217 217 / var(--tw-border-opacity));
-}
-
 .before\:bg-AuroMetalSaurus-32::before {
   content: var(--tw-content);
   background-color: #70758052;
-}
-
-.before\:content-\[\'\'\]::before {
-  --tw-content: '';
-  content: var(--tw-content);
 }
 
 .after\:absolute::after {
