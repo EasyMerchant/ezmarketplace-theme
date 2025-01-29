@@ -1554,10 +1554,6 @@ input:checked + .toggle-bg {
   display: grid;
 }
 
-.\!hidden {
-  display: none !important;
-}
-
 .hidden {
   display: none;
 }
@@ -2243,6 +2239,10 @@ input:checked + .toggle-bg {
 .border-gunmetal {
   --tw-border-opacity: 1;
   border-color: rgb(46 51 62 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .border-y-AuroMetalSaurus-16 {
@@ -3181,6 +3181,32 @@ input:checked + .toggle-bg {
   opacity: 0.6;
 }
 
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell .v-line:nth-child(odd):is(.dark *) {
+  --tw-text-opacity: 1 !important;
+  color: rgb(229 234 245 / var(--tw-text-opacity)) !important;
+}
+
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell .v-line:nth-child(even):is(.dark *) {
+  color: #e5eaf599 !important;
+}
+
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell.joint-type-container-parent {
+  fill: transparent !important;
+}
+
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell.joint-type-container-parent rect {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+#paper-container svg .joint-layers .joint-tools-layer .joint-tool.joint-theme-default rect:is(.dark *) {
+  fill: #242933 !important;
+}
+
+#paper-container svg .joint-layers .joint-tools-layer .joint-tool.joint-theme-default svg path:is(.dark *) {
+  stroke: #B6BBC6 !important;
+}
+
 .placeholder\:font-inter::-moz-placeholder {
   font-family: Inter, sans-serf;
 }
@@ -3956,6 +3982,15 @@ input:checked + .toggle-bg {
   border-width: 0px;
 }
 
+.dark\:border-AuroMetalSaurus-16:is(.dark *) {
+  border-color: #70758029;
+}
+
+.dark\:border-Lavender:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 234 245 / var(--tw-border-opacity));
+}
+
 .dark\:border-black-coral:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(88 93 104 / var(--tw-border-opacity));
@@ -4057,6 +4092,10 @@ input:checked + .toggle-bg {
   background-color: transparent;
 }
 
+.dark\:bg-composer-dark-bg:is(.dark *) {
+  background-image: url(../Image/composor-canva-dark.png);
+}
+
 .dark\:bg-logo-in-dark:is(.dark *) {
   background-image: url('../Image/logo-dark.svg');
 }
@@ -4077,6 +4116,10 @@ input:checked + .toggle-bg {
   fill: #434853;
 }
 
+.dark\:fill-silver-sand:is(.dark *) {
+  fill: #B6BBC6;
+}
+
 .dark\:stroke-Lavender:is(.dark *) {
   stroke: #E5EAF5;
 }
@@ -4095,6 +4138,10 @@ input:checked + .toggle-bg {
 
 .dark\:stroke-dark-gunmetal:is(.dark *) {
   stroke: #1c212b;
+}
+
+.dark\:stroke-gunmetal:is(.dark *) {
+  stroke: #2E333E;
 }
 
 .dark\:stroke-pale-cerulean:is(.dark *) {
@@ -4138,6 +4185,11 @@ input:checked + .toggle-bg {
   color: #f4f6fbde;
 }
 
+.dark\:text-baker-miller-pink:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 158 176 / var(--tw-text-opacity));
+}
+
 .dark\:text-blue-500:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(63 131 248 / var(--tw-text-opacity));
@@ -4161,6 +4213,11 @@ input:checked + .toggle-bg {
 .dark\:text-gray-500:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.dark\:text-gunmetal:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(46 51 62 / var(--tw-text-opacity));
 }
 
 .dark\:text-metallic-silver:is(.dark *) {
@@ -4195,6 +4252,14 @@ input:checked + .toggle-bg {
 .dark\:placeholder\:text-Lavender:is(.dark *)::placeholder {
   --tw-text-opacity: 1;
   color: rgb(229 234 245 / var(--tw-text-opacity));
+}
+
+.dark\:placeholder\:text-Lavender-60:is(.dark *)::-moz-placeholder {
+  color: #e5eaf599;
+}
+
+.dark\:placeholder\:text-Lavender-60:is(.dark *)::placeholder {
+  color: #e5eaf599;
 }
 
 .dark\:before\:bg-black-coral:is(.dark *)::before {
@@ -4315,6 +4380,11 @@ input:checked + .toggle-bg {
 .dark\:hover\:bg-gray-800:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.dark\:hover\:bg-pale-cerulean:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 186 227 / var(--tw-bg-opacity));
 }
 
 .dark\:hover\:text-Lavender:hover:is(.dark *) {
@@ -5182,4 +5252,4 @@ input:checked + .toggle-bg {
   content: var(--tw-content);
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-} 
+}

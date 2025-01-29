@@ -147,7 +147,8 @@ module.exports = {
         "logo-in-light":"url('../Image/logo-light.svg')",
         "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
-        "composer-bg":"url(../Image/composor-canva.png)"
+        "composer-bg":"url(../Image/composor-canva.png)",
+        "composer-dark-bg":"url(../Image/composor-canva-dark.png)"
       },
       inset:{
         "02":'2px',

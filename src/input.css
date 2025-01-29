@@ -76,5 +76,22 @@
 
 
 #paper-container svg .joint-layers .joint-cells-layer .joint-cell .v-line{
-  @apply first:hidden last:hidden even:text-dark-gunmemtal-87 even:opacity-60 even:text-xs even:leading-16-8 even:font-medium even:font-inter odd:text-base odd:mt-4 odd:leading-4 odd:font-normal odd:font-inter odd:text-dark-gunmemtal-87
+  @apply first:hidden last:hidden even:text-dark-gunmemtal-87 even:opacity-60 even:text-xs even:leading-16-8 dark:even:!text-Lavender-60 even:font-medium even:font-inter odd:text-base odd:mt-4 odd:leading-4 odd:font-normal odd:font-inter odd:text-dark-gunmemtal-87 dark:odd:!text-Lavender
 } 
+
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell.joint-type-container-parent{
+  @apply !fill-transparent
+}
+
+#paper-container svg .joint-layers .joint-cells-layer .joint-cell.joint-type-container-parent rect{
+  @apply !w-full !h-full
+}
+
+#paper-container svg .joint-layers .joint-tools-layer .joint-tool.joint-theme-default rect{
+  @apply dark:!fill-charleston-green
+}
+
+
+#paper-container svg .joint-layers .joint-tools-layer .joint-tool.joint-theme-default svg path{
+  @apply dark:!stroke-silver-sand
+}
