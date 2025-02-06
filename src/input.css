@@ -95,3 +95,13 @@
 #paper-container svg .joint-layers .joint-tools-layer .joint-tool.joint-theme-default svg path{
   @apply dark:!stroke-silver-sand
 }
+
+
+.tabs input[type=checkbox]:checked+label .box{
+	@apply text-new-car border-2 !border-new-car 
+
+}
+
+.tabs input[type=checkbox]:checked+label .box svg path{ 
+  @apply  !stroke-new-car
+}

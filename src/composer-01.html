@@ -10,7 +10,6 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body class="bg-anti-flash-white  dark:bg-chinese-black scrollbar-none">
    <div class="flex grow">
       <div class="sidebar h-screen max-w-84 w-full  bg-white  z-99">
@@ -900,7 +899,7 @@
                         <path d="M12 6L8.02701 10.0268L12.0538 13.9998" stroke="#2E333E" stroke-width="2"
                            stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-silver-sand" />
                      </svg>
-                     <div class="flex gap-2 text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender">
+                     <div class="flex gap-2 text-sm font-medium font-inter leading-21-6 text-black dark:text-Lavender items-center">
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M25 8.5H7C5.89543 8.5 5 9.39543 5 10.5V22.5C5 23.6046 5.89543 24.5 7 24.5H25C26.1046 24.5 27 23.6046 27 22.5V10.5C27 9.39543 26.1046 8.5 25 8.5Z"
@@ -909,23 +908,9 @@
                            <path d="M5 14.5H27" stroke="#2E333E" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" class="dark:stroke-silver-sand" />
                         </svg>
-                        <h1 class="mt-1">Account</h1>
+                        <h1>Account</h1>
                      </div>
                   </div>
-
-                  <!-- <svg id="deleteaccount" width="20" height="20" viewBox="0 0 16 16" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path d="M2 4H3.33333H14" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="dark:stroke-baker-miller-pink" />
-                     <path
-                        d="M12.6693 4.0026V13.3359C12.6693 13.6896 12.5288 14.0287 12.2787 14.2787C12.0287 14.5288 11.6896 14.6693 11.3359 14.6693H4.66927C4.31565 14.6693 3.97651 14.5288 3.72646 14.2787C3.47641 14.0287 3.33594 13.6896 3.33594 13.3359V4.0026M5.33594 4.0026V2.66927C5.33594 2.31565 5.47641 1.97651 5.72646 1.72646C5.97651 1.47641 6.31565 1.33594 6.66927 1.33594H9.33594C9.68956 1.33594 10.0287 1.47641 10.2787 1.72646C10.5288 1.97651 10.6693 2.31565 10.6693 2.66927V4.0026"
-                        stroke="#E93939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="dark:stroke-baker-miller-pink" />
-                     <path d="M6.66406 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="dark:stroke-baker-miller-pink" />
-                     <path d="M9.33594 7.33594V11.3359" stroke="#E93939" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="dark:stroke-baker-miller-pink" />
-                  </svg> -->
                   <div class="cursor-pointer" id="deleteaccount">
                      <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.75 10H9.75H25.75" stroke="#E93939" stroke-width="2" stroke-linecap="round"
@@ -940,37 +925,43 @@
                            stroke-linejoin="round" class="dark:stroke-baker-miller-pink" />
                      </svg>
                   </div>
-
                </div>
-
-               <div class="flex mt-4 border-b border-gray-300" id="default-styled-tab"
+               <div class="flex mt-4 border-b border-gray-300 tabs" id="default-styled-tab"
                   data-tabs-toggle="#default-styled-tab-content"
                   data-tabs-active-classes="text-dark-gunmetal border-new-car"
                   data-tabs-inactive-classes="text-gray-500 border-gray-300" role="tablist">
-
-                  <div id="basic" class="w-[199px] text-center" role="presentation">
+                  <div id="basic" class="w-[199px] text-center basic" role="presentation">
                      <div class="flex font-medium gap-4 justify-center cursor-pointer border-b-2 border-gray-300 p-3"
                         id="basic-styled-tab" data-tabs-target="#styled-basic" type="button" role="tab"
                         aria-controls="styled-basic" aria-selected="true">
-                        Basic
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <circle cx="12.5" cy="12" r="9" stroke="#1757D9" stroke-width="2" />
-                           <path d="M16 10L11.3846 14L9.5 12" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                        </svg>
+                        <input class="hidden" type="checkbox" checked id="task_1">
+                        <label class="flex items-center h-10 px-2 w-full gap-4 rounded cursor-pointer  justify-center" for="task_1">
+                           <span class="text-sm font-inter font-medium">Basic</span>
+                           <span class="w-5 h-5 text-transparent border-2 border-gray-300 rounded-full box flex items-center justify-center">
+                              <svg width="9" height="6" viewBox="0 0 9 6" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M8 1L3.38462 5L1.5 3" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                        </label>
                      </div>
                   </div>
-
                   <div id="trigger" class="w-[199px] text-center" role="presentation">
                      <div class="flex font-medium gap-4 justify-center cursor-pointer border-b-2 border-gray-300 p-3"
                         id="trigger-styled-tab" data-tabs-target="#styled-trigger" type="button" role="tab"
                         aria-controls="styled-trigger" aria-selected="false">
-                        Trigger
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <circle cx="12.5" cy="12" r="9" stroke="#1757D9" stroke-width="2" />
-                           <path d="M16 10L11.3846 14L9.5 12" stroke="#1757D9" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                        </svg>
+                        <input class="hidden peer" type="checkbox" checked id="task_2">
+                        <label class="flex items-center h-10 px-2 w-full gap-4 rounded cursor-pointer  justify-center" for="task_2">
+                           <span class="text-sm font-inter font-medium">Trigger</span>
+                           <span class="w-5 h-5 text-transparent border-2 border-gray-300 rounded-full box flex items-center justify-center peer-checked:border-2 peer-checked:border-new-car ">
+                              <svg width="9" height="6" viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M8 1L3.38462 5L1.5 3" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="currentColor" fill="none" />
+                              </svg>
+                           </span>
+
+                        </label>
                      </div>
                   </div>
                </div>
@@ -1048,8 +1039,7 @@
                         d="M10.375 22.4375C10.6236 22.4375 10.8621 22.5363 11.0379 22.7121C11.2137 22.8879 11.3125 23.1264 11.3125 23.375C11.3125 23.6236 11.2137 23.8621 11.0379 24.0379C10.8621 24.2137 10.6236 24.3125 10.375 24.3125C10.1264 24.3125 9.8879 24.2137 9.71209 24.0379C9.53627 23.8621 9.4375 23.6236 9.4375 23.375C9.4375 23.1264 9.53627 22.8879 9.71209 22.7121C9.8879 22.5363 10.1264 22.4375 10.375 22.4375ZM13.5 23.375C13.5 22.0938 12.7305 20.9922 11.625 20.5117V19C11.625 18.3086 12.1836 17.75 12.875 17.75H19.125C19.8164 17.75 20.375 18.3086 20.375 19V20.5117C19.2695 20.9922 18.5 22.0938 18.5 23.375C18.5 25.1016 19.8984 26.5 21.625 26.5C23.3516 26.5 24.75 25.1016 24.75 23.375C24.75 22.0938 23.9805 20.9922 22.875 20.5117V19C22.875 16.9297 21.1953 15.25 19.125 15.25H17.25V12.4883C18.3555 12.0078 19.125 10.9062 19.125 9.625C19.125 7.89844 17.7266 6.5 16 6.5C14.2734 6.5 12.875 7.89844 12.875 9.625C12.875 10.9062 13.6445 12.0078 14.75 12.4883V15.25H12.875C10.8047 15.25 9.125 16.9297 9.125 19V20.5117C8.01953 20.9922 7.25 22.0938 7.25 23.375C7.25 25.1016 8.64844 26.5 10.375 26.5C12.1016 26.5 13.5 25.1016 13.5 23.375ZM21.625 22.4375C21.8736 22.4375 22.1121 22.5363 22.2879 22.7121C22.4637 22.8879 22.5625 23.1264 22.5625 23.375C22.5625 23.6236 22.4637 23.8621 22.2879 24.0379C22.1121 24.2137 21.8736 24.3125 21.625 24.3125C21.3764 24.3125 21.1379 24.2137 20.9621 24.0379C20.7863 23.8621 20.6875 23.6236 20.6875 23.375C20.6875 23.1264 20.7863 22.8879 20.9621 22.7121C21.1379 22.5363 21.3764 22.4375 21.625 22.4375ZM16.9375 9.625C16.9375 9.87364 16.8387 10.1121 16.6629 10.2879C16.4871 10.4637 16.2486 10.5625 16 10.5625C15.7514 10.5625 15.5129 10.4637 15.3371 10.2879C15.1613 10.1121 15.0625 9.87364 15.0625 9.625C15.0625 9.37636 15.1613 9.13791 15.3371 8.96209C15.5129 8.78627 15.7514 8.6875 16 8.6875C16.2486 8.6875 16.4871 8.78627 16.6629 8.96209C16.8387 9.13791 16.9375 9.37636 16.9375 9.625Z"
                         fill="#2E333E" class="dark:fill-silver-sand" />
                   </svg>
-                  <h1 class="mt-1">Condition</h1>
-
+                  <h1>Condition</h1>
                </div>
             </div>
             <div class="cursor-pointer" id="deletecondition">
@@ -1066,7 +1056,6 @@
                      stroke-linejoin="round" class="dark:stroke-baker-miller-pink" />
                </svg>
             </div>
-
          </div>
          <div class="relative w-full">
             <div class="flex mt-2 border-b border-gray-300" id="default-styled-tab"
@@ -1085,7 +1074,6 @@
                      </svg>
                   </div>
                </div>
-
                <div class="w-[199px] text-center" role="presentation">
                   <div class="flex font-medium gap-4 justify-center cursor-pointer border-b-2 border-gray-300 p-3"
                      id="trigger-styled-tab2" data-tabs-target="#styled-trigger2" type="button" role="tab"
@@ -1099,7 +1087,6 @@
                   </div>
                </div>
             </div>
-
             <form class="flex flex-col justify-normal gap-0 h-full w-full">
                <div id="default-styled-tab-content2">
                   <div class="Basicinfo flex flex-col gap-4 px-4  h-[calc(100vh_-_318px)]" id="styled-basic2"
@@ -1269,7 +1256,7 @@
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="dark:stroke-silver-sand" />
                   </svg>
-                  <h1 class="mt-1">Data Provider</h1>
+                  <h1>Data Provider</h1>
                </div>
             </div>
 
@@ -1496,7 +1483,7 @@
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="dark:stroke-silver-sand dark:fill-silver-sand" />
                   </svg>
-                  <h1 class="mt-1">Action</h1>
+                  <h1>Action</h1>
                </div>
             </div>
             <div class="cursor-pointer" id="deleteaction">
@@ -1770,21 +1757,21 @@
             },
          });
 
+         var isDarkTheme = localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+         // Define port attributes for both in and out ports
          var portsIn = {
             position: {
                name: "top",
-               // args: {
-               //    x: 100,
-               //    y: -2,
-               // },
             },
             attrs: {
                portBody: {
                   magnet: true,
                   r: 5,
-                  fill: "#fff",
-                  strokeWidth: "2",
-                  stroke: "#9FA4AF",
+                  fill: isDarkTheme ? "#333" : "#fff", // Dark background in dark theme, light in light theme
+                  strokeWidth: 2,
+                  stroke: isDarkTheme ? "#fff" : "#9FA4AF", // White stroke in dark theme, grey in light theme
                   pointerEvents: "bounding-box",
                },
             },
@@ -1808,19 +1795,19 @@
                },
             ],
          };
+
          var portsOut = {
             position: {
                name: "bottom", // Ports appear at the bottom
-               //  args: { x: 0, y: 10 } // Adjust Y offset for better placement
             },
             attrs: {
                portBody: {
                   magnet: true,
                   r: 5,
-                  fill: "#fff",
+                  fill: isDarkTheme ? "#333" : "#fff", // Dark background in dark theme, light in light theme
                   strokeWidth: 2,
-                  stroke: "#9FA4AF",
-                  pointerEvents: "bounding-box"
+                  stroke: isDarkTheme ? "#fff" : "#9FA4AF", // White stroke in dark theme, grey in light theme
+                  pointerEvents: "bounding-box",
                },
             },
             label: {
@@ -1882,8 +1869,7 @@
          var addConditions;
          var dataProviders;
          var addActions;
-         var isDarkTheme = localStorage.getItem('color-theme') === 'dark' ||
-            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
 
 
          // Adding the rectangle when the add shape button is clicked
@@ -1921,6 +1907,7 @@
             accountData = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
                size: { width: 160, height: 72 },
+               id: 'account-body',
                attrs: {
                   body: {
                      fill: "#FFFFFF",
@@ -2084,21 +2071,6 @@
                console.log('View not found for the model!');
             }
 
-            accountData.findView(paper).$el.on("mouseenter", function () {
-
-               // Apply stroke and strokeWidth on hover
-               accountData.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-               accountData.attr("body/strokeWidth", 2);
-               accountData.attr("portBody/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-            });
-
-            accountData.findView(paper).$el.on("mouseleave", function () {
-               // Remove stroke and reset strokeWidth when mouse leaves
-               accountData.attr("body/stroke", null);
-               accountData.attr("body/strokeWidth", 0);
-
-               accountData.attr("portBody/stroke", "#1757D9");
-            });
 
             var deletenode = new joint.elementTools.Button({
                action: function (evt, elementView, tool) {
@@ -2176,6 +2148,10 @@
                   const nodeValueInput = document.getElementById("NodeValue");
                   const editButton = document.getElementById("a"); // Your submit button
                   const mainCanva = document.querySelector(".main-canva");
+                  const parent = document.querySelector('[model-id="account-body"]');
+
+                  // Select all the joint-port-body elements within that parent
+                  const ports = parent.querySelectorAll('.joint-port-body');
 
                   // Remove any existing event listeners
                   const newEditButton = editButton.cloneNode(true);
@@ -2195,8 +2171,13 @@
                   popUp.classList.add("translate-x-0");
                   mainCanva.classList.remove("hidden");
                   mainCanva.classList.add("block");
-                  elementView.model.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9") // Black border
-                  elementView.model.attr("body/strokeWidth", 2);
+
+                  // Add stroke when popup is shown
+                  accountData.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
+                  accountData.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
 
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
@@ -2224,17 +2205,15 @@
                         var spaceBetween = 16;  // Space between the SVG and tspan elements
 
                         // Calculate the new positions for the second and third tspan elements
-                        // Include space for SVG and the gap
-
                         var parentWidth = labelWidth + svgWidth + spaceBetween + 32;
-                        // Adjust the positions of label elements (tspans) relative to the SVG
+
                         var secondTspan = labelElements[1];
                         var thirdTspan = labelElements[2];
 
                         if (secondTspan) {
                            var currentXSecond = secondTspan.getAttribute('x');
                            console.log('Current x value of second tspan:', currentXSecond);
-                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 32;  // Position second tspan after the SVG
+                           var newXSecond = (svgX + svgWidth + spaceBetween + parseFloat(currentXSecond)) - parentWidth / 2 + 32;
                            secondTspan.setAttribute('x', newXSecond);
                            secondTspan.setAttribute('y', -20);  // Align vertically with the SVG
                            console.log('Updated x value of second tspan:', secondTspan.getAttribute('x'));
@@ -2244,14 +2223,14 @@
                         if (thirdTspan) {
                            var currentXThird = thirdTspan.getAttribute('x');
                            console.log('Current x value of third tspan:', currentXThird);
-                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 32;  // Position third tspan further
+                           var newXThird = (svgX + svgWidth + spaceBetween + parseFloat(currentXThird)) - parentWidth / 2 + 32;
                            thirdTspan.setAttribute('x', newXThird);
                            thirdTspan.setAttribute('y', -4);  // Align vertically with the SVG
                            console.log('Updated x value of third tspan:', thirdTspan.getAttribute('x'));
                            console.log('Updated y value of third tspan:', thirdTspan.getAttribute('y'));
                         }
 
-                        // Use the resize method on accountData
+                        // Resize the accountData model
                         if (typeof accountData.resize === 'function') {
                            accountData.resize(parentWidth, 72);  // Update the model size
                            console.log(parentWidth)
@@ -2262,7 +2241,6 @@
                         console.log('View not found for the model!');
                      }
 
-
                      // Hide the pop-up after updating
                      setTimeout(function () {
                         popUp.classList.remove("translate-x-0");
@@ -2271,8 +2249,71 @@
                         mainCanva.classList.add("hidden");
                      }, 300);
                   });
-               },
+               }
+
             })
+
+            let isClicked = false;
+
+            // Ensure 'view' is not redeclared if it exists
+            if (typeof view === "undefined") {
+               var view = accountData.findView(paper); // Use 'var' to avoid redeclaration issues
+            }
+
+            if (!view) {
+               console.error("View not found");
+            } else {
+               const element = view.el; // Ensure it's a native DOM element
+               const parent = document.querySelector('[model-id="account-body"]');
+
+               // Select all the joint-port-body elements within that parent
+               const ports = parent.querySelectorAll('.joint-port-body');
+               // Hover Effects
+               element.addEventListener("mouseenter", function () {
+                  if (!isClicked) {
+                     accountData.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                     accountData.attr("body/strokeWidth", 2);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#1757D9');
+                     });
+                  }
+               });
+
+               element.addEventListener("mouseleave", function () {
+                  if (!isClicked) {
+                     accountData.attr("body/stroke", null);
+                     accountData.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+
+               // Click to Toggle Stroke
+               element.addEventListener("click", function (event) {
+                  event.stopPropagation(); // Prevents triggering the document click event
+                  isClicked = true;
+                  accountData.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                  accountData.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
+               });
+
+               // Click Outside to Remove Stroke, unless the edit button is clicked
+               document.addEventListener("click", function (event) {
+                  const editButton = document.querySelector(".joint-tools-layer"); // Make sure the selector matches your edit button
+                  // Prevent removing the stroke when the edit button is clicked
+                  if (editButton && !editButton.contains(event.target) && !element.contains(event.target)) {
+                     isClicked = false;
+                     accountData.attr("body/stroke", null);
+                     accountData.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+            }
 
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
@@ -2408,6 +2449,7 @@
                   });
                }
             });
+
          });
 
          addCondition.addEventListener("click", () => {
@@ -2468,6 +2510,7 @@
             addConditions = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
                size: { width: 160, height: 72 },
+               id: 'condition-body',
                attrs: {
                   body: {
                      fill: "#FFFFFF",
@@ -2589,18 +2632,6 @@
                console.log('View not found for the model!');
             }
 
-            addConditions.findView(paper).$el.on("mouseenter", function () {
-               // Apply stroke and strokeWidth on hover
-               addConditions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-               addConditions.attr("body/strokeWidth", 2);
-            });
-
-            addConditions.findView(paper).$el.on("mouseleave", function () {
-               // Remove stroke and reset strokeWidth when mouse leaves
-               addConditions.attr("body/stroke", null);
-               addConditions.attr("body/strokeWidth", 0);
-            });
-
             var deletenode = new joint.elementTools.Button({
                action: function (evt, elementView, tool) {
                   // Find the delete button
@@ -2678,7 +2709,10 @@
                   const dropdown2 = document.getElementById("condition2"); // Second dropdown
                   const dropdown3 = document.getElementById("condition3");
                   const editButton = document.getElementById("add"); // Your submit button
-                  const mainCanva = document.querySelector(".main-canva");
+                  const mainCanva = document.querySelector(".main-canva"); const parent = document.querySelector('[model-id="condition-body"]');
+
+                  // Select all the joint-port-body elements within that parent
+                  const ports = parent.querySelectorAll('.joint-port-body');
                   console.log("", dropdown1)
                   // Remove any existing event listeners
                   const newEditButton = editButton.cloneNode(true);
@@ -2702,8 +2736,11 @@
                   popUp.classList.add("translate-x-0");
                   mainCanva.classList.remove("hidden");
                   mainCanva.classList.add("block");
-                  elementView.model.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
-                  elementView.model.attr("body/strokeWidth", 2);
+                  addConditions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
+                  addConditions.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
 
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
@@ -2782,7 +2819,70 @@
                      }, 300);
                   });
                },
-            });
+            })
+
+            let isClicked = false
+
+            // Ensure 'view' is not redeclared if it exists
+            if (typeof view === "undefined") {
+               var view = addConditions.findView(paper); // Use 'var' to avoid redeclaration issues
+            }
+
+            if (!view) {
+               console.error("View not found");
+            } else {
+               const element = view.el; // Ensure it's a native DOM element
+               const parent = document.querySelector('[model-id="condition-body"]');
+
+               // Select all the joint-port-body elements within that parent
+               const ports = parent.querySelectorAll('.joint-port-body');
+               // Hover Effects
+               element.addEventListener("mouseenter", function () {
+                  if (!isClicked) {
+                     addConditions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                     addConditions.attr("body/strokeWidth", 2);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#1757D9');
+                     });
+                  }
+               });
+
+               element.addEventListener("mouseleave", function () {
+                  if (!isClicked) {
+                     addConditions.attr("body/stroke", null);
+                     addConditions.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+
+               // Click to Toggle Stroke
+               element.addEventListener("click", function (event) {
+                  event.stopPropagation(); // Prevents triggering the document click event
+                  isClicked = true;
+                  addConditions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                  addConditions.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
+               });
+
+               // Click Outside to Remove Stroke, unless the edit button is clicked
+               document.addEventListener("click", function (event) {
+                  const editButton = document.querySelector(".joint-tools-layer"); // Make sure the selector matches your edit button
+                  // Prevent removing the stroke when the edit button is clicked
+                  if (editButton && !editButton.contains(event.target) && !element.contains(event.target)) {
+                     isClicked = false;
+                     addConditions.attr("body/stroke", null);
+                     addConditions.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+            }
+
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
                tools: [deletenode, editButton],
@@ -2913,6 +3013,7 @@
                   });
                }
             });
+
          });
 
          dataProvider.addEventListener("click", () => {
@@ -2949,6 +3050,7 @@
             dataProviders = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
                size: { width: 160, height: 72 },
+               id: "data-body",
                attrs: {
                   body: {
                      fill: "#FFFFFF",
@@ -3097,33 +3199,6 @@
                console.log('View not found for the model!');
             }
 
-            dataProviders.findView(paper).$el.on("mouseenter", function () {
-               // Apply stroke and strokeWidth on hover
-               dataProviders.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-               dataProviders.attr("body/strokeWidth", 2);
-            });
-
-            dataProviders.findView(paper).$el.on("click", function () {
-               // Apply stroke and strokeWidth on hover
-               dataProviders.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-               dataProviders.attr("body/strokeWidth", 2);
-            });
-            
-            // document.addEventListener("click", function (event) {
-            //    const targetElement = event.target;
-            //    if (targetElement !== null) {
-            //       console.log(targetElement);
-            //       // Remove stroke and reset strokeWidth when mouse leaves
-            //       dataProviders.attr("body/stroke", null);
-            //       dataProviders.attr("body/strokeWidth", 0);
-            //    }               
-            // });
-            dataProviders.findView(paper).$el.on("mouseleave", function () {
-               // Remove stroke and reset strokeWidth when mouse leaves
-               dataProviders.attr("body/stroke", null);
-               dataProviders.attr("body/strokeWidth", 0);
-            });
-
             var deletenode = new joint.elementTools.Button({
                action: function (evt, elementView, tool) {
                   // Find the delete button
@@ -3149,7 +3224,7 @@
                   }
                },
             });
-            
+
             // Edit button configuration
             var editButton = new joint.elementTools.Button({
                markup: [
@@ -3201,6 +3276,7 @@
                   const nodeValueInput = document.getElementById("data");
                   const editButton = document.getElementById("add-data"); // Your submit button
                   const mainCanva = document.querySelector(".main-canva");
+                  const ports = document.querySelectorAll('.joint-port-body');
 
                   // Remove any existing event listeners
                   const newEditButton = editButton.cloneNode(true);
@@ -3220,8 +3296,13 @@
                   popUp.classList.add("translate-x-0");
                   mainCanva.classList.remove("hidden");
                   mainCanva.classList.add("block");
-                  elementView.model.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
-                  elementView.model.attr("body/strokeWidth", 2);
+
+
+                  dataProviders.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
+                  dataProviders.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
 
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
@@ -3296,7 +3377,69 @@
                      }, 300);
                   });
                },
-            });
+            })
+
+            let isClicked = false
+
+            // Ensure 'view' is not redeclared if it exists
+            if (typeof view === "undefined") {
+               var view = dataProviders.findView(paper); // Use 'var' to avoid redeclaration issues
+            }
+
+            if (!view) {
+               console.error("View not found");
+            } else {
+               const element = view.el; // Ensure it's a native DOM element
+               const parent = document.querySelector('[model-id="data-body"]');
+
+               // Select all the joint-port-body elements within that parent
+               const ports = parent.querySelectorAll('.joint-port-body');
+               // Hover Effects
+               element.addEventListener("mouseenter", function () {
+                  if (!isClicked) {
+                     dataProviders.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                     dataProviders.attr("body/strokeWidth", 2);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#1757D9');
+                     });
+                  }
+               });
+
+               element.addEventListener("mouseleave", function () {
+                  if (!isClicked) {
+                     dataProviders.attr("body/stroke", null);
+                     dataProviders.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+
+               // Click to Toggle Stroke
+               element.addEventListener("click", function (event) {
+                  event.stopPropagation(); // Prevents triggering the document click event
+                  isClicked = true;
+                  dataProviders.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                  dataProviders.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
+               });
+
+               // Click Outside to Remove Stroke, unless the edit button is clicked
+               document.addEventListener("click", function (event) {
+                  const editButton = document.querySelector(".joint-tools-layer"); // Make sure the selector matches your edit button
+                  // Prevent removing the stroke when the edit button is clicked
+                  if (editButton && !editButton.contains(event.target) && !element.contains(event.target)) {
+                     isClicked = false;
+                     dataProviders.attr("body/stroke", null);
+                     dataProviders.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+            }
 
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
@@ -3430,6 +3573,7 @@
                   });
                }
             });
+
          });
 
          addAction.addEventListener("click", () => {
@@ -3485,6 +3629,7 @@
             addActions = new joint.shapes.container.Child({
                position: { x: 500, y: 300 }, // Default position
                size: { width: 160, height: 72 },
+               id: 'action-body',
                attrs: {
                   body: {
                      fill: "#FFFFFF",
@@ -3528,6 +3673,7 @@
                      children: [
                         {
                            tagName: 'path',
+                           selector: 'pathIcon', // Add a selector for this path to target it later
                            attributes: {
                               d: 'M17 6.5L7 18.5H16L15 26.5L25 14.5H16L17 6.5Z',
                               fill: '#2E333E',
@@ -3535,7 +3681,6 @@
                               'stroke-width': '2',
                               'stroke-linecap': 'round',
                               'stroke-linejoin': 'round',
-                              class: "dark:stroke-silver-sand dark:fill-silver-sand"
                            },
                         },
                      ],
@@ -3553,7 +3698,10 @@
                },
             });
 
-            addActions.addPorts([{ group: "in" }, { group: "out" }]); // Change this based on your theme logic
+            // Add the child node to the graph or paper
+            graph.addCell(addActions);
+            addActions.addPorts([{ group: "in" }, { group: "out" }]);
+
 
             addActions.attr('body/fill', isDarkTheme ? '#242933' : '#FFFFFF');
             // addActions.attr('svgIcon/fill','none');
@@ -3606,18 +3754,6 @@
             } else {
                console.log('View not found for the model!');
             }
-
-            addActions.findView(paper).$el.on("mouseenter", function () {
-               // Apply stroke and strokeWidth on hover
-               addActions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
-               addActions.attr("body/strokeWidth", 2);
-            });
-
-            addActions.findView(paper).$el.on("mouseleave", function () {
-               // Remove stroke and reset strokeWidth when mouse leaves
-               addActions.attr("body/stroke", null);
-               addActions.attr("body/strokeWidth", 0);
-            });
 
             var deletenode = new joint.elementTools.Button({
                action: function (evt, elementView, tool) {
@@ -3697,6 +3833,7 @@
                   const dropdown3 = document.getElementById("action3");
                   const editButton = document.getElementById("add-actions"); // Your submit button
                   const mainCanva = document.querySelector(".main-canva");
+                  const ports = document.querySelectorAll('.joint-port-body');
 
                   // Remove any existing event listeners
                   const newEditButton = editButton.cloneNode(true);
@@ -3720,8 +3857,12 @@
                   popUp.classList.add("translate-x-0");
                   mainCanva.classList.remove("hidden");
                   mainCanva.classList.add("block");
-                  elementView.model.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
-                  elementView.model.attr("body/strokeWidth", 2);
+
+                  addActions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9"); // Black border
+                  addActions.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
 
                   // Add a new event listener
                   newEditButton.addEventListener("click", function () {
@@ -3800,7 +3941,73 @@
                      }, 300);
                   });
                },
-            });
+            })
+
+            let isClicked = false;
+
+            // Ensure 'view' is not redeclared if it exists
+            if (typeof view === "undefined") {
+               var view = addActions.findView(paper); // Use 'var' to avoid redeclaration issues
+            }
+
+            if (!view) {
+               console.error("View not found");
+            } else {
+               const element = view.el; // Ensure it's a native DOM element
+               const parent = document.querySelector('[model-id="action-body"]');
+
+               // Select all the joint-port-body elements within that parent
+               const ports = parent.querySelectorAll('.joint-port-body');
+               console.log(ports)
+
+               // Hover Effects
+               element.addEventListener("mouseenter", function () {
+                  if (!isClicked) {
+                     addActions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                     addActions.attr("body/strokeWidth", 2);
+                     // port.style.stroke = "#1757D9"
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#1757D9');
+                     });
+                  }
+               });
+
+               element.addEventListener("mouseleave", function () {
+                  if (!isClicked) {
+                     addActions.attr("body/stroke", null);
+                     addActions.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+
+               // Click to Toggle Stroke
+               element.addEventListener("click", function (event) {
+                  event.stopPropagation(); // Prevents triggering the document click event
+                  isClicked = true;
+                  addActions.attr("body/stroke", isDarkTheme ? '#A5BAE3' : "#1757D9");
+                  addActions.attr("body/strokeWidth", 2);
+                  ports.forEach(port => {
+                     port.setAttribute('stroke', '#1757D9');
+                  });
+               });
+
+               // Click Outside to Remove Stroke, unless the edit button is clicked
+               document.addEventListener("click", function (event) {
+                  const editButton = document.querySelector(".joint-tools-layer"); // Make sure the selector matches your edit button
+                  // Prevent removing the stroke when the edit button is clicked
+                  if (editButton && !editButton.contains(event.target) && !element.contains(event.target)) {
+                     isClicked = false;
+                     addActions.attr("body/stroke", null);
+                     addActions.attr("body/strokeWidth", 0);
+                     ports.forEach(port => {
+                        port.setAttribute('stroke', '#9FA4AF');
+                     });
+                  }
+               });
+            }
+
 
             // Add tools to the element view
             var toolsView = new joint.dia.ToolsView({
@@ -3933,6 +4140,10 @@
                   });
                }
             });
+
+
+
+
          });
 
          graph.addCell(container_a);
@@ -3972,7 +4183,6 @@
          document.addEventListener("DOMContentLoaded", function () {
             const closeSidebarButtons = document.querySelectorAll(".closepop-up");
             const popups = document.querySelectorAll(".pop-up, .condition-popup, .dataProvider-popup, .add-popup");
-            // const addPopup = document.querySelector("");
             const mainCanva = document.querySelector(".main-canva");
 
             closeSidebarButtons.forEach(function (button) {
@@ -3987,9 +4197,26 @@
                         anyPopupOpen = true; // Mark as open if it's not closed
                      }
                   });
-                  // Toggle visibility of mainCanva based on popup states
-                  mainCanva.style.display = anyPopupOpen ? "none" : "block";
 
+                  // Toggle visibility of mainCanva based on popup states
+                  if (anyPopupOpen) {
+                     mainCanva.style.display = "none";
+                  } else {
+                     mainCanva.style.display = "block"; // Show mainCanva when all popups are closed
+                  }
+               });
+            });
+
+            // Optional: Reset mainCanva visibility when a popup is reopened
+            popups.forEach(function (popup) {
+               popup.addEventListener("transitionend", function () {
+                  // If no popups are open, display mainCanva
+                  if (![...popups].some(popup => !popup.classList.contains("translate-x-376-5"))) {
+                     mainCanva.style.display = "none";
+                  }
+                  else {
+                     mainCanva.style.display = "block";
+                  }
                });
             });
          });
