@@ -536,10 +536,11 @@ var options = {
     borderColor: '#3BA951',
   }
 };
-
-var chart = new ApexCharts(document.querySelector("#total-open-applications-chart"), options);
-chart.render();
-
+var elementChart = document.querySelector("#total-open-applications-chart");
+if(elementChart != null){
+  var chart = new ApexCharts(elementChart, options);
+  chart.render();
+}
 
 var options = {
   series: [
@@ -625,95 +626,11 @@ var options = {
     borderColor: '#3BA951',
   }
 };
-
-var chart = new ApexCharts(document.querySelector("#merchants-chart"), options);
-chart.render();
-
-
-var options = {
-  series: [{
-    name: "Session Duration",
-    data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
-  },
-  {
-    name: "Page Views",
-    data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
-  },
-  {
-    name: 'Total Visits',
-    data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
-  }
-  ],
-  chart: {
-    height: 350,
-    type: 'line',
-    zoom: {
-      enabled: false
-    },
-  },
-  colors: ["#3BA951", "#EFB117", "#3BA951"],
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    width: [5, 7, 5],
-    curve: 'straight',
-    dashArray: [0, 8, 5]
-  },
-  legend: {
-    tooltipHoverFormatter: function (val, opts) {
-      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
-    }
-  },
-  markers: {
-    size: 0,
-    hover: {
-      sizeOffset: 6
-    }
-  },
-  xaxis: {
-    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
-      '10 Jan', '11 Jan', '12 Jan'
-    ],
-    title: {
-      style: {
-        fontFamily: '"inter", sans-serif',
-        fontSize: '14px',
-      }
-    }
-  },
-  tooltip: {
-    y: [
-      {
-        title: {
-          formatter: function (val) {
-            return val + " (mins)"
-          }
-        }
-      },
-      {
-        title: {
-          formatter: function (val) {
-            return val + " per session"
-          }
-        }
-      },
-      {
-        title: {
-          formatter: function (val) {
-            return val;
-          }
-        }
-      }
-    ]
-  },
-  grid: {
-    borderColor: '#3BA951',
-  }
-};
-
-var chart = new ApexCharts(document.querySelector("#subscriptions-chart"), options);
-chart.render();
+var elementChartOne = document.querySelector("#merchants-chart");
+if(elementChartOne != null) {
+  var chartOne = new ApexCharts(elementChartOne, options);
+  chartOne.render();
+}
 
 
 var options = {
@@ -797,9 +714,100 @@ var options = {
     borderColor: '#3BA951',
   }
 };
+var elementChartTwo = document.querySelector("#subscriptions-chart");
+if(elementChartTwo != null) {
+  var chartTwo = new ApexCharts(elementChartTwo, options);
+  chartTwo.render();
+}
 
-var chart = new ApexCharts(document.querySelector("#fraud-chart"), options);
-chart.render();
+var options = {
+  series: [{
+    name: "Session Duration",
+    data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+  },
+  {
+    name: "Page Views",
+    data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+  },
+  {
+    name: 'Total Visits',
+    data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+  }
+  ],
+  chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+  },
+  colors: ["#3BA951", "#EFB117", "#3BA951"],
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [5, 7, 5],
+    curve: 'straight',
+    dashArray: [0, 8, 5]
+  },
+  legend: {
+    tooltipHoverFormatter: function (val, opts) {
+      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
+    }
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
+    }
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+      '10 Jan', '11 Jan', '12 Jan'
+    ],
+    title: {
+      style: {
+        fontFamily: '"inter", sans-serif',
+        fontSize: '14px',
+      }
+    }
+  },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val) {
+            return val + " (mins)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val + " per session"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val) {
+            return val;
+          }
+        }
+      }
+    ]
+  },
+  grid: {
+    borderColor: '#3BA951',
+  }
+};
+
+let  elementChartThree = document.querySelector("#fraud-chart")
+
+if( elementChartThree != null){
+  var chartThree = new ApexCharts( elementChartThree, options);
+ chartThree.render();
+}
 
 var options = {
   series: [44, 55, 13, 33, 20],
@@ -853,66 +861,12 @@ var options = {
     ]
   }
 };
+let elementChartFour = document.querySelector("#total-transactions-chart1")
 
-var chart = new ApexCharts(document.querySelector("#total-transactions-chart1"), options);
-chart.render();
-
-var options = {
-  series: [44, 55, 13, 33, 20],
-  chart: {
-    width: 200,
-    type: 'donut',
-  },
-  colors: ["#3ba951", "#4269d0", "#efb117", "#ff725c", "#6cc5b0"],
-  dataLabels: {
-    enabled: false
-  },
-  responsive: [
-    {
-      breakpoint: 2024,
-      options: {
-        chart: {
-          width: 240
-        },
-        legend: {
-          show: false
-        }
-      }
-    }
-  ],
-  legend: {
-    position: 'right',
-    offsetY: 0,
-    height: 230,
-  },
-  annotations: {
-    position: 'front',
-    yaxis: [
-      {
-        y: 0,
-        y2: 0,
-        strokeDashArray: 0,
-        borderWidth: 0,
-        opacity: 0,
-        fillColor: '#fff',
-        label: {
-          text: 'Top 25 Merchants by Transaction Vol.',
-          style: {
-            fontSize: '18px',
-            fontWeight: 'bold',
-            fontFamily: '"inter", sans-serif',
-            color: '#333',
-            background: 'transparent'
-          }
-        }
-      }
-    ]
-  }
-};
-
-var chart = new ApexCharts(document.querySelector("#total-refunds-chart1"), options);
-chart.render();
-
+if( elementChartFour != null){
+  var chartFour = new ApexCharts(elementChartFour, options);
+chartFour.render();
+}
 
 var options = {
   series: [44, 55, 13, 33, 20],
@@ -966,10 +920,72 @@ var options = {
     ]
   }
 };
+let elementChartFive = document.querySelector("#total-refunds-chart1")
 
-var chart = new ApexCharts(document.querySelector("#total-chargebacks-chart1"), options);
-chart.render();
+if( elementChartFive != null){
+  var chartFive = new ApexCharts(elementChartFive, options);
+  chartFive.render();
+}
 
+
+var options = {
+  series: [44, 55, 13, 33, 20],
+  chart: {
+    width: 200,
+    type: 'donut',
+  },
+  colors: ["#3ba951", "#4269d0", "#efb117", "#ff725c", "#6cc5b0"],
+  dataLabels: {
+    enabled: false
+  },
+  responsive: [
+    {
+      breakpoint: 2024,
+      options: {
+        chart: {
+          width: 240
+        },
+        legend: {
+          show: false
+        }
+      }
+    }
+  ],
+  legend: {
+    position: 'right',
+    offsetY: 0,
+    height: 230,
+  },
+  annotations: {
+    position: 'front',
+    yaxis: [
+      {
+        y: 0,
+        y2: 0,
+        strokeDashArray: 0,
+        borderWidth: 0,
+        opacity: 0,
+        fillColor: '#fff',
+        label: {
+          text: 'Top 25 Merchants by Transaction Vol.',
+          style: {
+            fontSize: '18px',
+            fontWeight: 'bold',
+            fontFamily: '"inter", sans-serif',
+            color: '#333',
+            background: 'transparent'
+          }
+        }
+      }
+    ]
+  }
+};
+let elementChartSix = document.querySelector("#total-chargebacks-chart1")
+
+if( elementChartSix != null){
+  var chartSix = new ApexCharts(elementChartSix, options);
+  chartSix.render();
+}
 var chart;
 var initialData = [10, 41, 35, 51, 49, 62, 69, 91, 148]; // Original data
 

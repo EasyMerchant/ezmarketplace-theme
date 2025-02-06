@@ -47,12 +47,14 @@ module.exports = {
         "156":"156px",
         "184.67":"184.67px",
         "232":'232px',
+        "376-5":"376.5px",
         "480":'480px',
         "544":'544px',
         "683":'683px',
         "736":'736px',
         "760":'760px',
-        "1120":"1120px"
+        "1120":"1120px",
+        "calc":"calc(100vw - 148px)"
       },
       height:{
         "06":'6px',
@@ -68,7 +70,8 @@ module.exports = {
         "85%":"85%",
         "93%":"93%",
         "calc":"calc(100vh - 64px)",
-        "calc-1":"calc(100vh - 15%)"
+        "calc-1":"calc(100vh - 15%)",
+        "calc-2":"calc(100vh - 56px)"
       },
       lineHeight:{
         "010":'10px',
@@ -104,6 +107,7 @@ module.exports = {
       },
       colors:{
         "anti-flash-white":'#f2f4f8',
+        "black-87":"#000000DE",
         "new-car-8":'#1757d914',
         "chinese-black":"#121212",
         "charleston-green":"#242933",
@@ -112,6 +116,7 @@ module.exports = {
         "AuroMetalSaurus-32":'#70758052',
         "AuroMetalSaurus-16":"#70758029",
         "dark-gunmetal-80":'#1c212bde',
+        "dark-gunmetal-60":'#1C212B99',
         "dark-gunmetal":'#1c212b',
         "deep-carmine-pink":'#e93939',
         "gunmetal":'#2E333E',
@@ -131,7 +136,10 @@ module.exports = {
         "outer-space":"#434853",
         "baker-miller-pink-08":"#ff9eb014",
         "green-dark":"#1A9310",
-        "gray-300":"#D9D9D9"
+        "gray-300":"#D9D9D9",
+        "black-14":"#00000014",
+        "dark-gunmemtal-87":'#1C212BDE',
+        "anti-flash-white":'#F2F4F8'
       },
       backgroundImage:{
         "user-dropdowm":"url('../Image/user-dropdown.svg')",
@@ -139,6 +147,8 @@ module.exports = {
         "logo-in-light":"url('../Image/logo-light.svg')",
         "logo-in-dark":"url('../Image/logo-dark.svg')",
         "usa":"url('../Image/usa.svg')",
+        "composer-bg":"url(../Image/composor-canva.png)",
+        "composer-dark-bg":"url(../Image/composor-canva-dark.png)"
       },
       inset:{
         "02":'2px',
@@ -165,6 +175,7 @@ module.exports = {
         "49%":'49%',
       },
       gap:{
+        "05":'5px',
         "056":"56px",
       },
       borderWidth:{
@@ -173,6 +184,9 @@ module.exports = {
       zIndex:{
         '99':'99',
         '111':'1111'
+      },
+      translate:{
+        "376-5":"376.5px",
       },
     },
   },
